@@ -1,0 +1,1 @@
+window.repositoryObject = {"object_id":"d6","name":"notedb@localhost","description":null,"summary":[{"field":"DBMS","value":"MariaDB"}],"modules":[],"dbObjects":[{"count":9,"id":"d6t","name":"Tables"}],"show_schema":true};
