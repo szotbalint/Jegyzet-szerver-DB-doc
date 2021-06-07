@@ -1,0 +1,217 @@
+\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request}{}\doxysection{Rest\+Authorize\+Request Class Reference}
+\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request}\index{RestAuthorizeRequest@{RestAuthorizeRequest}}
+Inheritance diagram for Rest\+Authorize\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a281d7e3744e38b49afa05cc0047e8b9e}{get\+Experience\+Profile\+Id}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a3ab66da8fd49fb7676f7440cb59f55ea}{set\+Experience\+Profile\+Id}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a2e7bb35c71bf1824456ceb944cb7a845}{get\+Description}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a592e1addd2a0ff06de6c3e29d4fa33d3}{create\+Response}} (\$data, \$status\+Code)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST Authorize Request
+
+To collect payment at a later time, first authorize a payment using the /payment resource. You can then capture the payment to complete the sale and collect payment.
+
+This looks exactly like a \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_purchase_request}{Rest\+Purchase\+Request}} object except that the intent is set to \char`\"{}authorize\char`\"{} (to authorize a payment to be captured later) rather than \char`\"{}sale\char`\"{} (which is used to capture a payment immediately).\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_autotoc_md140}{}\doxyparagraph{Example}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_autotoc_md140}
+\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_autotoc_md141}{}\doxysubparagraph{Initialize Gateway}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_autotoc_md141}
+{\ttfamily  // Create a gateway for the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_rest_gateway}{Rest\+Gateway}} // (routes to \mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_add7982ae8c25f1e10b44271426feac99}{Gateway\+Factory\+::create}}) \$gateway = Omnipay\+::create(\textquotesingle{}Pay\+Pal\+\_\+\+Rest\textquotesingle{});}
+
+{\ttfamily  // Initialise the gateway \$gateway-\/$>$initialize(array( \textquotesingle{}client\+Id\textquotesingle{} =$>$ \textquotesingle{}My\+Pay\+Pal\+Client\+Id\textquotesingle{}, \textquotesingle{}secret\textquotesingle{} =$>$ \textquotesingle{}My\+Pay\+Pal\+Secret\textquotesingle{}, \textquotesingle{}test\+Mode\textquotesingle{} =$>$ true, // Or false when you are ready for live transactions )); }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_autotoc_md142}{}\doxysubparagraph{Direct Credit Card Authorize}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_autotoc_md142}
+This is for the use case where a customer has presented their credit card details and you intend to use the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST gateway for processing a transaction using that credit card data.
+
+This does not require the customer to have a \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} account.
+
+// Create a credit card object // DO NOT USE THESE CARD VALUES -- substitute your own // see the documentation in the class header. \$card = new Credit\+Card(array( \textquotesingle{}first\+Name\textquotesingle{} =$>$ \textquotesingle{}Example\textquotesingle{}, \textquotesingle{}last\+Name\textquotesingle{} =$>$ \textquotesingle{}User\textquotesingle{}, \textquotesingle{}number\textquotesingle{} =$>$ \textquotesingle{}4111111111111111\textquotesingle{}, \textquotesingle{}expiry\+Month\textquotesingle{} =$>$ \textquotesingle{}01\textquotesingle{}, \textquotesingle{}expiry\+Year\textquotesingle{} =$>$ \textquotesingle{}2020\textquotesingle{}, \textquotesingle{}cvv\textquotesingle{} =$>$ \textquotesingle{}123\textquotesingle{}, \textquotesingle{}billing\+Address1\textquotesingle{} =$>$ \textquotesingle{}1 Scrubby Creek Road\textquotesingle{}, \textquotesingle{}billing\+Country\textquotesingle{} =$>$ \textquotesingle{}AU\textquotesingle{}, \textquotesingle{}billing\+City\textquotesingle{} =$>$ \textquotesingle{}Scrubby Creek\textquotesingle{}, \textquotesingle{}billing\+Postcode\textquotesingle{} =$>$ \textquotesingle{}4999\textquotesingle{}, \textquotesingle{}billing\+State\textquotesingle{} =$>$ \textquotesingle{}QLD\textquotesingle{}, ));
+
+// Do an authorisation transaction on the gateway \$transaction = \$gateway-\/$>$authorize(array( \textquotesingle{}amount\textquotesingle{} =$>$ \textquotesingle{}10.\+00\textquotesingle{}, \textquotesingle{}currency\textquotesingle{} =$>$ \textquotesingle{}AUD\textquotesingle{}, \textquotesingle{}description\textquotesingle{} =$>$ \textquotesingle{}This is a test authorize transaction.\textquotesingle{}, \textquotesingle{}card\textquotesingle{} =$>$ \$card, )); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; if (\$response-\/$>$is\+Successful()) \{ echo \char`\"{}\+Authorize transaction was successful!\textbackslash{}n\char`\"{}; // Find the authorization ID \$auth\+\_\+id = \$response-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a514421414d937d0a743fe4319458b402}{get\+Transaction\+Reference()}}; \} 
+
+Direct credit card payment and related features are restricted in some countries. As of January 2015 these transactions are only supported in the UK and in the USA.\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_autotoc_md143}{}\doxysubparagraph{Pay\+Pal Account Authorization}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_autotoc_md143}
+This is for the use case where the customer intends to pay using their \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} account. Note that no credit card details are provided, instead both a return URL and a cancel URL are required.
+
+The optimal solution here is to provide a unique return URL and cancel URL per transaction. That way your code will know what transaction is being returned or cancelled by \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}}.
+
+So step 1 is to store some transaction data somewhere on your system so that you have an ID when your transaction returns. How you do this of course depends on what framework, database layer, etc, you are using but for this step let\textquotesingle{}s assume that you have a class set up that can save a transaction and return the object, and that you can retrieve the ID of that saved object using some call like get\+Id() on the object. Most ORMs such as Doctrine ORM, Propel or Eloquent will have some methods that will allow you to do this or something similar.
+
+{\ttfamily  \$transaction = My\+Class\+::save\+Transaction(\$some\+\_\+data); \$txn\+\_\+id = \$transaction-\/$>$get\+Id(); }
+
+Step 2 is to send the purchase request.
+
+// Do a purchase transaction on the gateway try \{ \$transaction = \$gateway-\/$>$authorize(array( \textquotesingle{}amount\textquotesingle{} =$>$ \textquotesingle{}10.\+00\textquotesingle{}, \textquotesingle{}currency\textquotesingle{} =$>$ \textquotesingle{}AUD\textquotesingle{}, \textquotesingle{}description\textquotesingle{} =$>$ \textquotesingle{}This is a test authorize transaction.\textquotesingle{}, \textquotesingle{}return\+Url\textquotesingle{} =$>$ \textquotesingle{}\href{http://mysite.com/paypal/return/?txn_id='}{\texttt{ http\+://mysite.\+com/paypal/return/?txn\+\_\+id=\textquotesingle{}}} . \$txn\+\_\+id, \textquotesingle{}cancel\+Url\textquotesingle{} =$>$ \textquotesingle{}\href{http://mysite.com/paypal/return/?txn_id='}{\texttt{ http\+://mysite.\+com/paypal/return/?txn\+\_\+id=\textquotesingle{}}} . \$txn\+\_\+id, )); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; \$data = \$response-\/$>$\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data()}}; echo \char`\"{}\+Gateway purchase response data == \char`\"{} . print\+\_\+r(\$data, true) . \char`\"{}\textbackslash{}n\char`\"{};
+
+if (\$response-\/$>$is\+Successful()) \{ echo \char`\"{}\+Step 2 was successful!\textbackslash{}n\char`\"{}; \}
+
+\} catch (\textbackslash{}\+Exception \$e) \{ echo \char`\"{}\+Exception caught while attempting authorize.\textbackslash{}n\char`\"{}; echo \char`\"{}\+Exception type == \char`\"{} . get\+\_\+class(\$e) . \char`\"{}\textbackslash{}n\char`\"{}; echo \char`\"{}\+Message == \char`\"{} . \$e-\/$>$get\+Message() . \char`\"{}\textbackslash{}n\char`\"{}; \} 
+
+Step 3 is where your code needs to redirect the customer to the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} gateway so that the customer can sign in to their \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} account and agree to authorize the payment. The response will implement an interface called Redirect\+Response\+Interface from which the redirect URL can be obtained.
+
+How you do this redirect is up to your platform, code or framework at this point. For the below example I will assume that there is a function called redirect\+To() which can handle it for you.
+
+if (\$response-\/$>$is\+Redirect()) \{ // Redirect the customer to \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} so that they can sign in and // authorize the payment. echo \char`\"{}\+The transaction is a redirect\char`\"{}; redirect\+To(\$response-\/$>$get\+Redirect\+Url()); \} 
+
+Step 4 is where the customer returns to your site. This will happen on either the return\+Url or the cancel\+Url, that you provided in the purchase() call.
+
+If the cancel\+Url is called then you can assume that the customer has not authorized the payment, therefore you can cancel the transaction.
+
+If the return\+Url is called, then you need to complete the transaction via a further call to \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}}.
+
+Note this example assumes that the authorize has been successful.
+
+The payer ID and the payment ID returned from the callback after the authorize will be passed to the return URL as GET parameters payer\+Id and payment\+Id respectively.
+
+{\ttfamily  \$payment\+Id = \$\+\_\+\+GET\mbox{[}\textquotesingle{}payment\+Id\textquotesingle{}\mbox{]}; \$payer\+Id = \$\+\_\+\+GET\mbox{[}\textquotesingle{}payer\+Id\textquotesingle{}\mbox{]};}
+
+{\ttfamily  // Once the transaction has been approved, we need to complete it. \$transaction = \$gateway-\/$>$complete\+Purchase(array( \textquotesingle{}payer\+\_\+id\textquotesingle{} =$>$ \$payer\+\_\+id, \textquotesingle{}transaction\+Reference\textquotesingle{} =$>$ \$sale\+\_\+id, )); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; if (\$response-\/$>$is\+Successful()) \{ // The customer has successfully paid. echo \char`\"{}\+Step 4 was successful!\textbackslash{}n\char`\"{}; \} else \{ // There was an error returned by complete\+Purchase(). You should // check the error code and message from \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}}, which may be something // like \char`\"{}card declined\char`\"{}, etc. \} }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_autotoc_md144}{}\doxysubparagraph{Note on Handling Error Messages}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_autotoc_md144}
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} account payments are a 2 step process. Firstly the customer needs to authorize the payment from \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} to your application. Secondly, assuming that the customer does not have enough balance to pay the invoice from their \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} balance, \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} needs to transfer the funds from the customer\textquotesingle{}s credit card to their \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} account. This transaction is between \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} and the customer, and not between the customer and you.
+
+If the second transaction fails then a call to complete\+Purchase() will return an error. However this error message will be fairly generic. For privacy reasons, \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} will not disclose to the merchant the full reason for the failure, they will only disclose this to the customer.
+
+Therefore on a failed complete\+Authorize() call you could display an error message like this one\+:
+
+"{}\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} failed to process the transaction from your card. For privacy reasons, \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} are unable to disclose to us the reason for this failure. You should try a different payment method, a different card within \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}}, or contact \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} support if you need to understand the reason for the failed transaction. \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} may advise you to use a different card if the particular card is rejected by the card issuer."{}
+
+\mbox{\hyperlink{}{\href{https://developer.paypal.com/docs/api/\#authorizations}{\texttt{ https\+://developer.\+paypal.\+com/docs/api/\#authorizations}}  \href{http://bit.ly/1wUQ33R}{\texttt{ http\+://bit.\+ly/1w\+UQ33R}}  Rest\+Capture\+Request  Rest\+Purchase\+Request }}
+
+Definition at line 216 of file Rest\+Authorize\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a592e1addd2a0ff06de6c3e29d4fa33d3}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a592e1addd2a0ff06de6c3e29d4fa33d3}} 
+\index{RestAuthorizeRequest@{RestAuthorizeRequest}!createResponse@{createResponse}}
+\index{createResponse@{createResponse}!RestAuthorizeRequest@{RestAuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{createResponse()}{createResponse()}}
+{\footnotesize\ttfamily create\+Response (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{}]{\$status\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a592e1addd2a0ff06de6c3e29d4fa33d3}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 361 of file Rest\+Authorize\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{RestAuthorizeRequest@{RestAuthorizeRequest}!getData@{getData}}
+\index{getData@{getData}!RestAuthorizeRequest@{RestAuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_purchase_request_a81a67162a6288d78fc4c55283325f0b4}{Rest\+Purchase\+Request}}.
+
+
+
+Definition at line 218 of file Rest\+Authorize\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a2e7bb35c71bf1824456ceb944cb7a845}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a2e7bb35c71bf1824456ceb944cb7a845}} 
+\index{RestAuthorizeRequest@{RestAuthorizeRequest}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!RestAuthorizeRequest@{RestAuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get transaction description.
+
+The REST API does not currently have support for passing an invoice number or transaction ID.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a2e7bb35c71bf1824456ceb944cb7a845}{Abstract\+Request}}.
+
+
+
+Definition at line 335 of file Rest\+Authorize\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{RestAuthorizeRequest@{RestAuthorizeRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!RestAuthorizeRequest@{RestAuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get transaction endpoint.
+
+Authorization of payments is done using the /payment resource.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 356 of file Rest\+Authorize\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a281d7e3744e38b49afa05cc0047e8b9e}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a281d7e3744e38b49afa05cc0047e8b9e}} 
+\index{RestAuthorizeRequest@{RestAuthorizeRequest}!getExperienceProfileId@{getExperienceProfileId}}
+\index{getExperienceProfileId@{getExperienceProfileId}!RestAuthorizeRequest@{RestAuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{getExperienceProfileId()}{getExperienceProfileId()}}
+{\footnotesize\ttfamily get\+Experience\+Profile\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the experience profile id
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 311 of file Rest\+Authorize\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a3ab66da8fd49fb7676f7440cb59f55ea}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request_a3ab66da8fd49fb7676f7440cb59f55ea}} 
+\index{RestAuthorizeRequest@{RestAuthorizeRequest}!setExperienceProfileId@{setExperienceProfileId}}
+\index{setExperienceProfileId@{setExperienceProfileId}!RestAuthorizeRequest@{RestAuthorizeRequest}}
+\doxysubsubsection{\texorpdfstring{setExperienceProfileId()}{setExperienceProfileId()}}
+{\footnotesize\ttfamily set\+Experience\+Profile\+Id (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the experience profile id
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request}{Rest\+Authorize\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 322 of file Rest\+Authorize\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/paypal/src/\+Message/\mbox{\hyperlink{_rest_authorize_request_8php}{Rest\+Authorize\+Request.\+php}}\end{DoxyCompactItemize}

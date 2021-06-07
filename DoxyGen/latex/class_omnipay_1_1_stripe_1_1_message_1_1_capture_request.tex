@@ -1,0 +1,75 @@
+\hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_capture_request}{}\doxysection{Capture\+Request Class Reference}
+\label{class_omnipay_1_1_stripe_1_1_message_1_1_capture_request}\index{CaptureRequest@{CaptureRequest}}
+Inheritance diagram for Capture\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_stripe_1_1_message_1_1_capture_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_capture_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_capture_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} Capture Request.
+
+Use this request to capture and process a previously created authorization.
+
+Example -- note this example assumes that the authorization has been successful and that the authorization ID returned from the authorization is held in \$auth\+\_\+id. See \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_authorize_request}{Authorize\+Request}} for the first part of this example transaction\+:
+
+{\ttfamily  // Once the transaction has been authorized, we can capture it for final payment. \$transaction = \$gateway-\/$>$capture(array( \textquotesingle{}amount\textquotesingle{} =$>$ \textquotesingle{}10.\+00\textquotesingle{}, \textquotesingle{}currency\textquotesingle{} =$>$ \textquotesingle{}AUD\textquotesingle{}, )); \$transaction-\/$>$set\+Transaction\+Reference(\$auth\+\_\+id); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; }
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_authorize_request}{Authorize\+Request}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 29 of file Capture\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_capture_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_stripe_1_1_message_1_1_capture_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{CaptureRequest@{CaptureRequest}!getData@{getData}}
+\index{getData@{getData}!CaptureRequest@{CaptureRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 31 of file Capture\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_capture_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_stripe_1_1_message_1_1_capture_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{CaptureRequest@{CaptureRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!CaptureRequest@{CaptureRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Request}}.
+
+
+
+Definition at line 44 of file Capture\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/stripe/src/\+Message/\mbox{\hyperlink{stripe_2src_2_message_2_capture_request_8php}{Capture\+Request.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+\hypertarget{class_guzzle_1_1_iterator_1_1_filter_iterator}{}\doxysection{Filter\+Iterator Class Reference}
+\label{class_guzzle_1_1_iterator_1_1_filter_iterator}\index{FilterIterator@{FilterIterator}}
+Inheritance diagram for Filter\+Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_iterator_1_1_filter_iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_iterator_1_1_filter_iterator_a0d0695895ef39e6f6f77879ec735e479}{\+\_\+\+\_\+construct}} (\textbackslash{}Iterator \$iterator, \$callback)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_iterator_1_1_filter_iterator_acb64affba32059c09533892d9ded224a}{accept}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_iterator_1_1_filter_iterator_abc7c2ac0d93d22f71221e8b60512c860}{\$callback}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Filters values using a callback
+
+Used when PHP 5.\+4\textquotesingle{}s \{\begin{DoxySeeAlso}{See also}
+\textbackslash{}\+Callback\+Filter\+Iterator\} is not available 
+\end{DoxySeeAlso}
+
+
+Definition at line 12 of file Filter\+Iterator.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_iterator_1_1_filter_iterator_a0d0695895ef39e6f6f77879ec735e479}\label{class_guzzle_1_1_iterator_1_1_filter_iterator_a0d0695895ef39e6f6f77879ec735e479}} 
+\index{FilterIterator@{FilterIterator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FilterIterator@{FilterIterator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\textbackslash{}Iterator}]{\$iterator,  }\item[{}]{\$callback }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Iterator & {\em \$iterator} & Traversable iterator \\
+\hline
+array | \textbackslash{}\+Closure & {\em \$callback} & Callback used for filtering. Return true to keep or false to filter.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & if the callback if not callable \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 23 of file Filter\+Iterator.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_iterator_1_1_filter_iterator_acb64affba32059c09533892d9ded224a}\label{class_guzzle_1_1_iterator_1_1_filter_iterator_acb64affba32059c09533892d9ded224a}} 
+\index{FilterIterator@{FilterIterator}!accept@{accept}}
+\index{accept@{accept}!FilterIterator@{FilterIterator}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file Filter\+Iterator.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_iterator_1_1_filter_iterator_abc7c2ac0d93d22f71221e8b60512c860}\label{class_guzzle_1_1_iterator_1_1_filter_iterator_abc7c2ac0d93d22f71221e8b60512c860}} 
+\index{FilterIterator@{FilterIterator}!\$callback@{\$callback}}
+\index{\$callback@{\$callback}!FilterIterator@{FilterIterator}}
+\doxysubsubsection{\texorpdfstring{\$callback}{$callback}}
+{\footnotesize\ttfamily \$callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 15 of file Filter\+Iterator.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Iterator/\mbox{\hyperlink{_filter_iterator_8php}{Filter\+Iterator.\+php}}\end{DoxyCompactItemize}

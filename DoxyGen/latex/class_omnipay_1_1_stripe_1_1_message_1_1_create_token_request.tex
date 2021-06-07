@@ -1,0 +1,134 @@
+\hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request}{}\doxysection{Create\+Token\+Request Class Reference}
+\label{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request}\index{CreateTokenRequest@{CreateTokenRequest}}
+Inheritance diagram for Create\+Token\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_acb1e21155b2a02174a42fe6c3df53aed}{set\+Card}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_a59c53de9321b85505579482365325c24}{set\+Customer}} (\$customer)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_stripe_1_1_message}{Message}} which creates a new card token, or in a Connect API workflow can be used to share clients between the platform and the connected accounts.
+
+Creates a single use token that wraps the details of a credit card. This token can be used in place of a credit card dictionary with any API method. These tokens can only be used once\+: by creating a new charge object, or attaching them to a customer.
+
+In most cases, you should create tokens client-\/side using Checkout, Elements, or our mobile libraries, instead of using the API.
+
+\mbox{\hyperlink{}{https\+://stripe.\+com/docs/api\#create\+\_\+card\+\_\+token}}
+
+Definition at line 22 of file Create\+Token\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{CreateTokenRequest@{CreateTokenRequest}!getData@{getData}}
+\index{getData@{getData}!CreateTokenRequest@{CreateTokenRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement. \begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Request\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 53 of file Create\+Token\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{CreateTokenRequest@{CreateTokenRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!CreateTokenRequest@{CreateTokenRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string The endpoint for the create token request. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Request}}.
+
+
+
+Definition at line 73 of file Create\+Token\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_acb1e21155b2a02174a42fe6c3df53aed}\label{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_acb1e21155b2a02174a42fe6c3df53aed}} 
+\index{CreateTokenRequest@{CreateTokenRequest}!setCard@{setCard}}
+\index{setCard@{setCard}!CreateTokenRequest@{CreateTokenRequest}}
+\doxysubsubsection{\texorpdfstring{setCard()}{setCard()}}
+{\footnotesize\ttfamily set\+Card (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Sets the card.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_credit_card}{Credit\+Card}} & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request}{Abstract\+Request}} Provides a fluent interface
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Credit\+Card & {\em \$value} & Credit card object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Abstract\+Request \$this 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_acb1e21155b2a02174a42fe6c3df53aed}{Abstract\+Request}}.
+
+
+
+Definition at line 30 of file Create\+Token\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_a59c53de9321b85505579482365325c24}\label{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_a59c53de9321b85505579482365325c24}} 
+\index{CreateTokenRequest@{CreateTokenRequest}!setCustomer@{setCustomer}}
+\index{setCustomer@{setCustomer}!CreateTokenRequest@{CreateTokenRequest}}
+\doxysubsubsection{\texorpdfstring{setCustomer()}{setCustomer()}}
+{\footnotesize\ttfamily set\+Customer (\begin{DoxyParamCaption}\item[{}]{\$customer }\end{DoxyParamCaption})}
+
+The id of the customer with format cus\+\_\+$<$identifier$>$. {\bfseries{Only use this if you are using Connect API}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$customer} & The id of the customer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Abstract\+Request$\vert$\textbackslash{}\+Omnipay\textbackslash{}\+Stripe\textbackslash{}\+Message\textbackslash{}\+Create\+Token\+Request 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file Create\+Token\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/stripe/src/\+Message/\mbox{\hyperlink{_create_token_request_8php}{Create\+Token\+Request.\+php}}\end{DoxyCompactItemize}

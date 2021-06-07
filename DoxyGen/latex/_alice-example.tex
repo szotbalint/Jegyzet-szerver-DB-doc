@@ -1,0 +1,20 @@
+\hypertarget{_alice-example}{}\doxysection{Alice}
+Generate a text string by the Markov chain algorithm.
+
+Depending on the \$max\+Nb\+Chars, returns a random valid looking text. The algorithm generates a weighted table with the specified number of words as the index and the possible following words as the value.
+
+, swallowing down her flamingo, and began by taking the little golden key\textquotesingle{} 
+\begin{DoxyParams}[1]{Parameters}
+integer & {\em \$max\+Nb\+Chars} & Maximum number of characters the text should contain (minimum\+: 10) \\
+\hline
+integer & {\em \$index\+Size} & Determines how many words are considered for the generation of the next word. The minimum is 1, and it produces the higher level of randomness, although the generated text usually doesn\textquotesingle{}t make sense. Higher index sizes (up to 5) produce more correct text, at the price of less randomness. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyCodeInclude}{0}
+
+\end{DoxyCodeInclude}
+ 

@@ -1,0 +1,52 @@
+
+\begin{DoxyItemize}
+\item \href{\#upgrade-1.1}{\texttt{ Upgrading to 1.\+1 from 1.\+0}}
+\item \href{\#upgrade-1.4}{\texttt{ Upgrading to 1.\+4 from 1.\+3}}
+\end{DoxyItemize}
+
+\label{_upgrade-1.1}%
+ \hypertarget{md_rainlab_user__u_p_g_r_a_d_e_autotoc_md543}{}\doxysection{Upgrading To 1.\+1}\label{md_rainlab_user__u_p_g_r_a_d_e_autotoc_md543}
+The User plugin has been split apart in to smaller more manageable plugins. These fields are no longer provided by the User plugin\+: {\ttfamily company}, {\ttfamily phone}, {\ttfamily street\+\_\+addr}, {\ttfamily city}, {\ttfamily zip}, {\ttfamily country}, {\ttfamily state}. This is a non-\/destructive upgrade so the columns will remain in the database untouched.
+
+Country and State models have been removed and can be replaced by installing the plugin {\bfseries{Rain\+Lab.\+Location}}. The remaining profiles fields can be replaced by installing the plugin {\bfseries{Rain\+Lab.\+User\+Plus}}.
+
+In short, to retain the old functionaliy simply install the following plugins\+:
+
+
+\begin{DoxyItemize}
+\item Rain\+Lab.\+Location
+\item Rain\+Lab.\+User\+Plus
+\end{DoxyItemize}
+
+\label{_upgrade-1.4}%
+ \hypertarget{md_rainlab_user__u_p_g_r_a_d_e_autotoc_md544}{}\doxysection{Upgrading To 1.\+4}\label{md_rainlab_user__u_p_g_r_a_d_e_autotoc_md544}
+The Notifications tab in User settings has been removed. This feature has been replaced by the \href{https://octobercms.com/plugin/rainlab-notify}{\texttt{ Notify plugin}}. How to replace this feature\+:
+
+
+\begin{DoxyEnumerate}
+\item Install the {\ttfamily Rain\+Lab.\+Notify} plugin
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Navigate to Settings $>$ Notification rules
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Click {\bfseries{New notification}} rule
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Select User $>$ {\bfseries{Activated}}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Click {\bfseries{Add action}}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Select {\bfseries{Compose a mail message}}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Select {\bfseries{User email address}} for the {\bfseries{Send to field}}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Here you may select the {\bfseries{Mail template}} previously defined in the user settings.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Click {\bfseries{Save}} 
+\end{DoxyEnumerate}

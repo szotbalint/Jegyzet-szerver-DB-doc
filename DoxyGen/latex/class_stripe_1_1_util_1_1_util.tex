@@ -1,0 +1,108 @@
+\hypertarget{class_stripe_1_1_util_1_1_util}{}\doxysection{Util Class Reference}
+\label{class_stripe_1_1_util_1_1_util}\index{Util@{Util}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_util_1_1_util_a0b6733154ecabad079e639ed6c60655a}{is\+List}} (\$array)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_util_1_1_util_a282dc1f7ca4fabf63d75c1709d64d503}{convert\+Stripe\+Object\+To\+Array}} (\$values)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_util_1_1_util_acc7c89a9c275e7e4b51371227bb3a845}{convert\+To\+Stripe\+Object}} (\$resp, \$opts)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_util_1_1_util_ade9c008bebb5dc1a18dc1b2e9da3dbf2}{utf8}} (\$value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 7 of file Util.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stripe_1_1_util_1_1_util_a282dc1f7ca4fabf63d75c1709d64d503}\label{class_stripe_1_1_util_1_1_util_a282dc1f7ca4fabf63d75c1709d64d503}} 
+\index{Util@{Util}!convertStripeObjectToArray@{convertStripeObjectToArray}}
+\index{convertStripeObjectToArray@{convertStripeObjectToArray}!Util@{Util}}
+\doxysubsubsection{\texorpdfstring{convertStripeObjectToArray()}{convertStripeObjectToArray()}}
+{\footnotesize\ttfamily static convert\+Stripe\+Object\+To\+Array (\begin{DoxyParamCaption}\item[{}]{\$values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Recursively converts the PHP \mbox{\hyperlink{class_stripe_1_1_stripe}{Stripe}} object to an array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$values} & The PHP \mbox{\hyperlink{class_stripe_1_1_stripe}{Stripe}} object to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Util.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_util_1_1_util_acc7c89a9c275e7e4b51371227bb3a845}\label{class_stripe_1_1_util_1_1_util_acc7c89a9c275e7e4b51371227bb3a845}} 
+\index{Util@{Util}!convertToStripeObject@{convertToStripeObject}}
+\index{convertToStripeObject@{convertToStripeObject}!Util@{Util}}
+\doxysubsubsection{\texorpdfstring{convertToStripeObject()}{convertToStripeObject()}}
+{\footnotesize\ttfamily static convert\+To\+Stripe\+Object (\begin{DoxyParamCaption}\item[{}]{\$resp,  }\item[{}]{\$opts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Converts a response from the \mbox{\hyperlink{class_stripe_1_1_stripe}{Stripe}} API to the corresponding PHP object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$resp} & The response from the \mbox{\hyperlink{class_stripe_1_1_stripe}{Stripe}} API. \\
+\hline
+array & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stripe\+Object$\vert$array 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file Util.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_util_1_1_util_a0b6733154ecabad079e639ed6c60655a}\label{class_stripe_1_1_util_1_1_util_a0b6733154ecabad079e639ed6c60655a}} 
+\index{Util@{Util}!isList@{isList}}
+\index{isList@{isList}!Util@{Util}}
+\doxysubsubsection{\texorpdfstring{isList()}{isList()}}
+{\footnotesize\ttfamily static is\+List (\begin{DoxyParamCaption}\item[{}]{\$array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Whether the provided array (or other) is a list rather than a dictionary.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | mixed & {\em \$array} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the given object is a list. 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file Util.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_util_1_1_util_ade9c008bebb5dc1a18dc1b2e9da3dbf2}\label{class_stripe_1_1_util_1_1_util_ade9c008bebb5dc1a18dc1b2e9da3dbf2}} 
+\index{Util@{Util}!utf8@{utf8}}
+\index{utf8@{utf8}!Util@{Util}}
+\doxysubsubsection{\texorpdfstring{utf8()}{utf8()}}
+{\footnotesize\ttfamily static utf8 (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | mixed & {\em \$value} & A string to UTF8-\/encode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$mixed The UTF8-\/encoded string, or the object passed in if it wasn\textquotesingle{}t a string. 
+\end{DoxyReturn}
+
+
+Definition at line 123 of file Util.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/stripe/stripe-\/php/lib/\+Util/\mbox{\hyperlink{_util_8php}{Util.\+php}}\end{DoxyCompactItemize}

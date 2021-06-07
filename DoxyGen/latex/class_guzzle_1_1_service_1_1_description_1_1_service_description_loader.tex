@@ -1,0 +1,81 @@
+\hypertarget{class_guzzle_1_1_service_1_1_description_1_1_service_description_loader}{}\doxysection{Service\+Description\+Loader Class Reference}
+\label{class_guzzle_1_1_service_1_1_description_1_1_service_description_loader}\index{ServiceDescriptionLoader@{ServiceDescriptionLoader}}
+Inheritance diagram for Service\+Description\+Loader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_service_1_1_description_1_1_service_description_loader}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_service_description_loader_a3f1a227880676cb3fcdf15852b2391ca}{build}} (\$config, array \$options)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_service_description_loader_a703f66212913b63c9f8ea162f94540ed}{resolve\+Extension}} (\$name, array \&\$op, array \&\$operations)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Loader for service descriptions 
+
+Definition at line 11 of file Service\+Description\+Loader.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_service_description_loader_a3f1a227880676cb3fcdf15852b2391ca}\label{class_guzzle_1_1_service_1_1_description_1_1_service_description_loader_a3f1a227880676cb3fcdf15852b2391ca}} 
+\index{ServiceDescriptionLoader@{ServiceDescriptionLoader}!build@{build}}
+\index{build@{build}!ServiceDescriptionLoader@{ServiceDescriptionLoader}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily build (\begin{DoxyParamCaption}\item[{}]{\$config,  }\item[{array}]{\$options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Perform the parsing of a config file and create the end result
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$config} & Configuration data \\
+\hline
+array & {\em \$options} & Options to use when building\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_service_1_1_abstract_config_loader_a3f1a227880676cb3fcdf15852b2391ca}{Abstract\+Config\+Loader}}.
+
+
+
+Definition at line 13 of file Service\+Description\+Loader.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_service_description_loader_a703f66212913b63c9f8ea162f94540ed}\label{class_guzzle_1_1_service_1_1_description_1_1_service_description_loader_a703f66212913b63c9f8ea162f94540ed}} 
+\index{ServiceDescriptionLoader@{ServiceDescriptionLoader}!resolveExtension@{resolveExtension}}
+\index{resolveExtension@{resolveExtension}!ServiceDescriptionLoader@{ServiceDescriptionLoader}}
+\doxysubsubsection{\texorpdfstring{resolveExtension()}{resolveExtension()}}
+{\footnotesize\ttfamily resolve\+Extension (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{array \&}]{\$op,  }\item[{array \&}]{\$operations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the operation \\
+\hline
+array & {\em \$op} & \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_operation}{Operation}} value array \\
+\hline
+array & {\em \$operations} & Currently loaded operations \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Description\+Builder\+Exception} & when extending a non-\/existent operation \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 43 of file Service\+Description\+Loader.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Description/\mbox{\hyperlink{_service_description_loader_8php}{Service\+Description\+Loader.\+php}}\end{DoxyCompactItemize}

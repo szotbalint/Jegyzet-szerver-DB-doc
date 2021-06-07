@@ -1,0 +1,243 @@
+\hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter}{}\doxysection{Schema\+Formatter Class Reference}
+\label{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter}\index{SchemaFormatter@{SchemaFormatter}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_aabb9ff44a80eb6755e11f9be21677563}{format}} (\$format, \$value)
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_ad442b9abc98942fe4c4f3e7b6c1379b5}{format\+Date\+Time}} (\$value)
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_afebabcdc58d6a9f9df228e94778dbc32}{format\+Date\+Time\+Http}} (\$value)
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_ac384ecf530fb04bf8702d4434b9d2ad3}{format\+Date}} (\$value)
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a339a2a629eac1912adb0c72901a3a402}{format\+Time}} (\$value)
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a5d3e7cbbafdefec5fc97ddd0929a25de}{format\+Boolean\+As\+String}} (\$value)
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a5b67ae12c76fcff22621220f5d030c21}{format\+Timestamp}} (\$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a16c6eb3f822a0a29075cdd66d4e18753}{get\+Utc\+Time\+Zone}} ()
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_afdd8123905696c58dab20c62a27a9703}{date\+Formatter}} (\$date\+Time, \$\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_aabb9ff44a80eb6755e11f9be21677563}{format}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a1743a778c45212b337f33372c50c95c6}{\$utc\+Time\+Zone}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+JSON Schema formatter class 
+
+Definition at line 10 of file Schema\+Formatter.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_afdd8123905696c58dab20c62a27a9703}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_afdd8123905696c58dab20c62a27a9703}} 
+\index{SchemaFormatter@{SchemaFormatter}!dateFormatter@{dateFormatter}}
+\index{dateFormatter@{dateFormatter}!SchemaFormatter@{SchemaFormatter}}
+\doxysubsubsection{\texorpdfstring{dateFormatter()}{dateFormatter()}}
+{\footnotesize\ttfamily static date\+Formatter (\begin{DoxyParamCaption}\item[{}]{\$date\+Time,  }\item[{}]{\$format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Perform the actual Date\+Time formatting
+
+
+\begin{DoxyParams}[1]{Parameters}
+int | string | \textbackslash{}\+Date\+Time & {\em \$date\+Time} & Date time value \\
+\hline
+string & {\em \$format} & Format of the result\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 140 of file Schema\+Formatter.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_aabb9ff44a80eb6755e11f9be21677563}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_aabb9ff44a80eb6755e11f9be21677563}} 
+\index{SchemaFormatter@{SchemaFormatter}!format@{format}}
+\index{format@{format}!SchemaFormatter@{SchemaFormatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily static format (\begin{DoxyParamCaption}\item[{}]{\$format,  }\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Format a value by a registered format name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$format} & Registered format used to format the value \\
+\hline
+mixed & {\em \$value} & Value being formatted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file Schema\+Formatter.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a5d3e7cbbafdefec5fc97ddd0929a25de}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a5d3e7cbbafdefec5fc97ddd0929a25de}} 
+\index{SchemaFormatter@{SchemaFormatter}!formatBooleanAsString@{formatBooleanAsString}}
+\index{formatBooleanAsString@{formatBooleanAsString}!SchemaFormatter@{SchemaFormatter}}
+\doxysubsubsection{\texorpdfstring{formatBooleanAsString()}{formatBooleanAsString()}}
+{\footnotesize\ttfamily static format\+Boolean\+As\+String (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Formats a boolean value as a string
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | integer | bool & {\em \$value} & Value to convert to a boolean \textquotesingle{}true\textquotesingle{} / \textquotesingle{}false\textquotesingle{} value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 98 of file Schema\+Formatter.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_ac384ecf530fb04bf8702d4434b9d2ad3}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_ac384ecf530fb04bf8702d4434b9d2ad3}} 
+\index{SchemaFormatter@{SchemaFormatter}!formatDate@{formatDate}}
+\index{formatDate@{formatDate}!SchemaFormatter@{SchemaFormatter}}
+\doxysubsubsection{\texorpdfstring{formatDate()}{formatDate()}}
+{\footnotesize\ttfamily static format\+Date (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a YYYY-\/\+MM-\/\+DD formatted string
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | integer | \textbackslash{}\+Date\+Time & {\em \$value} & Date time value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file Schema\+Formatter.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_ad442b9abc98942fe4c4f3e7b6c1379b5}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_ad442b9abc98942fe4c4f3e7b6c1379b5}} 
+\index{SchemaFormatter@{SchemaFormatter}!formatDateTime@{formatDateTime}}
+\index{formatDateTime@{formatDateTime}!SchemaFormatter@{SchemaFormatter}}
+\doxysubsubsection{\texorpdfstring{formatDateTime()}{formatDateTime()}}
+{\footnotesize\ttfamily static format\+Date\+Time (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a ISO 8601 (YYYY-\/\+MM-\/\+DDThh\+:mm\+:ssZ) formatted date time value in UTC time
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | integer | \textbackslash{}\+Date\+Time & {\em \$value} & Date time value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file Schema\+Formatter.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_afebabcdc58d6a9f9df228e94778dbc32}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_afebabcdc58d6a9f9df228e94778dbc32}} 
+\index{SchemaFormatter@{SchemaFormatter}!formatDateTimeHttp@{formatDateTimeHttp}}
+\index{formatDateTimeHttp@{formatDateTimeHttp}!SchemaFormatter@{SchemaFormatter}}
+\doxysubsubsection{\texorpdfstring{formatDateTimeHttp()}{formatDateTimeHttp()}}
+{\footnotesize\ttfamily static format\+Date\+Time\+Http (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create an HTTP date (RFC 1123 / RFC 822) formatted UTC date-\/time string
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | integer | \textbackslash{}\+Date\+Time & {\em \$value} & Date time value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file Schema\+Formatter.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a339a2a629eac1912adb0c72901a3a402}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a339a2a629eac1912adb0c72901a3a402}} 
+\index{SchemaFormatter@{SchemaFormatter}!formatTime@{formatTime}}
+\index{formatTime@{formatTime}!SchemaFormatter@{SchemaFormatter}}
+\doxysubsubsection{\texorpdfstring{formatTime()}{formatTime()}}
+{\footnotesize\ttfamily static format\+Time (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a hh\+:mm\+:ss formatted string
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | integer | \textbackslash{}\+Date\+Time & {\em \$value} & Date time value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file Schema\+Formatter.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a5b67ae12c76fcff22621220f5d030c21}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a5b67ae12c76fcff22621220f5d030c21}} 
+\index{SchemaFormatter@{SchemaFormatter}!formatTimestamp@{formatTimestamp}}
+\index{formatTimestamp@{formatTimestamp}!SchemaFormatter@{SchemaFormatter}}
+\doxysubsubsection{\texorpdfstring{formatTimestamp()}{formatTimestamp()}}
+{\footnotesize\ttfamily static format\+Timestamp (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Return a UNIX timestamp in the UTC timezone
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | integer | \textbackslash{}\+Date\+Time & {\em \$value} & Time value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file Schema\+Formatter.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a16c6eb3f822a0a29075cdd66d4e18753}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a16c6eb3f822a0a29075cdd66d4e18753}} 
+\index{SchemaFormatter@{SchemaFormatter}!getUtcTimeZone@{getUtcTimeZone}}
+\index{getUtcTimeZone@{getUtcTimeZone}!SchemaFormatter@{SchemaFormatter}}
+\doxysubsubsection{\texorpdfstring{getUtcTimeZone()}{getUtcTimeZone()}}
+{\footnotesize\ttfamily static get\+Utc\+Time\+Zone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Get a UTC Date\+Time\+Zone object
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Date\+Time\+Zone 
+\end{DoxyReturn}
+
+
+Definition at line 120 of file Schema\+Formatter.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a1743a778c45212b337f33372c50c95c6}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_formatter_a1743a778c45212b337f33372c50c95c6}} 
+\index{SchemaFormatter@{SchemaFormatter}!\$utcTimeZone@{\$utcTimeZone}}
+\index{\$utcTimeZone@{\$utcTimeZone}!SchemaFormatter@{SchemaFormatter}}
+\doxysubsubsection{\texorpdfstring{\$utcTimeZone}{$utcTimeZone}}
+{\footnotesize\ttfamily \$utc\+Time\+Zone\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file Schema\+Formatter.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Description/\mbox{\hyperlink{_schema_formatter_8php}{Schema\+Formatter.\+php}}\end{DoxyCompactItemize}

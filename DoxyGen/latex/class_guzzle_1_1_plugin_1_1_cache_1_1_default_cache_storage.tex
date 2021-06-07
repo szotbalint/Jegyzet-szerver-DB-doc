@@ -1,0 +1,238 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage}{}\doxysection{Default\+Cache\+Storage Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage}\index{DefaultCacheStorage@{DefaultCacheStorage}}
+Inheritance diagram for Default\+Cache\+Storage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a0ba263cf7f2fa1fd727831bc1b329f51}{\+\_\+\+\_\+construct}} (\$\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a45a5439eaa0c506cb640aff80eab1ae1}{cache}}, \$key\+Prefix=\textquotesingle{}\textquotesingle{}, \$default\+Ttl=3600)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a45a5439eaa0c506cb640aff80eab1ae1}{cache}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}} \$response)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_ad19442bdcb8b20d50e65a2256bfd5306}{delete}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a8bbb772ff32d35c2461f801260559d74}{purge}} (\$url)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a8ac14feb76ace5df963c1b8ae6a6fc23}{fetch}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a1ac50c49d058fd2facac6d8e60091b33}{get\+Cache\+Key}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a7d5b5e36ee6b393641b1cd2de54e9365}{get\+Body\+Key}} (\$url, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface}{Entity\+Body\+Interface}} \$body)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a7181898a9770edd7d1f7ab2175c215f2}{\$key\+Prefix}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_ac2dc76d756ec398393d4b1d23659276c}{\$cache}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_abc1315a5d0337283ba317384dd77056c}{\$default\+Ttl}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Default cache storage implementation 
+
+Definition at line 16 of file Default\+Cache\+Storage.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a0ba263cf7f2fa1fd727831bc1b329f51}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a0ba263cf7f2fa1fd727831bc1b329f51}} 
+\index{DefaultCacheStorage@{DefaultCacheStorage}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DefaultCacheStorage@{DefaultCacheStorage}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$cache,  }\item[{}]{\$key\+Prefix = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$default\+Ttl = {\ttfamily 3600} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$cache} & \mbox{\hyperlink{namespace_guzzle_1_1_plugin_1_1_cache}{Cache}} used to store cache data \\
+\hline
+string & {\em \$key\+Prefix} & Provide an optional key prefix to prefix on all cache keys \\
+\hline
+int & {\em \$default\+Ttl} & Default cache TTL \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file Default\+Cache\+Storage.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a45a5439eaa0c506cb640aff80eab1ae1}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a45a5439eaa0c506cb640aff80eab1ae1}} 
+\index{DefaultCacheStorage@{DefaultCacheStorage}!cache@{cache}}
+\index{cache@{cache}!DefaultCacheStorage@{DefaultCacheStorage}}
+\doxysubsubsection{\texorpdfstring{cache()}{cache()}}
+{\footnotesize\ttfamily cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}}}]{\$response }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{namespace_guzzle_1_1_plugin_1_1_cache}{Cache}} an HTTP request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request being cached \\
+\hline
+Response & {\em \$response} & Response to cache \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a45a5439eaa0c506cb640aff80eab1ae1}{Cache\+Storage\+Interface}}.
+
+
+
+Definition at line 39 of file Default\+Cache\+Storage.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_ad19442bdcb8b20d50e65a2256bfd5306}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_ad19442bdcb8b20d50e65a2256bfd5306}} 
+\index{DefaultCacheStorage@{DefaultCacheStorage}!delete@{delete}}
+\index{delete@{delete}!DefaultCacheStorage@{DefaultCacheStorage}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+Deletes cache entries that match a request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to delete from cache \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_ad19442bdcb8b20d50e65a2256bfd5306}{Cache\+Storage\+Interface}}.
+
+
+
+Definition at line 102 of file Default\+Cache\+Storage.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a8ac14feb76ace5df963c1b8ae6a6fc23}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a8ac14feb76ace5df963c1b8ae6a6fc23}} 
+\index{DefaultCacheStorage@{DefaultCacheStorage}!fetch@{fetch}}
+\index{fetch@{fetch}!DefaultCacheStorage@{DefaultCacheStorage}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}}
+{\footnotesize\ttfamily fetch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+Get a Response from the cache for a request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null$\vert$\+Response 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a8ac14feb76ace5df963c1b8ae6a6fc23}{Cache\+Storage\+Interface}}.
+
+
+
+Definition at line 123 of file Default\+Cache\+Storage.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a7d5b5e36ee6b393641b1cd2de54e9365}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a7d5b5e36ee6b393641b1cd2de54e9365}} 
+\index{DefaultCacheStorage@{DefaultCacheStorage}!getBodyKey@{getBodyKey}}
+\index{getBodyKey@{getBodyKey}!DefaultCacheStorage@{DefaultCacheStorage}}
+\doxysubsubsection{\texorpdfstring{getBodyKey()}{getBodyKey()}}
+{\footnotesize\ttfamily get\+Body\+Key (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface}{Entity\+Body\+Interface}}}]{\$body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create a cache key for a response\textquotesingle{}s body
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & URL of the entry \\
+\hline
+Entity\+Body\+Interface & {\em \$body} & Response body\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 204 of file Default\+Cache\+Storage.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a1ac50c49d058fd2facac6d8e60091b33}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a1ac50c49d058fd2facac6d8e60091b33}} 
+\index{DefaultCacheStorage@{DefaultCacheStorage}!getCacheKey@{getCacheKey}}
+\index{getCacheKey@{getCacheKey}!DefaultCacheStorage@{DefaultCacheStorage}}
+\doxysubsubsection{\texorpdfstring{getCacheKey()}{getCacheKey()}}
+{\footnotesize\ttfamily get\+Cache\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Hash a request URL into a string that returns cache metadata
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 181 of file Default\+Cache\+Storage.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a8bbb772ff32d35c2461f801260559d74}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a8bbb772ff32d35c2461f801260559d74}} 
+\index{DefaultCacheStorage@{DefaultCacheStorage}!purge@{purge}}
+\index{purge@{purge}!DefaultCacheStorage@{DefaultCacheStorage}}
+\doxysubsubsection{\texorpdfstring{purge()}{purge()}}
+{\footnotesize\ttfamily purge (\begin{DoxyParamCaption}\item[{}]{\$url }\end{DoxyParamCaption})}
+
+Purge all cache entries for a given URL
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a8bbb772ff32d35c2461f801260559d74}{Cache\+Storage\+Interface}}.
+
+
+
+Definition at line 116 of file Default\+Cache\+Storage.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_ac2dc76d756ec398393d4b1d23659276c}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_ac2dc76d756ec398393d4b1d23659276c}} 
+\index{DefaultCacheStorage@{DefaultCacheStorage}!\$cache@{\$cache}}
+\index{\$cache@{\$cache}!DefaultCacheStorage@{DefaultCacheStorage}}
+\doxysubsubsection{\texorpdfstring{\$cache}{$cache}}
+{\footnotesize\ttfamily \$\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a45a5439eaa0c506cb640aff80eab1ae1}{cache}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 22 of file Default\+Cache\+Storage.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_abc1315a5d0337283ba317384dd77056c}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_abc1315a5d0337283ba317384dd77056c}} 
+\index{DefaultCacheStorage@{DefaultCacheStorage}!\$defaultTtl@{\$defaultTtl}}
+\index{\$defaultTtl@{\$defaultTtl}!DefaultCacheStorage@{DefaultCacheStorage}}
+\doxysubsubsection{\texorpdfstring{\$defaultTtl}{$defaultTtl}}
+{\footnotesize\ttfamily \$default\+Ttl\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Default\+Cache\+Storage.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a7181898a9770edd7d1f7ab2175c215f2}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a7181898a9770edd7d1f7ab2175c215f2}} 
+\index{DefaultCacheStorage@{DefaultCacheStorage}!\$keyPrefix@{\$keyPrefix}}
+\index{\$keyPrefix@{\$keyPrefix}!DefaultCacheStorage@{DefaultCacheStorage}}
+\doxysubsubsection{\texorpdfstring{\$keyPrefix}{$keyPrefix}}
+{\footnotesize\ttfamily \$key\+Prefix\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 19 of file Default\+Cache\+Storage.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Cache/\mbox{\hyperlink{_default_cache_storage_8php}{Default\+Cache\+Storage.\+php}}\end{DoxyCompactItemize}

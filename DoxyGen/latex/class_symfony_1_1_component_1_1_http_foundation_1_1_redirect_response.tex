@@ -1,0 +1,162 @@
+\hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response}{}\doxysection{Redirect\+Response Class Reference}
+\label{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response}\index{RedirectResponse@{RedirectResponse}}
+Inheritance diagram for Redirect\+Response\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a480136141c48db21fdfad65cc5dc91b1}{\+\_\+\+\_\+construct}} (\$url, \$status=302, \$headers=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a080c6284b1782460a43446ec7fd29c55}{get\+Target\+Url}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a0a00d8c996a49183b434e759911ad872}{set\+Target\+Url}} (\$url)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a3a4580dc79113edaf6e36e61f1f8d2cd}{create}} (\$url=\textquotesingle{}\textquotesingle{}, \$status=302, \$headers=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a6c5a06f74980aac4e743768ff3c88be0}{\$target\+Url}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response}{Redirect\+Response}} represents an HTTP response doing a redirect.
+
+\begin{DoxyAuthor}{Author}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\texttt{ fabien@symfony.\+com}} 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file Redirect\+Response.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a480136141c48db21fdfad65cc5dc91b1}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a480136141c48db21fdfad65cc5dc91b1}} 
+\index{RedirectResponse@{RedirectResponse}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!RedirectResponse@{RedirectResponse}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$status = {\ttfamily 302},  }\item[{}]{\$headers = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Creates a redirect response so that it conforms to the rules defined for a redirect status code.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & The URL to redirect to. The URL should be a full URL, with schema etc., but practically every browser redirects on paths only as well \\
+\hline
+int & {\em \$status} & The status code (302 by default) \\
+\hline
+array & {\em \$headers} & The headers (Location is always set to the given URL)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_response_accc48099f22d3dfb1c99ea4cb65182b0}{Response}}.
+
+
+
+Definition at line 35 of file Redirect\+Response.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a3a4580dc79113edaf6e36e61f1f8d2cd}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a3a4580dc79113edaf6e36e61f1f8d2cd}} 
+\index{RedirectResponse@{RedirectResponse}!create@{create}}
+\index{create@{create}!RedirectResponse@{RedirectResponse}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static create (\begin{DoxyParamCaption}\item[{}]{\$url = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$status = {\ttfamily 302},  }\item[{}]{\$headers = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Factory method for chainability.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & The url to redirect to \\
+\hline
+int & {\em \$status} & The response status code \\
+\hline
+array & {\em \$headers} & An array of response headers\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_response_a6b3e812cefe9a04b9ab80564dfabfa7e}{Response}}.
+
+
+
+Definition at line 59 of file Redirect\+Response.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a080c6284b1782460a43446ec7fd29c55}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a080c6284b1782460a43446ec7fd29c55}} 
+\index{RedirectResponse@{RedirectResponse}!getTargetUrl@{getTargetUrl}}
+\index{getTargetUrl@{getTargetUrl}!RedirectResponse@{RedirectResponse}}
+\doxysubsubsection{\texorpdfstring{getTargetUrl()}{getTargetUrl()}}
+{\footnotesize\ttfamily get\+Target\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the target URL.
+
+\begin{DoxyReturn}{Returns}
+string target URL 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file Redirect\+Response.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a0a00d8c996a49183b434e759911ad872}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a0a00d8c996a49183b434e759911ad872}} 
+\index{RedirectResponse@{RedirectResponse}!setTargetUrl@{setTargetUrl}}
+\index{setTargetUrl@{setTargetUrl}!RedirectResponse@{RedirectResponse}}
+\doxysubsubsection{\texorpdfstring{setTargetUrl()}{setTargetUrl()}}
+{\footnotesize\ttfamily set\+Target\+Url (\begin{DoxyParamCaption}\item[{}]{\$url }\end{DoxyParamCaption})}
+
+Sets the redirect target of this response.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & The URL to redirect to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 83 of file Redirect\+Response.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a6c5a06f74980aac4e743768ff3c88be0}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_redirect_response_a6c5a06f74980aac4e743768ff3c88be0}} 
+\index{RedirectResponse@{RedirectResponse}!\$targetUrl@{\$targetUrl}}
+\index{\$targetUrl@{\$targetUrl}!RedirectResponse@{RedirectResponse}}
+\doxysubsubsection{\texorpdfstring{\$targetUrl}{$targetUrl}}
+{\footnotesize\ttfamily \$target\+Url\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 21 of file Redirect\+Response.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/symfony/http-\/foundation/\mbox{\hyperlink{_redirect_response_8php}{Redirect\+Response.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler}{}\doxysection{Memcache\+Session\+Handler Class Reference}
+\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler}\index{MemcacheSessionHandler@{MemcacheSessionHandler}}
+Inheritance diagram for Memcache\+Session\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a2bbeaf5f9771d76e3be8fa6128b0d6d3}{\+\_\+\+\_\+construct}} (\textbackslash{}Memcache \$memcache, array \$options=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_ac70d1623e67e5b6d1859856dcef15d82}{open}} (\$save\+Path, \$session\+Name)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a379d9c87c852c5901ff1976be29a5048}{read}} (\$session\+Id)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_ad7b615bb92609350d2d9d0c07f6f58ed}{write}} (\$session\+Id, \$data)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a7976894a2e2239ff937a9203c383c9c1}{destroy}} (\$session\+Id)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a57aff7ee0656d8aa75d545fb8b3ae35d}{gc}} (\$maxlifetime)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a67cf632000b211fdf30818adf4b86a08}{get\+Memcache}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Drak \href{mailto:drak@zikula.org}{\texttt{ drak@zikula.\+org}}
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000056}{Deprecated}}]since version 3.\+4, to be removed in 4.\+0. Use Symfony\textbackslash{}\+Component\textbackslash{}\+Http\+Foundation\textbackslash{}\+Session\textbackslash{}\+Storage\textbackslash{}\+Handler\textbackslash{}\+Memcached\+Session\+Handler instead. \end{DoxyRefDesc}
+
+
+Definition at line 21 of file Memcache\+Session\+Handler.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a2bbeaf5f9771d76e3be8fa6128b0d6d3}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a2bbeaf5f9771d76e3be8fa6128b0d6d3}} 
+\index{MemcacheSessionHandler@{MemcacheSessionHandler}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MemcacheSessionHandler@{MemcacheSessionHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\textbackslash{}Memcache}]{\$memcache,  }\item[{array}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+Constructor.
+
+List of available options\+:
+\begin{DoxyItemize}
+\item prefix\+: The prefix to use for the memcache keys in order to avoid collision
+\item expiretime\+: The time to live in seconds
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Memcache & {\em \$memcache} & A \textbackslash{}\+Memcache instance \\
+\hline
+array & {\em \$options} & An associative array of Memcache options\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 47 of file Memcache\+Session\+Handler.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{MemcacheSessionHandler@{MemcacheSessionHandler}!close@{close}}
+\index{close@{close}!MemcacheSessionHandler@{MemcacheSessionHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{\} 
+
+Definition at line 69 of file Memcache\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a7976894a2e2239ff937a9203c383c9c1}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a7976894a2e2239ff937a9203c383c9c1}} 
+\index{MemcacheSessionHandler@{MemcacheSessionHandler}!destroy@{destroy}}
+\index{destroy@{destroy}!MemcacheSessionHandler@{MemcacheSessionHandler}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily destroy (\begin{DoxyParamCaption}\item[{}]{\$session\+Id }\end{DoxyParamCaption})}
+
+\{\} 
+
+Definition at line 93 of file Memcache\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a57aff7ee0656d8aa75d545fb8b3ae35d}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a57aff7ee0656d8aa75d545fb8b3ae35d}} 
+\index{MemcacheSessionHandler@{MemcacheSessionHandler}!gc@{gc}}
+\index{gc@{gc}!MemcacheSessionHandler@{MemcacheSessionHandler}}
+\doxysubsubsection{\texorpdfstring{gc()}{gc()}}
+{\footnotesize\ttfamily gc (\begin{DoxyParamCaption}\item[{}]{\$maxlifetime }\end{DoxyParamCaption})}
+
+\{\} 
+
+Definition at line 103 of file Memcache\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a67cf632000b211fdf30818adf4b86a08}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a67cf632000b211fdf30818adf4b86a08}} 
+\index{MemcacheSessionHandler@{MemcacheSessionHandler}!getMemcache@{getMemcache}}
+\index{getMemcache@{getMemcache}!MemcacheSessionHandler@{MemcacheSessionHandler}}
+\doxysubsubsection{\texorpdfstring{getMemcache()}{getMemcache()}}
+{\footnotesize\ttfamily get\+Memcache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Return a Memcache instance.
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Memcache 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Memcache\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_ac70d1623e67e5b6d1859856dcef15d82}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_ac70d1623e67e5b6d1859856dcef15d82}} 
+\index{MemcacheSessionHandler@{MemcacheSessionHandler}!open@{open}}
+\index{open@{open}!MemcacheSessionHandler@{MemcacheSessionHandler}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily open (\begin{DoxyParamCaption}\item[{}]{\$save\+Path,  }\item[{}]{\$session\+Name }\end{DoxyParamCaption})}
+
+\{\} 
+
+Definition at line 61 of file Memcache\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a379d9c87c852c5901ff1976be29a5048}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_a379d9c87c852c5901ff1976be29a5048}} 
+\index{MemcacheSessionHandler@{MemcacheSessionHandler}!read@{read}}
+\index{read@{read}!MemcacheSessionHandler@{MemcacheSessionHandler}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}\item[{}]{\$session\+Id }\end{DoxyParamCaption})}
+
+\{\} 
+
+Definition at line 77 of file Memcache\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_ad7b615bb92609350d2d9d0c07f6f58ed}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_memcache_session_handler_ad7b615bb92609350d2d9d0c07f6f58ed}} 
+\index{MemcacheSessionHandler@{MemcacheSessionHandler}!write@{write}}
+\index{write@{write}!MemcacheSessionHandler@{MemcacheSessionHandler}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{}]{\$session\+Id,  }\item[{}]{\$data }\end{DoxyParamCaption})}
+
+\{\} 
+
+Definition at line 85 of file Memcache\+Session\+Handler.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/symfony/http-\/foundation/\+Session/\+Storage/\+Handler/\mbox{\hyperlink{_memcache_session_handler_8php}{Memcache\+Session\+Handler.\+php}}\end{DoxyCompactItemize}

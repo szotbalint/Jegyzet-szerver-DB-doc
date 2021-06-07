@@ -1,0 +1,111 @@
+\hypertarget{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser}{}\doxysection{Model\+File\+Parser Class Reference}
+\label{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser}\index{ModelFileParser@{ModelFileParser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a7dab1d71b070f8c5a9f171b9c2d1ece4}{extract\+Model\+Info\+From\+Source}} (\$file\+Contents)
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a8c609915f133c29a6e79a9a9b0ab95e9}{extract\+Model\+Relations\+From\+Source}} (\$file\+Contents)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a24df7175fd03cbb64ac8bb2d2e2371ad}{extract\+Namespace}} (\$stream)
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_ae5f35ef7bf3ab99e112d4d3af7848462}{extract\+Class\+Name}} (\$stream)
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a6500dfffc6514b679c97c9951312c9c5}{extract\+Table\+Name}} (\$stream)
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_ae7d45f94f94660213d2a4da18d4ad88e}{extract\+Relations}} (\$stream)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Model\+File\+Parser.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_ae5f35ef7bf3ab99e112d4d3af7848462}\label{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_ae5f35ef7bf3ab99e112d4d3af7848462}} 
+\index{ModelFileParser@{ModelFileParser}!extractClassName@{extractClassName}}
+\index{extractClassName@{extractClassName}!ModelFileParser@{ModelFileParser}}
+\doxysubsubsection{\texorpdfstring{extractClassName()}{extractClassName()}}
+{\footnotesize\ttfamily extract\+Class\+Name (\begin{DoxyParamCaption}\item[{}]{\$stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+extract\+Class\+Name from model info 
+
+Definition at line 117 of file Model\+File\+Parser.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a7dab1d71b070f8c5a9f171b9c2d1ece4}\label{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a7dab1d71b070f8c5a9f171b9c2d1ece4}} 
+\index{ModelFileParser@{ModelFileParser}!extractModelInfoFromSource@{extractModelInfoFromSource}}
+\index{extractModelInfoFromSource@{extractModelInfoFromSource}!ModelFileParser@{ModelFileParser}}
+\doxysubsubsection{\texorpdfstring{extractModelInfoFromSource()}{extractModelInfoFromSource()}}
+{\footnotesize\ttfamily extract\+Model\+Info\+From\+Source (\begin{DoxyParamCaption}\item[{}]{\$file\+Contents }\end{DoxyParamCaption})}
+
+Returns the model namespace, class name and table name. 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file\+Contents} & Specifies the file contents. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$null Returns an array with keys \textquotesingle{}namespace\textquotesingle{}, \textquotesingle{}class\textquotesingle{} and \textquotesingle{}table\textquotesingle{} Returns null if the parsing fails. 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file Model\+File\+Parser.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a8c609915f133c29a6e79a9a9b0ab95e9}\label{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a8c609915f133c29a6e79a9a9b0ab95e9}} 
+\index{ModelFileParser@{ModelFileParser}!extractModelRelationsFromSource@{extractModelRelationsFromSource}}
+\index{extractModelRelationsFromSource@{extractModelRelationsFromSource}!ModelFileParser@{ModelFileParser}}
+\doxysubsubsection{\texorpdfstring{extractModelRelationsFromSource()}{extractModelRelationsFromSource()}}
+{\footnotesize\ttfamily extract\+Model\+Relations\+From\+Source (\begin{DoxyParamCaption}\item[{}]{\$file\+Contents }\end{DoxyParamCaption})}
+
+Extracts names and types of model relations. 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file\+Contents} & Specifies the file contents. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$null Returns an array with keys matching the relation types and values containing relation names as array. Returns null if the parsing fails. 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Model\+File\+Parser.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a24df7175fd03cbb64ac8bb2d2e2371ad}\label{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a24df7175fd03cbb64ac8bb2d2e2371ad}} 
+\index{ModelFileParser@{ModelFileParser}!extractNamespace@{extractNamespace}}
+\index{extractNamespace@{extractNamespace}!ModelFileParser@{ModelFileParser}}
+\doxysubsubsection{\texorpdfstring{extractNamespace()}{extractNamespace()}}
+{\footnotesize\ttfamily extract\+Namespace (\begin{DoxyParamCaption}\item[{}]{\$stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+extract\+Namespace from model info 
+
+Definition at line 98 of file Model\+File\+Parser.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_ae7d45f94f94660213d2a4da18d4ad88e}\label{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_ae7d45f94f94660213d2a4da18d4ad88e}} 
+\index{ModelFileParser@{ModelFileParser}!extractRelations@{extractRelations}}
+\index{extractRelations@{extractRelations}!ModelFileParser@{ModelFileParser}}
+\doxysubsubsection{\texorpdfstring{extractRelations()}{extractRelations()}}
+{\footnotesize\ttfamily extract\+Relations (\begin{DoxyParamCaption}\item[{}]{\$stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 157 of file Model\+File\+Parser.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a6500dfffc6514b679c97c9951312c9c5}\label{class_rain_lab_1_1_builder_1_1_classes_1_1_model_file_parser_a6500dfffc6514b679c97c9951312c9c5}} 
+\index{ModelFileParser@{ModelFileParser}!extractTableName@{extractTableName}}
+\index{extractTableName@{extractTableName}!ModelFileParser@{ModelFileParser}}
+\doxysubsubsection{\texorpdfstring{extractTableName()}{extractTableName()}}
+{\footnotesize\ttfamily extract\+Table\+Name (\begin{DoxyParamCaption}\item[{}]{\$stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns the table name. This method would return null in case if the \$table variable was found, but it value cannot be read. If the variable is not found, the method returns false, allowing the outer loop to go to the next token. 
+
+Definition at line 132 of file Model\+File\+Parser.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rainlab/builder/classes/\mbox{\hyperlink{_model_file_parser_8php}{Model\+File\+Parser.\+php}}\end{DoxyCompactItemize}

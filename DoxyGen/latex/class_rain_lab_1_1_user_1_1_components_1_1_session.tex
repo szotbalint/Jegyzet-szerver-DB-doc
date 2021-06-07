@@ -1,0 +1,218 @@
+\hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session}{}\doxysection{Session Class Reference}
+\label{class_rain_lab_1_1_user_1_1_components_1_1_session}\index{Session@{Session}}
+Inheritance diagram for Session\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rain_lab_1_1_user_1_1_components_1_1_session}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_a27a8a36da11529f46acf74750ff0f7a5}{component\+Details}} ()
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_ac3c1d468ddb39831d0aac9b8e0d47112}{define\+Properties}} ()
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_a6c75e553ce5032deabddf65788e4d41e}{get\+Redirect\+Options}} ()
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_a0006c9963b5033812acfdda9a9e0581d}{get\+Allowed\+User\+Groups\+Options}} ()
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_a4be4055f3361d4800e16bc2e2e38cda6}{init}} ()
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_aa2eb34e3894c9da534c026d54443ae86}{on\+Run}} ()
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_ae8a275690ff1b618e1947378b0ed73ae}{user}} ()
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_a743d552013a0c61ddc117d3c0d714a4e}{impersonator}} ()
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_a63feb227c1282cd158351be969212fb2}{on\+Logout}} ()
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_ab3ad754c271cd5be6c38379cab2b0681}{on\+Stop\+Impersonating}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_aef08298224bb7a9e7784529f93b661c3}{ALLOW\+\_\+\+ALL}} = \textquotesingle{}all\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_a08351f6de0f056080406fefc6cbb8aea}{ALLOW\+\_\+\+GUEST}} = \textquotesingle{}guest\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_aa8ac2e79d3ad3701308212de114599e3}{ALLOW\+\_\+\+USER}} = \textquotesingle{}\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_ae8a275690ff1b618e1947378b0ed73ae}{user}}\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_ab63f1479be4c8a305294ab175d8f8c78}{check\+User\+Security}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User session
+
+This will inject the user object to every page and provide the ability for the user to sign out. This can also be used to restrict access to pages. 
+
+Definition at line 21 of file Session.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_ab63f1479be4c8a305294ab175d8f8c78}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_ab63f1479be4c8a305294ab175d8f8c78}} 
+\index{Session@{Session}!checkUserSecurity@{checkUserSecurity}}
+\index{checkUserSecurity@{checkUserSecurity}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{checkUserSecurity()}{checkUserSecurity()}}
+{\footnotesize\ttfamily check\+User\+Security (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Checks if the user can access this page based on the security rules \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 178 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_a27a8a36da11529f46acf74750ff0f7a5}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_a27a8a36da11529f46acf74750ff0f7a5}} 
+\index{Session@{Session}!componentDetails@{componentDetails}}
+\index{componentDetails@{componentDetails}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{componentDetails()}{componentDetails()}}
+{\footnotesize\ttfamily component\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_ac3c1d468ddb39831d0aac9b8e0d47112}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_ac3c1d468ddb39831d0aac9b8e0d47112}} 
+\index{Session@{Session}!defineProperties@{defineProperties}}
+\index{defineProperties@{defineProperties}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{defineProperties()}{defineProperties()}}
+{\footnotesize\ttfamily define\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_a0006c9963b5033812acfdda9a9e0581d}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_a0006c9963b5033812acfdda9a9e0581d}} 
+\index{Session@{Session}!getAllowedUserGroupsOptions@{getAllowedUserGroupsOptions}}
+\index{getAllowedUserGroupsOptions@{getAllowedUserGroupsOptions}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{getAllowedUserGroupsOptions()}{getAllowedUserGroupsOptions()}}
+{\footnotesize\ttfamily get\+Allowed\+User\+Groups\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_a6c75e553ce5032deabddf65788e4d41e}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_a6c75e553ce5032deabddf65788e4d41e}} 
+\index{Session@{Session}!getRedirectOptions@{getRedirectOptions}}
+\index{getRedirectOptions@{getRedirectOptions}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{getRedirectOptions()}{getRedirectOptions()}}
+{\footnotesize\ttfamily get\+Redirect\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_a743d552013a0c61ddc117d3c0d714a4e}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_a743d552013a0c61ddc117d3c0d714a4e}} 
+\index{Session@{Session}!impersonator@{impersonator}}
+\index{impersonator@{impersonator}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{impersonator()}{impersonator()}}
+{\footnotesize\ttfamily impersonator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the previously signed in user when impersonating. 
+
+Definition at line 123 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_a4be4055f3361d4800e16bc2e2e38cda6}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_a4be4055f3361d4800e16bc2e2e38cda6}} 
+\index{Session@{Session}!init@{init}}
+\index{init@{init}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Component is initialized. 
+
+Definition at line 78 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_a63feb227c1282cd158351be969212fb2}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_a63feb227c1282cd158351be969212fb2}} 
+\index{Session@{Session}!onLogout@{onLogout}}
+\index{onLogout@{onLogout}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{onLogout()}{onLogout()}}
+{\footnotesize\ttfamily on\+Logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Log out the user
+
+Usage\+: Sign out
+
+With the optional redirect parameter\+: Sign out 
+
+Definition at line 138 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_aa2eb34e3894c9da534c026d54443ae86}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_aa2eb34e3894c9da534c026d54443ae86}} 
+\index{Session@{Session}!onRun@{onRun}}
+\index{onRun@{onRun}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{onRun()}{onRun()}}
+{\footnotesize\ttfamily on\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Executed when this component is bound to a page or layout. 
+
+Definition at line 88 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_ab3ad754c271cd5be6c38379cab2b0681}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_ab3ad754c271cd5be6c38379cab2b0681}} 
+\index{Session@{Session}!onStopImpersonating@{onStopImpersonating}}
+\index{onStopImpersonating@{onStopImpersonating}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{onStopImpersonating()}{onStopImpersonating()}}
+{\footnotesize\ttfamily on\+Stop\+Impersonating (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+If impersonating, revert back to the previously signed in user. \begin{DoxyReturn}{Returns}
+Redirect 
+\end{DoxyReturn}
+
+
+Definition at line 159 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_ae8a275690ff1b618e1947378b0ed73ae}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_ae8a275690ff1b618e1947378b0ed73ae}} 
+\index{Session@{Session}!user@{user}}
+\index{user@{user}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{user()}{user()}}
+{\footnotesize\ttfamily user (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the logged in user, if available, and touches the last seen timestamp. \begin{DoxyReturn}{Returns}
+Rain\+Lab\textbackslash{}\+User\textbackslash{}\+Models\textbackslash{}\+User 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file Session.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_aef08298224bb7a9e7784529f93b661c3}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_aef08298224bb7a9e7784529f93b661c3}} 
+\index{Session@{Session}!ALLOW\_ALL@{ALLOW\_ALL}}
+\index{ALLOW\_ALL@{ALLOW\_ALL}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{ALLOW\_ALL}{ALLOW\_ALL}}
+{\footnotesize\ttfamily const ALLOW\+\_\+\+ALL = \textquotesingle{}all\textquotesingle{}}
+
+
+
+Definition at line 23 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_a08351f6de0f056080406fefc6cbb8aea}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_a08351f6de0f056080406fefc6cbb8aea}} 
+\index{Session@{Session}!ALLOW\_GUEST@{ALLOW\_GUEST}}
+\index{ALLOW\_GUEST@{ALLOW\_GUEST}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{ALLOW\_GUEST}{ALLOW\_GUEST}}
+{\footnotesize\ttfamily const ALLOW\+\_\+\+GUEST = \textquotesingle{}guest\textquotesingle{}}
+
+
+
+Definition at line 24 of file Session.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_components_1_1_session_aa8ac2e79d3ad3701308212de114599e3}\label{class_rain_lab_1_1_user_1_1_components_1_1_session_aa8ac2e79d3ad3701308212de114599e3}} 
+\index{Session@{Session}!ALLOW\_USER@{ALLOW\_USER}}
+\index{ALLOW\_USER@{ALLOW\_USER}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{ALLOW\_USER}{ALLOW\_USER}}
+{\footnotesize\ttfamily const ALLOW\+\_\+\+USER = \textquotesingle{}\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_components_1_1_session_ae8a275690ff1b618e1947378b0ed73ae}{user}}\textquotesingle{}}
+
+
+
+Definition at line 25 of file Session.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rainlab/user/components/\mbox{\hyperlink{rainlab_2user_2components_2_session_8php}{Session.\+php}}\end{DoxyCompactItemize}

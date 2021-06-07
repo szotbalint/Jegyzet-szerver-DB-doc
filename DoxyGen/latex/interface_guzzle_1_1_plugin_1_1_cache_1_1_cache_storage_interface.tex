@@ -1,0 +1,107 @@
+\hypertarget{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface}{}\doxysection{Cache\+Storage\+Interface Interface Reference}
+\label{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface}\index{CacheStorageInterface@{CacheStorageInterface}}
+Inheritance diagram for Cache\+Storage\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a8ac14feb76ace5df963c1b8ae6a6fc23}{fetch}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a45a5439eaa0c506cb640aff80eab1ae1}{cache}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}} \$response)
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_ad19442bdcb8b20d50e65a2256bfd5306}{delete}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a8bbb772ff32d35c2461f801260559d74}{purge}} (\$url)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface used to cache HTTP requests 
+
+Definition at line 11 of file Cache\+Storage\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a45a5439eaa0c506cb640aff80eab1ae1}\label{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a45a5439eaa0c506cb640aff80eab1ae1}} 
+\index{CacheStorageInterface@{CacheStorageInterface}!cache@{cache}}
+\index{cache@{cache}!CacheStorageInterface@{CacheStorageInterface}}
+\doxysubsubsection{\texorpdfstring{cache()}{cache()}}
+{\footnotesize\ttfamily cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}}}]{\$response }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{namespace_guzzle_1_1_plugin_1_1_cache}{Cache}} an HTTP request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request being cached \\
+\hline
+Response & {\em \$response} & Response to cache \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a45a5439eaa0c506cb640aff80eab1ae1}{Default\+Cache\+Storage}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_ad19442bdcb8b20d50e65a2256bfd5306}\label{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_ad19442bdcb8b20d50e65a2256bfd5306}} 
+\index{CacheStorageInterface@{CacheStorageInterface}!delete@{delete}}
+\index{delete@{delete}!CacheStorageInterface@{CacheStorageInterface}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+Deletes cache entries that match a request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to delete from cache \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_ad19442bdcb8b20d50e65a2256bfd5306}{Default\+Cache\+Storage}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a8ac14feb76ace5df963c1b8ae6a6fc23}\label{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a8ac14feb76ace5df963c1b8ae6a6fc23}} 
+\index{CacheStorageInterface@{CacheStorageInterface}!fetch@{fetch}}
+\index{fetch@{fetch}!CacheStorageInterface@{CacheStorageInterface}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}}
+{\footnotesize\ttfamily fetch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+Get a Response from the cache for a request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null$\vert$\+Response 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a8ac14feb76ace5df963c1b8ae6a6fc23}{Default\+Cache\+Storage}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a8bbb772ff32d35c2461f801260559d74}\label{interface_guzzle_1_1_plugin_1_1_cache_1_1_cache_storage_interface_a8bbb772ff32d35c2461f801260559d74}} 
+\index{CacheStorageInterface@{CacheStorageInterface}!purge@{purge}}
+\index{purge@{purge}!CacheStorageInterface@{CacheStorageInterface}}
+\doxysubsubsection{\texorpdfstring{purge()}{purge()}}
+{\footnotesize\ttfamily purge (\begin{DoxyParamCaption}\item[{}]{\$url }\end{DoxyParamCaption})}
+
+Purge all cache entries for a given URL
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_cache_storage_a8bbb772ff32d35c2461f801260559d74}{Default\+Cache\+Storage}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Cache/\mbox{\hyperlink{_cache_storage_interface_8php}{Cache\+Storage\+Interface.\+php}}\end{DoxyCompactItemize}

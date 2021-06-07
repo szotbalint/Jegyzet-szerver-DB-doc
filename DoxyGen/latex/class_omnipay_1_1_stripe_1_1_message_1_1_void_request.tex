@@ -1,0 +1,63 @@
+\hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_void_request}{}\doxysection{Void\+Request Class Reference}
+\label{class_omnipay_1_1_stripe_1_1_message_1_1_void_request}\index{VoidRequest@{VoidRequest}}
+Inheritance diagram for Void\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{class_omnipay_1_1_stripe_1_1_message_1_1_void_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_void_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} Void Request.
+
+\mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} does not support voiding, per se, but we treat it as a full refund.
+
+See \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_refund_request}{Refund\+Request}} for additional information
+
+Example -- note this example assumes that the purchase has been successful and that the transaction ID returned from the purchase is held in \$sale\+\_\+id. See \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_purchase_request}{Purchase\+Request}} for the first part of this example transaction\+:
+
+{\ttfamily  // Do a void transaction on the gateway \$transaction = \$gateway-\/$>$void(array( \textquotesingle{}transaction\+Reference\textquotesingle{} =$>$ \$sale\+\_\+id, )); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; if (\$response-\/$>$is\+Successful()) \{ echo \char`\"{}\+Void transaction was successful!\textbackslash{}n\char`\"{}; \$void\+\_\+id = \$response-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a514421414d937d0a743fe4319458b402}{get\+Transaction\+Reference()}}; echo \char`\"{}\+Transaction reference = \char`\"{} . \$void\+\_\+id . \char`\"{}\textbackslash{}n\char`\"{}; \} }
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_refund_request}{Refund\+Request}} 
+
+\mbox{\hyperlink{class_omnipay_1_1_omnipay}{Omnipay}}\textbackslash{}\+Stripe\textbackslash{}\+Gateway \mbox{\hyperlink{}{https\+://stripe.\+com/docs/api\#create\+\_\+refund}}
+\end{DoxySeeAlso}
+
+
+Definition at line 37 of file Void\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_void_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_stripe_1_1_message_1_1_void_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{VoidRequest@{VoidRequest}!getData@{getData}}
+\index{getData@{getData}!VoidRequest@{VoidRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_refund_request_a81a67162a6288d78fc4c55283325f0b4}{Refund\+Request}}.
+
+
+
+Definition at line 39 of file Void\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/stripe/src/\+Message/\mbox{\hyperlink{_void_request_8php}{Void\+Request.\+php}}\end{DoxyCompactItemize}

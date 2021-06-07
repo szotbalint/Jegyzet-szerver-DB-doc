@@ -1,0 +1,124 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy}{}\doxysection{Truncated\+Backoff\+Strategy Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy}\index{TruncatedBackoffStrategy@{TruncatedBackoffStrategy}}
+Inheritance diagram for Truncated\+Backoff\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a820d4adda6a0bc445a81e6ef5a5c0425}{\+\_\+\+\_\+construct}} (\$max\+Retries, \mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_backoff_1_1_backoff_strategy_interface}{Backoff\+Strategy\+Interface}} \$next=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a4b101bee317e17df87a73f52689b0210}{makes\+Decision}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a28bad9e3cfc885d6860831b04acdb496}{get\+Delay}} (\$retries, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}} \$response=null, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_exception_1_1_http_exception}{Http\+Exception}} \$e=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a9fb747ef5633c244639185a7fe54f6b0}{\$max}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Strategy that will not retry more than a certain number of times. 
+
+Definition at line 12 of file Truncated\+Backoff\+Strategy.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a820d4adda6a0bc445a81e6ef5a5c0425}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a820d4adda6a0bc445a81e6ef5a5c0425}} 
+\index{TruncatedBackoffStrategy@{TruncatedBackoffStrategy}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TruncatedBackoffStrategy@{TruncatedBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$max\+Retries,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_backoff_1_1_backoff_strategy_interface}{Backoff\+Strategy\+Interface}}}]{\$next = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$max\+Retries} & Maximum number of retries per request \\
+\hline
+\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_backoff_1_1_backoff_strategy_interface}{Backoff\+Strategy\+Interface}} & {\em \$next} & The optional next strategy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file Truncated\+Backoff\+Strategy.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a28bad9e3cfc885d6860831b04acdb496}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a28bad9e3cfc885d6860831b04acdb496}} 
+\index{TruncatedBackoffStrategy@{TruncatedBackoffStrategy}!getDelay@{getDelay}}
+\index{getDelay@{getDelay}!TruncatedBackoffStrategy@{TruncatedBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{getDelay()}{getDelay()}}
+{\footnotesize\ttfamily get\+Delay (\begin{DoxyParamCaption}\item[{}]{\$retries,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}}}]{\$response = {\ttfamily null},  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_exception_1_1_http_exception}{Http\+Exception}}}]{\$e = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Implement the concrete strategy
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$retries} & Number of retries of the request \\
+\hline
+Request\+Interface & {\em \$request} & Request that was sent \\
+\hline
+Response & {\em \$response} & Response that was received. Note that there may not be a response \\
+\hline
+Http\+Exception & {\em \$e} & Exception that was encountered if any\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool$\vert$int$\vert$null Returns false to not retry or the number of seconds to delay between retries. Return true or null to defer to the next strategy if available, and if not, return 0. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_backoff_strategy_a7797eb59fe0453dc5fd8c28b5bba4612}{Abstract\+Backoff\+Strategy}}.
+
+
+
+Definition at line 32 of file Truncated\+Backoff\+Strategy.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a4b101bee317e17df87a73f52689b0210}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a4b101bee317e17df87a73f52689b0210}} 
+\index{TruncatedBackoffStrategy@{TruncatedBackoffStrategy}!makesDecision@{makesDecision}}
+\index{makesDecision@{makesDecision}!TruncatedBackoffStrategy@{TruncatedBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{makesDecision()}{makesDecision()}}
+{\footnotesize\ttfamily makes\+Decision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if the strategy does filtering and makes decisions on whether or not to retry.
+
+Strategies that return false will never retry if all of the previous strategies in a chain defer on a backoff decision.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_backoff_strategy_a4b101bee317e17df87a73f52689b0210}{Abstract\+Backoff\+Strategy}}.
+
+
+
+Definition at line 27 of file Truncated\+Backoff\+Strategy.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a9fb747ef5633c244639185a7fe54f6b0}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_truncated_backoff_strategy_a9fb747ef5633c244639185a7fe54f6b0}} 
+\index{TruncatedBackoffStrategy@{TruncatedBackoffStrategy}!\$max@{\$max}}
+\index{\$max@{\$max}!TruncatedBackoffStrategy@{TruncatedBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{\$max}{$max}}
+{\footnotesize\ttfamily \$max\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 15 of file Truncated\+Backoff\+Strategy.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Backoff/\mbox{\hyperlink{_truncated_backoff_strategy_8php}{Truncated\+Backoff\+Strategy.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,172 @@
+\hypertarget{class_guzzle_1_1_inflection_1_1_memoizing_inflector}{}\doxysection{Memoizing\+Inflector Class Reference}
+\label{class_guzzle_1_1_inflection_1_1_memoizing_inflector}\index{MemoizingInflector@{MemoizingInflector}}
+Inheritance diagram for Memoizing\+Inflector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_inflection_1_1_memoizing_inflector}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a73b2f73aeac2c062c5bb615fa1c37d62}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_guzzle_1_1_inflection_1_1_inflector_interface}{Inflector\+Interface}} \$inflector, \$max\+Cache\+Size=500)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_memoizing_inflector_ad01d48f21224e98a8d2000362a26797f}{snake}} (\$word)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a90e8a36fdc9368bc410736f432e741f0}{camel}} (\$word)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a511ff0d7d2ad693cf40b4a0845cec5b1}{prune\+Cache}} (\$cache)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_memoizing_inflector_ac2dc76d756ec398393d4b1d23659276c}{\$cache}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a38471c72ecde5cdc6d225fa6f0083ddd}{\$max\+Cache\+Size}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a3881dc7860ccbbad88d920f8f0de307f}{\$decorated\+Inflector}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Decorator used to add memoization to previously inflected words 
+
+Definition at line 8 of file Memoizing\+Inflector.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a73b2f73aeac2c062c5bb615fa1c37d62}\label{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a73b2f73aeac2c062c5bb615fa1c37d62}} 
+\index{MemoizingInflector@{MemoizingInflector}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MemoizingInflector@{MemoizingInflector}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_inflection_1_1_inflector_interface}{Inflector\+Interface}}}]{\$inflector,  }\item[{}]{\$max\+Cache\+Size = {\ttfamily 500} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_inflection_1_1_inflector_interface}{Inflector\+Interface}} & {\em \$inflector} & \mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_inflector}{Inflector}} being decorated \\
+\hline
+int & {\em \$max\+Cache\+Size} & Maximum number of cached items to hold per cache \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file Memoizing\+Inflector.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a90e8a36fdc9368bc410736f432e741f0}\label{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a90e8a36fdc9368bc410736f432e741f0}} 
+\index{MemoizingInflector@{MemoizingInflector}!camel@{camel}}
+\index{camel@{camel}!MemoizingInflector@{MemoizingInflector}}
+\doxysubsubsection{\texorpdfstring{camel()}{camel()}}
+{\footnotesize\ttfamily camel (\begin{DoxyParamCaption}\item[{}]{\$word }\end{DoxyParamCaption})}
+
+Converts strings from snake\+\_\+case to upper Camel\+Case
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$word} & Value to convert into upper Camel\+Case\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_inflection_1_1_inflector_interface_a90e8a36fdc9368bc410736f432e741f0}{Inflector\+Interface}}.
+
+
+
+Definition at line 49 of file Memoizing\+Inflector.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a511ff0d7d2ad693cf40b4a0845cec5b1}\label{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a511ff0d7d2ad693cf40b4a0845cec5b1}} 
+\index{MemoizingInflector@{MemoizingInflector}!pruneCache@{pruneCache}}
+\index{pruneCache@{pruneCache}!MemoizingInflector@{MemoizingInflector}}
+\doxysubsubsection{\texorpdfstring{pruneCache()}{pruneCache()}}
+{\footnotesize\ttfamily prune\+Cache (\begin{DoxyParamCaption}\item[{}]{\$cache }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Prune one of the named caches by removing 20\% of the cache if it is full
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$cache} & Type of cache to prune \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file Memoizing\+Inflector.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_memoizing_inflector_ad01d48f21224e98a8d2000362a26797f}\label{class_guzzle_1_1_inflection_1_1_memoizing_inflector_ad01d48f21224e98a8d2000362a26797f}} 
+\index{MemoizingInflector@{MemoizingInflector}!snake@{snake}}
+\index{snake@{snake}!MemoizingInflector@{MemoizingInflector}}
+\doxysubsubsection{\texorpdfstring{snake()}{snake()}}
+{\footnotesize\ttfamily snake (\begin{DoxyParamCaption}\item[{}]{\$word }\end{DoxyParamCaption})}
+
+Converts strings from camel case to snake case (e.\+g. Camel\+Case camel\+\_\+case).
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$word} & Word to convert to snake case\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_inflection_1_1_inflector_interface_ad01d48f21224e98a8d2000362a26797f}{Inflector\+Interface}}.
+
+
+
+Definition at line 32 of file Memoizing\+Inflector.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_memoizing_inflector_ac2dc76d756ec398393d4b1d23659276c}\label{class_guzzle_1_1_inflection_1_1_memoizing_inflector_ac2dc76d756ec398393d4b1d23659276c}} 
+\index{MemoizingInflector@{MemoizingInflector}!\$cache@{\$cache}}
+\index{\$cache@{\$cache}!MemoizingInflector@{MemoizingInflector}}
+\doxysubsubsection{\texorpdfstring{\$cache}{$cache}}
+{\footnotesize\ttfamily \$cache\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'snake'} => array(),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'camel'} => array()}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Definition at line 11 of file Memoizing\+Inflector.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a3881dc7860ccbbad88d920f8f0de307f}\label{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a3881dc7860ccbbad88d920f8f0de307f}} 
+\index{MemoizingInflector@{MemoizingInflector}!\$decoratedInflector@{\$decoratedInflector}}
+\index{\$decoratedInflector@{\$decoratedInflector}!MemoizingInflector@{MemoizingInflector}}
+\doxysubsubsection{\texorpdfstring{\$decoratedInflector}{$decoratedInflector}}
+{\footnotesize\ttfamily \$decorated\+Inflector\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 20 of file Memoizing\+Inflector.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a38471c72ecde5cdc6d225fa6f0083ddd}\label{class_guzzle_1_1_inflection_1_1_memoizing_inflector_a38471c72ecde5cdc6d225fa6f0083ddd}} 
+\index{MemoizingInflector@{MemoizingInflector}!\$maxCacheSize@{\$maxCacheSize}}
+\index{\$maxCacheSize@{\$maxCacheSize}!MemoizingInflector@{MemoizingInflector}}
+\doxysubsubsection{\texorpdfstring{\$maxCacheSize}{$maxCacheSize}}
+{\footnotesize\ttfamily \$max\+Cache\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Memoizing\+Inflector.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Inflection/\mbox{\hyperlink{_memoizing_inflector_8php}{Memoizing\+Inflector.\+php}}\end{DoxyCompactItemize}

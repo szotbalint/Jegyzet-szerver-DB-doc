@@ -1,0 +1,28 @@
+Provides useful Iterators and Iterator decorators
+
+
+\begin{DoxyItemize}
+\item Chunked\+Iterator\+: Pulls out chunks from an inner iterator and yields the chunks as arrays
+\item Filter\+Iterator\+: Used when PHP 5.\+4\textquotesingle{}s Callback\+Filter\+Iterator is not available
+\item Map\+Iterator\+: Maps values before yielding
+\item Method\+Proxy\+Iterator\+: Proxies missing method calls to the innermost iterator
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle_src__guzzle__iterator__r_e_a_d_m_e_autotoc_md90}{}\doxysubsection{Installing via Composer}\label{md_pixel_shop_vendor_guzzle_guzzle_src__guzzle__iterator__r_e_a_d_m_e_autotoc_md90}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Install Composer}
+\DoxyCodeLine{curl -\/sS https://getcomposer.org/installer | php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Add Guzzle as a dependency}
+\DoxyCodeLine{php composer.phar require guzzle/iterator:\string~3.0}
+
+\end{DoxyCode}
+
+
+After installing, you need to require Composer\textquotesingle{}s autoloader\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{require \textcolor{stringliteral}{'vendor/autoload.php'};}
+
+\end{DoxyCode}
+ 

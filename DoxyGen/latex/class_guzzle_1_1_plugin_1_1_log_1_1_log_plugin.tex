@@ -1,0 +1,241 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin}{}\doxysection{Log\+Plugin Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin}\index{LogPlugin@{LogPlugin}}
+Inheritance diagram for Log\+Plugin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a1a51933af8e614dcc8ca18193b957326}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_guzzle_1_1_log_1_1_log_adapter_interface}{Log\+Adapter\+Interface}} \$log\+Adapter, \$formatter=null, \$wire\+Bodies=false)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ab7077a7979866e723ec08bed2bfbb1d6}{on\+Curl\+Read}} (\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} \$event)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a291ede88ffe9b50bbdea855e690c004c}{on\+Curl\+Write}} (\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} \$event)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ad5d409207870e96ccf59041047a94ccc}{on\+Request\+Before\+Send}} (\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} \$event)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a47008d4ea14170e1e63d2b4409f49b34}{on\+Request\+Sent}} (\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} \$event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a9ba5bcb6aebd5ad45e053733888ec62a}{get\+Debug\+Plugin}} (\$wire\+Bodies=true, \$stream=null)
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_af1f63475927bbcb3bd21b58712076104}{get\+Subscribed\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ab8a1d3776301a64a491f0625a1dcbde2}{\$log\+Adapter}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_aaa20b918c6ac948a690031a99db6b906}{\$formatter}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ac61c1c16d9922c1def06c4e5158ed3c4}{\$wire\+Bodies}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Plugin class that will add request and response logging to an HTTP request.
+
+The log plugin uses a message formatter that allows custom messages via template variable substitution.
+
+\begin{DoxySeeAlso}{See also}
+Message\+Logger for a list of available log template variable substitutions 
+\end{DoxySeeAlso}
+
+
+Definition at line 20 of file Log\+Plugin.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a1a51933af8e614dcc8ca18193b957326}\label{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a1a51933af8e614dcc8ca18193b957326}} 
+\index{LogPlugin@{LogPlugin}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LogPlugin@{LogPlugin}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_log_1_1_log_adapter_interface}{Log\+Adapter\+Interface}}}]{\$log\+Adapter,  }\item[{}]{\$formatter = {\ttfamily null},  }\item[{}]{\$wire\+Bodies = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Log\+Adapter\+Interface & {\em \$log\+Adapter} & Adapter object used to log message \\
+\hline
+string | Message\+Formatter & {\em \$formatter} & Formatter used to format log messages or the formatter template \\
+\hline
+bool & {\em \$wire\+Bodies} & Set to true to track request and response bodies using a temporary buffer if the bodies are not repeatable. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Log\+Plugin.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a9ba5bcb6aebd5ad45e053733888ec62a}\label{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a9ba5bcb6aebd5ad45e053733888ec62a}} 
+\index{LogPlugin@{LogPlugin}!getDebugPlugin@{getDebugPlugin}}
+\index{getDebugPlugin@{getDebugPlugin}!LogPlugin@{LogPlugin}}
+\doxysubsubsection{\texorpdfstring{getDebugPlugin()}{getDebugPlugin()}}
+{\footnotesize\ttfamily static get\+Debug\+Plugin (\begin{DoxyParamCaption}\item[{}]{\$wire\+Bodies = {\ttfamily true},  }\item[{}]{\$stream = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a log plugin that outputs full request, response, and curl error information to stderr
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$wire\+Bodies} & Set to false to disable request/response body output when they use are not repeatable \\
+\hline
+resource & {\em \$stream} & \mbox{\hyperlink{namespace_guzzle_1_1_stream}{Stream}} to write to when logging. Defaults to STDERR when it is available\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Log\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_af1f63475927bbcb3bd21b58712076104}\label{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_af1f63475927bbcb3bd21b58712076104}} 
+\index{LogPlugin@{LogPlugin}!getSubscribedEvents@{getSubscribedEvents}}
+\index{getSubscribedEvents@{getSubscribedEvents}!LogPlugin@{LogPlugin}}
+\doxysubsubsection{\texorpdfstring{getSubscribedEvents()}{getSubscribedEvents()}}
+{\footnotesize\ttfamily static get\+Subscribed\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns an array of event names this subscriber wants to listen to.
+
+The array keys are event names and the value can be\+:
+
+
+\begin{DoxyItemize}
+\item The method name to call (priority defaults to 0)
+\item An array composed of the method name to call and the priority
+\item An array of arrays composed of the method names to call and respective priorities, or 0 if unset
+\end{DoxyItemize}
+
+For instance\+:
+
+
+\begin{DoxyItemize}
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ \textquotesingle{}method\+Name\textquotesingle{})
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(\textquotesingle{}method\+Name\textquotesingle{}, \$priority))
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(array(\textquotesingle{}method\+Name1\textquotesingle{}, \$priority), array(\textquotesingle{}method\+Name2\textquotesingle{})))
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+array The event names to listen to 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface_af1f63475927bbcb3bd21b58712076104}{Event\+Subscriber\+Interface}}.
+
+
+
+Definition at line 70 of file Log\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ab7077a7979866e723ec08bed2bfbb1d6}\label{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ab7077a7979866e723ec08bed2bfbb1d6}} 
+\index{LogPlugin@{LogPlugin}!onCurlRead@{onCurlRead}}
+\index{onCurlRead@{onCurlRead}!LogPlugin@{LogPlugin}}
+\doxysubsubsection{\texorpdfstring{onCurlRead()}{onCurlRead()}}
+{\footnotesize\ttfamily on\+Curl\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})}
+
+Event triggered when curl data is read from a request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event & {\em \$event} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 85 of file Log\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a291ede88ffe9b50bbdea855e690c004c}\label{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a291ede88ffe9b50bbdea855e690c004c}} 
+\index{LogPlugin@{LogPlugin}!onCurlWrite@{onCurlWrite}}
+\index{onCurlWrite@{onCurlWrite}!LogPlugin@{LogPlugin}}
+\doxysubsubsection{\texorpdfstring{onCurlWrite()}{onCurlWrite()}}
+{\footnotesize\ttfamily on\+Curl\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})}
+
+Event triggered when curl data is written to a response
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event & {\em \$event} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 98 of file Log\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ad5d409207870e96ccf59041047a94ccc}\label{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ad5d409207870e96ccf59041047a94ccc}} 
+\index{LogPlugin@{LogPlugin}!onRequestBeforeSend@{onRequestBeforeSend}}
+\index{onRequestBeforeSend@{onRequestBeforeSend}!LogPlugin@{LogPlugin}}
+\doxysubsubsection{\texorpdfstring{onRequestBeforeSend()}{onRequestBeforeSend()}}
+{\footnotesize\ttfamily on\+Request\+Before\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})}
+
+Called before a request is sent
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event & {\em \$event} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file Log\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a47008d4ea14170e1e63d2b4409f49b34}\label{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_a47008d4ea14170e1e63d2b4409f49b34}} 
+\index{LogPlugin@{LogPlugin}!onRequestSent@{onRequestSent}}
+\index{onRequestSent@{onRequestSent}!LogPlugin@{LogPlugin}}
+\doxysubsubsection{\texorpdfstring{onRequestSent()}{onRequestSent()}}
+{\footnotesize\ttfamily on\+Request\+Sent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})}
+
+Triggers the actual log write when a request completes
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event & {\em \$event} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 136 of file Log\+Plugin.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_aaa20b918c6ac948a690031a99db6b906}\label{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_aaa20b918c6ac948a690031a99db6b906}} 
+\index{LogPlugin@{LogPlugin}!\$formatter@{\$formatter}}
+\index{\$formatter@{\$formatter}!LogPlugin@{LogPlugin}}
+\doxysubsubsection{\texorpdfstring{\$formatter}{$formatter}}
+{\footnotesize\ttfamily \$formatter\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Log\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ab8a1d3776301a64a491f0625a1dcbde2}\label{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ab8a1d3776301a64a491f0625a1dcbde2}} 
+\index{LogPlugin@{LogPlugin}!\$logAdapter@{\$logAdapter}}
+\index{\$logAdapter@{\$logAdapter}!LogPlugin@{LogPlugin}}
+\doxysubsubsection{\texorpdfstring{\$logAdapter}{$logAdapter}}
+{\footnotesize\ttfamily \$log\+Adapter\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file Log\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ac61c1c16d9922c1def06c4e5158ed3c4}\label{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin_ac61c1c16d9922c1def06c4e5158ed3c4}} 
+\index{LogPlugin@{LogPlugin}!\$wireBodies@{\$wireBodies}}
+\index{\$wireBodies@{\$wireBodies}!LogPlugin@{LogPlugin}}
+\doxysubsubsection{\texorpdfstring{\$wireBodies}{$wireBodies}}
+{\footnotesize\ttfamily \$wire\+Bodies\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Log\+Plugin.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Log/\mbox{\hyperlink{_log_plugin_8php}{Log\+Plugin.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,187 @@
+\hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched}{}\doxysection{Resource\+Iterator\+Apply\+Batched Class Reference}
+\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched}\index{ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}}
+Inheritance diagram for Resource\+Iterator\+Apply\+Batched\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a6a7f9d0c8c7529f1bb65ea498a23e1ea}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}} \$iterator, \$callback)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a1afc866c1a66d0e3551b5a8a36898bf7}{apply}} (\$per\+Batch=50)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a4ed382c41b5cef94e1d7f3ce1df8cc11}{get\+Batch\+Count}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a90c16658629aceddaffce39c918bcb94}{get\+Iterated\+Count}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a0cf9c0f01ef8b36bdd76aa204c35c194}{get\+All\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_abc7c2ac0d93d22f71221e8b60512c860}{\$callback}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a3a999852dfee63e69aacacefb7e33564}{\$iterator}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_abf8e3678f636ef79956e7aa5f0b1dfce}{\$batches}} = 0
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a790b6fcc537b07c0020addfb0a27b4f9}{\$iterated}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Apply a callback to the contents of a \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}}\} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000033}{Deprecated}}]Will be removed in a future version and is no longer maintained. Use the \mbox{\hyperlink{namespace_guzzle_1_1_batch}{Batch}}\textbackslash{} abstractions instead. @code\+Coverage\+Ignore \end{DoxyRefDesc}
+
+
+Definition at line 16 of file Resource\+Iterator\+Apply\+Batched.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a6a7f9d0c8c7529f1bb65ea498a23e1ea}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a6a7f9d0c8c7529f1bb65ea498a23e1ea}} 
+\index{ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}}}]{\$iterator,  }\item[{}]{\$callback }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}} & {\em \$iterator} & \mbox{\hyperlink{namespace_guzzle_1_1_service_1_1_resource}{Resource}} iterator to apply a callback to \\
+\hline
+array | callable & {\em \$callback} & Callback method accepting the resource iterator and an array of the iterator\textquotesingle{}s current resources \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file Resource\+Iterator\+Apply\+Batched.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a1afc866c1a66d0e3551b5a8a36898bf7}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a1afc866c1a66d0e3551b5a8a36898bf7}} 
+\index{ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}!apply@{apply}}
+\index{apply@{apply}!ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily apply (\begin{DoxyParamCaption}\item[{}]{\$per\+Batch = {\ttfamily 50} }\end{DoxyParamCaption})}
+
+Apply the callback to the contents of the resource iterator
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$per\+Batch} & The number of records to group per batch transfer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns the number of iterated resources 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file Resource\+Iterator\+Apply\+Batched.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a0cf9c0f01ef8b36bdd76aa204c35c194}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a0cf9c0f01ef8b36bdd76aa204c35c194}} 
+\index{ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}!getAllEvents@{getAllEvents}}
+\index{getAllEvents@{getAllEvents}!ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}}
+\doxysubsubsection{\texorpdfstring{getAllEvents()}{getAllEvents()}}
+{\footnotesize\ttfamily static get\+All\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a list of all of the events emitted from the class
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_common_1_1_abstract_has_dispatcher_a0cf9c0f01ef8b36bdd76aa204c35c194}{Abstract\+Has\+Dispatcher}}.
+
+
+
+Definition at line 30 of file Resource\+Iterator\+Apply\+Batched.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a4ed382c41b5cef94e1d7f3ce1df8cc11}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a4ed382c41b5cef94e1d7f3ce1df8cc11}} 
+\index{ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}!getBatchCount@{getBatchCount}}
+\index{getBatchCount@{getBatchCount}!ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}}
+\doxysubsubsection{\texorpdfstring{getBatchCount()}{getBatchCount()}}
+{\footnotesize\ttfamily get\+Batch\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the total number of batches sent
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Resource\+Iterator\+Apply\+Batched.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a90c16658629aceddaffce39c918bcb94}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a90c16658629aceddaffce39c918bcb94}} 
+\index{ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}!getIteratedCount@{getIteratedCount}}
+\index{getIteratedCount@{getIteratedCount}!ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}}
+\doxysubsubsection{\texorpdfstring{getIteratedCount()}{getIteratedCount()}}
+{\footnotesize\ttfamily get\+Iterated\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the total number of iterated resources
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file Resource\+Iterator\+Apply\+Batched.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_abf8e3678f636ef79956e7aa5f0b1dfce}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_abf8e3678f636ef79956e7aa5f0b1dfce}} 
+\index{ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}!\$batches@{\$batches}}
+\index{\$batches@{\$batches}!ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}}
+\doxysubsubsection{\texorpdfstring{\$batches}{$batches}}
+{\footnotesize\ttfamily \$batches = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Resource\+Iterator\+Apply\+Batched.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_abc7c2ac0d93d22f71221e8b60512c860}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_abc7c2ac0d93d22f71221e8b60512c860}} 
+\index{ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}!\$callback@{\$callback}}
+\index{\$callback@{\$callback}!ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}}
+\doxysubsubsection{\texorpdfstring{\$callback}{$callback}}
+{\footnotesize\ttfamily \$callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 19 of file Resource\+Iterator\+Apply\+Batched.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a790b6fcc537b07c0020addfb0a27b4f9}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a790b6fcc537b07c0020addfb0a27b4f9}} 
+\index{ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}!\$iterated@{\$iterated}}
+\index{\$iterated@{\$iterated}!ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}}
+\doxysubsubsection{\texorpdfstring{\$iterated}{$iterated}}
+{\footnotesize\ttfamily \$iterated = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file Resource\+Iterator\+Apply\+Batched.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a3a999852dfee63e69aacacefb7e33564}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_apply_batched_a3a999852dfee63e69aacacefb7e33564}} 
+\index{ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}!\$iterator@{\$iterator}}
+\index{\$iterator@{\$iterator}!ResourceIteratorApplyBatched@{ResourceIteratorApplyBatched}}
+\doxysubsubsection{\texorpdfstring{\$iterator}{$iterator}}
+{\footnotesize\ttfamily \$iterator\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 22 of file Resource\+Iterator\+Apply\+Batched.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Resource/\mbox{\hyperlink{_resource_iterator_apply_batched_8php}{Resource\+Iterator\+Apply\+Batched.\+php}}\end{DoxyCompactItemize}

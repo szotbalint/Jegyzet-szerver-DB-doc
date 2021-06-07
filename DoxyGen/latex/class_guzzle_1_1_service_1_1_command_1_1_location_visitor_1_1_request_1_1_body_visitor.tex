@@ -1,0 +1,70 @@
+\hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_body_visitor}{}\doxysection{Body\+Visitor Class Reference}
+\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_body_visitor}\index{BodyVisitor@{BodyVisitor}}
+Inheritance diagram for Body\+Visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_body_visitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_body_visitor_a2220e64cc1ed46d8ac39aac131e13c38}{visit}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}} \$param, \$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_body_visitor_a38a1c404e26c28be71c6de8fa3568ae1}{add\+Expect\+Header}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_entity_enclosing_request_interface}{Entity\+Enclosing\+Request\+Interface}} \$request, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface}{Entity\+Body\+Interface}} \$body, \$expect)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Visitor used to apply a body to a request
+
+This visitor can use a data parameter of \textquotesingle{}expect\textquotesingle{} to control the Expect header. Set the expect data parameter to false to disable the expect header, or set the value to an integer so that the expect 100-\/continue header is only added if the Content-\/\+Length of the entity body is greater than the value. 
+
+Definition at line 19 of file Body\+Visitor.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_body_visitor_a38a1c404e26c28be71c6de8fa3568ae1}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_body_visitor_a38a1c404e26c28be71c6de8fa3568ae1}} 
+\index{BodyVisitor@{BodyVisitor}!addExpectHeader@{addExpectHeader}}
+\index{addExpectHeader@{addExpectHeader}!BodyVisitor@{BodyVisitor}}
+\doxysubsubsection{\texorpdfstring{addExpectHeader()}{addExpectHeader()}}
+{\footnotesize\ttfamily add\+Expect\+Header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_entity_enclosing_request_interface}{Entity\+Enclosing\+Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface}{Entity\+Body\+Interface}}}]{\$body,  }\item[{}]{\$expect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Add the appropriate expect header to a request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Entity\+Enclosing\+Request\+Interface & {\em \$request} & \mbox{\hyperlink{namespace_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request}{Request}} to update \\
+\hline
+Entity\+Body\+Interface & {\em \$body} & Entity body of the request \\
+\hline
+string | int & {\em \$expect} & Expect header setting \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file Body\+Visitor.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_body_visitor_a2220e64cc1ed46d8ac39aac131e13c38}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_body_visitor_a2220e64cc1ed46d8ac39aac131e13c38}} 
+\index{BodyVisitor@{BodyVisitor}!visit@{visit}}
+\index{visit@{visit}!BodyVisitor@{BodyVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}}}]{\$param,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+@code\+Coverage\+Ignore 
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_a2220e64cc1ed46d8ac39aac131e13c38}{Abstract\+Request\+Visitor}}.
+
+
+
+Definition at line 21 of file Body\+Visitor.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Command/\+Location\+Visitor/\+Request/\mbox{\hyperlink{_request_2_body_visitor_8php}{Body\+Visitor.\+php}}\end{DoxyCompactItemize}

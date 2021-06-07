@@ -1,0 +1,54 @@
+
+
+\href{https://crawlerdetect.io/}{\texttt{ }}~\newline
+~\newline
+ \href{https://crawlerdetect.io/}{\texttt{ crawlerdetect.\+io}} ~\newline
+~\newline
+ 
+
+
+
+\href{https://github.com/JayBizzle/Crawler-Detect/actions}{\texttt{ }} \href{https://packagist.org/packages/jaybizzle/crawler-detect}{\texttt{ }} \href{https://scrutinizer-ci.com/g/JayBizzle/Crawler-Detect/?branch=master}{\texttt{ }} \href{https://github.com/JayBizzle/Crawler-Detect}{\texttt{ }} \href{https://packagist.org/packages/jaybizzle/crawler-detect}{\texttt{ }} \href{https://coveralls.io/github/JayBizzle/Crawler-Detect}{\texttt{ }} \hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md741}{}\doxysubsection{About Crawler\+Detect}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md741}
+Crawler\+Detect is a PHP class for detecting bots/crawlers/spiders via the user agent and http\+\_\+from header. Currently able to detect 1,000\textquotesingle{}s of bots/spiders/crawlers.\hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md742}{}\doxysubsubsection{Installation}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md742}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require jaybizzle/crawler-\/detect}
+
+\end{DoxyCode}
+\hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md743}{}\doxysubsubsection{Usage}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md743}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_jaybizzle_1_1_crawler_detect_1_1_crawler_detect}{Jaybizzle\(\backslash\)CrawlerDetect\(\backslash\)CrawlerDetect}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$CrawlerDetect = \textcolor{keyword}{new} CrawlerDetect;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Check the user agent of the current 'visitor'}}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(\$CrawlerDetect-\/>isCrawler()) \{}
+\DoxyCodeLine{    \textcolor{comment}{// true if crawler user agent detected}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Pass a user agent as a string}}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(\$CrawlerDetect-\/>isCrawler(\textcolor{stringliteral}{'Mozilla/5.0 (compatible; Sosospider/2.0; +http://help.soso.com/webspider.htm)'})) \{}
+\DoxyCodeLine{    \textcolor{comment}{// true if crawler user agent detected}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Output the name of the bot that matched (if any)}}
+\DoxyCodeLine{echo \$CrawlerDetect-\/>\mbox{\hyperlink{class_jaybizzle_1_1_crawler_detect_1_1_crawler_detect_ad8cf8aeab81623c99c33da0a36f18267}{getMatches}}();}
+
+\end{DoxyCode}
+\hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md744}{}\doxysubsubsection{Contributing}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md744}
+If you find a bot/spider/crawler user agent that Crawler\+Detect fails to detect, please submit a pull request with the regex pattern added to the {\ttfamily \$data} array in {\ttfamily \mbox{\hyperlink{_crawlers_8php}{Fixtures/\+Crawlers.\+php}}} and add the failing user agent to {\ttfamily tests/crawlers.\+txt}.
+
+Failing that, just create an issue with the user agent you have found, and we\textquotesingle{}ll take it from there \+:)\hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md745}{}\doxysubsubsection{Laravel Package}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md745}
+If you would like to use this with Laravel, please see \href{https://github.com/JayBizzle/Laravel-Crawler-Detect}{\texttt{ Laravel-\/\+Crawler-\/\+Detect}}\hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md746}{}\doxysubsubsection{Symfony Bundle}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md746}
+To use this library with Symfony 2/3/4, check out the \href{https://github.com/nicolasmure/CrawlerDetectBundle}{\texttt{ Crawler\+Detect\+Bundle}}.\hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md747}{}\doxysubsubsection{YII2 Extension}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md747}
+To use this library with the YII2 framework, check out \href{https://github.com/AlikDex/yii2-crawler-detect}{\texttt{ yii2-\/crawler-\/detect}}.\hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md748}{}\doxysubsubsection{ES6 Library}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md748}
+To use this library with Node\+JS or any ES6 application based, check out \href{https://github.com/JefferyHus/es6-crawler-detect}{\texttt{ es6-\/crawler-\/detect}}.\hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md749}{}\doxysubsubsection{Python Library}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md749}
+To use this library in a Python project, check out \href{https://github.com/moskrc/CrawlerDetect}{\texttt{ crawlerdetect}}.\hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md750}{}\doxysubsubsection{.\+NET Library}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md750}
+To use this library in a .net standard (including .net core) based project, check out \href{https://github.com/gplumb/NetCrawlerDetect}{\texttt{ Net\+Crawler\+Detect}}.\hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md751}{}\doxysubsubsection{Ruby Gem}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md751}
+To use this library with Ruby on Rails or any Ruby-\/based application, check out \href{https://github.com/loadkpi/crawler_detect}{\texttt{ crawler\+\_\+detect}} gem.\hypertarget{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md752}{}\doxysubsubsection{Go Module}\label{md_vdlp_redirect_vendor_jaybizzle_crawler_detect__r_e_a_d_m_e_autotoc_md752}
+To use this library with Go, check out the \href{https://github.com/x-way/crawlerdetect}{\texttt{ crawlerdetect}} module.
+
+{\itshape Parts of this class are based on the brilliant \href{https://github.com/serbanghita/Mobile-Detect}{\texttt{ Mobile\+Detect}}}
+
+\href{https://github.com/JayBizzle/Crawler-Detect}{\texttt{ }} 

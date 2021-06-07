@@ -1,0 +1,70 @@
+\hypertarget{interface_guzzle_1_1_plugin_1_1_cache_1_1_can_cache_strategy_interface}{}\doxysection{Can\+Cache\+Strategy\+Interface Interface Reference}
+\label{interface_guzzle_1_1_plugin_1_1_cache_1_1_can_cache_strategy_interface}\index{CanCacheStrategyInterface@{CanCacheStrategyInterface}}
+Inheritance diagram for Can\+Cache\+Strategy\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_guzzle_1_1_plugin_1_1_cache_1_1_can_cache_strategy_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_cache_1_1_can_cache_strategy_interface_afc839ff17e72531afabfce4c55ba728d}{can\+Cache\+Request}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_cache_1_1_can_cache_strategy_interface_adf2b28a387c47779788caae5e752ebc2}{can\+Cache\+Response}} (\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}} \$response)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Strategy used to determine if a request can be cached 
+
+Definition at line 11 of file Can\+Cache\+Strategy\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_guzzle_1_1_plugin_1_1_cache_1_1_can_cache_strategy_interface_afc839ff17e72531afabfce4c55ba728d}\label{interface_guzzle_1_1_plugin_1_1_cache_1_1_can_cache_strategy_interface_afc839ff17e72531afabfce4c55ba728d}} 
+\index{CanCacheStrategyInterface@{CanCacheStrategyInterface}!canCacheRequest@{canCacheRequest}}
+\index{canCacheRequest@{canCacheRequest}!CanCacheStrategyInterface@{CanCacheStrategyInterface}}
+\doxysubsubsection{\texorpdfstring{canCacheRequest()}{canCacheRequest()}}
+{\footnotesize\ttfamily can\+Cache\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+Determine if a request can be cached
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to determine\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_can_cache_strategy_afc839ff17e72531afabfce4c55ba728d}{Default\+Can\+Cache\+Strategy}}, and \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_afc839ff17e72531afabfce4c55ba728d}{Callback\+Can\+Cache\+Strategy}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_plugin_1_1_cache_1_1_can_cache_strategy_interface_adf2b28a387c47779788caae5e752ebc2}\label{interface_guzzle_1_1_plugin_1_1_cache_1_1_can_cache_strategy_interface_adf2b28a387c47779788caae5e752ebc2}} 
+\index{CanCacheStrategyInterface@{CanCacheStrategyInterface}!canCacheResponse@{canCacheResponse}}
+\index{canCacheResponse@{canCacheResponse}!CanCacheStrategyInterface@{CanCacheStrategyInterface}}
+\doxysubsubsection{\texorpdfstring{canCacheResponse()}{canCacheResponse()}}
+{\footnotesize\ttfamily can\+Cache\+Response (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}}}]{\$response }\end{DoxyParamCaption})}
+
+Determine if a response can be cached
+
+
+\begin{DoxyParams}[1]{Parameters}
+Response & {\em \$response} & Response to determine\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_can_cache_strategy_adf2b28a387c47779788caae5e752ebc2}{Default\+Can\+Cache\+Strategy}}, and \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_adf2b28a387c47779788caae5e752ebc2}{Callback\+Can\+Cache\+Strategy}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Cache/\mbox{\hyperlink{_can_cache_strategy_interface_8php}{Can\+Cache\+Strategy\+Interface.\+php}}\end{DoxyCompactItemize}

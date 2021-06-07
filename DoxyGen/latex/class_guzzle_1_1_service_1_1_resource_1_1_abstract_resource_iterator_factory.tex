@@ -1,0 +1,105 @@
+\hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory}{}\doxysection{Abstract\+Resource\+Iterator\+Factory Class Reference}
+\label{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory}\index{AbstractResourceIteratorFactory@{AbstractResourceIteratorFactory}}
+Inheritance diagram for Abstract\+Resource\+Iterator\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory_a4346bc8e6ef72cac9383fa80f7237b92}{build}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command, array \$options=array())
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory_a99278793e0f07f87c0b8754f05274411}{can\+Build}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory_a005ddd23ce4e5dd4c47bdb3469eda4d0}{get\+Class\+Name}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract resource iterator factory implementation 
+
+Definition at line 11 of file Abstract\+Resource\+Iterator\+Factory.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory_a4346bc8e6ef72cac9383fa80f7237b92}\label{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory_a4346bc8e6ef72cac9383fa80f7237b92}} 
+\index{AbstractResourceIteratorFactory@{AbstractResourceIteratorFactory}!build@{build}}
+\index{build@{build}!AbstractResourceIteratorFactory@{AbstractResourceIteratorFactory}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command,  }\item[{array}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Create a resource iterator
+
+
+\begin{DoxyParams}[1]{Parameters}
+Command\+Interface & {\em \$command} & \mbox{\hyperlink{namespace_guzzle_1_1_service_1_1_command}{Command}} to create an iterator for \\
+\hline
+array & {\em \$options} & \mbox{\hyperlink{namespace_guzzle_1_1_iterator}{Iterator}} options that are exposed as data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_factory_interface_a4346bc8e6ef72cac9383fa80f7237b92}{Resource\+Iterator\+Factory\+Interface}}.
+
+
+
+Definition at line 13 of file Abstract\+Resource\+Iterator\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory_a99278793e0f07f87c0b8754f05274411}\label{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory_a99278793e0f07f87c0b8754f05274411}} 
+\index{AbstractResourceIteratorFactory@{AbstractResourceIteratorFactory}!canBuild@{canBuild}}
+\index{canBuild@{canBuild}!AbstractResourceIteratorFactory@{AbstractResourceIteratorFactory}}
+\doxysubsubsection{\texorpdfstring{canBuild()}{canBuild()}}
+{\footnotesize\ttfamily can\+Build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command }\end{DoxyParamCaption})}
+
+Check if the factory can create an iterator
+
+
+\begin{DoxyParams}[1]{Parameters}
+Command\+Interface & {\em \$command} & \mbox{\hyperlink{namespace_guzzle_1_1_service_1_1_command}{Command}} to create an iterator for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_factory_interface_a99278793e0f07f87c0b8754f05274411}{Resource\+Iterator\+Factory\+Interface}}.
+
+
+
+Definition at line 24 of file Abstract\+Resource\+Iterator\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory_a005ddd23ce4e5dd4c47bdb3469eda4d0}\label{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory_a005ddd23ce4e5dd4c47bdb3469eda4d0}} 
+\index{AbstractResourceIteratorFactory@{AbstractResourceIteratorFactory}!getClassName@{getClassName}}
+\index{getClassName@{getClassName}!AbstractResourceIteratorFactory@{AbstractResourceIteratorFactory}}
+\doxysubsubsection{\texorpdfstring{getClassName()}{getClassName()}}
+{\footnotesize\ttfamily get\+Class\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+Get the name of the class to instantiate for the command
+
+
+\begin{DoxyParams}[1]{Parameters}
+Command\+Interface & {\em \$command} & \mbox{\hyperlink{namespace_guzzle_1_1_service_1_1_command}{Command}} that is associated with the iterator\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_class_factory_a005ddd23ce4e5dd4c47bdb3469eda4d0}{Resource\+Iterator\+Class\+Factory}}, and \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_map_resource_iterator_factory_a005ddd23ce4e5dd4c47bdb3469eda4d0}{Map\+Resource\+Iterator\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Resource/\mbox{\hyperlink{_abstract_resource_iterator_factory_8php}{Abstract\+Resource\+Iterator\+Factory.\+php}}\end{DoxyCompactItemize}

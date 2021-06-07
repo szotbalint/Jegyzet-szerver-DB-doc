@@ -1,0 +1,91 @@
+\hypertarget{class_guzzle_1_1_parser_1_1_url_1_1_url_parser}{}\doxysection{Url\+Parser Class Reference}
+\label{class_guzzle_1_1_parser_1_1_url_1_1_url_parser}\index{UrlParser@{UrlParser}}
+Inheritance diagram for Url\+Parser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_parser_1_1_url_1_1_url_parser}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_parser_1_1_url_1_1_url_parser_a76cf1a86159722cc71807166a737ee7d}{set\+Utf8\+Support}} (\$utf8)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_parser_1_1_url_1_1_url_parser_a6147fe97c0be7e217e24dc2ec97fda27}{parse\+Url}} (\$url)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_parser_1_1_url_1_1_url_parser_a99bb930ba655fe92b53dcb86eb94dac6}{\$utf8}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parses URLs into parts using PHP\textquotesingle{}s built-\/in parse\+\_\+url() function \begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000028}{Deprecated}}]Just use parse\+\_\+url. UTF-\/8 characters should be percent encoded anyways. @code\+Coverage\+Ignore \end{DoxyRefDesc}
+
+
+Definition at line 12 of file Url\+Parser.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_parser_1_1_url_1_1_url_parser_a6147fe97c0be7e217e24dc2ec97fda27}\label{class_guzzle_1_1_parser_1_1_url_1_1_url_parser_a6147fe97c0be7e217e24dc2ec97fda27}} 
+\index{UrlParser@{UrlParser}!parseUrl@{parseUrl}}
+\index{parseUrl@{parseUrl}!UrlParser@{UrlParser}}
+\doxysubsubsection{\texorpdfstring{parseUrl()}{parseUrl()}}
+{\footnotesize\ttfamily parse\+Url (\begin{DoxyParamCaption}\item[{}]{\$url }\end{DoxyParamCaption})}
+
+Parse a URL using special handling for a subset of UTF-\/8 characters in the query string if needed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & URL to parse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array Returns an array identical to what is returned from parse\+\_\+url(). When an array key is missing from this array, you must fill it in with NULL to avoid warnings in calling code. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_parser_1_1_url_1_1_url_parser_interface_a6147fe97c0be7e217e24dc2ec97fda27}{Url\+Parser\+Interface}}.
+
+
+
+Definition at line 27 of file Url\+Parser.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_parser_1_1_url_1_1_url_parser_a76cf1a86159722cc71807166a737ee7d}\label{class_guzzle_1_1_parser_1_1_url_1_1_url_parser_a76cf1a86159722cc71807166a737ee7d}} 
+\index{UrlParser@{UrlParser}!setUtf8Support@{setUtf8Support}}
+\index{setUtf8Support@{setUtf8Support}!UrlParser@{UrlParser}}
+\doxysubsubsection{\texorpdfstring{setUtf8Support()}{setUtf8Support()}}
+{\footnotesize\ttfamily set\+Utf8\+Support (\begin{DoxyParamCaption}\item[{}]{\$utf8 }\end{DoxyParamCaption})}
+
+Set whether or not to attempt to handle UTF-\/8 strings (still WIP)
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$utf8} & Set to TRUE to handle UTF string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file Url\+Parser.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_parser_1_1_url_1_1_url_parser_a99bb930ba655fe92b53dcb86eb94dac6}\label{class_guzzle_1_1_parser_1_1_url_1_1_url_parser_a99bb930ba655fe92b53dcb86eb94dac6}} 
+\index{UrlParser@{UrlParser}!\$utf8@{\$utf8}}
+\index{\$utf8@{\$utf8}!UrlParser@{UrlParser}}
+\doxysubsubsection{\texorpdfstring{\$utf8}{$utf8}}
+{\footnotesize\ttfamily \$utf8 = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 15 of file Url\+Parser.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Parser/\+Url/\mbox{\hyperlink{_url_parser_8php}{Url\+Parser.\+php}}\end{DoxyCompactItemize}

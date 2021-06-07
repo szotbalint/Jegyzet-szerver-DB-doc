@@ -1,0 +1,52 @@
+Tools for dealing with currency display and conversions. You can configure currencies and converters via the Settings page.
+
+
+\begin{DoxyItemize}
+\item Settings \textbackslash{} Currencies
+\item Settings \textbackslash{} Currency converters
+\end{DoxyItemize}\hypertarget{md_responsiv_currency__r_e_a_d_m_e_autotoc_md631}{}\doxysubsection{Formatting currency}\label{md_responsiv_currency__r_e_a_d_m_e_autotoc_md631}
+You may call the currency facade in PHP using {\ttfamily Currency\+::format} or in Twig using the {\ttfamily $\vert$currency} filter. \begin{DoxyVerb}<?= Currency::format(10) ?>
+
+{{ 10|currency }}
+\end{DoxyVerb}
+ This method takes an options argument, as an array that supports various values.
+
+
+\begin{DoxyItemize}
+\item to\+: To a given currency code
+\item from\+: From a currency code
+\item format\+: Display format. Options\+: long, short, null.
+\end{DoxyItemize}
+
+For example, to convert an amount from USD to AUD\+: \begin{DoxyVerb}Currency::format(10, ['from' => 'USD', 'to' => 'AUD']);
+\end{DoxyVerb}
+ To display a currency in long or short format \begin{DoxyVerb}// $10.00 USD
+Currency::format(10, ['format' => 'long']);
+
+// $10
+Currency::format(10, ['format' => 'short']);
+\end{DoxyVerb}
+ \hypertarget{md_responsiv_currency__r_e_a_d_m_e_autotoc_md632}{}\doxysubsection{Currency Form Widget}\label{md_responsiv_currency__r_e_a_d_m_e_autotoc_md632}
+This plugin introduces a currency form field called {\ttfamily currency}. The form widget renders a text field that displays the currency symbol. When the field is shown as a preview, the number is formatted using the primary currency settings.
+
+Usage\+: \begin{DoxyVerb}# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    total_amount:
+        label: Total amount
+        type: currency
+        format: short
+\end{DoxyVerb}
+ \hypertarget{md_responsiv_currency__r_e_a_d_m_e_autotoc_md633}{}\doxysubsection{Currency List Column}\label{md_responsiv_currency__r_e_a_d_m_e_autotoc_md633}
+This plugin introduces a currency list column called {\ttfamily currency}. The value is formatted using the primary currency settings. \begin{DoxyVerb}# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    total_amount:
+        label: Loan amount
+        type: currency
+\end{DoxyVerb}
+ 

@@ -1,0 +1,254 @@
+\hypertarget{class_guzzle_1_1_http_1_1_static_client}{}\doxysection{Static\+Client Class Reference}
+\label{class_guzzle_1_1_http_1_1_static_client}\index{StaticClient@{StaticClient}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_a7627bf663626b0adbc67f5bf3b8d60cc}{mount}} (\$class\+Name=\textquotesingle{}Guzzle\textquotesingle{}, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_client_interface}{Client\+Interface}} \$client=null)
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac157fd312f78b67a4721f07321f643e4}{request}} (\$method, \$url, \$\mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}}=array())
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ad964eb76c60d4bb82e0a083f6427bb3a}{get}} (\$url, \$\mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}}=array())
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_a27348a588968125610f5de2f463e07a8}{head}} (\$url, \$\mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}}=array())
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_a25d0d5e5ce763d0ca6dbb6529b2a398e}{delete}} (\$url, \$\mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}}=array())
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_a73e6dfacabb635278b74af7bb56ade24}{post}} (\$url, \$\mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}}=array())
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ab1d9d959840a5b23883cee4b0562de82}{put}} (\$url, \$\mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}}=array())
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac23c8d8f6bfb13559338bb4a963f785f}{patch}} (\$url, \$\mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}}=array())
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}} (\$url, \$options=array())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simplified interface to Guzzle that does not require a class to be instantiated 
+
+Definition at line 13 of file Static\+Client.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_static_client_a25d0d5e5ce763d0ca6dbb6529b2a398e}\label{class_guzzle_1_1_http_1_1_static_client_a25d0d5e5ce763d0ca6dbb6529b2a398e}} 
+\index{StaticClient@{StaticClient}!delete@{delete}}
+\index{delete@{delete}!StaticClient@{StaticClient}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily static delete (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Send a DELETE request
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & URL of the request \\
+\hline
+array & {\em \$options} & Array of request options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Guzzle\+::request for a list of available \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 97 of file Static\+Client.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_static_client_ad964eb76c60d4bb82e0a083f6427bb3a}\label{class_guzzle_1_1_http_1_1_static_client_ad964eb76c60d4bb82e0a083f6427bb3a}} 
+\index{StaticClient@{StaticClient}!get@{get}}
+\index{get@{get}!StaticClient@{StaticClient}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily static get (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Send a GET request
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & URL of the request \\
+\hline
+array & {\em \$options} & Array of request options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Guzzle\+::request for a list of available \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 69 of file Static\+Client.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_static_client_a27348a588968125610f5de2f463e07a8}\label{class_guzzle_1_1_http_1_1_static_client_a27348a588968125610f5de2f463e07a8}} 
+\index{StaticClient@{StaticClient}!head@{head}}
+\index{head@{head}!StaticClient@{StaticClient}}
+\doxysubsubsection{\texorpdfstring{head()}{head()}}
+{\footnotesize\ttfamily static head (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Send a HEAD request
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & URL of the request \\
+\hline
+array & {\em \$options} & Array of request options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Guzzle\+::request for a list of available \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 83 of file Static\+Client.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_static_client_a7627bf663626b0adbc67f5bf3b8d60cc}\label{class_guzzle_1_1_http_1_1_static_client_a7627bf663626b0adbc67f5bf3b8d60cc}} 
+\index{StaticClient@{StaticClient}!mount@{mount}}
+\index{mount@{mount}!StaticClient@{StaticClient}}
+\doxysubsubsection{\texorpdfstring{mount()}{mount()}}
+{\footnotesize\ttfamily static mount (\begin{DoxyParamCaption}\item[{}]{\$class\+Name = {\ttfamily \textquotesingle{}Guzzle\textquotesingle{}},  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_client_interface}{Client\+Interface}}}]{\$client = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Mount the client to a simpler class name for a specific client
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & Class name to use to mount \\
+\hline
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_client_interface}{Client\+Interface}} & {\em \$client} & \mbox{\hyperlink{class_guzzle_1_1_http_1_1_client}{Client}} used to send requests \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Static\+Client.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}\label{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}} 
+\index{StaticClient@{StaticClient}!options@{options}}
+\index{options@{options}!StaticClient@{StaticClient}}
+\doxysubsubsection{\texorpdfstring{options()}{options()}}
+{\footnotesize\ttfamily static options (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Send an OPTIONS request
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & URL of the request \\
+\hline
+array & {\em \$options} & Array of request options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Guzzle\+::request for a list of available \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 153 of file Static\+Client.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_static_client_ac23c8d8f6bfb13559338bb4a963f785f}\label{class_guzzle_1_1_http_1_1_static_client_ac23c8d8f6bfb13559338bb4a963f785f}} 
+\index{StaticClient@{StaticClient}!patch@{patch}}
+\index{patch@{patch}!StaticClient@{StaticClient}}
+\doxysubsubsection{\texorpdfstring{patch()}{patch()}}
+{\footnotesize\ttfamily static patch (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Send a PATCH request
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & URL of the request \\
+\hline
+array & {\em \$options} & Array of request options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Guzzle\+::request for a list of available \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 139 of file Static\+Client.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_static_client_a73e6dfacabb635278b74af7bb56ade24}\label{class_guzzle_1_1_http_1_1_static_client_a73e6dfacabb635278b74af7bb56ade24}} 
+\index{StaticClient@{StaticClient}!post@{post}}
+\index{post@{post}!StaticClient@{StaticClient}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily static post (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Send a POST request
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & URL of the request \\
+\hline
+array & {\em \$options} & Array of request options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Guzzle\+::request for a list of available \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 111 of file Static\+Client.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_static_client_ab1d9d959840a5b23883cee4b0562de82}\label{class_guzzle_1_1_http_1_1_static_client_ab1d9d959840a5b23883cee4b0562de82}} 
+\index{StaticClient@{StaticClient}!put@{put}}
+\index{put@{put}!StaticClient@{StaticClient}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily static put (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Send a PUT request
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & URL of the request \\
+\hline
+array & {\em \$options} & Array of request options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Guzzle\+::request for a list of available \mbox{\hyperlink{class_guzzle_1_1_http_1_1_static_client_ac7b9ba2a70347393177ca874dcf03533}{options}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 125 of file Static\+Client.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_static_client_ac157fd312f78b67a4721f07321f643e4}\label{class_guzzle_1_1_http_1_1_static_client_ac157fd312f78b67a4721f07321f643e4}} 
+\index{StaticClient@{StaticClient}!request@{request}}
+\index{request@{request}!StaticClient@{StaticClient}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily static request (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$url,  }\item[{}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & HTTP request method (GET, POST, HEAD, DELETE, PUT, etc) \\
+\hline
+string & {\em \$url} & URL of the request \\
+\hline
+array & {\em \$options} & Options to use with the request. See\+: Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+Factory\+::apply\+Options() \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response$\vert$\textbackslash{}\+Guzzle\textbackslash{}\+Stream\textbackslash{}\+Stream 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Static\+Client.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Http/\mbox{\hyperlink{_static_client_8php}{Static\+Client.\+php}}\end{DoxyCompactItemize}

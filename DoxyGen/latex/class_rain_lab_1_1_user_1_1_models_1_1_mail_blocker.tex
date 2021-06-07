@@ -1,0 +1,329 @@
+\hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker}{}\doxysection{Mail\+Blocker Class Reference}
+\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker}\index{MailBlocker@{MailBlocker}}
+Inheritance diagram for Mail\+Blocker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a9f056a62c08e96f6e017a6fa9352d151}{set\+Preferences}} (\$user, \$templates, \$options=\mbox{[}$\,$\mbox{]})
+\item 
+static \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a69d43a1533ffabc0b61511f67d1291a8}{add\+Block}} (\$template, \$user)
+\item 
+static \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_aca75fe558946f31e9d37ab86ced00db7}{remove\+Block}} (\$template, \$user)
+\item 
+static \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a44e95daa3b67b484cac148d71c63a9af}{block\+All}} (\$user)
+\item 
+static \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a5c9ddf0690e9f8fe1d484ac7fb0ec654}{unblock\+All}} (\$user)
+\item 
+static \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a1d7e7d7e1c1f418ecafdab761c71b827}{is\+Block\+All}} (\$user)
+\item 
+static \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_afce91c87a7d3ae61c365c2d1168ff7e9}{sync\+User}} (\$user)
+\item 
+static \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_af4d391cfd952c55f30d1c48c6e557a74}{check\+All\+For\+User}} (\$user)
+\item 
+static \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_ac4ba92130919ed99693c78d680397e3a}{check\+For\+Email}} (\$template, \$email)
+\item 
+static \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_aeb98eb8dc1c2e9da915086fe734a4313}{filter\+Message}} (\$template, \$message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_ae8876a14058f368335baccf35af4a22b}{\$table}} = \textquotesingle{}rainlab\+\_\+user\+\_\+mail\+\_\+blockers\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a1578683643768f402aa354aabf0c1c31}{\$belongs\+To}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a5758640ec23bdc1a6850649763244e86}{\$guarded}} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_ac6c40b554ef004c82299b01e8a851700}{\$safe\+Templates}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mail Blocker
+
+A utility model that allows a user to block specific mail views/templates from being sent to their address. 
+
+Definition at line 14 of file Mail\+Blocker.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a69d43a1533ffabc0b61511f67d1291a8}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a69d43a1533ffabc0b61511f67d1291a8}} 
+\index{MailBlocker@{MailBlocker}!addBlock@{addBlock}}
+\index{addBlock@{addBlock}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{addBlock()}{addBlock()}}
+{\footnotesize\ttfamily static add\+Block (\begin{DoxyParamCaption}\item[{}]{\$template,  }\item[{}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Adds a block for a user and a mail view/template code. 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$template} & \\
+\hline
+Rain\+Lab\textbackslash{}\+User\textbackslash{}\+Models\textbackslash{}\+User & {\em \$user} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a44e95daa3b67b484cac148d71c63a9af}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a44e95daa3b67b484cac148d71c63a9af}} 
+\index{MailBlocker@{MailBlocker}!blockAll@{blockAll}}
+\index{blockAll@{blockAll}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{blockAll()}{blockAll()}}
+{\footnotesize\ttfamily static block\+All (\begin{DoxyParamCaption}\item[{}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Blocks all mail messages for a user. 
+\begin{DoxyParams}[1]{Parameters}
+Rain\+Lab\textbackslash{}\+User\textbackslash{}\+Models\textbackslash{}\+User & {\em \$user} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 165 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_af4d391cfd952c55f30d1c48c6e557a74}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_af4d391cfd952c55f30d1c48c6e557a74}} 
+\index{MailBlocker@{MailBlocker}!checkAllForUser@{checkAllForUser}}
+\index{checkAllForUser@{checkAllForUser}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{checkAllForUser()}{checkAllForUser()}}
+{\footnotesize\ttfamily static check\+All\+For\+User (\begin{DoxyParamCaption}\item[{}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns a list of mail templates blocked by the user. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_model}{Model}} & {\em \$user} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 205 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_ac4ba92130919ed99693c78d680397e3a}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_ac4ba92130919ed99693c78d680397e3a}} 
+\index{MailBlocker@{MailBlocker}!checkForEmail@{checkForEmail}}
+\index{checkForEmail@{checkForEmail}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{checkForEmail()}{checkForEmail()}}
+{\footnotesize\ttfamily static check\+For\+Email (\begin{DoxyParamCaption}\item[{}]{\$template,  }\item[{}]{\$email }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks if an email address has blocked a given template, returns an array of blocked emails. 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$template} & \\
+\hline
+string & {\em \$email} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 217 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_aeb98eb8dc1c2e9da915086fe734a4313}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_aeb98eb8dc1c2e9da915086fe734a4313}} 
+\index{MailBlocker@{MailBlocker}!filterMessage@{filterMessage}}
+\index{filterMessage@{filterMessage}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{filterMessage()}{filterMessage()}}
+{\footnotesize\ttfamily static filter\+Message (\begin{DoxyParamCaption}\item[{}]{\$template,  }\item[{}]{\$message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Filters a Illuminate\textbackslash{}\+Mail\textbackslash{}\+Message and removes blocked recipients. If no recipients remain, false is returned. Returns null if mailing should proceed. 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$template} & \\
+\hline
+Illuminate\textbackslash{}\+Mail\textbackslash{}\+Message & {\em \$message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool$\vert$null 
+\end{DoxyReturn}
+
+
+Definition at line 248 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a1d7e7d7e1c1f418ecafdab761c71b827}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a1d7e7d7e1c1f418ecafdab761c71b827}} 
+\index{MailBlocker@{MailBlocker}!isBlockAll@{isBlockAll}}
+\index{isBlockAll@{isBlockAll}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{isBlockAll()}{isBlockAll()}}
+{\footnotesize\ttfamily static is\+Block\+All (\begin{DoxyParamCaption}\item[{}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks if a user is blocking all templates. 
+\begin{DoxyParams}[1]{Parameters}
+Rain\+Lab\textbackslash{}\+User\textbackslash{}\+Models\textbackslash{}\+User & {\em \$user} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 185 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_aca75fe558946f31e9d37ab86ced00db7}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_aca75fe558946f31e9d37ab86ced00db7}} 
+\index{MailBlocker@{MailBlocker}!removeBlock@{removeBlock}}
+\index{removeBlock@{removeBlock}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{removeBlock()}{removeBlock()}}
+{\footnotesize\ttfamily static remove\+Block (\begin{DoxyParamCaption}\item[{}]{\$template,  }\item[{}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Removes a block for a user and a mail view/template code. 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$template} & \\
+\hline
+Rain\+Lab\textbackslash{}\+User\textbackslash{}\+Models\textbackslash{}\+User & {\em \$user} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 137 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a9f056a62c08e96f6e017a6fa9352d151}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a9f056a62c08e96f6e017a6fa9352d151}} 
+\index{MailBlocker@{MailBlocker}!setPreferences@{setPreferences}}
+\index{setPreferences@{setPreferences}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{setPreferences()}{setPreferences()}}
+{\footnotesize\ttfamily static set\+Preferences (\begin{DoxyParamCaption}\item[{}]{\$user,  }\item[{}]{\$templates,  }\item[{}]{\$options = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets mail blocking preferences for a user. Eg\+:
+
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a9f056a62c08e96f6e017a6fa9352d151}{Mail\+Blocker\+::set\+Preferences}}(\$user, \mbox{[}acme.\+blog\+::post.\+new\+\_\+reply =$>$ 0\mbox{]})
+
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a9f056a62c08e96f6e017a6fa9352d151}{Mail\+Blocker\+::set\+Preferences}}(\$user, \mbox{[}acme.\+blog\+::post.\+new\+\_\+reply =$>$ 0\mbox{]}, \mbox{[}fillable =$>$ \mbox{[}acme.\+blog\+::post.\+new\+\_\+reply\mbox{]}\mbox{]})
+
+\mbox{\hyperlink{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a9f056a62c08e96f6e017a6fa9352d151}{Mail\+Blocker\+::set\+Preferences}}(\$user, \mbox{[}template\+\_\+alias =$>$ 0\mbox{]}, \mbox{[}aliases =$>$ \mbox{[}template\+\_\+alias =$>$ acme.\+blog\+::post.\+new\+\_\+reply\mbox{]}\mbox{]})
+
+Supported options\+:
+\begin{DoxyItemize}
+\item aliases\+: Alias definitions, with alias as key and template as value.
+\item fillable\+: An array of expected templates, undefined templates are ignored.
+\item verify\+: Only allow mail templates that are registered in the system.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$templates} & Template name as key and boolean as value. If false, template is blocked. \\
+\hline
+Rain\+Lab\textbackslash{}\+User\textbackslash{}\+Models\textbackslash{}\+User & {\em \$user} & \\
+\hline
+array & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_afce91c87a7d3ae61c365c2d1168ff7e9}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_afce91c87a7d3ae61c365c2d1168ff7e9}} 
+\index{MailBlocker@{MailBlocker}!syncUser@{syncUser}}
+\index{syncUser@{syncUser}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{syncUser()}{syncUser()}}
+{\footnotesize\ttfamily static sync\+User (\begin{DoxyParamCaption}\item[{}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\hyperlink{namespace_rain_lab_1_1_user_1_1_updates}{Updates}} mail blockers for a user if they change their email address 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_model}{Model}} & {\em \$user} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 195 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a5c9ddf0690e9f8fe1d484ac7fb0ec654}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a5c9ddf0690e9f8fe1d484ac7fb0ec654}} 
+\index{MailBlocker@{MailBlocker}!unblockAll@{unblockAll}}
+\index{unblockAll@{unblockAll}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{unblockAll()}{unblockAll()}}
+{\footnotesize\ttfamily static unblock\+All (\begin{DoxyParamCaption}\item[{}]{\$user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Removes block on all mail messages for a user. 
+\begin{DoxyParams}[1]{Parameters}
+Rain\+Lab\textbackslash{}\+User\textbackslash{}\+Models\textbackslash{}\+User & {\em \$user} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 175 of file Mail\+Blocker.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a1578683643768f402aa354aabf0c1c31}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a1578683643768f402aa354aabf0c1c31}} 
+\index{MailBlocker@{MailBlocker}!\$belongsTo@{\$belongsTo}}
+\index{\$belongsTo@{\$belongsTo}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{\$belongsTo}{$belongsTo}}
+{\footnotesize\ttfamily \$belongs\+To}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'user'} => User::class}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+Definition at line 29 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a5758640ec23bdc1a6850649763244e86}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_a5758640ec23bdc1a6850649763244e86}} 
+\index{MailBlocker@{MailBlocker}!\$guarded@{\$guarded}}
+\index{\$guarded@{\$guarded}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{\$guarded}{$guarded}}
+{\footnotesize\ttfamily \$guarded = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_ac6c40b554ef004c82299b01e8a851700}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_ac6c40b554ef004c82299b01e8a851700}} 
+\index{MailBlocker@{MailBlocker}!\$safeTemplates@{\$safeTemplates}}
+\index{\$safeTemplates@{\$safeTemplates}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{\$safeTemplates}{$safeTemplates}}
+{\footnotesize\ttfamily \$safe\+Templates\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'rainlab.user::mail.restore'}}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+Definition at line 36 of file Mail\+Blocker.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_ae8876a14058f368335baccf35af4a22b}\label{class_rain_lab_1_1_user_1_1_models_1_1_mail_blocker_ae8876a14058f368335baccf35af4a22b}} 
+\index{MailBlocker@{MailBlocker}!\$table@{\$table}}
+\index{\$table@{\$table}!MailBlocker@{MailBlocker}}
+\doxysubsubsection{\texorpdfstring{\$table}{$table}}
+{\footnotesize\ttfamily \$table = \textquotesingle{}rainlab\+\_\+user\+\_\+mail\+\_\+blockers\textquotesingle{}}
+
+
+
+Definition at line 19 of file Mail\+Blocker.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rainlab/user/models/\mbox{\hyperlink{_mail_blocker_8php}{Mail\+Blocker.\+php}}\end{DoxyCompactItemize}

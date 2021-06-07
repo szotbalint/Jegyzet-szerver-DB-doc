@@ -1,0 +1,165 @@
+\hypertarget{class_guzzle_1_1_cache_1_1_zf1_cache_adapter}{}\doxysection{Zf1\+Cache\+Adapter Class Reference}
+\label{class_guzzle_1_1_cache_1_1_zf1_cache_adapter}\index{Zf1CacheAdapter@{Zf1CacheAdapter}}
+Inheritance diagram for Zf1\+Cache\+Adapter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_cache_1_1_zf1_cache_adapter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_a6494cde87b5ff9c3535ebabaf970cf48}{\+\_\+\+\_\+construct}} (\textbackslash{}Zend\+\_\+\+Cache\+\_\+\+Backend \$cache)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_a2e2bf79bf19297a041e5c35440cd98f0}{contains}} (\$id, array \$options=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_aceda3b5ee974ed58514666d8821dcf37}{delete}} (\$id, array \$options=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_a00e0940fc1feeb7a6d31d5dd8aceeb06}{fetch}} (\$id, array \$options=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_aba8b44586cb3552c534399ee434f63b8}{save}} (\$id, \$data, \$life\+Time=false, array \$options=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Zend Framework 1 cache adapter
+
+\mbox{\hyperlink{}{deprecated 3. }}
+
+Definition at line 14 of file Zf1\+Cache\+Adapter.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_a6494cde87b5ff9c3535ebabaf970cf48}\label{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_a6494cde87b5ff9c3535ebabaf970cf48}} 
+\index{Zf1CacheAdapter@{Zf1CacheAdapter}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Zf1CacheAdapter@{Zf1CacheAdapter}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\textbackslash{}Zend\+\_\+\+Cache\+\_\+\+Backend}]{\$cache }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Zend\+\_\+\+Cache\+\_\+\+Backend & {\em \$cache} & \mbox{\hyperlink{namespace_guzzle_1_1_cache}{Cache}} object to wrap \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Zf1\+Cache\+Adapter.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_a2e2bf79bf19297a041e5c35440cd98f0}\label{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_a2e2bf79bf19297a041e5c35440cd98f0}} 
+\index{Zf1CacheAdapter@{Zf1CacheAdapter}!contains@{contains}}
+\index{contains@{contains}!Zf1CacheAdapter@{Zf1CacheAdapter}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily contains (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{array}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Test if an entry exists in the cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & cache id The cache id of the entry to check for. \\
+\hline
+array & {\em \$options} & Array of cache adapter options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns TRUE if a cache entry exists for the given cache id, FALSE otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_cache_1_1_cache_adapter_interface_a2e2bf79bf19297a041e5c35440cd98f0}{Cache\+Adapter\+Interface}}.
+
+
+
+Definition at line 25 of file Zf1\+Cache\+Adapter.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_aceda3b5ee974ed58514666d8821dcf37}\label{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_aceda3b5ee974ed58514666d8821dcf37}} 
+\index{Zf1CacheAdapter@{Zf1CacheAdapter}!delete@{delete}}
+\index{delete@{delete}!Zf1CacheAdapter@{Zf1CacheAdapter}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{array}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Deletes a cache entry.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & cache id \\
+\hline
+array & {\em \$options} & Array of cache adapter options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE on success, FALSE on failure 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_cache_1_1_cache_adapter_interface_aceda3b5ee974ed58514666d8821dcf37}{Cache\+Adapter\+Interface}}.
+
+
+
+Definition at line 30 of file Zf1\+Cache\+Adapter.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_a00e0940fc1feeb7a6d31d5dd8aceeb06}\label{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_a00e0940fc1feeb7a6d31d5dd8aceeb06}} 
+\index{Zf1CacheAdapter@{Zf1CacheAdapter}!fetch@{fetch}}
+\index{fetch@{fetch}!Zf1CacheAdapter@{Zf1CacheAdapter}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}}
+{\footnotesize\ttfamily fetch (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{array}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Fetches an entry from the cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & cache id The id of the cache entry to fetch. \\
+\hline
+array & {\em \$options} & Array of cache adapter options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The cached data or FALSE, if no cache entry exists for the given id. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_cache_1_1_cache_adapter_interface_a00e0940fc1feeb7a6d31d5dd8aceeb06}{Cache\+Adapter\+Interface}}.
+
+
+
+Definition at line 35 of file Zf1\+Cache\+Adapter.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_aba8b44586cb3552c534399ee434f63b8}\label{class_guzzle_1_1_cache_1_1_zf1_cache_adapter_aba8b44586cb3552c534399ee434f63b8}} 
+\index{Zf1CacheAdapter@{Zf1CacheAdapter}!save@{save}}
+\index{save@{save}!Zf1CacheAdapter@{Zf1CacheAdapter}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$data,  }\item[{}]{\$life\+Time = {\ttfamily false},  }\item[{array}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Puts data into the cache.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The cache id \\
+\hline
+string & {\em \$data} & The cache entry/data \\
+\hline
+int | bool & {\em \$life\+Time} & The lifetime. If != false, sets a specific lifetime for this cache entry \\
+\hline
+array & {\em \$options} & Array of cache adapter options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool TRUE if the entry was successfully stored in the cache, FALSE otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_cache_1_1_cache_adapter_interface_aba8b44586cb3552c534399ee434f63b8}{Cache\+Adapter\+Interface}}.
+
+
+
+Definition at line 40 of file Zf1\+Cache\+Adapter.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Cache/\mbox{\hyperlink{_zf1_cache_adapter_8php}{Zf1\+Cache\+Adapter.\+php}}\end{DoxyCompactItemize}

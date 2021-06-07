@@ -1,0 +1,173 @@
+\hypertarget{class_guzzle_1_1_service_1_1_command_1_1_operation_command}{}\doxysection{Operation\+Command Class Reference}
+\label{class_guzzle_1_1_service_1_1_command_1_1_operation_command}\index{OperationCommand@{OperationCommand}}
+Inheritance diagram for Operation\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.849873cm]{class_guzzle_1_1_service_1_1_command_1_1_operation_command}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_operation_command_ac0dae82617659973ba1793ed50a88c90}{set\+Response\+Parser}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_response_parser_interface}{Response\+Parser\+Interface}} \$parser)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_operation_command_aaa0755a62b035bada0f1665f7bd30af8}{set\+Request\+Serializer}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_request_serializer_interface}{Request\+Serializer\+Interface}} \$serializer)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a4be4d93f449b9b7f49d89092ca48b448}{get\+Request\+Serializer}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a563e6cd84c9c85b4662b028992996709}{get\+Response\+Parser}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a3928875ef0ceb18a51c1061be3eb3a00}{build}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a7d4ad4038b036a67eece619e6f88c89e}{process}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a51c8b137b7b0157e095799bf5f50fc9d}{\$request\+Serializer}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a870c9aa81c5c7dc0c745275ffb0950cc}{\$response\+Parser}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A command that creates requests based on \{\begin{DoxySeeAlso}{See also}
+Guzzle\textbackslash{}\+Service\textbackslash{}\+Description\textbackslash{}\+Operation\+Interface\} objects, and if the matching operation uses a service description model in the response\+Class attribute, then this command will marshal the response into an associative array based on the JSON schema of the model. 
+\end{DoxySeeAlso}
+
+
+Definition at line 10 of file Operation\+Command.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a3928875ef0ceb18a51c1061be3eb3a00}\label{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a3928875ef0ceb18a51c1061be3eb3a00}} 
+\index{OperationCommand@{OperationCommand}!build@{build}}
+\index{build@{build}!OperationCommand@{OperationCommand}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create the request object that will carry out the command 
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_abstract_command_a3928875ef0ceb18a51c1061be3eb3a00}{Abstract\+Command}}.
+
+
+
+Definition at line 76 of file Operation\+Command.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a4be4d93f449b9b7f49d89092ca48b448}\label{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a4be4d93f449b9b7f49d89092ca48b448}} 
+\index{OperationCommand@{OperationCommand}!getRequestSerializer@{getRequestSerializer}}
+\index{getRequestSerializer@{getRequestSerializer}!OperationCommand@{OperationCommand}}
+\doxysubsubsection{\texorpdfstring{getRequestSerializer()}{getRequestSerializer()}}
+{\footnotesize\ttfamily get\+Request\+Serializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the request serializer used with the command
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_request_serializer_interface}{Request\+Serializer\+Interface}} 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Operation\+Command.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a563e6cd84c9c85b4662b028992996709}\label{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a563e6cd84c9c85b4662b028992996709}} 
+\index{OperationCommand@{OperationCommand}!getResponseParser@{getResponseParser}}
+\index{getResponseParser@{getResponseParser}!OperationCommand@{OperationCommand}}
+\doxysubsubsection{\texorpdfstring{getResponseParser()}{getResponseParser()}}
+{\footnotesize\ttfamily get\+Response\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the response parser used for the operation
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_response_parser_interface}{Response\+Parser\+Interface}} 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file Operation\+Command.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a7d4ad4038b036a67eece619e6f88c89e}\label{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a7d4ad4038b036a67eece619e6f88c89e}} 
+\index{OperationCommand@{OperationCommand}!process@{process}}
+\index{process@{process}!OperationCommand@{OperationCommand}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create the result of the command after the request has been completed. Override this method in subclasses to customize this behavior 
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_abstract_command_a7d4ad4038b036a67eece619e6f88c89e}{Abstract\+Command}}.
+
+
+
+Definition at line 82 of file Operation\+Command.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_operation_command_aaa0755a62b035bada0f1665f7bd30af8}\label{class_guzzle_1_1_service_1_1_command_1_1_operation_command_aaa0755a62b035bada0f1665f7bd30af8}} 
+\index{OperationCommand@{OperationCommand}!setRequestSerializer@{setRequestSerializer}}
+\index{setRequestSerializer@{setRequestSerializer}!OperationCommand@{OperationCommand}}
+\doxysubsubsection{\texorpdfstring{setRequestSerializer()}{setRequestSerializer()}}
+{\footnotesize\ttfamily set\+Request\+Serializer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_request_serializer_interface}{Request\+Serializer\+Interface}}}]{\$serializer }\end{DoxyParamCaption})}
+
+Set the request serializer used with the command
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_request_serializer_interface}{Request\+Serializer\+Interface}} & {\em \$serializer} & Request serializer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Operation\+Command.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_operation_command_ac0dae82617659973ba1793ed50a88c90}\label{class_guzzle_1_1_service_1_1_command_1_1_operation_command_ac0dae82617659973ba1793ed50a88c90}} 
+\index{OperationCommand@{OperationCommand}!setResponseParser@{setResponseParser}}
+\index{setResponseParser@{setResponseParser}!OperationCommand@{OperationCommand}}
+\doxysubsubsection{\texorpdfstring{setResponseParser()}{setResponseParser()}}
+{\footnotesize\ttfamily set\+Response\+Parser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_response_parser_interface}{Response\+Parser\+Interface}}}]{\$parser }\end{DoxyParamCaption})}
+
+Set the response parser used with the command
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_response_parser_interface}{Response\+Parser\+Interface}} & {\em \$parser} & Response parser\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file Operation\+Command.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a51c8b137b7b0157e095799bf5f50fc9d}\label{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a51c8b137b7b0157e095799bf5f50fc9d}} 
+\index{OperationCommand@{OperationCommand}!\$requestSerializer@{\$requestSerializer}}
+\index{\$requestSerializer@{\$requestSerializer}!OperationCommand@{OperationCommand}}
+\doxysubsubsection{\texorpdfstring{\$requestSerializer}{$requestSerializer}}
+{\footnotesize\ttfamily \$request\+Serializer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file Operation\+Command.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a870c9aa81c5c7dc0c745275ffb0950cc}\label{class_guzzle_1_1_service_1_1_command_1_1_operation_command_a870c9aa81c5c7dc0c745275ffb0950cc}} 
+\index{OperationCommand@{OperationCommand}!\$responseParser@{\$responseParser}}
+\index{\$responseParser@{\$responseParser}!OperationCommand@{OperationCommand}}
+\doxysubsubsection{\texorpdfstring{\$responseParser}{$responseParser}}
+{\footnotesize\ttfamily \$response\+Parser\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 16 of file Operation\+Command.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Command/\mbox{\hyperlink{_operation_command_8php}{Operation\+Command.\+php}}\end{DoxyCompactItemize}

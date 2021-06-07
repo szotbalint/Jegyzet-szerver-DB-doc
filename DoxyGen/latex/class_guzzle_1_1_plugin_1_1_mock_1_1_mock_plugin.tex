@@ -1,0 +1,413 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin}{}\doxysection{Mock\+Plugin Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin}\index{MockPlugin@{MockPlugin}}
+Inheritance diagram for Mock\+Plugin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a8dcd5f43751b0e5194499330f7092c4f}{\+\_\+\+\_\+construct}} (array \$items=null, \$temporary=false, \$\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a0e29fca5be8fdff6a6befe3fa03237cd}{read\+Bodies}}=false)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a0e29fca5be8fdff6a6befe3fa03237cd}{read\+Bodies}} (\$read\+Bodies)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_ac751e87b3d4c4bf2feb03bee8b092755}{count}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a071bd09f29ebd03ab9523ea7295c53c1}{add\+Response}} (\$response)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aea66fb3cb3ff5451ede6a9215175ca83}{add\+Exception}} (\mbox{\hyperlink{class_guzzle_1_1_http_1_1_exception_1_1_curl_exception}{Curl\+Exception}} \$e)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a50b4e5bacc902ec5d52ecfa01ec77212}{clear\+Queue}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aa7a8055e5ee1eb792f29443ddb79c4d3}{get\+Queue}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a73c2f35418baaf18ab8d900f2ed4d1cf}{is\+Temporary}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_ada976d9e838e3748d16178b7e8f8c789}{dequeue}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a7751f77b5263bcf940ece6e824a05b38}{flush}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aa81fb2e0ad792d6d094aea0bb2639c0a}{get\+Received\+Requests}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_ad5d409207870e96ccf59041047a94ccc}{on\+Request\+Before\+Send}} (\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} \$event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_af1f63475927bbcb3bd21b58712076104}{get\+Subscribed\+Events}} ()
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a0cf9c0f01ef8b36bdd76aa204c35c194}{get\+All\+Events}} ()
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a8417321ed4f5eb176f7495cae829f9f8}{get\+Mock\+File}} (\$path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a4a0b48f6ae2fcb248a4f0288c7c344a6}{\$queue}} = array()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a1cb81bd683eb55bd7e42129cd73310f6}{\$temporary}} = false
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aca67eaaee7113b4a1c9753180a1e3902}{\$received}} = array()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a817210bccb41df24331821671dfcf6b8}{\$read\+Bodies}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Queues mock responses or exceptions and delivers mock responses or exceptions in a fifo order. 
+
+Definition at line 17 of file Mock\+Plugin.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a8dcd5f43751b0e5194499330f7092c4f}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a8dcd5f43751b0e5194499330f7092c4f}} 
+\index{MockPlugin@{MockPlugin}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$items = {\ttfamily null},  }\item[{}]{\$temporary = {\ttfamily false},  }\item[{}]{\$read\+Bodies = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$items} & Array of responses or exceptions to queue \\
+\hline
+bool & {\em \$temporary} & Set to TRUE to remove the plugin when the queue is empty \\
+\hline
+bool & {\em \$read\+Bodies} & Set to TRUE to consume the entity body when a mock is served \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Mock\+Plugin.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aea66fb3cb3ff5451ede6a9215175ca83}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aea66fb3cb3ff5451ede6a9215175ca83}} 
+\index{MockPlugin@{MockPlugin}!addException@{addException}}
+\index{addException@{addException}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{addException()}{addException()}}
+{\footnotesize\ttfamily add\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_exception_1_1_curl_exception}{Curl\+Exception}}}]{\$e }\end{DoxyParamCaption})}
+
+Add an exception to the end of the queue
+
+
+\begin{DoxyParams}[1]{Parameters}
+Curl\+Exception & {\em \$e} & Exception to throw when the request is executed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin}{Mock\+Plugin}} 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a071bd09f29ebd03ab9523ea7295c53c1}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a071bd09f29ebd03ab9523ea7295c53c1}} 
+\index{MockPlugin@{MockPlugin}!addResponse@{addResponse}}
+\index{addResponse@{addResponse}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{addResponse()}{addResponse()}}
+{\footnotesize\ttfamily add\+Response (\begin{DoxyParamCaption}\item[{}]{\$response }\end{DoxyParamCaption})}
+
+Add a response to the end of the queue
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | Response & {\em \$response} & Response object or path to response file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin}{Mock\+Plugin}} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & if a string or Response is not passed \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 112 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a50b4e5bacc902ec5d52ecfa01ec77212}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a50b4e5bacc902ec5d52ecfa01ec77212}} 
+\index{MockPlugin@{MockPlugin}!clearQueue@{clearQueue}}
+\index{clearQueue@{clearQueue}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{clearQueue()}{clearQueue()}}
+{\footnotesize\ttfamily clear\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear the queue
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin}{Mock\+Plugin}} 
+\end{DoxyReturn}
+
+
+Definition at line 145 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_ac751e87b3d4c4bf2feb03bee8b092755}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_ac751e87b3d4c4bf2feb03bee8b092755}} 
+\index{MockPlugin@{MockPlugin}!count@{count}}
+\index{count@{count}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the number of remaining mock responses
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_ada976d9e838e3748d16178b7e8f8c789}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_ada976d9e838e3748d16178b7e8f8c789}} 
+\index{MockPlugin@{MockPlugin}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily dequeue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+Get a response from the front of the list and add it to a request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to mock\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Curl\+Exception} & When request.\+send is called and an exception is queued \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 180 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a7751f77b5263bcf940ece6e824a05b38}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a7751f77b5263bcf940ece6e824a05b38}} 
+\index{MockPlugin@{MockPlugin}!flush@{flush}}
+\index{flush@{flush}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear the array of received requests 
+
+Definition at line 210 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a0cf9c0f01ef8b36bdd76aa204c35c194}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a0cf9c0f01ef8b36bdd76aa204c35c194}} 
+\index{MockPlugin@{MockPlugin}!getAllEvents@{getAllEvents}}
+\index{getAllEvents@{getAllEvents}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{getAllEvents()}{getAllEvents()}}
+{\footnotesize\ttfamily static get\+All\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a list of all of the events emitted from the class
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_common_1_1_abstract_has_dispatcher_a0cf9c0f01ef8b36bdd76aa204c35c194}{Abstract\+Has\+Dispatcher}}.
+
+
+
+Definition at line 57 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a8417321ed4f5eb176f7495cae829f9f8}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a8417321ed4f5eb176f7495cae829f9f8}} 
+\index{MockPlugin@{MockPlugin}!getMockFile@{getMockFile}}
+\index{getMockFile@{getMockFile}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{getMockFile()}{getMockFile()}}
+{\footnotesize\ttfamily static get\+Mock\+File (\begin{DoxyParamCaption}\item[{}]{\$path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a mock response from a file
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & File to retrieve a mock response from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & if the file is not found \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 70 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aa7a8055e5ee1eb792f29443ddb79c4d3}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aa7a8055e5ee1eb792f29443ddb79c4d3}} 
+\index{MockPlugin@{MockPlugin}!getQueue@{getQueue}}
+\index{getQueue@{getQueue}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{getQueue()}{getQueue()}}
+{\footnotesize\ttfamily get\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an array of mock responses remaining in the queue
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 157 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aa81fb2e0ad792d6d094aea0bb2639c0a}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aa81fb2e0ad792d6d094aea0bb2639c0a}} 
+\index{MockPlugin@{MockPlugin}!getReceivedRequests@{getReceivedRequests}}
+\index{getReceivedRequests@{getReceivedRequests}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{getReceivedRequests()}{getReceivedRequests()}}
+{\footnotesize\ttfamily get\+Received\+Requests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get an array of requests that were mocked by this plugin
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 220 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_af1f63475927bbcb3bd21b58712076104}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_af1f63475927bbcb3bd21b58712076104}} 
+\index{MockPlugin@{MockPlugin}!getSubscribedEvents@{getSubscribedEvents}}
+\index{getSubscribedEvents@{getSubscribedEvents}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{getSubscribedEvents()}{getSubscribedEvents()}}
+{\footnotesize\ttfamily static get\+Subscribed\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns an array of event names this subscriber wants to listen to.
+
+The array keys are event names and the value can be\+:
+
+
+\begin{DoxyItemize}
+\item The method name to call (priority defaults to 0)
+\item An array composed of the method name to call and the priority
+\item An array of arrays composed of the method names to call and respective priorities, or 0 if unset
+\end{DoxyItemize}
+
+For instance\+:
+
+
+\begin{DoxyItemize}
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ \textquotesingle{}method\+Name\textquotesingle{})
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(\textquotesingle{}method\+Name\textquotesingle{}, \$priority))
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(array(\textquotesingle{}method\+Name1\textquotesingle{}, \$priority), array(\textquotesingle{}method\+Name2\textquotesingle{})))
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+array The event names to listen to 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface_af1f63475927bbcb3bd21b58712076104}{Event\+Subscriber\+Interface}}.
+
+
+
+Definition at line 51 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a73c2f35418baaf18ab8d900f2ed4d1cf}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a73c2f35418baaf18ab8d900f2ed4d1cf}} 
+\index{MockPlugin@{MockPlugin}!isTemporary@{isTemporary}}
+\index{isTemporary@{isTemporary}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{isTemporary()}{isTemporary()}}
+{\footnotesize\ttfamily is\+Temporary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if this is a temporary plugin
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 167 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_ad5d409207870e96ccf59041047a94ccc}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_ad5d409207870e96ccf59041047a94ccc}} 
+\index{MockPlugin@{MockPlugin}!onRequestBeforeSend@{onRequestBeforeSend}}
+\index{onRequestBeforeSend@{onRequestBeforeSend}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{onRequestBeforeSend()}{onRequestBeforeSend()}}
+{\footnotesize\ttfamily on\+Request\+Before\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})}
+
+Called when a request is about to be sent
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event & {\em \$event} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 231 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a0e29fca5be8fdff6a6befe3fa03237cd}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a0e29fca5be8fdff6a6befe3fa03237cd}} 
+\index{MockPlugin@{MockPlugin}!readBodies@{readBodies}}
+\index{readBodies@{readBodies}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{readBodies()}{readBodies()}}
+{\footnotesize\ttfamily read\+Bodies (\begin{DoxyParamCaption}\item[{}]{\$read\+Bodies }\end{DoxyParamCaption})}
+
+Set whether or not to consume the entity body of a request when a mock response is used
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$read\+Bodies} & Set to true to read and consume entity bodies\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file Mock\+Plugin.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a4a0b48f6ae2fcb248a4f0288c7c344a6}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a4a0b48f6ae2fcb248a4f0288c7c344a6}} 
+\index{MockPlugin@{MockPlugin}!\$queue@{\$queue}}
+\index{\$queue@{\$queue}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{\$queue}{$queue}}
+{\footnotesize\ttfamily \$queue = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 20 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a817210bccb41df24331821671dfcf6b8}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a817210bccb41df24331821671dfcf6b8}} 
+\index{MockPlugin@{MockPlugin}!\$readBodies@{\$readBodies}}
+\index{\$readBodies@{\$readBodies}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{\$readBodies}{$readBodies}}
+{\footnotesize\ttfamily \$\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a0e29fca5be8fdff6a6befe3fa03237cd}{read\+Bodies}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aca67eaaee7113b4a1c9753180a1e3902}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_aca67eaaee7113b4a1c9753180a1e3902}} 
+\index{MockPlugin@{MockPlugin}!\$received@{\$received}}
+\index{\$received@{\$received}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{\$received}{$received}}
+{\footnotesize\ttfamily \$received = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Mock\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a1cb81bd683eb55bd7e42129cd73310f6}\label{class_guzzle_1_1_plugin_1_1_mock_1_1_mock_plugin_a1cb81bd683eb55bd7e42129cd73310f6}} 
+\index{MockPlugin@{MockPlugin}!\$temporary@{\$temporary}}
+\index{\$temporary@{\$temporary}!MockPlugin@{MockPlugin}}
+\doxysubsubsection{\texorpdfstring{\$temporary}{$temporary}}
+{\footnotesize\ttfamily \$temporary = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file Mock\+Plugin.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Mock/\mbox{\hyperlink{_mock_plugin_8php}{Mock\+Plugin.\+php}}\end{DoxyCompactItemize}

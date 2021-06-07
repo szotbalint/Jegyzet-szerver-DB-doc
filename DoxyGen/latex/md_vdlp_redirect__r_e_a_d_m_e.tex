@@ -1,0 +1,102 @@
+
+
+ \doxysection*{Vdlp.\+Redirect}
+
+
+
+{\itshape Manage all your HTTP redirects with an easy to use GUI. This is an essential SEO plugin.} 
+
+
+
+      
+
+\begin{quote}
+{\bfseries{IMPORTANT}}\+: As of version 2.\+0 PHP 7.\+0 support is dropped. \end{quote}
+\begin{quote}
+This plugin was formerly known as {\ttfamily Adrenth.\+Redirect}. The plugin has been renamed to {\ttfamily Vdlp.\+Redirect}. Please install this plugin which automatically migrates data and settings from {\ttfamily Adrenth.\+Redirect}. The current version of {\ttfamily Adrenth.\+Redirect} will stay available for users which have it installed, but will be hidden from the October CMS marketplace. Upgrade to {\ttfamily Vdlp.\+Redirect} as soon as possible. \end{quote}
+\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md715}{}\doxysubsection{The \#1 Redirect plugin for October CMS}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md715}
+This is the best Redirect-\/plugin for October CMS. With this plugin installed you can manage redirects directly from October CMS\textquotesingle{} beautiful interface. Many webmasters and SEO specialists use redirects to optimise their website for search engines. This plugin allows you to manage such redirects with a nice and user-\/friendly interface.\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md716}{}\doxysubsection{History}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md716}
+This plugin was originally build in 2016 by Alwin Drenth a Software Engineer at Van der Let \& Partners. As of 2018 this plugin is re-\/distributed to the October CMS Marketplace with vendor name Vdlp.\+Redirect (formerly known as Adrenth.\+Redirect).
+
+The Redirect plugin will now be maintained by Van der Let \& Partners and You (the open source community).\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md717}{}\doxysubsection{What does this plugin offer?}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md717}
+This plugin adds a \textquotesingle{}Redirects\textquotesingle{} section to the main menu of October CMS. This plugin has a unique and fast matching algorithm to match your redirects before your website is being rendered.\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md718}{}\doxysubsection{Features}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md718}
+
+\begin{DoxyItemize}
+\item {\bfseries{Quick}} matching algorithm
+\item A {\bfseries{test}} utility for redirects
+\item Matching using {\bfseries{placeholders}} (dynamic paths)
+\item Matching using {\bfseries{regular expressions}}
+\item {\bfseries{Exact}} path matching
+\item {\bfseries{Importing}} and {\bfseries{exporting}} redirect rules
+\item {\bfseries{Schedule}} redirects (e.\+g. active for 2 months)
+\item Redirect to {\bfseries{external}} URLs
+\item Redirect to {\bfseries{internal}} CMS pages
+\item Redirect to relative or absolute URLs
+\item Redirect {\bfseries{log}}
+\item {\bfseries{Categorize}} redirects
+\item {\bfseries{Statistics}}
+\begin{DoxyItemize}
+\item Hits per redirect
+\item Popular redirects per month (top 10)
+\item Popular crawlers per month (top 10)
+\item Number of redirects per month
+\item And more...
+\end{DoxyItemize}
+\item Multilingual $\ast$$\ast$$\ast$(Need help translating! Contact us at \href{mailto:octobercms@vdlp.nl}{\texttt{ octobercms@vdlp.\+nl}})$\ast$$\ast$$\ast$
+\item Supports My\+SQL, SQLite and Postgres
+\item HTTP status codes 301, 302, 303, 404, 410
+\item Caching
+\end{DoxyItemize}\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md719}{}\doxysubsection{Supported database platforms}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md719}
+
+\begin{DoxyItemize}
+\item My\+SQL
+\item Postgres
+\item SQLite
+\end{DoxyItemize}\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md720}{}\doxysubsection{PHP requirements}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md720}
+
+\begin{DoxyItemize}
+\item PHP version 7.\+1.\+3 or higher.
+\item PHP extensions\+: {\ttfamily ext-\/curl} and {\ttfamily ext-\/json}.
+\end{DoxyItemize}\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md721}{}\doxysubsection{Supported HTTP status codes}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md721}
+
+\begin{DoxyItemize}
+\item {\ttfamily HTTP/1.\+1 301 Moved Permanently}
+\item {\ttfamily HTTP/1.\+1 302 Found}
+\item {\ttfamily HTTP/1.\+1 303 See Other}
+\item {\ttfamily HTTP/1.\+1 404 Not Found}
+\item {\ttfamily HTTP/1.\+1 410 Gone}
+\end{DoxyItemize}\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md722}{}\doxysubsection{Supported HTTP request methods}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md722}
+
+\begin{DoxyItemize}
+\item {\ttfamily GET}
+\item {\ttfamily POST}
+\item {\ttfamily HEAD}
+\end{DoxyItemize}\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md723}{}\doxysubsection{Performance}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md723}
+All redirects are stored in the database and will be automatically \char`\"{}published\char`\"{} to a file which the internal redirect mechanism uses to determine if a certain request needs to be redirected. This is way faster than querying a database.
+
+This plugin is designed to be fast and should have no negative effect on the performance of your website.
+
+To gain maximum performance with this plugin\+:
+
+
+\begin{DoxyItemize}
+\item Enable redirect caching using a \char`\"{}in-\/memory\char`\"{} caching method (see Caching).
+\item Maintain your redirects frequently to keep the number of redirects as low as possible.
+\item Try to use placeholders to keep your number of redirect low (less redirects is better performance).
+\end{DoxyItemize}\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md724}{}\doxysubsection{Caching}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md724}
+If your website has a lot of redirects it is recommended to enable redirect caching. You can enable redirect caching in the settings panel of this plugin.
+
+Only cache drivers which support tagged cache are supported. So driver {\ttfamily file} and {\ttfamily database} are not supported. For this plugin database and file caching do not increase performance, but can actually have a negative influence on performance. So it is recommended to use an in-\/memory caching solution like {\ttfamily memcached} or {\ttfamily redis}.\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md725}{}\doxysubsubsection{How caching works}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md725}
+If caching is enabled (and supported) every request which is handled by this plugin will be cached. It will be stored with tag {\ttfamily Vdlp.\+Redirect}.
+
+When you modify a redirect all redirect cache will be invalidated automatically. It is also possible to manually clear the cache using the \textquotesingle{}Clear cache\textquotesingle{} button in the Backend.\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md726}{}\doxysubsection{Placeholders}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md726}
+This plugin makes advantage of the {\ttfamily symfony/routing} package. So if you need more info on how to make placeholder requirements for your redirection URLs, please go to\+: \href{https://symfony.com/doc/current/components/routing/introduction.html\#usage}{\texttt{ https\+://symfony.\+com/doc/current/components/routing/introduction.\+html\#usage}}\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md727}{}\doxysubsection{Contribution}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md727}
+Please feel free to \href{https://github.com/vdlp/oc-redirect-plugin}{\texttt{ contribute}} to this awesome plugin.\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md728}{}\doxysubsection{Questions? Need help?}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md728}
+If you have any question about how to use this plugin, please don\textquotesingle{}t hesitate to contact us at \href{mailto:octobercms@vdlp.nl}{\texttt{ octobercms@vdlp.\+nl}}. We\textquotesingle{}re happy to help you. You can also visit the support forum and drop your questions/issues there.
+
+\DoxyHorRuler{0}
+
+
+\begin{quote}
+If you love this quality plugin as much as we do, please \href{http://octobercms.com/plugin/vdlp-redirect}{\texttt{ {\bfseries{rate our plugin}}}}. \end{quote}
+\hypertarget{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md730}{}\doxysubsection{$<$/blockquote$>$}\label{md_vdlp_redirect__r_e_a_d_m_e_autotoc_md730}

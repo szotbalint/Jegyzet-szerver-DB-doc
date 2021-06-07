@@ -1,0 +1,225 @@
+\hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server}{}\doxysection{Server Class Reference}
+\label{class_guzzle_1_1_tests_1_1_http_1_1_server}\index{Server@{Server}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_ac9071eedbf3c719c8d21990c459f95c4}{\+\_\+\+\_\+construct}} (\$port=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_a7751f77b5263bcf940ece6e824a05b38}{flush}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_a2df87b9864f840f8efbc1dac142da5e1}{enqueue}} (\$responses)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_ad7e54aa55e82e9be1428d9fa8eb559a5}{is\+Running}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_accd14bda49a1044b4d8dd93f020f11ee}{get\+Url}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_afd4db46d3c12f47f0bee19cd2101be64}{get\+Port}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_a64c3ca8ddd1f058c266ce466e8e26326}{get\+Received\+Requests}} (\$hydrate=false)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_af8fa59992209e36dccb3eefb0f75531f}{start}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_a8b6fc76a620d7557d06e9a11a9ffb509}{stop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_adbbe510a37f177c138ebb598c3fdb161}{DEFAULT\+\_\+\+PORT}} = 8124
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_a1bf0fbb958506ba8ed4a4f4e86d7259c}{REQUEST\+\_\+\+DELIMITER}} = \char`\"{}\textbackslash{}n-\/-\/-\/-\/\mbox{[}request\mbox{]}\textbackslash{}n\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server}{Server}} class is used to control a scripted webserver using node.\+js that will respond to HTTP requests with queued responses.
+
+Queued responses will be served to requests using a FIFO order. All requests received by the server are stored on the node.\+js server and can be retrieved by calling \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_server_a64c3ca8ddd1f058c266ce466e8e26326}{Server\+::get\+Received\+Requests()}}\}.
+\end{DoxySeeAlso}
+\mbox{\hyperlink{namespace_guzzle_1_1_tests_1_1_mock}{Mock}} responses that don\textquotesingle{}t require data to be transmitted over HTTP a great for testing. \mbox{\hyperlink{namespace_guzzle_1_1_tests_1_1_mock}{Mock}} response, however, cannot test the actual sending of an HTTP request using c\+URL. This test server allows the simulation of any number of HTTP request response transactions to test the actual sending of requests over the wire without having to leave an internal network. 
+
+Definition at line 27 of file Server.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server_ac9071eedbf3c719c8d21990c459f95c4}\label{class_guzzle_1_1_tests_1_1_http_1_1_server_ac9071eedbf3c719c8d21990c459f95c4}} 
+\index{Server@{Server}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$port = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Create a new scripted server
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$port} & Port to listen on (defaults to 8124) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Server.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server_a2df87b9864f840f8efbc1dac142da5e1}\label{class_guzzle_1_1_tests_1_1_http_1_1_server_a2df87b9864f840f8efbc1dac142da5e1}} 
+\index{Server@{Server}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily enqueue (\begin{DoxyParamCaption}\item[{}]{\$responses }\end{DoxyParamCaption})}
+
+Queue an array of responses or a single response on the server.
+
+Any currently queued responses will be overwritten. Subsequent requests on the server will return queued responses in FIFO order.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | Response & {\em \$responses} & A single or array of Responses to queue \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Bad\+Response\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 71 of file Server.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server_a7751f77b5263bcf940ece6e824a05b38}\label{class_guzzle_1_1_tests_1_1_http_1_1_server_a7751f77b5263bcf940ece6e824a05b38}} 
+\index{Server@{Server}!flush@{flush}}
+\index{flush@{flush}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Flush the received requests from the server 
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 57 of file Server.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server_afd4db46d3c12f47f0bee19cd2101be64}\label{class_guzzle_1_1_tests_1_1_http_1_1_server_afd4db46d3c12f47f0bee19cd2101be64}} 
+\index{Server@{Server}!getPort@{getPort}}
+\index{getPort@{getPort}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getPort()}{getPort()}}
+{\footnotesize\ttfamily get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the port that the server is listening on
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file Server.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server_a64c3ca8ddd1f058c266ce466e8e26326}\label{class_guzzle_1_1_tests_1_1_http_1_1_server_a64c3ca8ddd1f058c266ce466e8e26326}} 
+\index{Server@{Server}!getReceivedRequests@{getReceivedRequests}}
+\index{getReceivedRequests@{getReceivedRequests}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getReceivedRequests()}{getReceivedRequests()}}
+{\footnotesize\ttfamily get\+Received\+Requests (\begin{DoxyParamCaption}\item[{}]{\$hydrate = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Get all of the received requests
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$hydrate} & Set to TRUE to turn the messages into actual \{\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Request\+Interface\} objects. If \$hydrate is FALSE, requests will be returned as strings.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 145 of file Server.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server_accd14bda49a1044b4d8dd93f020f11ee}\label{class_guzzle_1_1_tests_1_1_http_1_1_server_accd14bda49a1044b4d8dd93f020f11ee}} 
+\index{Server@{Server}!getUrl@{getUrl}}
+\index{getUrl@{getUrl}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getUrl()}{getUrl()}}
+{\footnotesize\ttfamily get\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the URL to the server
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 120 of file Server.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server_ad7e54aa55e82e9be1428d9fa8eb559a5}\label{class_guzzle_1_1_tests_1_1_http_1_1_server_ad7e54aa55e82e9be1428d9fa8eb559a5}} 
+\index{Server@{Server}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
+{\footnotesize\ttfamily is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if the server is running
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file Server.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server_af8fa59992209e36dccb3eefb0f75531f}\label{class_guzzle_1_1_tests_1_1_http_1_1_server_af8fa59992209e36dccb3eefb0f75531f}} 
+\index{Server@{Server}!start@{start}}
+\index{start@{start}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Start running the node.\+js server in the background 
+
+Definition at line 161 of file Server.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server_a8b6fc76a620d7557d06e9a11a9ffb509}\label{class_guzzle_1_1_tests_1_1_http_1_1_server_a8b6fc76a620d7557d06e9a11a9ffb509}} 
+\index{Server@{Server}!stop@{stop}}
+\index{stop@{stop}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stop running the node.\+js server 
+
+Definition at line 182 of file Server.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server_adbbe510a37f177c138ebb598c3fdb161}\label{class_guzzle_1_1_tests_1_1_http_1_1_server_adbbe510a37f177c138ebb598c3fdb161}} 
+\index{Server@{Server}!DEFAULT\_PORT@{DEFAULT\_PORT}}
+\index{DEFAULT\_PORT@{DEFAULT\_PORT}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_PORT}{DEFAULT\_PORT}}
+{\footnotesize\ttfamily const DEFAULT\+\_\+\+PORT = 8124}
+
+
+
+Definition at line 29 of file Server.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_server_a1bf0fbb958506ba8ed4a4f4e86d7259c}\label{class_guzzle_1_1_tests_1_1_http_1_1_server_a1bf0fbb958506ba8ed4a4f4e86d7259c}} 
+\index{Server@{Server}!REQUEST\_DELIMITER@{REQUEST\_DELIMITER}}
+\index{REQUEST\_DELIMITER@{REQUEST\_DELIMITER}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{REQUEST\_DELIMITER}{REQUEST\_DELIMITER}}
+{\footnotesize\ttfamily const REQUEST\+\_\+\+DELIMITER = \char`\"{}\textbackslash{}n-\/-\/-\/-\/\mbox{[}request\mbox{]}\textbackslash{}n\char`\"{}}
+
+
+
+Definition at line 30 of file Server.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/tests/\+Guzzle/\+Tests/\+Http/\mbox{\hyperlink{pixel_2shop_2vendor_2guzzle_2guzzle_2tests_2_guzzle_2_tests_2_http_2_server_8php}{Server.\+php}}\end{DoxyCompactItemize}

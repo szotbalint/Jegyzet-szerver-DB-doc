@@ -1,0 +1,121 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar}{}\doxysection{File\+Cookie\+Jar Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar}\index{FileCookieJar@{FileCookieJar}}
+Inheritance diagram for File\+Cookie\+Jar\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a0d5139661c0645d37bebd01f2383ae33}{\+\_\+\+\_\+construct}} (\$cookie\+File)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a4dcaa8f72c8423d4de25a9e87fa6f3e4}{load}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a0722441477f957078ee2437054556cbc}{\$filename}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Persists non-\/session cookies using a JSON formatted file 
+
+Definition at line 10 of file File\+Cookie\+Jar.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a0d5139661c0645d37bebd01f2383ae33}\label{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a0d5139661c0645d37bebd01f2383ae33}} 
+\index{FileCookieJar@{FileCookieJar}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FileCookieJar@{FileCookieJar}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$cookie\+File }\end{DoxyParamCaption})}
+
+Create a new \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar}{File\+Cookie\+Jar}} object
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$cookie\+File} & File to store the cookie data\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & if the file cannot be found or created \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_array_cookie_jar_a191b48f9fadd70b97fb9eccf50e68ffb}{Array\+Cookie\+Jar}}.
+
+
+
+Definition at line 22 of file File\+Cookie\+Jar.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a421831a265621325e1fdd19aace0c758}\label{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a421831a265621325e1fdd19aace0c758}} 
+\index{FileCookieJar@{FileCookieJar}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!FileCookieJar@{FileCookieJar}}
+\doxysubsubsection{\texorpdfstring{\_\_destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Saves the file when shutting down 
+
+Definition at line 31 of file File\+Cookie\+Jar.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a4dcaa8f72c8423d4de25a9e87fa6f3e4}\label{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a4dcaa8f72c8423d4de25a9e87fa6f3e4}} 
+\index{FileCookieJar@{FileCookieJar}!load@{load}}
+\index{load@{load}!FileCookieJar@{FileCookieJar}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Load the contents of the json formatted file into the data array and discard any unsaved state 
+
+Definition at line 53 of file File\+Cookie\+Jar.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a7ea8510f21be99e0602d0cf7f452b15e}\label{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a7ea8510f21be99e0602d0cf7f452b15e}} 
+\index{FileCookieJar@{FileCookieJar}!persist@{persist}}
+\index{persist@{persist}!FileCookieJar@{FileCookieJar}}
+\doxysubsubsection{\texorpdfstring{persist()}{persist()}}
+{\footnotesize\ttfamily persist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Save the contents of the data array to the file
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & if the file cannot be found or created \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 41 of file File\+Cookie\+Jar.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a0722441477f957078ee2437054556cbc}\label{class_guzzle_1_1_plugin_1_1_cookie_1_1_cookie_jar_1_1_file_cookie_jar_a0722441477f957078ee2437054556cbc}} 
+\index{FileCookieJar@{FileCookieJar}!\$filename@{\$filename}}
+\index{\$filename@{\$filename}!FileCookieJar@{FileCookieJar}}
+\doxysubsubsection{\texorpdfstring{\$filename}{$filename}}
+{\footnotesize\ttfamily \$filename\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file File\+Cookie\+Jar.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Cookie/\+Cookie\+Jar/\mbox{\hyperlink{_file_cookie_jar_8php}{File\+Cookie\+Jar.\+php}}\end{DoxyCompactItemize}

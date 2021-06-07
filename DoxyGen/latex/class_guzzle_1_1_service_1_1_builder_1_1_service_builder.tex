@@ -1,0 +1,345 @@
+\hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder}{}\doxysection{Service\+Builder Class Reference}
+\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder}\index{ServiceBuilder@{ServiceBuilder}}
+Inheritance diagram for Service\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.727273cm]{class_guzzle_1_1_service_1_1_builder_1_1_service_builder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a165ff85e8c47f9c87d3033ddf184b5e6}{\+\_\+\+\_\+construct}} (array \$service\+Builder\+Config=array())
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_ac2f3a0997c46fd9bb24fe4190f738eb0}{unserialize}} (\$serialized)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a4d9813fea8525b19a1d370eeb8fe41d6}{serialize}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a3e736017afc43819c250a15eb58ced04}{add\+Global\+Plugin}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface}{Event\+Subscriber\+Interface}} \$plugin)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a6275d1cdbd13a95e08b47abf2f1d53ce}{get\+Data}} (\$name)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a36b40c07a4b62b07364b06d12d0d7bb8}{get}} (\$name, \$throw\+Away=false)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a9f5f4156ec8bed2bffdeed5ed89bed13}{set}} (\$key, \$service)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_ac6bde6b1eb50eb5377e91771fe46b7a3}{offset\+Set}} (\$offset, \$value)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a2411227ea7118b13495de9839fd4b563}{offset\+Unset}} (\$offset)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a24ff257ec0c2221bc6fd7b1b4388e26e}{offset\+Exists}} (\$offset)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a59aee6e89465b48f014699f41b521f87}{offset\+Get}} (\$offset)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a771996c4da90fe20a6092d546207dc38}{factory}} (\$config=null, array \$global\+Parameters=array())
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a0cf9c0f01ef8b36bdd76aa204c35c194}{get\+All\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_aa15271ba8a94da32ecf1906a4cfb4c46}{\$builder\+Config}} = array()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a3e6b906050bb3d1e3493257491f54f8b}{\$clients}} = array()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a4ab51386acb82cd0a0066eac2567b2bd}{\$plugins}} = array()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_abc9ddf34b327da4ed0089c946d57e484}{\$cached\+Factory}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\{\}
+
+Clients and data can be set, retrieved, and removed by accessing the service builder like an associative array. 
+
+Definition at line 16 of file Service\+Builder.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a165ff85e8c47f9c87d3033ddf184b5e6}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a165ff85e8c47f9c87d3033ddf184b5e6}} 
+\index{ServiceBuilder@{ServiceBuilder}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$service\+Builder\+Config = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$service\+Builder\+Config} & \mbox{\hyperlink{namespace_guzzle_1_1_service}{Service}} configuration settings\+:
+\begin{DoxyItemize}
+\item name\+: Name of the service
+\item class\+: \mbox{\hyperlink{class_guzzle_1_1_service_1_1_client}{Client}} class to instantiate using a factory method
+\item params\+: array of key value pair configuration settings for the builder 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file Service\+Builder.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a3e736017afc43819c250a15eb58ced04}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a3e736017afc43819c250a15eb58ced04}} 
+\index{ServiceBuilder@{ServiceBuilder}!addGlobalPlugin@{addGlobalPlugin}}
+\index{addGlobalPlugin@{addGlobalPlugin}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{addGlobalPlugin()}{addGlobalPlugin()}}
+{\footnotesize\ttfamily add\+Global\+Plugin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface}{Event\+Subscriber\+Interface}}}]{\$plugin }\end{DoxyParamCaption})}
+
+Attach a plugin to every client created by the builder
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event\+Subscriber\+Interface & {\em \$plugin} & Plugin to attach to each client\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a771996c4da90fe20a6092d546207dc38}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a771996c4da90fe20a6092d546207dc38}} 
+\index{ServiceBuilder@{ServiceBuilder}!factory@{factory}}
+\index{factory@{factory}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{factory()}{factory()}}
+{\footnotesize\ttfamily static factory (\begin{DoxyParamCaption}\item[{}]{\$config = {\ttfamily null},  }\item[{array}]{\$global\+Parameters = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a new \mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder}{Service\+Builder}} using configuration data sourced from an array, .js$\vert$.json or .php file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string & {\em \$config} & The full path to an .json$\vert$.js or .php file, or an associative array \\
+\hline
+array & {\em \$global\+Parameters} & Array of global parameters to pass to every service as it is instantiated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_builder_1_1_service_builder_interface}{Service\+Builder\+Interface}} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Service\+Builder\+Exception} & if a file cannot be opened \\
+\hline
+{\em Service\+Not\+Found\+Exception} & when trying to extend a missing client \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 41 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a36b40c07a4b62b07364b06d12d0d7bb8}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a36b40c07a4b62b07364b06d12d0d7bb8}} 
+\index{ServiceBuilder@{ServiceBuilder}!get@{get}}
+\index{get@{get}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{}]{\$throw\+Away = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Get a \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_client_interface}{Client\+Interface}} object or arbitrary data from the service builder
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the registered service or data to retrieve \\
+\hline
+bool | array & {\em \$throw\+Away} & Only pertains to retrieving client objects built using a configuration array. Set to TRUE to not store the client for later retrieval from the \mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder}{Service\+Builder}}. If an array is specified, that data will overwrite the configured params of the client if the client implements \{\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\textbackslash{}\+Guzzle\textbackslash{}\+Common\textbackslash{}\+From\+Config\+Interface\} and will not store the client for later retrieval.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Guzzle\textbackslash{}\+Service\textbackslash{}\+Client\+Interface$\vert$mixed 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Service\+Not\+Found\+Exception} & when a client or data cannot be found by the given name \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_builder_1_1_service_builder_interface_a36b40c07a4b62b07364b06d12d0d7bb8}{Service\+Builder\+Interface}}.
+
+
+
+Definition at line 104 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a0cf9c0f01ef8b36bdd76aa204c35c194}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a0cf9c0f01ef8b36bdd76aa204c35c194}} 
+\index{ServiceBuilder@{ServiceBuilder}!getAllEvents@{getAllEvents}}
+\index{getAllEvents@{getAllEvents}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{getAllEvents()}{getAllEvents()}}
+{\footnotesize\ttfamily static get\+All\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a list of all of the events emitted from the class
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_common_1_1_abstract_has_dispatcher_a0cf9c0f01ef8b36bdd76aa204c35c194}{Abstract\+Has\+Dispatcher}}.
+
+
+
+Definition at line 63 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a6275d1cdbd13a95e08b47abf2f1d53ce}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a6275d1cdbd13a95e08b47abf2f1d53ce}} 
+\index{ServiceBuilder@{ServiceBuilder}!getData@{getData}}
+\index{getData@{getData}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Get data from the service builder without triggering the building of a service
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the service to retrieve\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$null 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a24ff257ec0c2221bc6fd7b1b4388e26e}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a24ff257ec0c2221bc6fd7b1b4388e26e}} 
+\index{ServiceBuilder@{ServiceBuilder}!offsetExists@{offsetExists}}
+\index{offsetExists@{offsetExists}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{offsetExists()}{offsetExists()}}
+{\footnotesize\ttfamily offset\+Exists (\begin{DoxyParamCaption}\item[{}]{\$offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 180 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a59aee6e89465b48f014699f41b521f87}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a59aee6e89465b48f014699f41b521f87}} 
+\index{ServiceBuilder@{ServiceBuilder}!offsetGet@{offsetGet}}
+\index{offsetGet@{offsetGet}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{offsetGet()}{offsetGet()}}
+{\footnotesize\ttfamily offset\+Get (\begin{DoxyParamCaption}\item[{}]{\$offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 185 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_ac6bde6b1eb50eb5377e91771fe46b7a3}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_ac6bde6b1eb50eb5377e91771fe46b7a3}} 
+\index{ServiceBuilder@{ServiceBuilder}!offsetSet@{offsetSet}}
+\index{offsetSet@{offsetSet}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{offsetSet()}{offsetSet()}}
+{\footnotesize\ttfamily offset\+Set (\begin{DoxyParamCaption}\item[{}]{\$offset,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 169 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a2411227ea7118b13495de9839fd4b563}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a2411227ea7118b13495de9839fd4b563}} 
+\index{ServiceBuilder@{ServiceBuilder}!offsetUnset@{offsetUnset}}
+\index{offsetUnset@{offsetUnset}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{offsetUnset()}{offsetUnset()}}
+{\footnotesize\ttfamily offset\+Unset (\begin{DoxyParamCaption}\item[{}]{\$offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 174 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a4d9813fea8525b19a1d370eeb8fe41d6}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a4d9813fea8525b19a1d370eeb8fe41d6}} 
+\index{ServiceBuilder@{ServiceBuilder}!serialize@{serialize}}
+\index{serialize@{serialize}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a9f5f4156ec8bed2bffdeed5ed89bed13}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a9f5f4156ec8bed2bffdeed5ed89bed13}} 
+\index{ServiceBuilder@{ServiceBuilder}!set@{set}}
+\index{set@{set}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$service }\end{DoxyParamCaption})}
+
+Register a service or arbitrary data by name with the service builder
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & Name of the client or data to register \\
+\hline
+mixed & {\em \$service} & \mbox{\hyperlink{class_guzzle_1_1_service_1_1_client}{Client}} configuration array or arbitrary data to register. The client configuration array must include a \textquotesingle{}class\textquotesingle{} (string) and \textquotesingle{}params\textquotesingle{} (array) key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_builder_1_1_service_builder_interface}{Service\+Builder\+Interface}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_builder_1_1_service_builder_interface_a9f5f4156ec8bed2bffdeed5ed89bed13}{Service\+Builder\+Interface}}.
+
+
+
+Definition at line 158 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_ac2f3a0997c46fd9bb24fe4190f738eb0}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_ac2f3a0997c46fd9bb24fe4190f738eb0}} 
+\index{ServiceBuilder@{ServiceBuilder}!unserialize@{unserialize}}
+\index{unserialize@{unserialize}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{unserialize()}{unserialize()}}
+{\footnotesize\ttfamily unserialize (\begin{DoxyParamCaption}\item[{}]{\$serialized }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file Service\+Builder.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_aa15271ba8a94da32ecf1906a4cfb4c46}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_aa15271ba8a94da32ecf1906a4cfb4c46}} 
+\index{ServiceBuilder@{ServiceBuilder}!\$builderConfig@{\$builderConfig}}
+\index{\$builderConfig@{\$builderConfig}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{\$builderConfig}{$builderConfig}}
+{\footnotesize\ttfamily \$builder\+Config = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 19 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_abc9ddf34b327da4ed0089c946d57e484}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_abc9ddf34b327da4ed0089c946d57e484}} 
+\index{ServiceBuilder@{ServiceBuilder}!\$cachedFactory@{\$cachedFactory}}
+\index{\$cachedFactory@{\$cachedFactory}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{\$cachedFactory}{$cachedFactory}}
+{\footnotesize\ttfamily \$cached\+Factory\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a3e6b906050bb3d1e3493257491f54f8b}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a3e6b906050bb3d1e3493257491f54f8b}} 
+\index{ServiceBuilder@{ServiceBuilder}!\$clients@{\$clients}}
+\index{\$clients@{\$clients}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{\$clients}{$clients}}
+{\footnotesize\ttfamily \$clients = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 22 of file Service\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a4ab51386acb82cd0a0066eac2567b2bd}\label{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a4ab51386acb82cd0a0066eac2567b2bd}} 
+\index{ServiceBuilder@{ServiceBuilder}!\$plugins@{\$plugins}}
+\index{\$plugins@{\$plugins}!ServiceBuilder@{ServiceBuilder}}
+\doxysubsubsection{\texorpdfstring{\$plugins}{$plugins}}
+{\footnotesize\ttfamily \$plugins = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file Service\+Builder.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Builder/\mbox{\hyperlink{_service_builder_8php}{Service\+Builder.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy}{}\doxysection{Callback\+Backoff\+Strategy Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy}\index{CallbackBackoffStrategy@{CallbackBackoffStrategy}}
+Inheritance diagram for Callback\+Backoff\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_aca8cbe07cdb56d377208fc043ce9e904}{\+\_\+\+\_\+construct}} (\$callback, \$decision, \mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_backoff_1_1_backoff_strategy_interface}{Backoff\+Strategy\+Interface}} \$next=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_a4b101bee317e17df87a73f52689b0210}{makes\+Decision}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_a28bad9e3cfc885d6860831b04acdb496}{get\+Delay}} (\$retries, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}} \$response=null, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_exception_1_1_http_exception}{Http\+Exception}} \$e=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_abc7c2ac0d93d22f71221e8b60512c860}{\$callback}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_a75ebdb10d3165dd8a24865af6b44e1d5}{\$decision}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Strategy that will invoke a closure to determine whether or not to retry with a delay 
+
+Definition at line 13 of file Callback\+Backoff\+Strategy.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_aca8cbe07cdb56d377208fc043ce9e904}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_aca8cbe07cdb56d377208fc043ce9e904}} 
+\index{CallbackBackoffStrategy@{CallbackBackoffStrategy}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CallbackBackoffStrategy@{CallbackBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$callback,  }\item[{}]{\$decision,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_backoff_1_1_backoff_strategy_interface}{Backoff\+Strategy\+Interface}}}]{\$next = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Closure | array | mixed & {\em \$callback} & Callable method to invoke \\
+\hline
+bool & {\em \$decision} & Set to true if this strategy makes a backoff decision \\
+\hline
+\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_backoff_1_1_backoff_strategy_interface}{Backoff\+Strategy\+Interface}} & {\em \$next} & The optional next strategy\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 28 of file Callback\+Backoff\+Strategy.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_a28bad9e3cfc885d6860831b04acdb496}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_a28bad9e3cfc885d6860831b04acdb496}} 
+\index{CallbackBackoffStrategy@{CallbackBackoffStrategy}!getDelay@{getDelay}}
+\index{getDelay@{getDelay}!CallbackBackoffStrategy@{CallbackBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{getDelay()}{getDelay()}}
+{\footnotesize\ttfamily get\+Delay (\begin{DoxyParamCaption}\item[{}]{\$retries,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}}}]{\$response = {\ttfamily null},  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_exception_1_1_http_exception}{Http\+Exception}}}]{\$e = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Implement the concrete strategy
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$retries} & Number of retries of the request \\
+\hline
+Request\+Interface & {\em \$request} & Request that was sent \\
+\hline
+Response & {\em \$response} & Response that was received. Note that there may not be a response \\
+\hline
+Http\+Exception & {\em \$e} & Exception that was encountered if any\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool$\vert$int$\vert$null Returns false to not retry or the number of seconds to delay between retries. Return true or null to defer to the next strategy if available, and if not, return 0. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_backoff_strategy_a7797eb59fe0453dc5fd8c28b5bba4612}{Abstract\+Backoff\+Strategy}}.
+
+
+
+Definition at line 43 of file Callback\+Backoff\+Strategy.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_a4b101bee317e17df87a73f52689b0210}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_a4b101bee317e17df87a73f52689b0210}} 
+\index{CallbackBackoffStrategy@{CallbackBackoffStrategy}!makesDecision@{makesDecision}}
+\index{makesDecision@{makesDecision}!CallbackBackoffStrategy@{CallbackBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{makesDecision()}{makesDecision()}}
+{\footnotesize\ttfamily makes\+Decision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if the strategy does filtering and makes decisions on whether or not to retry.
+
+Strategies that return false will never retry if all of the previous strategies in a chain defer on a backoff decision.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_backoff_strategy_a4b101bee317e17df87a73f52689b0210}{Abstract\+Backoff\+Strategy}}.
+
+
+
+Definition at line 38 of file Callback\+Backoff\+Strategy.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_abc7c2ac0d93d22f71221e8b60512c860}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_abc7c2ac0d93d22f71221e8b60512c860}} 
+\index{CallbackBackoffStrategy@{CallbackBackoffStrategy}!\$callback@{\$callback}}
+\index{\$callback@{\$callback}!CallbackBackoffStrategy@{CallbackBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{\$callback}{$callback}}
+{\footnotesize\ttfamily \$callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 16 of file Callback\+Backoff\+Strategy.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_a75ebdb10d3165dd8a24865af6b44e1d5}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_callback_backoff_strategy_a75ebdb10d3165dd8a24865af6b44e1d5}} 
+\index{CallbackBackoffStrategy@{CallbackBackoffStrategy}!\$decision@{\$decision}}
+\index{\$decision@{\$decision}!CallbackBackoffStrategy@{CallbackBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{\$decision}{$decision}}
+{\footnotesize\ttfamily \$decision\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 19 of file Callback\+Backoff\+Strategy.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Backoff/\mbox{\hyperlink{_callback_backoff_strategy_8php}{Callback\+Backoff\+Strategy.\+php}}\end{DoxyCompactItemize}

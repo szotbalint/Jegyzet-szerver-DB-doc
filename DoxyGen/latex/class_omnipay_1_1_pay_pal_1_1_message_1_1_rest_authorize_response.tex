@@ -1,0 +1,172 @@
+\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response}{}\doxysection{Rest\+Authorize\+Response Class Reference}
+\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response}\index{RestAuthorizeResponse@{RestAuthorizeResponse}}
+Inheritance diagram for Rest\+Authorize\+Response\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_ab3f7be4768fcc207aece3240b90983c8}{is\+Successful}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_ad698db94bdfd49c67d2a3ed2d0999908}{is\+Redirect}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a320f8cf6bf704c301b24f83e4d0c3a22}{get\+Redirect\+Url}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a97ef462c87dc65b58dbd885126af4006}{get\+Complete\+Url}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a514421414d937d0a743fe4319458b402}{get\+Transaction\+Reference}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a18ab6bbcc61f346555fa5379061fe9d6}{get\+Redirect\+Method}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a29663a5a3f887ac0aa019b96f4c34013}{get\+Redirect\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST Authorize \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_response}{Response}} 
+
+Definition at line 13 of file Rest\+Authorize\+Response.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a97ef462c87dc65b58dbd885126af4006}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a97ef462c87dc65b58dbd885126af4006}} 
+\index{RestAuthorizeResponse@{RestAuthorizeResponse}!getCompleteUrl@{getCompleteUrl}}
+\index{getCompleteUrl@{getCompleteUrl}!RestAuthorizeResponse@{RestAuthorizeResponse}}
+\doxysubsubsection{\texorpdfstring{getCompleteUrl()}{getCompleteUrl()}}
+{\footnotesize\ttfamily get\+Complete\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the URL to complete (execute) the purchase or agreement.
+
+The URL is embedded in the links section of the purchase or create subscription request response.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Rest\+Authorize\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a29663a5a3f887ac0aa019b96f4c34013}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a29663a5a3f887ac0aa019b96f4c34013}} 
+\index{RestAuthorizeResponse@{RestAuthorizeResponse}!getRedirectData@{getRedirectData}}
+\index{getRedirectData@{getRedirectData}!RestAuthorizeResponse@{RestAuthorizeResponse}}
+\doxysubsubsection{\texorpdfstring{getRedirectData()}{getRedirectData()}}
+{\footnotesize\ttfamily get\+Redirect\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the redirect form data array, if the redirect method is POST.
+
+\begin{DoxyReturn}{Returns}
+null 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a29663a5a3f887ac0aa019b96f4c34013}{Redirect\+Response\+Interface}}.
+
+
+
+Definition at line 96 of file Rest\+Authorize\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a18ab6bbcc61f346555fa5379061fe9d6}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a18ab6bbcc61f346555fa5379061fe9d6}} 
+\index{RestAuthorizeResponse@{RestAuthorizeResponse}!getRedirectMethod@{getRedirectMethod}}
+\index{getRedirectMethod@{getRedirectMethod}!RestAuthorizeResponse@{RestAuthorizeResponse}}
+\doxysubsubsection{\texorpdfstring{getRedirectMethod()}{getRedirectMethod()}}
+{\footnotesize\ttfamily get\+Redirect\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the required redirect method (either GET or POST).
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a18ab6bbcc61f346555fa5379061fe9d6}{Redirect\+Response\+Interface}}.
+
+
+
+Definition at line 86 of file Rest\+Authorize\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a320f8cf6bf704c301b24f83e4d0c3a22}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a320f8cf6bf704c301b24f83e4d0c3a22}} 
+\index{RestAuthorizeResponse@{RestAuthorizeResponse}!getRedirectUrl@{getRedirectUrl}}
+\index{getRedirectUrl@{getRedirectUrl}!RestAuthorizeResponse@{RestAuthorizeResponse}}
+\doxysubsubsection{\texorpdfstring{getRedirectUrl()}{getRedirectUrl()}}
+{\footnotesize\ttfamily get\+Redirect\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the redirect target url.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a320f8cf6bf704c301b24f83e4d0c3a22}{Redirect\+Response\+Interface}}.
+
+
+
+Definition at line 25 of file Rest\+Authorize\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a514421414d937d0a743fe4319458b402}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a514421414d937d0a743fe4319458b402}} 
+\index{RestAuthorizeResponse@{RestAuthorizeResponse}!getTransactionReference@{getTransactionReference}}
+\index{getTransactionReference@{getTransactionReference}!RestAuthorizeResponse@{RestAuthorizeResponse}}
+\doxysubsubsection{\texorpdfstring{getTransactionReference()}{getTransactionReference()}}
+{\footnotesize\ttfamily get\+Transaction\+Reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gateway Reference
+
+\begin{DoxyReturn}{Returns}
+null$\vert$string A reference provided by the gateway to represent this transaction 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_response_a514421414d937d0a743fe4319458b402}{Rest\+Response}}.
+
+
+
+Definition at line 59 of file Rest\+Authorize\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_ad698db94bdfd49c67d2a3ed2d0999908}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_ad698db94bdfd49c67d2a3ed2d0999908}} 
+\index{RestAuthorizeResponse@{RestAuthorizeResponse}!isRedirect@{isRedirect}}
+\index{isRedirect@{isRedirect}!RestAuthorizeResponse@{RestAuthorizeResponse}}
+\doxysubsubsection{\texorpdfstring{isRedirect()}{isRedirect()}}
+{\footnotesize\ttfamily is\+Redirect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Does the response require a redirect?
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_ad698db94bdfd49c67d2a3ed2d0999908}{Abstract\+Response}}.
+
+
+
+Definition at line 20 of file Rest\+Authorize\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_ab3f7be4768fcc207aece3240b90983c8}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_ab3f7be4768fcc207aece3240b90983c8}} 
+\index{RestAuthorizeResponse@{RestAuthorizeResponse}!isSuccessful@{isSuccessful}}
+\index{isSuccessful@{isSuccessful}!RestAuthorizeResponse@{RestAuthorizeResponse}}
+\doxysubsubsection{\texorpdfstring{isSuccessful()}{isSuccessful()}}
+{\footnotesize\ttfamily is\+Successful (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Is the response successful?
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_response_ab3f7be4768fcc207aece3240b90983c8}{Rest\+Response}}.
+
+
+
+Definition at line 15 of file Rest\+Authorize\+Response.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/paypal/src/\+Message/\mbox{\hyperlink{_rest_authorize_response_8php}{Rest\+Authorize\+Response.\+php}}\end{DoxyCompactItemize}

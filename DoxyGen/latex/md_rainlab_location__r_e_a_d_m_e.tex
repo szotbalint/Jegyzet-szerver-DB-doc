@@ -1,0 +1,153 @@
+This plugin adds location based features to \href{http://octobercms.com}{\texttt{ October\+CMS}}.
+
+
+\begin{DoxyItemize}
+\item Easily add Country and State to any model
+\item Form widget for address lookups (Google API)
+\end{DoxyItemize}\hypertarget{md_rainlab_location__r_e_a_d_m_e_autotoc_md453}{}\doxysubsection{Extended features}\label{md_rainlab_location__r_e_a_d_m_e_autotoc_md453}
+To integrate locations with front-\/end users consider installing the \href{http://octobercms.com/plugin/rainlab-userplus}{\texttt{ User Plus+ plugin}} ({\ttfamily Rain\+Lab.\+User\+Plus}).\hypertarget{md_rainlab_location__r_e_a_d_m_e_autotoc_md454}{}\doxysubsection{Google API key requirement}\label{md_rainlab_location__r_e_a_d_m_e_autotoc_md454}
+As of June 22, 2016 the Google Maps service requires an API key. You may generate a key from the following link\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://developers.google.com/maps/documentation/javascript/get-api-key}{\texttt{ Get a Google API key}}
+\end{DoxyItemize}
+
+Copy the key and enter it in the {\bfseries{Settings $>$ Location settings}} area. If you find the address finder is not working, you may need to enable the \href{https://console.developers.google.com/apis/api/places_backend/overview?project=_}{\texttt{ Places API}} and the \href{https://console.developers.google.com/apis/api/maps_backend/overview?project=_}{\texttt{ Maps Java\+Script API}}.\hypertarget{md_rainlab_location__r_e_a_d_m_e_autotoc_md455}{}\doxysubsection{Add Country and State to any model}\label{md_rainlab_location__r_e_a_d_m_e_autotoc_md455}
+This plugin provides an easy way to add location fields, country and state, to any model. Simply add these columns to the database table\+: \begin{DoxyVerb}$table->integer('country_id')->unsigned()->nullable()->index();
+$table->integer('state_id')->unsigned()->nullable()->index();
+\end{DoxyVerb}
+ Then implement the {\bfseries{\mbox{\hyperlink{class_rain_lab_1_1_location_1_1_behaviors_1_1_location_model}{Rain\+Lab.\+Location.\+Behaviors.\+Location\+Model}}}} behavior in the model class\+: \begin{DoxyVerb}public $implement = ['RainLab.Location.Behaviors.LocationModel'];
+\end{DoxyVerb}
+ This will automatically create two \char`\"{}belongs to\char`\"{} relationships\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{state}} -\/ relation for Rain\+Lab\textbackslash{}\+Location\textbackslash{}\+Models\textbackslash{}\+State
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item {\bfseries{country}} -\/ relation for Rain\+Lab\textbackslash{}\+Location\textbackslash{}\+Models\textbackslash{}\+Country
+\end{DoxyEnumerate}\hypertarget{md_rainlab_location__r_e_a_d_m_e_autotoc_md456}{}\doxysubsection{Back-\/end usage}\label{md_rainlab_location__r_e_a_d_m_e_autotoc_md456}
+\hypertarget{md_rainlab_location__r_e_a_d_m_e_autotoc_md457}{}\doxysubsubsection{Forms}\label{md_rainlab_location__r_e_a_d_m_e_autotoc_md457}
+You are free to add the following form field definitions\+: \begin{DoxyVerb}country:
+    label: rainlab.location::lang.country.label
+    type: dropdown
+    span: left
+    placeholder: rainlab.location::lang.country.select
+
+state:
+    label: rainlab.location::lang.state.label
+    type: dropdown
+    span: right
+    dependsOn: country
+    placeholder: rainlab.location::lang.state.select
+\end{DoxyVerb}
+ \hypertarget{md_rainlab_location__r_e_a_d_m_e_autotoc_md458}{}\doxysubsubsection{Lists}\label{md_rainlab_location__r_e_a_d_m_e_autotoc_md458}
+For the list column definitions, you can use the following snippet\+: \begin{DoxyVerb} country:
+     label: rainlab.location::lang.country.label
+     searchable: true
+     relation: country
+     select: name
+     sortable: false
+
+ state:
+     label: rainlab.location::lang.state.label
+     searchable: true
+     relation: state
+     select: name
+     sortable: false
+\end{DoxyVerb}
+ \hypertarget{md_rainlab_location__r_e_a_d_m_e_autotoc_md459}{}\doxysubsection{Front-\/end usage}\label{md_rainlab_location__r_e_a_d_m_e_autotoc_md459}
+The front-\/end can also use the relationships by creating a partial called {\bfseries{country-\/state}} with the content\+: \begin{DoxyVerb}{% set countryId = countryId|default(form_value('country_id')) %}
+{% set stateId = stateId|default(form_value('state_id')) %}
+
+<div class="form-group">
+    <label for="accountCountry">Country</label>
+    {{ form_select_country('country_id', countryId, {
+        id: 'accountCountry',
+        class: 'form-control',
+        emptyOption: '',
+        'data-request': 'onInit',
+        'data-request-update': {
+            'country-state': '#partialCountryState'
+        }
+    }) }}
+</div>
+
+<div class="form-group">
+    <label for="accountState">State</label>
+    {{ form_select_state('state_id', countryId, stateId, {
+        id: 'accountState',
+        class: 'form-control',
+        emptyOption: ''
+    }) }}
+</div>
+\end{DoxyVerb}
+ This partial can be rendered in a form with the following\+: \begin{DoxyVerb}<div id="partialCountryState">
+    {% partial 'country-state' countryId=user.country_id stateId=user.state_id %}
+</div>
+\end{DoxyVerb}
+ \hypertarget{md_rainlab_location__r_e_a_d_m_e_autotoc_md460}{}\doxysubsection{Short code accessors}\label{md_rainlab_location__r_e_a_d_m_e_autotoc_md460}
+The behavior will also add a special short code accessor and setter to the model that converts {\ttfamily country\+\_\+code} and {\ttfamily state\+\_\+code} to their respective identifiers. \begin{DoxyVerb}// Softly looks up and sets the country_id and state_id
+// for these Country and State relations.
+
+$model->country_code = "US";
+$model->state_code = "FL";
+$model->save();
+\end{DoxyVerb}
+ \hypertarget{md_rainlab_location__r_e_a_d_m_e_autotoc_md461}{}\doxysubsection{Address Finder Form Widget}\label{md_rainlab_location__r_e_a_d_m_e_autotoc_md461}
+This plugin introduces an address lookup form field called {\ttfamily addressfinder}. The form widget renders a Google Maps autocomplete address field that automatically populates mapped fields based on the value entered and selected in the address.
+
+Available mappings\+:
+
+
+\begin{DoxyItemize}
+\item street
+\item city
+\item zip
+\item state
+\item country
+\item country-\/long
+\item latitude
+\item longitude
+\item vicinity
+\end{DoxyItemize}
+
+Available options\+:
+
+You can restrict the address lookup to certain countries by defining the {\ttfamily country\+Restriction} option. The option accepts a comma separated list of ISO 3166-\/1 ALPHA-\/2 compatible country codes (see\+: \href{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+ISO\+\_\+3166-\/1\+\_\+alpha-\/2}}).
+
+Usage\+: \begin{DoxyVerb}# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    address:
+        label: Address
+        type: addressfinder
+        countryRestriction: 'us,ch'
+        fieldMap:
+            latitude: latitude
+            longitude: longitude
+            city: city
+            zip: zip
+            country: country_code
+            state: state_code
+            vicinity: vicinity
+
+    city:
+        label: City
+    zip:
+        label: Zip
+    country_code:
+        label: Country
+    state_code:
+        label: State
+    latitude:
+        label: Latitude
+    longitude:
+        label: Longitude
+    vicinity:
+        label: Vicinity
+\end{DoxyVerb}
+ 

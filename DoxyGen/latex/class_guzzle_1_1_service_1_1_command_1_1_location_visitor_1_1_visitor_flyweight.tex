@@ -1,0 +1,228 @@
+\hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight}{}\doxysection{Visitor\+Flyweight Class Reference}
+\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight}\index{VisitorFlyweight@{VisitorFlyweight}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a2cd0d2873473ffef964946c1ba616479}{\+\_\+\+\_\+construct}} (array \$mappings=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_aea2ad46bd6ea441ac3a7a253de551ae5}{get\+Request\+Visitor}} (\$visitor)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_aba50d33f15e71c6758d23e2ddd75e097}{get\+Response\+Visitor}} (\$visitor)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a9a517cfa5f6e7b321682514b611600a2}{add\+Request\+Visitor}} (\$name, \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_request_visitor_interface}{Request\+Visitor\+Interface}} \$visitor)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a6e779d44fa0ec674f7b2026ebb756d05}{add\+Response\+Visitor}} (\$name, \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_response_1_1_response_visitor_interface}{Response\+Visitor\+Interface}} \$visitor)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_ac93fbec81f07e5d15f80db907e63dc10}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a36412c93989cb32b1a77467f458208c4}{\$mappings}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_ac2dc76d756ec398393d4b1d23659276c}{\$cache}} = array()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_ad9d7ce33ebb142b70e58b68052ca0ea8}{\$instance}}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_aadfcc42a8eef49c37a2122555a5a7749}{\$default\+Mappings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Flyweight factory used to instantiate request and response visitors 
+
+Definition at line 12 of file Visitor\+Flyweight.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a2cd0d2873473ffef964946c1ba616479}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a2cd0d2873473ffef964946c1ba616479}} 
+\index{VisitorFlyweight@{VisitorFlyweight}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!VisitorFlyweight@{VisitorFlyweight}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$mappings = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$mappings} & Array mapping request.\+name and response.\+name to location visitor classes. Leave null to use the default values. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file Visitor\+Flyweight.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a9a517cfa5f6e7b321682514b611600a2}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a9a517cfa5f6e7b321682514b611600a2}} 
+\index{VisitorFlyweight@{VisitorFlyweight}!addRequestVisitor@{addRequestVisitor}}
+\index{addRequestVisitor@{addRequestVisitor}!VisitorFlyweight@{VisitorFlyweight}}
+\doxysubsubsection{\texorpdfstring{addRequestVisitor()}{addRequestVisitor()}}
+{\footnotesize\ttfamily add\+Request\+Visitor (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_request_visitor_interface}{Request\+Visitor\+Interface}}}]{\$visitor }\end{DoxyParamCaption})}
+
+Add a response visitor to the factory by name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the visitor \\
+\hline
+Request\+Visitor\+Interface & {\em \$visitor} & Visitor to add\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file Visitor\+Flyweight.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a6e779d44fa0ec674f7b2026ebb756d05}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a6e779d44fa0ec674f7b2026ebb756d05}} 
+\index{VisitorFlyweight@{VisitorFlyweight}!addResponseVisitor@{addResponseVisitor}}
+\index{addResponseVisitor@{addResponseVisitor}!VisitorFlyweight@{VisitorFlyweight}}
+\doxysubsubsection{\texorpdfstring{addResponseVisitor()}{addResponseVisitor()}}
+{\footnotesize\ttfamily add\+Response\+Visitor (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_response_1_1_response_visitor_interface}{Response\+Visitor\+Interface}}}]{\$visitor }\end{DoxyParamCaption})}
+
+Add a response visitor to the factory by name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the visitor \\
+\hline
+Response\+Visitor\+Interface & {\em \$visitor} & Visitor to add\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file Visitor\+Flyweight.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_ac93fbec81f07e5d15f80db907e63dc10}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_ac93fbec81f07e5d15f80db907e63dc10}} 
+\index{VisitorFlyweight@{VisitorFlyweight}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!VisitorFlyweight@{VisitorFlyweight}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+self @code\+Coverage\+Ignore 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Visitor\+Flyweight.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_aea2ad46bd6ea441ac3a7a253de551ae5}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_aea2ad46bd6ea441ac3a7a253de551ae5}} 
+\index{VisitorFlyweight@{VisitorFlyweight}!getRequestVisitor@{getRequestVisitor}}
+\index{getRequestVisitor@{getRequestVisitor}!VisitorFlyweight@{VisitorFlyweight}}
+\doxysubsubsection{\texorpdfstring{getRequestVisitor()}{getRequestVisitor()}}
+{\footnotesize\ttfamily get\+Request\+Visitor (\begin{DoxyParamCaption}\item[{}]{\$visitor }\end{DoxyParamCaption})}
+
+Get an instance of a request visitor by location name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$visitor} & Visitor name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Request\+Visitor\+Interface 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Visitor\+Flyweight.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_aba50d33f15e71c6758d23e2ddd75e097}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_aba50d33f15e71c6758d23e2ddd75e097}} 
+\index{VisitorFlyweight@{VisitorFlyweight}!getResponseVisitor@{getResponseVisitor}}
+\index{getResponseVisitor@{getResponseVisitor}!VisitorFlyweight@{VisitorFlyweight}}
+\doxysubsubsection{\texorpdfstring{getResponseVisitor()}{getResponseVisitor()}}
+{\footnotesize\ttfamily get\+Response\+Visitor (\begin{DoxyParamCaption}\item[{}]{\$visitor }\end{DoxyParamCaption})}
+
+Get an instance of a response visitor by location name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$visitor} & Visitor name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Response\+Visitor\+Interface 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Visitor\+Flyweight.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_ac2dc76d756ec398393d4b1d23659276c}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_ac2dc76d756ec398393d4b1d23659276c}} 
+\index{VisitorFlyweight@{VisitorFlyweight}!\$cache@{\$cache}}
+\index{\$cache@{\$cache}!VisitorFlyweight@{VisitorFlyweight}}
+\doxysubsubsection{\texorpdfstring{\$cache}{$cache}}
+{\footnotesize\ttfamily \$cache = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file Visitor\+Flyweight.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_aadfcc42a8eef49c37a2122555a5a7749}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_aadfcc42a8eef49c37a2122555a5a7749}} 
+\index{VisitorFlyweight@{VisitorFlyweight}!\$defaultMappings@{\$defaultMappings}}
+\index{\$defaultMappings@{\$defaultMappings}!VisitorFlyweight@{VisitorFlyweight}}
+\doxysubsubsection{\texorpdfstring{\$defaultMappings}{$defaultMappings}}
+{\footnotesize\ttfamily \$default\+Mappings\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'request.body'}          => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Request\(\backslash\)BodyVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'request.header'}        => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Request\(\backslash\)HeaderVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'request.json'}          => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Request\(\backslash\)JsonVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'request.postField'}     => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Request\(\backslash\)PostFieldVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'request.postFile'}      => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Request\(\backslash\)PostFileVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'request.query'}         => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Request\(\backslash\)QueryVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'request.response\_body'} => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Request\(\backslash\)ResponseBodyVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'request.responseBody'}  => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Request\(\backslash\)ResponseBodyVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'request.xml'}           => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Request\(\backslash\)XmlVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'response.body'}         => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Response\(\backslash\)BodyVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'response.header'}       => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Response\(\backslash\)HeaderVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'response.json'}         => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Response\(\backslash\)JsonVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'response.reasonPhrase'} => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Response\(\backslash\)ReasonPhraseVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'response.statusCode'}   => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Response\(\backslash\)StatusCodeVisitor'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'response.xml'}          => \textcolor{stringliteral}{'Guzzle\(\backslash\)Service\(\backslash\)Command\(\backslash\)LocationVisitor\(\backslash\)Response\(\backslash\)XmlVisitor'}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Definition at line 18 of file Visitor\+Flyweight.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_ad9d7ce33ebb142b70e58b68052ca0ea8}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_ad9d7ce33ebb142b70e58b68052ca0ea8}} 
+\index{VisitorFlyweight@{VisitorFlyweight}!\$instance@{\$instance}}
+\index{\$instance@{\$instance}!VisitorFlyweight@{VisitorFlyweight}}
+\doxysubsubsection{\texorpdfstring{\$instance}{$instance}}
+{\footnotesize\ttfamily \$instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 15 of file Visitor\+Flyweight.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a36412c93989cb32b1a77467f458208c4}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_visitor_flyweight_a36412c93989cb32b1a77467f458208c4}} 
+\index{VisitorFlyweight@{VisitorFlyweight}!\$mappings@{\$mappings}}
+\index{\$mappings@{\$mappings}!VisitorFlyweight@{VisitorFlyweight}}
+\doxysubsubsection{\texorpdfstring{\$mappings}{$mappings}}
+{\footnotesize\ttfamily \$mappings\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 37 of file Visitor\+Flyweight.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Command/\+Location\+Visitor/\mbox{\hyperlink{_visitor_flyweight_8php}{Visitor\+Flyweight.\+php}}\end{DoxyCompactItemize}

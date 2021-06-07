@@ -1,0 +1,109 @@
+\hypertarget{class_guzzle_1_1_batch_1_1_batch_closure_transfer}{}\doxysection{Batch\+Closure\+Transfer Class Reference}
+\label{class_guzzle_1_1_batch_1_1_batch_closure_transfer}\index{BatchClosureTransfer@{BatchClosureTransfer}}
+Inheritance diagram for Batch\+Closure\+Transfer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_batch_1_1_batch_closure_transfer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_closure_transfer_a2951e530913341f40fbb7a4e6788a5fb}{\+\_\+\+\_\+construct}} (\$callable, \$context=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_closure_transfer_a744114b6e52f06c6d07fb1827a04828d}{transfer}} (array \$batch)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_closure_transfer_ae3d0fc9fa800751a4a5e2917209d85f2}{\$callable}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_closure_transfer_ae05dedb802ada0155efdece2044fed64}{\$context}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch}{Batch}} transfer strategy where transfer logic can be defined via a Closure. This class is to be used with \{\begin{DoxySeeAlso}{See also}
+Guzzle\textbackslash{}\+Batch\textbackslash{}\+Batch\+Interface\} 
+\end{DoxySeeAlso}
+
+
+Definition at line 11 of file Batch\+Closure\+Transfer.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_closure_transfer_a2951e530913341f40fbb7a4e6788a5fb}\label{class_guzzle_1_1_batch_1_1_batch_closure_transfer_a2951e530913341f40fbb7a4e6788a5fb}} 
+\index{BatchClosureTransfer@{BatchClosureTransfer}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!BatchClosureTransfer@{BatchClosureTransfer}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$callable,  }\item[{}]{\$context = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$callable} & Callable that performs the transfer. This function should accept two arguments\+: (array \$batch, mixed \$context). \\
+\hline
+mixed & {\em \$context} & Optional context to pass to the batch divisor\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 26 of file Batch\+Closure\+Transfer.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_closure_transfer_a744114b6e52f06c6d07fb1827a04828d}\label{class_guzzle_1_1_batch_1_1_batch_closure_transfer_a744114b6e52f06c6d07fb1827a04828d}} 
+\index{BatchClosureTransfer@{BatchClosureTransfer}!transfer@{transfer}}
+\index{transfer@{transfer}!BatchClosureTransfer@{BatchClosureTransfer}}
+\doxysubsubsection{\texorpdfstring{transfer()}{transfer()}}
+{\footnotesize\ttfamily callable A closure that performs the transfer (\begin{DoxyParamCaption}\item[{array}]{\$batch }\end{DoxyParamCaption})}
+
+Transfer an array of items
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$batch} & Array of items to transfer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_transfer_interface_a49020e430ac206e6b083d0e0d068b263}{Batch\+Transfer\+Interface}}.
+
+
+
+Definition at line 36 of file Batch\+Closure\+Transfer.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_closure_transfer_ae3d0fc9fa800751a4a5e2917209d85f2}\label{class_guzzle_1_1_batch_1_1_batch_closure_transfer_ae3d0fc9fa800751a4a5e2917209d85f2}} 
+\index{BatchClosureTransfer@{BatchClosureTransfer}!\$callable@{\$callable}}
+\index{\$callable@{\$callable}!BatchClosureTransfer@{BatchClosureTransfer}}
+\doxysubsubsection{\texorpdfstring{\$callable}{$callable}}
+{\footnotesize\ttfamily \$callable\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file Batch\+Closure\+Transfer.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_closure_transfer_ae05dedb802ada0155efdece2044fed64}\label{class_guzzle_1_1_batch_1_1_batch_closure_transfer_ae05dedb802ada0155efdece2044fed64}} 
+\index{BatchClosureTransfer@{BatchClosureTransfer}!\$context@{\$context}}
+\index{\$context@{\$context}!BatchClosureTransfer@{BatchClosureTransfer}}
+\doxysubsubsection{\texorpdfstring{\$context}{$context}}
+{\footnotesize\ttfamily \$context\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Batch\+Closure\+Transfer.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Batch/\mbox{\hyperlink{_batch_closure_transfer_8php}{Batch\+Closure\+Transfer.\+php}}\end{DoxyCompactItemize}

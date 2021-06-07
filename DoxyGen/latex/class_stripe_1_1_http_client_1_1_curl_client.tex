@@ -1,0 +1,228 @@
+\hypertarget{class_stripe_1_1_http_client_1_1_curl_client}{}\doxysection{Curl\+Client Class Reference}
+\label{class_stripe_1_1_http_client_1_1_curl_client}\index{CurlClient@{CurlClient}}
+Inheritance diagram for Curl\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_stripe_1_1_http_client_1_1_curl_client}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_a9800bffa1cf4c9092fefa243856893f3}{\+\_\+\+\_\+construct}} (\$default\+Options=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_ae2ce4b43907e3cb8f78bafcb89a81ff9}{get\+Default\+Options}} ()
+\item 
+\mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_ad5c3315d293ca64fa60d69af54fc5de8}{set\+Timeout}} (\$seconds)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_a25b261a05a130a79f45fb762022de7df}{set\+Connect\+Timeout}} (\$seconds)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_abac5019c5daf3a27d739aa3a249fdb31}{get\+Timeout}} ()
+\item 
+\mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_a318b43e6d6f5f4edc62ae1b2cf0f9ec1}{get\+Connect\+Timeout}} ()
+\item 
+\mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_ac931426d5baf2373053abfde3e08f3fe}{request}} (\$method, \$abs\+Url, \$headers, \$params, \$has\+File)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_a0deb004950b8dc4f51836316fd19c111}{instance}} ()
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_aa027cf52f8e03fac7ff6746ba970d6c4}{encode}} (\$arr, \$prefix=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_ac44eb4a7126bb47c9fd4b520447bcc9e}{DEFAULT\+\_\+\+TIMEOUT}} = 80
+\item 
+const \mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_a80545ea983eec9f99f31b9224112bb65}{DEFAULT\+\_\+\+CONNECT\+\_\+\+TIMEOUT}} = 30
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_a5b060dd94ee5476aa989c591f9aca43c}{\$default\+Options}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Curl\+Client.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_a9800bffa1cf4c9092fefa243856893f3}\label{class_stripe_1_1_http_client_1_1_curl_client_a9800bffa1cf4c9092fefa243856893f3}} 
+\index{CurlClient@{CurlClient}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$default\+Options = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client}{Curl\+Client}} constructor.
+
+Pass in a callable to \$default\+Options that returns an array of CURLOPT\+\_\+$\ast$ values to start off a request with, or an flat array with the same format used by curl\+\_\+setopt\+\_\+array() to provide a static set of options. Note that many options are overridden later in the request call, including timeouts, which can be set via \mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_ad5c3315d293ca64fa60d69af54fc5de8}{set\+Timeout()}} and \mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_a25b261a05a130a79f45fb762022de7df}{set\+Connect\+Timeout()}}.
+
+Note that \mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_ac931426d5baf2373053abfde3e08f3fe}{request()}} will silently ignore a non-\/callable, non-\/array \$default\+Options, and will throw an exception if \$default\+Options returns a non-\/array value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | callable | null & {\em \$default\+Options} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Curl\+Client.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_aa027cf52f8e03fac7ff6746ba970d6c4}\label{class_stripe_1_1_http_client_1_1_curl_client_aa027cf52f8e03fac7ff6746ba970d6c4}} 
+\index{CurlClient@{CurlClient}!encode@{encode}}
+\index{encode@{encode}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily static encode (\begin{DoxyParamCaption}\item[{}]{\$arr,  }\item[{}]{\$prefix = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$arr} & An map of param keys to values. \\
+\hline
+string | null & {\em \$prefix} & Only public for testability, should not be called outside of \mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client}{Curl\+Client}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string A querystring, essentially. 
+\end{DoxyReturn}
+
+
+Definition at line 266 of file Curl\+Client.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_a318b43e6d6f5f4edc62ae1b2cf0f9ec1}\label{class_stripe_1_1_http_client_1_1_curl_client_a318b43e6d6f5f4edc62ae1b2cf0f9ec1}} 
+\index{CurlClient@{CurlClient}!getConnectTimeout@{getConnectTimeout}}
+\index{getConnectTimeout@{getConnectTimeout}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{getConnectTimeout()}{getConnectTimeout()}}
+{\footnotesize\ttfamily get\+Connect\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file Curl\+Client.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_ae2ce4b43907e3cb8f78bafcb89a81ff9}\label{class_stripe_1_1_http_client_1_1_curl_client_ae2ce4b43907e3cb8f78bafcb89a81ff9}} 
+\index{CurlClient@{CurlClient}!getDefaultOptions@{getDefaultOptions}}
+\index{getDefaultOptions@{getDefaultOptions}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{getDefaultOptions()}{getDefaultOptions()}}
+{\footnotesize\ttfamily get\+Default\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file Curl\+Client.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_abac5019c5daf3a27d739aa3a249fdb31}\label{class_stripe_1_1_http_client_1_1_curl_client_abac5019c5daf3a27d739aa3a249fdb31}} 
+\index{CurlClient@{CurlClient}!getTimeout@{getTimeout}}
+\index{getTimeout@{getTimeout}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{getTimeout()}{getTimeout()}}
+{\footnotesize\ttfamily get\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file Curl\+Client.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_a0deb004950b8dc4f51836316fd19c111}\label{class_stripe_1_1_http_client_1_1_curl_client_a0deb004950b8dc4f51836316fd19c111}} 
+\index{CurlClient@{CurlClient}!instance@{instance}}
+\index{instance@{instance}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily static instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 13 of file Curl\+Client.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_ac931426d5baf2373053abfde3e08f3fe}\label{class_stripe_1_1_http_client_1_1_curl_client_ac931426d5baf2373053abfde3e08f3fe}} 
+\index{CurlClient@{CurlClient}!request@{request}}
+\index{request@{request}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily request (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$abs\+Url,  }\item[{}]{\$headers,  }\item[{}]{\$params,  }\item[{}]{\$has\+File }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & The HTTP method being used \\
+\hline
+string & {\em \$abs\+Url} & The URL being requested, including domain and protocol \\
+\hline
+array & {\em \$headers} & Headers to be used in the request (full strings, not KV pairs) \\
+\hline
+array & {\em \$params} & KV pairs for parameters. Can be nested for arrays and hashes \\
+\hline
+boolean & {\em \$has\+File} & Whether or not \$params references a file (via an @ prefix or Curl\+File) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{namespace_stripe_1_1_error}{Error}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_stripe_1_1_http_client_1_1_client_interface_ac931426d5baf2373053abfde3e08f3fe}{Client\+Interface}}.
+
+
+
+Definition at line 78 of file Curl\+Client.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_a25b261a05a130a79f45fb762022de7df}\label{class_stripe_1_1_http_client_1_1_curl_client_a25b261a05a130a79f45fb762022de7df}} 
+\index{CurlClient@{CurlClient}!setConnectTimeout@{setConnectTimeout}}
+\index{setConnectTimeout@{setConnectTimeout}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{setConnectTimeout()}{setConnectTimeout()}}
+{\footnotesize\ttfamily set\+Connect\+Timeout (\begin{DoxyParamCaption}\item[{}]{\$seconds }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file Curl\+Client.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_ad5c3315d293ca64fa60d69af54fc5de8}\label{class_stripe_1_1_http_client_1_1_curl_client_ad5c3315d293ca64fa60d69af54fc5de8}} 
+\index{CurlClient@{CurlClient}!setTimeout@{setTimeout}}
+\index{setTimeout@{setTimeout}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{setTimeout()}{setTimeout()}}
+{\footnotesize\ttfamily set\+Timeout (\begin{DoxyParamCaption}\item[{}]{\$seconds }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file Curl\+Client.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_a5b060dd94ee5476aa989c591f9aca43c}\label{class_stripe_1_1_http_client_1_1_curl_client_a5b060dd94ee5476aa989c591f9aca43c}} 
+\index{CurlClient@{CurlClient}!\$defaultOptions@{\$defaultOptions}}
+\index{\$defaultOptions@{\$defaultOptions}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{\$defaultOptions}{$defaultOptions}}
+{\footnotesize\ttfamily \$default\+Options\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 21 of file Curl\+Client.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_a80545ea983eec9f99f31b9224112bb65}\label{class_stripe_1_1_http_client_1_1_curl_client_a80545ea983eec9f99f31b9224112bb65}} 
+\index{CurlClient@{CurlClient}!DEFAULT\_CONNECT\_TIMEOUT@{DEFAULT\_CONNECT\_TIMEOUT}}
+\index{DEFAULT\_CONNECT\_TIMEOUT@{DEFAULT\_CONNECT\_TIMEOUT}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_CONNECT\_TIMEOUT}{DEFAULT\_CONNECT\_TIMEOUT}}
+{\footnotesize\ttfamily const DEFAULT\+\_\+\+CONNECT\+\_\+\+TIMEOUT = 30}
+
+
+
+Definition at line 49 of file Curl\+Client.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_http_client_1_1_curl_client_ac44eb4a7126bb47c9fd4b520447bcc9e}\label{class_stripe_1_1_http_client_1_1_curl_client_ac44eb4a7126bb47c9fd4b520447bcc9e}} 
+\index{CurlClient@{CurlClient}!DEFAULT\_TIMEOUT@{DEFAULT\_TIMEOUT}}
+\index{DEFAULT\_TIMEOUT@{DEFAULT\_TIMEOUT}!CurlClient@{CurlClient}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_TIMEOUT}{DEFAULT\_TIMEOUT}}
+{\footnotesize\ttfamily const DEFAULT\+\_\+\+TIMEOUT = 80}
+
+
+
+Definition at line 48 of file Curl\+Client.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/stripe/stripe-\/php/lib/\+Http\+Client/\mbox{\hyperlink{_curl_client_8php}{Curl\+Client.\+php}}\end{DoxyCompactItemize}

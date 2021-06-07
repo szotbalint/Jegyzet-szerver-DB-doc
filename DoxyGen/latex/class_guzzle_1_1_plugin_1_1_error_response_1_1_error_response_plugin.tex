@@ -1,0 +1,119 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin}{}\doxysection{Error\+Response\+Plugin Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin}\index{ErrorResponsePlugin@{ErrorResponsePlugin}}
+Inheritance diagram for Error\+Response\+Plugin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin_a9aa26789ab5897b21ae186615f0fa264}{on\+Command\+Before\+Send}} (\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} \$event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin_af1f63475927bbcb3bd21b58712076104}{get\+Subscribed\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin_ad12e617487e876213a1cd0cd0e9ec8cf}{get\+Error\+Closure}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command, \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_operation}{Operation}} \$operation)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Converts generic Guzzle response exceptions into error\+Response exceptions 
+
+Definition at line 15 of file Error\+Response\+Plugin.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin_ad12e617487e876213a1cd0cd0e9ec8cf}\label{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin_ad12e617487e876213a1cd0cd0e9ec8cf}} 
+\index{ErrorResponsePlugin@{ErrorResponsePlugin}!getErrorClosure@{getErrorClosure}}
+\index{getErrorClosure@{getErrorClosure}!ErrorResponsePlugin@{ErrorResponsePlugin}}
+\doxysubsubsection{\texorpdfstring{getErrorClosure()}{getErrorClosure()}}
+{\footnotesize\ttfamily get\+Error\+Closure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_operation}{Operation}}}]{\$operation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request that received an error \\
+\hline
+Command\+Interface & {\em \$command} & Command that created the request \\
+\hline
+Operation & {\em \$operation} & Operation that defines the request and errors\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Closure Returns a closure 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Error\+Response\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 47 of file Error\+Response\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin_af1f63475927bbcb3bd21b58712076104}\label{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin_af1f63475927bbcb3bd21b58712076104}} 
+\index{ErrorResponsePlugin@{ErrorResponsePlugin}!getSubscribedEvents@{getSubscribedEvents}}
+\index{getSubscribedEvents@{getSubscribedEvents}!ErrorResponsePlugin@{ErrorResponsePlugin}}
+\doxysubsubsection{\texorpdfstring{getSubscribedEvents()}{getSubscribedEvents()}}
+{\footnotesize\ttfamily static get\+Subscribed\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns an array of event names this subscriber wants to listen to.
+
+The array keys are event names and the value can be\+:
+
+
+\begin{DoxyItemize}
+\item The method name to call (priority defaults to 0)
+\item An array composed of the method name to call and the priority
+\item An array of arrays composed of the method names to call and respective priorities, or 0 if unset
+\end{DoxyItemize}
+
+For instance\+:
+
+
+\begin{DoxyItemize}
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ \textquotesingle{}method\+Name\textquotesingle{})
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(\textquotesingle{}method\+Name\textquotesingle{}, \$priority))
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(array(\textquotesingle{}method\+Name1\textquotesingle{}, \$priority), array(\textquotesingle{}method\+Name2\textquotesingle{})))
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+array The event names to listen to 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface_af1f63475927bbcb3bd21b58712076104}{Event\+Subscriber\+Interface}}.
+
+
+
+Definition at line 17 of file Error\+Response\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin_a9aa26789ab5897b21ae186615f0fa264}\label{class_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_plugin_a9aa26789ab5897b21ae186615f0fa264}} 
+\index{ErrorResponsePlugin@{ErrorResponsePlugin}!onCommandBeforeSend@{onCommandBeforeSend}}
+\index{onCommandBeforeSend@{onCommandBeforeSend}!ErrorResponsePlugin@{ErrorResponsePlugin}}
+\doxysubsubsection{\texorpdfstring{onCommandBeforeSend()}{onCommandBeforeSend()}}
+{\footnotesize\ttfamily on\+Command\+Before\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})}
+
+Adds a listener to requests before they sent from a command
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event & {\em \$event} & Event emitted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file Error\+Response\+Plugin.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Error\+Response/\mbox{\hyperlink{_error_response_plugin_8php}{Error\+Response\+Plugin.\+php}}\end{DoxyCompactItemize}

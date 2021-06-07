@@ -1,0 +1,1039 @@
+Faker is a PHP library that generates fake data for you. Whether you need to bootstrap your database, create good-\/looking XML documents, fill-\/in your persistence to stress test it, or anonymize data taken from a production service, Faker is for you.
+
+Faker is heavily inspired by Perl\textquotesingle{}s \href{http://search.cpan.org/~jasonk/Data-Faker-0.07/}{\texttt{ Data\+::\+Faker}}, and by ruby\textquotesingle{}s \href{https://rubygems.org/gems/faker}{\texttt{ Faker}}.
+
+Faker requires PHP $>$= 5.\+3.\+3.
+
+\href{https://packagist.org/packages/fzaninotto/faker}{\texttt{ }} \href{http://travis-ci.org/fzaninotto/Faker}{\texttt{ }} \href{https://insight.sensiolabs.com/projects/eceb78a9-38d4-4ad5-8b6b-b52f323e3549}{\texttt{ }}\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md327}{}\doxysection{Installation}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md327}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require fzaninotto/faker}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md328}{}\doxysection{Basic Usage}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md328}
+Use {\ttfamily Faker\textbackslash{}Factory\+::create()} to create and initialize a faker generator, which can generate data by accessing properties named after the type of data you want.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\textcolor{comment}{// require the Faker autoloader}}
+\DoxyCodeLine{require\_once \textcolor{stringliteral}{'/path/to/Faker/src/autoload.php'};}
+\DoxyCodeLine{\textcolor{comment}{// alternatively, use another PSR-\/0 compliant autoloader (like the Symfony2 ClassLoader for instance)}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// use the factory to create a Faker\(\backslash\)Generator instance}}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}} = \mbox{\hyperlink{class_faker_1_1_factory_a0b3398649c2f374eb81301f7c4630ca0}{Faker\(\backslash\)Factory::create}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// generate data by accessing properties}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>name;}
+\DoxyCodeLine{  \textcolor{comment}{// 'Lucy Cechtelar';}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>address;}
+\DoxyCodeLine{  \textcolor{comment}{// "{}426 Jordy Lodge}}
+\DoxyCodeLine{  \textcolor{comment}{// Cartwrightshire, SC 88120-\/6700"{}}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>text;}
+\DoxyCodeLine{  \textcolor{comment}{// Sint velit eveniet. Rerum atque repellat voluptatem quia rerum. Numquam excepturi}}
+\DoxyCodeLine{  \textcolor{comment}{// beatae sint laudantium consequatur. Magni occaecati itaque sint et sit tempore. Nesciunt}}
+\DoxyCodeLine{  \textcolor{comment}{// amet quidem. Iusto deleniti cum autem ad quia aperiam.}}
+\DoxyCodeLine{  \textcolor{comment}{// A consectetur quos aliquam. In iste aliquid et aut similique suscipit. Consequatur qui}}
+\DoxyCodeLine{  \textcolor{comment}{// quaerat iste minus hic expedita. Consequuntur error magni et laboriosam. Aut aspernatur}}
+\DoxyCodeLine{  \textcolor{comment}{// voluptatem sit aliquam. Dolores voluptatum est.}}
+\DoxyCodeLine{  \textcolor{comment}{// Aut molestias et maxime. Fugit autem facilis quos vero. Eius quibusdam possimus est.}}
+\DoxyCodeLine{  \textcolor{comment}{// Ea quaerat et quisquam. Deleniti sunt quam. Adipisci consequatur id in occaecati.}}
+\DoxyCodeLine{  \textcolor{comment}{// Et sint et. Ut ducimus quod nemo ab voluptatum.}}
+
+\end{DoxyCode}
+
+
+Even if this example shows a property access, each call to {\ttfamily \$faker-\/$>$name} yields a different (random) result. This is because Faker uses {\ttfamily \+\_\+\+\_\+get()} magic, and forwards {\ttfamily Faker\textbackslash{}Generator-\/$>$\$property} calls to {\ttfamily Faker\textbackslash{}Generator-\/$>$format(\$property)}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\$i=0; \$i < 10; \$i++) \{}
+\DoxyCodeLine{  echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>name, \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{  \textcolor{comment}{// Adaline Reichel}}
+\DoxyCodeLine{  \textcolor{comment}{// Dr. Santa Prosacco DVM}}
+\DoxyCodeLine{  \textcolor{comment}{// Noemy Vandervort V}}
+\DoxyCodeLine{  \textcolor{comment}{// Lexi O'Conner}}
+\DoxyCodeLine{  \textcolor{comment}{// Gracie Weber}}
+\DoxyCodeLine{  \textcolor{comment}{// Roscoe Johns}}
+\DoxyCodeLine{  \textcolor{comment}{// Emmett Lebsack}}
+\DoxyCodeLine{  \textcolor{comment}{// Keegan Thiel}}
+\DoxyCodeLine{  \textcolor{comment}{// Wellington Koelpin II}}
+\DoxyCodeLine{  \textcolor{comment}{// Ms. Karley Kiehn V}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Tip}}\+: For a quick generation of fake data, you can also use Faker as a command line tool thanks to \href{https://github.com/bit3/faker-cli}{\texttt{ faker-\/cli}}.\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md329}{}\doxysection{Formatters}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md329}
+Each of the generator properties (like {\ttfamily name}, {\ttfamily address}, and {\ttfamily lorem}) are called \char`\"{}formatters\char`\"{}. A faker generator has many of them, packaged in \char`\"{}providers\char`\"{}. Here is a list of the bundled formatters in the default locale.\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md330}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+Base$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md330}
+\begin{DoxyVerb}randomDigit             // 7
+randomDigitNotNull      // 5
+randomNumber($nbDigits = NULL) // 79907610
+randomFloat($nbMaxDecimals = NULL, $min = 0, $max = NULL) // 48.8932
+numberBetween($min = 1000, $max = 9000) // 8567
+randomLetter            // 'b'
+randomElements($array = array ('a','b','c'), $count = 1) // array('c')
+randomElement($array = array ('a','b','c')) // 'b'
+shuffle('hello, world') // 'rlo,h eoldlw'
+shuffle(array(1, 2, 3)) // array(2, 1, 3)
+numerify('Hello ###') // 'Hello 609'
+lexify('Hello ???') // 'Hello wgt'
+bothify('Hello ##??') // 'Hello 42jz'
+asciify('Hello ***') // 'Hello R6+'
+regexify('[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}'); // sm0@y8k96a.ej
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md331}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+Lorem$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md331}
+\begin{DoxyVerb}word                    // 'aut'
+words($nb = 3)          // array('porro', 'sed', 'magni')
+sentence($nbWords = 6)  // 'Sit vitae voluptas sint non voluptates.'
+sentences($nb = 3)      // array('Optio quos qui illo error.', 'Laborum vero a officia id corporis.', 'Saepe provident esse hic eligendi.')
+paragraph($nbSentences = 3) // 'Ut ab voluptas sed a nam. Sint autem inventore aut officia aut aut blanditiis. Ducimus eos odit amet et est ut eum.'
+paragraphs($nb = 3)     // array('Quidem ut sunt et quidem est accusamus aut. Fuga est placeat rerum ut. Enim ex eveniet facere sunt.', 'Aut nam et eum architecto fugit repellendus illo. Qui ex esse veritatis.', 'Possimus omnis aut incidunt sunt. Asperiores incidunt iure sequi cum culpa rem. Rerum exercitationem est rem.')
+text($maxNbChars = 200) // 'Fuga totam reiciendis qui architecto fugiat nemo. Consequatur recusandae qui cupiditate eos quod.'
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md332}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}en\+\_\+\+US\textbackslash{}\+Person$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md332}
+\begin{DoxyVerb}title($gender = null|'male'|'female')     // 'Ms.'
+titleMale                                 // 'Mr.'
+titleFemale                               // 'Ms.'
+suffix                                    // 'Jr.'
+name($gender = null|'male'|'female')      // 'Dr. Zane Stroman'
+firstName($gender = null|'male'|'female') // 'Maynard'
+firstNameMale                             // 'Maynard'
+firstNameFemale                           // 'Rachel'
+lastName                                  // 'Zulauf'
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md333}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}en\+\_\+\+US\textbackslash{}\+Address$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md333}
+\begin{DoxyVerb}cityPrefix              // 'Lake'
+secondaryAddress        // 'Suite 961'
+state                   // 'NewMexico'
+stateAbbr               // 'OH'
+citySuffix              // 'borough'
+streetSuffix            // 'Keys'
+buildingNumber          // '484'
+city                    // 'West Judge'
+streetName              // 'Keegan Trail'
+streetAddress           // '439 Karley Loaf Suite 897'
+postcode                // '17916'
+address                 // '8888 Cummings Vista Apt. 101, Susanbury, NY 95473'
+country                 // 'Falkland Islands (Malvinas)'
+latitude                // 77.147489
+longitude               // 86.211205
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md334}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}en\+\_\+\+US\textbackslash{}\+Phone\+Number$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md334}
+\begin{DoxyVerb}phoneNumber             // '132-149-0269x3767'
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md335}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}en\+\_\+\+US\textbackslash{}\+Company$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md335}
+\begin{DoxyVerb}catchPhrase             // 'Monitored regional contingency'
+bs                      // 'e-enable robust architectures'
+company                 // 'Bogan-Treutel'
+companySuffix           // 'and Sons'
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md336}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}en\+\_\+\+US\textbackslash{}\+Text$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md336}
+\begin{DoxyVerb}realText($maxNbChars = 200, $indexSize = 2) // "And yet I wish you could manage it?) 'And what are they made of?' Alice asked in a shrill, passionate voice. 'Would YOU like cats if you were never even spoke to Time!' 'Perhaps not,' Alice replied."
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md337}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+Date\+Time$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md337}
+\begin{DoxyVerb}unixTime($max = 'now')                // 58781813
+dateTime($max = 'now')                // DateTime('2008-04-25 08:37:17')
+dateTimeAD($max = 'now')              // DateTime('1800-04-29 20:38:49')
+iso8601($max = 'now')                 // '1978-12-09T10:10:29+0000'
+date($format = 'Y-m-d', $max = 'now') // '1979-06-09'
+time($format = 'H:i:s', $max = 'now') // '20:49:42'
+dateTimeBetween($startDate = '-30 years', $endDate = 'now') // DateTime('2003-03-15 02:00:49')
+dateTimeThisCentury($max = 'now')     // DateTime('1915-05-30 19:28:21')
+dateTimeThisDecade($max = 'now')      // DateTime('2007-05-29 22:30:48')
+dateTimeThisYear($max = 'now')        // DateTime('2011-02-27 20:52:14')
+dateTimeThisMonth($max = 'now')       // DateTime('2011-10-23 13:46:23')
+amPm($max = 'now')                    // 'pm'
+dayOfMonth($max = 'now')              // '04'
+dayOfWeek($max = 'now')               // 'Friday'
+month($max = 'now')                   // '06'
+monthName($max = 'now')               // 'January'
+year($max = 'now')                    // '1993'
+century                               // 'VI'
+timezone                              // 'Europe/Paris'
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md338}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+Internet$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md338}
+\begin{DoxyVerb}email                   // 'tkshlerin@collins.com'
+safeEmail               // 'king.alford@example.org'
+freeEmail               // 'bradley72@gmail.com'
+companyEmail            // 'russel.durward@mcdermott.org'
+freeEmailDomain         // 'yahoo.com'
+safeEmailDomain         // 'example.org'
+userName                // 'wade55'
+password                // 'k&|X+a45*2['
+domainName              // 'wolffdeckow.net'
+domainWord              // 'feeney'
+tld                     // 'biz'
+url                     // 'http://www.skilesdonnelly.biz/aut-accusantium-ut-architecto-sit-et.html'
+slug                    // 'aut-repellat-commodi-vel-itaque-nihil-id-saepe-nostrum'
+ipv4                    // '109.133.32.252'
+localIpv4               // '10.242.58.8'
+ipv6                    // '8e65:933d:22ee:a232:f1c1:2741:1f10:117c'
+macAddress              // '43:85:B7:08:10:CA'
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md339}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+User\+Agent$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md339}
+\begin{DoxyVerb}userAgent              // 'Mozilla/5.0 (Windows CE) AppleWebKit/5350 (KHTML, like Gecko) Chrome/13.0.888.0 Safari/5350'
+chrome                 // 'Mozilla/5.0 (Macintosh; PPC Mac OS X 10_6_5) AppleWebKit/5312 (KHTML, like Gecko) Chrome/14.0.894.0 Safari/5312'
+firefox                // 'Mozilla/5.0 (X11; Linuxi686; rv:7.0) Gecko/20101231 Firefox/3.6'
+safari                 // 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_7_1 rv:3.0; en-US) AppleWebKit/534.11.3 (KHTML, like Gecko) Version/4.0 Safari/534.11.3'
+opera                  // 'Opera/8.25 (Windows NT 5.1; en-US) Presto/2.9.188 Version/10.00'
+internetExplorer       // 'Mozilla/5.0 (compatible; MSIE 7.0; Windows 98; Win 9x 4.90; Trident/3.0)'
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md340}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+Payment$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md340}
+\begin{DoxyVerb}creditCardType          // 'MasterCard'
+creditCardNumber        // '4485480221084675'
+creditCardExpirationDate // 04/13
+creditCardExpirationDateString // '04/13'
+creditCardDetails       // array('MasterCard', '4485480221084675', 'Aleksander Nowak', '04/13')
+swiftBicNumber          // RZTIAT22263
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md341}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+Color$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md341}
+\begin{DoxyVerb}hexcolor               // '#fa3cc2'
+rgbcolor               // '0,255,122'
+rgbColorAsArray        // array(0,255,122)
+rgbCssColor            // 'rgb(0,255,122)'
+safeColorName          // 'fuchsia'
+colorName              // 'Gainsbor'
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md342}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+File$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md342}
+\begin{DoxyVerb}fileExtension          // 'avi'
+mimeType               // 'video/x-msvideo'
+// Copy a random file from the source to the target directory and returns the fullpath or filename
+file($sourceDir = '/tmp', $targetDir = '/tmp') // '/path/to/targetDir/13b73edae8443990be1aa8f1a483bc27.jpg'
+file($sourceDir, $targetDir, false) // '13b73edae8443990be1aa8f1a483bc27.jpg'
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md343}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+Image$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md343}
+\begin{DoxyVerb}// Image generation provided by LoremPixel (http://lorempixel.com/)
+imageUrl($width = 640, $height = 480) // 'http://lorempixel.com/640/480/'
+imageUrl($width, $height, 'cats')     // 'http://lorempixel.com/800/600/cats/'
+imageUrl($width, $height, 'cats', true, 'Faker') // 'http://lorempixel.com/800/400/cats/Faker'
+image($dir = '/tmp', $width = 640, $height = 480) // '/tmp/13b73edae8443990be1aa8f1a483bc27.jpg'
+image($dir, $width, $height, 'cats')  // 'tmp/13b73edae8443990be1aa8f1a483bc27.jpg' it's a cat!
+image($dir, $width, $height, 'cats', true, 'Faker') // 'tmp/13b73edae8443990be1aa8f1a483bc27.jpg' it's a cat with Faker text
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md344}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+Uuid$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md344}
+\begin{DoxyVerb}uuid                   // '7e57d004-2b97-0e7a-b45f-5387367791cd'
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md345}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+Barcode$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md345}
+\begin{DoxyVerb}ean13          // '4006381333931'
+ean8           // '73513537'
+isbn13         // '9790404436093'
+isbn10         // '4881416324'
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md346}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+Miscellaneous$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md346}
+\begin{DoxyVerb}boolean($chanceOfGettingTrue = 50) // true
+md5           // 'de99a620c50f2990e87144735cd357e7'
+sha1          // 'f08e7f04ca1a413807ebc47551a40a20a0b4de5c'
+sha256        // '0061e4c60dac5c1d82db0135a42e00c89ae3a333e7c26485321f24348c7e98a5'
+locale        // en_UK
+countryCode   // UK
+languageCode  // en
+currencyCode  // EUR
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md347}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}\+Biased$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md347}
+\begin{DoxyVerb}// get a random number between 10 and 20,
+// with more chances to be close to 20
+biasedNumberBetween($min = 10, $max = 20, $function = 'sqrt')
+\end{DoxyVerb}
+ \hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md348}{}\doxysection{Unique and Optional modifiers}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md348}
+Faker provides two special providers, {\ttfamily unique()} and {\ttfamily optional()}, to be called before any provider. {\ttfamily optional()} can be useful for seeding non-\/required fields, like a mobile telephone number; {\ttfamily unique()} is required to populate fields that cannot accept twice the same value, like primary identifiers.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// unique() forces providers to return unique values}}
+\DoxyCodeLine{\$values = array();}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\$i=0; \$i < 10; \$i++) \{}
+\DoxyCodeLine{  \textcolor{comment}{// get a random digit, but always a new one, to avoid duplicates}}
+\DoxyCodeLine{  \$values []= \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>unique()-\/>randomDigit;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{print\_r(\$values); \textcolor{comment}{// [4, 1, 8, 5, 0, 2, 6, 9, 7, 3]}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// providers with a limited range will throw an exception when no new unique value can be generated}}
+\DoxyCodeLine{\$values = array();}
+\DoxyCodeLine{\textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{  \textcolor{keywordflow}{for} (\$i=0; \$i < 10; \$i++) \{}
+\DoxyCodeLine{    \$values []= \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>unique()-\/>randomDigitNotNull;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\} \textcolor{keywordflow}{catch} (\(\backslash\)OverflowException \$e) \{}
+\DoxyCodeLine{  echo \textcolor{stringliteral}{"{}There are only 9 unique digits not null, Faker can't generate 10 of them!"{}};}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// you can reset the unique modifier for all providers by passing true as first argument}}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>unique(\$reset = \textcolor{keyword}{true})-\/>randomDigitNotNull; \textcolor{comment}{// will not throw OverflowException since unique() was reset}}
+\DoxyCodeLine{\textcolor{comment}{// tip: unique() keeps one array of values per provider}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// optional() sometimes bypasses the provider to return a default value instead (which defaults to NULL)}}
+\DoxyCodeLine{\$values = array();}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\$i=0; \$i < 10; \$i++) \{}
+\DoxyCodeLine{  \textcolor{comment}{// get a random digit, but also null sometimes}}
+\DoxyCodeLine{  \$values []= \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>optional()-\/>randomDigit;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{print\_r(\$values); \textcolor{comment}{// [1, 4, null, 9, 5, null, null, 4, 6, null]}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// optional() accepts a weight argument to specify the probability of receiving the default value.}}
+\DoxyCodeLine{\textcolor{comment}{// 0 will always return the default value; 1 will always return the provider. Default weight is 0.5.}}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>optional(\$weight = 0.1)-\/>randomDigit; \textcolor{comment}{// 90\% chance of NULL}}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>optional(\$weight = 0.9)-\/>randomDigit; \textcolor{comment}{// 10\% chance of NULL}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// optional() accepts a default argument to specify the default value to return.}}
+\DoxyCodeLine{\textcolor{comment}{// Defaults to NULL.}}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>optional(\$weight = 0.5, \$default = \textcolor{keyword}{false})-\/>randomDigit; \textcolor{comment}{// 50\% chance of FALSE}}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>optional(\$weight = 0.9, \$default = \textcolor{stringliteral}{'abc'})-\/>word; \textcolor{comment}{// 10\% chance of 'abc'}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md349}{}\doxysection{Localization}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md349}
+{\ttfamily Faker\textbackslash{}Factory} can take a locale as an argument, to return localized data. If no localized provider is found, the factory fallbacks to the default locale (en\+\_\+\+EN).
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}} = \mbox{\hyperlink{class_faker_1_1_factory_a0b3398649c2f374eb81301f7c4630ca0}{Faker\(\backslash\)Factory::create}}(\textcolor{stringliteral}{'fr\_FR'}); \textcolor{comment}{// create a French faker}}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\$i=0; \$i < 10; \$i++) \{}
+\DoxyCodeLine{  echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>name, \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{  \textcolor{comment}{// Luce du Coulon}}
+\DoxyCodeLine{  \textcolor{comment}{// Auguste Dupont}}
+\DoxyCodeLine{  \textcolor{comment}{// Roger Le Voisin}}
+\DoxyCodeLine{  \textcolor{comment}{// Alexandre Lacroix}}
+\DoxyCodeLine{  \textcolor{comment}{// Jacques Humbert-\/Roy}}
+\DoxyCodeLine{  \textcolor{comment}{// Thérèse Guillet-\/Andre}}
+\DoxyCodeLine{  \textcolor{comment}{// Gilles Gros-\/Bodin}}
+\DoxyCodeLine{  \textcolor{comment}{// Amélie Pires}}
+\DoxyCodeLine{  \textcolor{comment}{// Marcel Laporte}}
+\DoxyCodeLine{  \textcolor{comment}{// Geneviève Marchal}}
+
+\end{DoxyCode}
+
+
+You can check available Faker locales in the source code, \href{https://github.com/fzaninotto/Faker/tree/master/src/Faker/Provider}{\texttt{ under the {\ttfamily Provider} directory}}. The localization of Faker is an ongoing process, for which we need your help. Don\textquotesingle{}t hesitate to create localized providers to your own locale and submit a PR!\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md350}{}\doxysection{Populating Entities Using an ORM or an ODM}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md350}
+Faker provides adapters for Object-\/\+Relational and Object-\/\+Document Mappers (currently, \href{http://www.propelorm.org}{\texttt{ Propel}}, \href{http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/}{\texttt{ Doctrine2}}, \href{http://cakephp.org}{\texttt{ Cake\+PHP}} and \href{https://github.com/mandango/mandango}{\texttt{ Mandango}} are supported). These adapters ease the population of databases through the Entity classes provided by an ORM library (or the population of document stores using Document classes provided by an ODM library).
+
+To populate entities, create a new populator class (using a generator instance as parameter), then list the class and number of all the entities that must be generated. To launch the actual data population, call the {\ttfamily execute()} method.
+
+Here is an example showing how to populate 5 {\ttfamily Author} and 10 {\ttfamily Book} objects\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\mbox{\hyperlink{test_2_documentor_8php_ab328ac5b606185b5e1706aa41380cc76}{\$generator}} = \mbox{\hyperlink{class_faker_1_1_factory_a0b3398649c2f374eb81301f7c4630ca0}{\(\backslash\)Faker\(\backslash\)Factory::create}}();}
+\DoxyCodeLine{\$populator = \textcolor{keyword}{new} \mbox{\hyperlink{class_faker_1_1_o_r_m_1_1_propel_1_1_populator}{Faker\(\backslash\)ORM\(\backslash\)Propel\(\backslash\)Populator}}(\mbox{\hyperlink{test_2_documentor_8php_ab328ac5b606185b5e1706aa41380cc76}{\$generator}});}
+\DoxyCodeLine{\$populator-\/>addEntity(\textcolor{stringliteral}{'Author'}, 5);}
+\DoxyCodeLine{\$populator-\/>addEntity(\textcolor{stringliteral}{'Book'}, 10);}
+\DoxyCodeLine{\$insertedPKs = \$populator-\/>execute();}
+
+\end{DoxyCode}
+
+
+The populator uses name and column type guessers to populate each column with relevant data. For instance, Faker populates a column named {\ttfamily first\+\_\+name} using the {\ttfamily first\+Name} formatter, and a column with a {\ttfamily TIMESTAMP} type using the {\ttfamily date\+Time} formatter. The resulting entities are therefore coherent. If Faker misinterprets a column name, you can still specify a custom closure to be used for populating a particular column, using the third argument to {\ttfamily add\+Entity()}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\$populator-\/>addEntity(\textcolor{stringliteral}{'Book'}, 5, array(}
+\DoxyCodeLine{  \textcolor{stringliteral}{'ISBN'} => \textcolor{keyword}{function}() use (\mbox{\hyperlink{test_2_documentor_8php_ab328ac5b606185b5e1706aa41380cc76}{\$generator}}) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{test_2_documentor_8php_ab328ac5b606185b5e1706aa41380cc76}{\$generator}}-\/>ean13(); \}}
+\DoxyCodeLine{));}
+
+\end{DoxyCode}
+
+
+In this example, Faker will guess a formatter for all columns except {\ttfamily ISBN}, for which the given anonymous function will be used.
+
+{\bfseries{Tip}}\+: To ignore some columns, specify {\ttfamily null} for the column names in the third argument of {\ttfamily add\+Entity()}. This is usually necessary for columns added by a behavior\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\$populator-\/>addEntity(\textcolor{stringliteral}{'Book'}, 5, array(}
+\DoxyCodeLine{  \textcolor{stringliteral}{'CreatedAt'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{  \textcolor{stringliteral}{'UpdatedAt'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{));}
+
+\end{DoxyCode}
+
+
+Of course, Faker does not populate autoincremented primary keys. In addition, {\ttfamily Faker\textbackslash{}ORM\textbackslash{}Propel\textbackslash{}Populator\+::execute()} returns the list of inserted PKs, indexed by class\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{print\_r(\$insertedPKs);}
+\DoxyCodeLine{\textcolor{comment}{// array(}}
+\DoxyCodeLine{\textcolor{comment}{//   'Author' => (34, 35, 36, 37, 38),}}
+\DoxyCodeLine{\textcolor{comment}{//   'Book'   => (456, 457, 458, 459, 470, 471, 472, 473, 474, 475)}}
+\DoxyCodeLine{\textcolor{comment}{// )}}
+
+\end{DoxyCode}
+
+
+In the previous example, the {\ttfamily Book} and {\ttfamily Author} models share a relationship. Since {\ttfamily Author} entities are populated first, Faker is smart enough to relate the populated {\ttfamily Book} entities to one of the populated {\ttfamily Author} entities.
+
+Lastly, if you want to execute an arbitrary function on an entity before insertion, use the fourth argument of the {\ttfamily add\+Entity()} method\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\$populator-\/>addEntity(\textcolor{stringliteral}{'Book'}, 5, array(), array(}
+\DoxyCodeLine{  \textcolor{keyword}{function}(\$book) \{ \$book-\/>publish(); \},}
+\DoxyCodeLine{));}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md351}{}\doxysection{Seeding the Generator}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md351}
+You may want to get always the same generated data -\/ for instance when using Faker for unit testing purposes. The generator offers a {\ttfamily seed()} method, which seeds the random number generator. Calling the same script twice with the same seed produces the same results.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}} = \mbox{\hyperlink{class_faker_1_1_factory_a0b3398649c2f374eb81301f7c4630ca0}{Faker\(\backslash\)Factory::create}}();}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>seed(1234);}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>name; \textcolor{comment}{// 'Jess Mraz I';}}
+
+\end{DoxyCode}
+
+
+\begin{quote}
+{\bfseries{Tip}}\+: Date\+Time formatters won\textquotesingle{}t reproduce the same fake data if you don\textquotesingle{}t fix the {\ttfamily \$max} value\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\textcolor{comment}{// even when seeded, this line will return different results because \$max varies}}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>dateTime(); \textcolor{comment}{// equivalent to \$faker-\/>dateTime(\$max = 'now')}}
+\DoxyCodeLine{\textcolor{comment}{// make sure you fix the \$max parameter}}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>dateTime(\textcolor{stringliteral}{'2014-\/02-\/25 08:37:17'}); \textcolor{comment}{// will return always the same date when seeded}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Tip}}\+: Formatters won\textquotesingle{}t reproduce the same fake data if you use the {\ttfamily rand()} php function. Use {\ttfamily \$faker} or {\ttfamily mt\+\_\+rand()} instead\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\textcolor{comment}{// bad}}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>realText(rand(10,20));}
+\DoxyCodeLine{\textcolor{comment}{// good}}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>realText(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>numberBetween(10,20));}
+
+\end{DoxyCode}
+ \end{quote}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md352}{}\doxysection{Faker Internals\+: Understanding Providers}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md352}
+A {\ttfamily Faker\textbackslash{}Generator} alone can\textquotesingle{}t do much generation. It needs {\ttfamily Faker\textbackslash{}Provider} objects to delegate the data generation to them. {\ttfamily Faker\textbackslash{}Factory\+::create()} actually creates a {\ttfamily Faker\textbackslash{}Generator} bundled with the default providers. Here is what happens under the hood\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_faker_1_1_generator}{Faker\(\backslash\)Generator}}();}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>addProvider(\textcolor{keyword}{new} Faker\(\backslash\)Provider\(\backslash\)en\_US\(\backslash\)Person(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}));}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>addProvider(\textcolor{keyword}{new} Faker\(\backslash\)Provider\(\backslash\)en\_US\(\backslash\)Address(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}));}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>addProvider(\textcolor{keyword}{new} Faker\(\backslash\)Provider\(\backslash\)en\_US\(\backslash\)PhoneNumber(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}));}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>addProvider(\textcolor{keyword}{new} Faker\(\backslash\)Provider\(\backslash\)en\_US\(\backslash\)Company(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}));}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>addProvider(\textcolor{keyword}{new} Faker\(\backslash\)Provider\(\backslash\)Lorem(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}));}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>addProvider(\textcolor{keyword}{new} Faker\(\backslash\)Provider\(\backslash\)Internet(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}));}
+\DoxyCodeLine{````}
+\DoxyCodeLine{}
+\DoxyCodeLine{Whenever you \textcolor{keywordflow}{try} to access a \textcolor{keyword}{property} on the `\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}` object, the generator looks \textcolor{keywordflow}{for} a method with the same name in all the providers attached to it. For instance, calling `\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>name` triggers a call to `\mbox{\hyperlink{class_faker_1_1_provider_1_1_person_afdd9ed03b86f6acfbf47c8c6d88f27c3}{Faker\(\backslash\)Provider\(\backslash\)Person::name}}()`. And since Faker starts with the last provider, you can easily \textcolor{keyword}{override} existing formatters: just add a provider containing methods named after the formatters you want to \textcolor{keyword}{override}.}
+\DoxyCodeLine{}
+\DoxyCodeLine{That means that you can easily add your own providers to a `\mbox{\hyperlink{class_faker_1_1_generator}{Faker\(\backslash\)Generator}}` instance. A provider is usually a \textcolor{keyword}{class }extending `\(\backslash\)Faker\(\backslash\)Provider\(\backslash\)Base`. This parent class allows you to use methods like `lexify()` or `randomNumber()`; it also gives you access to formatters of other providers, through the \textcolor{keyword}{protected} `\mbox{\hyperlink{test_2_documentor_8php_ab328ac5b606185b5e1706aa41380cc76}{\$generator}}` \textcolor{keyword}{property}. The \textcolor{keyword}{new} formatters are the \textcolor{keyword}{public} methods of the provider \textcolor{keyword}{class}.}
+\DoxyCodeLine{}
+\DoxyCodeLine{Here is an example provider \textcolor{keywordflow}{for} populating Book data:}
+\DoxyCodeLine{}
+\DoxyCodeLine{```php}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_faker_1_1_provider}{Faker\(\backslash\)Provider}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }Book \textcolor{keyword}{extends} \mbox{\hyperlink{class_faker_1_1_provider_1_1_base}{\(\backslash\)Faker\(\backslash\)Provider\(\backslash\)Base}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{keyword}{public} \textcolor{keyword}{function} title(\$nbWords = 5)}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    \$sentence = \$this-\/>generator-\/>sentence(\$nbWords);}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} substr(\$sentence, 0, strlen(\$sentence) -\/ 1);}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{keyword}{public} \textcolor{keyword}{function} ISBN()}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \$this-\/>generator-\/>ean13();}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+To register this provider, just add a new instance of {\ttfamily \textbackslash{}Faker\textbackslash{}Provider\textbackslash{}Book} to an existing generator\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>addProvider(\textcolor{keyword}{new} \(\backslash\)Faker\(\backslash\)Provider\(\backslash\)Book(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}));}
+
+\end{DoxyCode}
+
+
+Now you can use the two new formatters like any other Faker formatter\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{\$book = \textcolor{keyword}{new} Book();}
+\DoxyCodeLine{\$book-\/>setTitle(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>title);}
+\DoxyCodeLine{\$book-\/>setISBN(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>ISBN);}
+\DoxyCodeLine{\$book-\/>setSummary(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>text);}
+\DoxyCodeLine{\$book-\/>setPrice(\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>randomNumber(2));}
+
+\end{DoxyCode}
+
+
+{\bfseries{Tip}}\+: A provider can also be a Plain Old PHP Object. In that case, all the public methods of the provider become available to the generator.\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md353}{}\doxysection{Real Life Usage}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md353}
+The following script generates a valid XML document\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{require\_once \textcolor{stringliteral}{'/path/to/Faker/src/autoload.php'};}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}} = \mbox{\hyperlink{class_faker_1_1_factory_a0b3398649c2f374eb81301f7c4630ca0}{Faker\(\backslash\)Factory::create}}();}
+\DoxyCodeLine{?>}
+\DoxyCodeLine{<?xml \mbox{\hyperlink{namespaceconf_af9c8593b58583463efe6932e24c9d6e6}{version}}=\textcolor{stringliteral}{"{}1.0"{}} encoding=\textcolor{stringliteral}{"{}UTF-\/8"{}}?>}
+\DoxyCodeLine{<contacts>}
+\DoxyCodeLine{<?php \textcolor{keywordflow}{for} (\$i=0; \$i < 10; \$i++): ?>}
+\DoxyCodeLine{  <contact firstName=\textcolor{stringliteral}{"{}<?php echo \$faker-\/>firstName ?>"{}} lastName=\textcolor{stringliteral}{"{}<?php echo \$faker-\/>lastName ?>"{}} email=\textcolor{stringliteral}{"{}<?php echo \$faker-\/>email ?>"{}}/>}
+\DoxyCodeLine{    <phone number=\textcolor{stringliteral}{"{}<?php echo \$faker-\/>phoneNumber ?>"{}}/>}
+\DoxyCodeLine{<?php \textcolor{keywordflow}{if} (\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>boolean(25)): ?>}
+\DoxyCodeLine{    <birth date=\textcolor{stringliteral}{"{}<?php echo \$faker-\/>dateTimeThisCentury-\/>format('Y-\/m-\/d') ?>"{}} place=\textcolor{stringliteral}{"{}<?php echo \$faker-\/>city ?>"{}}/>}
+\DoxyCodeLine{<?php \mbox{\hyperlink{test_8php_af15391f5d90d29f01a5ed91362fb9826}{endif}}; ?>}
+\DoxyCodeLine{    <address>}
+\DoxyCodeLine{      <street><?php echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>streetAddress ?></street>}
+\DoxyCodeLine{      <city><?php echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>city ?></city>}
+\DoxyCodeLine{      <postcode><?php echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>postcode ?></postcode>}
+\DoxyCodeLine{      <state><?php echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>state ?></state>}
+\DoxyCodeLine{    </address>}
+\DoxyCodeLine{    <company name=\textcolor{stringliteral}{"{}<?php echo \$faker-\/>company ?>"{}} catchPhrase=\textcolor{stringliteral}{"{}<?php echo \$faker-\/>catchPhrase ?>"{}}>}
+\DoxyCodeLine{<?php if (\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>boolean(33)): ?>}
+\DoxyCodeLine{      <offer><?php echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>bs ?></offer>}
+\DoxyCodeLine{<?php \mbox{\hyperlink{test_8php_af15391f5d90d29f01a5ed91362fb9826}{endif}}; ?>}
+\DoxyCodeLine{<?php if (\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>boolean(33)): ?>}
+\DoxyCodeLine{      <director name=\textcolor{stringliteral}{"{}<?php echo \$faker-\/>name ?>"{}} />}
+\DoxyCodeLine{<?php \mbox{\hyperlink{test_8php_af15391f5d90d29f01a5ed91362fb9826}{endif}}; ?>}
+\DoxyCodeLine{    </company>}
+\DoxyCodeLine{<?php if (\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>boolean(15)): ?>}
+\DoxyCodeLine{    <details>}
+\DoxyCodeLine{<![CDATA[}
+\DoxyCodeLine{<?php echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>text(400) ?>}
+\DoxyCodeLine{]]>}
+\DoxyCodeLine{    </details>}
+\DoxyCodeLine{<?php \mbox{\hyperlink{test_8php_af15391f5d90d29f01a5ed91362fb9826}{endif}}; ?>}
+\DoxyCodeLine{  </contact>}
+\DoxyCodeLine{<?php \mbox{\hyperlink{test_8php_ae8fdc27183f296411bac00ed522ee1ac}{endfor}}; ?>}
+\DoxyCodeLine{</contacts>}
+
+\end{DoxyCode}
+
+
+Running this script produces a document looking like\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?\textcolor{keyword}{xml} \textcolor{keyword}{version}=\textcolor{stringliteral}{"{}1.0"{}} \textcolor{keyword}{encoding}=\textcolor{stringliteral}{"{}UTF-\/8"{}}?>}
+\DoxyCodeLine{<\textcolor{keywordtype}{contacts}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{contact} \textcolor{keyword}{firstName}=\textcolor{stringliteral}{"{}Ona"{}} \textcolor{keyword}{lastName}=\textcolor{stringliteral}{"{}Bednar"{}} \textcolor{keyword}{email}=\textcolor{stringliteral}{"{}schamberger.frank@wuckert.com"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{phone} \textcolor{keyword}{number}=\textcolor{stringliteral}{"{}1-\/265-\/479-\/1196x714"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{street}>182 \textcolor{keyword}{Harrison} \textcolor{keyword}{Cove}</\textcolor{keywordtype}{street}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{city}>\textcolor{keyword}{North} \textcolor{keyword}{Lloyd}</\textcolor{keywordtype}{city}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{postcode}>45577</\textcolor{keywordtype}{postcode}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{state}>\textcolor{keyword}{Alabama}</\textcolor{keywordtype}{state}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{company} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Veum, Funk and Shanahan"{}} \textcolor{keyword}{catchPhrase}=\textcolor{stringliteral}{"{}Function-\/based stable solution"{}}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{offer}>\textcolor{keyword}{orchestrate} \textcolor{keyword}{compelling} \textcolor{keyword}{web-\/readiness}</\textcolor{keywordtype}{offer}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{company}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{details}>}
+\DoxyCodeLine{<![\textcolor{keyword}{CDATA}[}
+\DoxyCodeLine{\textcolor{keyword}{Alias} \textcolor{keyword}{accusantium} \textcolor{keyword}{voluptatum} \textcolor{keyword}{autem} \textcolor{keyword}{nobis} \textcolor{keyword}{cumque} \textcolor{keyword}{neque} \textcolor{keyword}{modi.} \textcolor{keyword}{Voluptatem} \textcolor{keyword}{error} \textcolor{keyword}{molestiae} \textcolor{keyword}{consequatur} \textcolor{keyword}{alias.}}
+\DoxyCodeLine{\textcolor{keyword}{Illum} \textcolor{keyword}{commodi} \textcolor{keyword}{molestiae} \textcolor{keyword}{aut} \textcolor{keyword}{repellat} \textcolor{keyword}{id.} \textcolor{keyword}{Et} \textcolor{keyword}{sit} \textcolor{keyword}{consequuntur} \textcolor{keyword}{aut} \textcolor{keyword}{et} \textcolor{keyword}{ullam} \textcolor{keyword}{asperiores.} \textcolor{keyword}{Cupiditate} \textcolor{keyword}{culpa} \textcolor{keyword}{voluptatem} \textcolor{keyword}{et} \textcolor{keyword}{mollitia} \textcolor{keyword}{dolor.} \textcolor{keyword}{Nisi} \textcolor{keyword}{praesentium} \textcolor{keyword}{qui} \textcolor{keyword}{ut.}}
+\DoxyCodeLine{]]>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{details}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{contact}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{contact} \textcolor{keyword}{firstName}=\textcolor{stringliteral}{"{}Aurelie"{}} \textcolor{keyword}{lastName}=\textcolor{stringliteral}{"{}Paucek"{}} \textcolor{keyword}{email}=\textcolor{stringliteral}{"{}alfonzo55@durgan.com"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{phone} \textcolor{keyword}{number}=\textcolor{stringliteral}{"{}863.712.1363x9425"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{street}>90111 \textcolor{keyword}{Hegmann} \textcolor{keyword}{Inlet}</\textcolor{keywordtype}{street}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{city}>\textcolor{keyword}{South} \textcolor{keyword}{Geovanymouth}</\textcolor{keywordtype}{city}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{postcode}>69961-\/9311</\textcolor{keywordtype}{postcode}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{state}>\textcolor{keyword}{Colorado}</\textcolor{keywordtype}{state}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{company} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Krajcik-\/Grimes"{}} \textcolor{keyword}{catchPhrase}=\textcolor{stringliteral}{"{}Switchable cohesive instructionset"{}}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{company}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{contact}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{contact} \textcolor{keyword}{firstName}=\textcolor{stringliteral}{"{}Clifton"{}} \textcolor{keyword}{lastName}=\textcolor{stringliteral}{"{}Kshlerin"{}} \textcolor{keyword}{email}=\textcolor{stringliteral}{"{}kianna.wiegand@framiwyman.info"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{phone} \textcolor{keyword}{number}=\textcolor{stringliteral}{"{}692-\/194-\/4746"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{street}>9791 \textcolor{keyword}{Nona} \textcolor{keyword}{Corner}</\textcolor{keywordtype}{street}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{city}>\textcolor{keyword}{Harberhaven}</\textcolor{keywordtype}{city}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{postcode}>74062-\/8191</\textcolor{keywordtype}{postcode}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{state}>\textcolor{keyword}{RhodeIsland}</\textcolor{keywordtype}{state}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{company} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Rosenbaum-\/Aufderhar"{}} \textcolor{keyword}{catchPhrase}=\textcolor{stringliteral}{"{}Realigned asynchronous encryption"{}}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{company}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{contact}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{contact} \textcolor{keyword}{firstName}=\textcolor{stringliteral}{"{}Alexandre"{}} \textcolor{keyword}{lastName}=\textcolor{stringliteral}{"{}Orn"{}} \textcolor{keyword}{email}=\textcolor{stringliteral}{"{}thelma37@erdmancorwin.biz"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{phone} \textcolor{keyword}{number}=\textcolor{stringliteral}{"{}189.655.8677x027"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{street}>11161 \textcolor{keyword}{Schultz} \textcolor{keyword}{Via}</\textcolor{keywordtype}{street}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{city}>\textcolor{keyword}{Feilstad}</\textcolor{keywordtype}{city}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{postcode}>98019</\textcolor{keywordtype}{postcode}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{state}>\textcolor{keyword}{NewJersey}</\textcolor{keywordtype}{state}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{company} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}O'Hara-\/Prosacco"{}} \textcolor{keyword}{catchPhrase}=\textcolor{stringliteral}{"{}Re-\/engineered solution-\/oriented algorithm"{}}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{director} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Dr. Berenice Auer V"{}} />}
+\DoxyCodeLine{    </\textcolor{keywordtype}{company}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{details}>}
+\DoxyCodeLine{<![\textcolor{keyword}{CDATA}[}
+\DoxyCodeLine{\textcolor{keyword}{Ut} \textcolor{keyword}{itaque} \textcolor{keyword}{et} \textcolor{keyword}{quaerat} \textcolor{keyword}{doloremque} \textcolor{keyword}{eum} \textcolor{keyword}{praesentium.} \textcolor{keyword}{Rerum} \textcolor{keyword}{in} \textcolor{keyword}{saepe} \textcolor{keyword}{dolorem.} \textcolor{keyword}{Explicabo} \textcolor{keyword}{qui} \textcolor{keyword}{consequuntur} \textcolor{keyword}{commodi} \textcolor{keyword}{minima} \textcolor{keyword}{rem.}}
+\DoxyCodeLine{\textcolor{keyword}{Harum} \textcolor{keyword}{temporibus} \textcolor{keyword}{rerum} \textcolor{keyword}{dolores.} \textcolor{keyword}{Non} \textcolor{keyword}{molestiae} \textcolor{keyword}{id} \textcolor{keyword}{dolorem} \textcolor{keyword}{placeat.}}
+\DoxyCodeLine{\textcolor{keyword}{Aut} \textcolor{keyword}{asperiores} \textcolor{keyword}{nihil} \textcolor{keyword}{eius} \textcolor{keyword}{repellendus.} \textcolor{keyword}{Vero} \textcolor{keyword}{nihil} \textcolor{keyword}{corporis} \textcolor{keyword}{voluptatem} \textcolor{keyword}{explicabo} \textcolor{keyword}{commodi.} \textcolor{keyword}{Occaecati} \textcolor{keyword}{omnis} \textcolor{keyword}{blanditiis} \textcolor{keyword}{beatae} \textcolor{keyword}{quod} \textcolor{keyword}{aspernatur} \textcolor{keyword}{eos.}}
+\DoxyCodeLine{]]>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{details}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{contact}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{contact} \textcolor{keyword}{firstName}=\textcolor{stringliteral}{"{}Katelynn"{}} \textcolor{keyword}{lastName}=\textcolor{stringliteral}{"{}Kohler"{}} \textcolor{keyword}{email}=\textcolor{stringliteral}{"{}reinger.trudie@stiedemannjakubowski.com"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{phone} \textcolor{keyword}{number}=\textcolor{stringliteral}{"{}(665)713-\/1657"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{street}>6106 \textcolor{keyword}{Nader} \textcolor{keyword}{Village} \textcolor{keyword}{Suite} 753</\textcolor{keywordtype}{street}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{city}>\textcolor{keyword}{McLaughlinstad}</\textcolor{keywordtype}{city}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{postcode}>43189-\/8621</\textcolor{keywordtype}{postcode}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{state}>\textcolor{keyword}{Missouri}</\textcolor{keywordtype}{state}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{company} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Herman-\/Tremblay"{}} \textcolor{keyword}{catchPhrase}=\textcolor{stringliteral}{"{}Object-\/based explicit service-\/desk"{}}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{offer}>\textcolor{keyword}{expedite} \textcolor{keyword}{viral} \textcolor{keyword}{synergies}</\textcolor{keywordtype}{offer}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{director} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Arden Deckow"{}} />}
+\DoxyCodeLine{    </\textcolor{keywordtype}{company}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{contact}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{contact} \textcolor{keyword}{firstName}=\textcolor{stringliteral}{"{}Blanca"{}} \textcolor{keyword}{lastName}=\textcolor{stringliteral}{"{}Stark"{}} \textcolor{keyword}{email}=\textcolor{stringliteral}{"{}tad27@feest.net"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{phone} \textcolor{keyword}{number}=\textcolor{stringliteral}{"{}168.719.4692x87177"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{street}>7546 \textcolor{keyword}{Kuvalis} \textcolor{keyword}{Plaza}</\textcolor{keywordtype}{street}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{city}>\textcolor{keyword}{South} \textcolor{keyword}{Wilfrid}</\textcolor{keywordtype}{city}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{postcode}>77069</\textcolor{keywordtype}{postcode}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{state}>\textcolor{keyword}{Georgia}</\textcolor{keywordtype}{state}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{company} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Upton, Braun and Rowe"{}} \textcolor{keyword}{catchPhrase}=\textcolor{stringliteral}{"{}Visionary leadingedge pricingstructure"{}}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{company}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{contact}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{contact} \textcolor{keyword}{firstName}=\textcolor{stringliteral}{"{}Rene"{}} \textcolor{keyword}{lastName}=\textcolor{stringliteral}{"{}Spencer"{}} \textcolor{keyword}{email}=\textcolor{stringliteral}{"{}anibal28@armstrong.info"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{phone} \textcolor{keyword}{number}=\textcolor{stringliteral}{"{}715.222.0095x175"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{birth} \textcolor{keyword}{date}=\textcolor{stringliteral}{"{}2008-\/08-\/07"{}} \textcolor{keyword}{place}=\textcolor{stringliteral}{"{}Zulaufborough"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{street}>478 \textcolor{keyword}{Daisha} \textcolor{keyword}{Landing} \textcolor{keyword}{Apt.} 510</\textcolor{keywordtype}{street}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{city}>\textcolor{keyword}{West} \textcolor{keyword}{Lizethhaven}</\textcolor{keywordtype}{city}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{postcode}>30566-\/5362</\textcolor{keywordtype}{postcode}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{state}>\textcolor{keyword}{WestVirginia}</\textcolor{keywordtype}{state}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{company} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Wiza Inc"{}} \textcolor{keyword}{catchPhrase}=\textcolor{stringliteral}{"{}Persevering reciprocal approach"{}}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{offer}>\textcolor{keyword}{orchestrate} \textcolor{keyword}{dynamic} \textcolor{keyword}{networks}</\textcolor{keywordtype}{offer}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{director} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Erwin Nienow"{}} />}
+\DoxyCodeLine{    </\textcolor{keywordtype}{company}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{details}>}
+\DoxyCodeLine{<![\textcolor{keyword}{CDATA}[}
+\DoxyCodeLine{\textcolor{keyword}{Dolorem} \textcolor{keyword}{consequatur} \textcolor{keyword}{voluptates} \textcolor{keyword}{unde} \textcolor{keyword}{optio} \textcolor{keyword}{unde.} \textcolor{keyword}{Accusantium} \textcolor{keyword}{dolorem} \textcolor{keyword}{est} \textcolor{keyword}{est} \textcolor{keyword}{architecto} \textcolor{keyword}{impedit.} \textcolor{keyword}{Corrupti} \textcolor{keyword}{et} \textcolor{keyword}{provident} \textcolor{keyword}{quo.}}
+\DoxyCodeLine{\textcolor{keyword}{Reprehenderit} \textcolor{keyword}{dolores} \textcolor{keyword}{aut} \textcolor{keyword}{quidem} \textcolor{keyword}{suscipit} \textcolor{keyword}{repudiandae} \textcolor{keyword}{corporis} \textcolor{keyword}{error.} \textcolor{keyword}{Molestiae} \textcolor{keyword}{enim} \textcolor{keyword}{aperiam} \textcolor{keyword}{illo.}}
+\DoxyCodeLine{\textcolor{keyword}{Et} \textcolor{keyword}{similique} \textcolor{keyword}{qui} \textcolor{keyword}{non} \textcolor{keyword}{expedita} \textcolor{keyword}{quia} \textcolor{keyword}{dolorum.} \textcolor{keyword}{Ex} \textcolor{keyword}{rem} \textcolor{keyword}{incidunt} \textcolor{keyword}{ea} \textcolor{keyword}{accusantium} \textcolor{keyword}{temporibus} \textcolor{keyword}{minus} \textcolor{keyword}{non.}}
+\DoxyCodeLine{]]>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{details}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{contact}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{contact} \textcolor{keyword}{firstName}=\textcolor{stringliteral}{"{}Alessandro"{}} \textcolor{keyword}{lastName}=\textcolor{stringliteral}{"{}Hagenes"{}} \textcolor{keyword}{email}=\textcolor{stringliteral}{"{}tbreitenberg@oharagorczany.com"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{phone} \textcolor{keyword}{number}=\textcolor{stringliteral}{"{}1-\/284-\/958-\/6768"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{street}>1251 \textcolor{keyword}{Koelpin} \textcolor{keyword}{Mission}</\textcolor{keywordtype}{street}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{city}>\textcolor{keyword}{North} \textcolor{keyword}{Revastad}</\textcolor{keywordtype}{city}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{postcode}>81620</\textcolor{keywordtype}{postcode}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{state}>\textcolor{keyword}{Maryland}</\textcolor{keywordtype}{state}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{company} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Stiedemann-\/Bruen"{}} \textcolor{keyword}{catchPhrase}=\textcolor{stringliteral}{"{}Re-\/engineered 24/7 success"{}}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{company}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{contact}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{contact} \textcolor{keyword}{firstName}=\textcolor{stringliteral}{"{}Novella"{}} \textcolor{keyword}{lastName}=\textcolor{stringliteral}{"{}Rutherford"{}} \textcolor{keyword}{email}=\textcolor{stringliteral}{"{}claud65@bogisich.biz"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{phone} \textcolor{keyword}{number}=\textcolor{stringliteral}{"{}(091)825-\/7971"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{street}>6396 \textcolor{keyword}{Langworth} \textcolor{keyword}{Hills} \textcolor{keyword}{Apt.} 446</\textcolor{keywordtype}{street}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{city}>\textcolor{keyword}{New} \textcolor{keyword}{Carlos}</\textcolor{keywordtype}{city}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{postcode}>89399-\/0268</\textcolor{keywordtype}{postcode}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{state}>\textcolor{keyword}{Wyoming}</\textcolor{keywordtype}{state}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{company} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Stroman-\/Legros"{}} \textcolor{keyword}{catchPhrase}=\textcolor{stringliteral}{"{}Expanded 4thgeneration moratorium"{}}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{director} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Earlene Bayer"{}} />}
+\DoxyCodeLine{    </\textcolor{keywordtype}{company}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{contact}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{contact} \textcolor{keyword}{firstName}=\textcolor{stringliteral}{"{}Andreane"{}} \textcolor{keyword}{lastName}=\textcolor{stringliteral}{"{}Mann"{}} \textcolor{keyword}{email}=\textcolor{stringliteral}{"{}meggie17@ornbaumbach.com"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{phone} \textcolor{keyword}{number}=\textcolor{stringliteral}{"{}941-\/659-\/9982x5689"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{birth} \textcolor{keyword}{date}=\textcolor{stringliteral}{"{}1934-\/02-\/21"{}} \textcolor{keyword}{place}=\textcolor{stringliteral}{"{}Stantonborough"{}}/>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{street}>2246 \textcolor{keyword}{Kreiger} \textcolor{keyword}{Station} \textcolor{keyword}{Apt.} 291</\textcolor{keywordtype}{street}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{city}>\textcolor{keyword}{Kaydenmouth}</\textcolor{keywordtype}{city}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{postcode}>11397-\/1072</\textcolor{keywordtype}{postcode}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{state}>\textcolor{keyword}{Wyoming}</\textcolor{keywordtype}{state}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{address}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{company} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Lebsack, Bernhard and Kiehn"{}} \textcolor{keyword}{catchPhrase}=\textcolor{stringliteral}{"{}Persevering actuating framework"{}}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{offer}>\textcolor{keyword}{grow} \textcolor{keyword}{sticky} \textcolor{keyword}{portals}</\textcolor{keywordtype}{offer}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{company}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{details}>}
+\DoxyCodeLine{<![\textcolor{keyword}{CDATA}[}
+\DoxyCodeLine{\textcolor{keyword}{Quia} \textcolor{keyword}{dolor} \textcolor{keyword}{ut} \textcolor{keyword}{quia} \textcolor{keyword}{error} \textcolor{keyword}{libero.} \textcolor{keyword}{Enim} \textcolor{keyword}{facilis} \textcolor{keyword}{iusto} \textcolor{keyword}{earum} \textcolor{keyword}{et} \textcolor{keyword}{minus} \textcolor{keyword}{rerum} \textcolor{keyword}{assumenda.} \textcolor{keyword}{Quia} \textcolor{keyword}{doloribus} \textcolor{keyword}{et} \textcolor{keyword}{reprehenderit} \textcolor{keyword}{ut.} \textcolor{keyword}{Occaecati} \textcolor{keyword}{voluptatum} \textcolor{keyword}{dolor} \textcolor{keyword}{voluptatem} \textcolor{keyword}{vitae} \textcolor{keyword}{qui} \textcolor{keyword}{velit} \textcolor{keyword}{quia.}}
+\DoxyCodeLine{\textcolor{keyword}{Fugiat} \textcolor{keyword}{non} \textcolor{keyword}{in} \textcolor{keyword}{itaque} \textcolor{keyword}{sunt} \textcolor{keyword}{nobis} \textcolor{keyword}{totam.} \textcolor{keyword}{Sed} \textcolor{keyword}{nesciunt} \textcolor{keyword}{est} \textcolor{keyword}{deleniti} \textcolor{keyword}{cumque} \textcolor{keyword}{alias.} \textcolor{keyword}{Repudiandae} \textcolor{keyword}{quo} \textcolor{keyword}{aut} \textcolor{keyword}{numquam} \textcolor{keyword}{modi} \textcolor{keyword}{dicta} \textcolor{keyword}{libero.}}
+\DoxyCodeLine{]]>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{details}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{contact}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{contacts}>}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md354}{}\doxysection{Language specific formatters}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md354}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md355}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}at\+\_\+\+AT\textbackslash{}\+Payment$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md355}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>vat;           \textcolor{comment}{// "{}AT U12345678"{} -\/ Austrian Value Added Tax number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>vat(\textcolor{keyword}{false});    \textcolor{comment}{// "{}ATU12345678"{} -\/ unspaced Austrian Value Added Tax number}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md356}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}be\+\_\+\+BE\textbackslash{}\+Payment$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md356}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>vat;           \textcolor{comment}{// "{}BE 0123456789"{} -\/ Belgian Value Added Tax number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>vat(\textcolor{keyword}{false});    \textcolor{comment}{// "{}BE0123456789"{} -\/ unspaced Belgian Value Added Tax number}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md357}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}bg\+\_\+\+BG\textbackslash{}\+Payment$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md357}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>vat;           \textcolor{comment}{// "{}BG 0123456789"{} -\/ Bulgarian Value Added Tax number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>vat(\textcolor{keyword}{false});    \textcolor{comment}{// "{}BG0123456789"{} -\/ unspaced Bulgarian Value Added Tax number}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md358}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}cs\+\_\+\+CZ\textbackslash{}\+Address$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md358}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>region; \textcolor{comment}{// "{}Liberecký kraj"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md359}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}cs\+\_\+\+CZ\textbackslash{}\+Company$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md359}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a valid IČO}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>ico; \textcolor{comment}{// "{}69663963"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md360}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}cs\+\_\+\+CZ\textbackslash{}\+Date\+Time$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md360}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>monthNameGenitive; \textcolor{comment}{// "{}prosince"{}}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>formattedDate; \textcolor{comment}{// "{}12. listopadu 2015"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md361}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}da\+\_\+\+DK\textbackslash{}\+Person$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md361}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random CPR number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cpr; \textcolor{comment}{// "{}051280-\/2387"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md362}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}da\+\_\+\+DK\textbackslash{}\+Address$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md362}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random 'kommune' name}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>kommune; \textcolor{comment}{// "{}Frederiksberg"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random region name}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>region; \textcolor{comment}{// "{}Region Sjælland"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md363}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}da\+\_\+\+DK\textbackslash{}\+Company$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md363}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random CVR number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cvr; \textcolor{comment}{// "{}32458723"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random P number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>p; \textcolor{comment}{// "{}5398237590"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md364}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}fr\+\_\+\+FR\textbackslash{}\+Company$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md364}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random SIREN number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>siren; \textcolor{comment}{// 082 250 104}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random SIRET number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>siret; \textcolor{comment}{// 347 355 708 00224}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md365}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}fr\+\_\+\+FR\textbackslash{}\+Address$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md365}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random department name}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>departmentName; \textcolor{comment}{// "{}Haut-\/Rhin"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random department number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>departmentNumber; \textcolor{comment}{// "{}2B"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random department info (department number => department name)}}
+\DoxyCodeLine{\mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>department; \textcolor{comment}{// array('18' => 'Cher');}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random region}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>region; \textcolor{comment}{// "{}Saint-\/Pierre-\/et-\/Miquelon"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md366}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}ja\+\_\+\+JP\textbackslash{}\+Person$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md366}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a 'kana' name}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>kanaName; \textcolor{comment}{// "{}アオタ ミノル"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a 'kana' first name}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>firstKanaName; \textcolor{comment}{// "{}ハルカ"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a 'kana' last name}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>lastKanaName; \textcolor{comment}{// "{}ナカジマ"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md367}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}kk\+\_\+\+KZ\textbackslash{}\+Company$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md367}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates an business identification number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>businessIdentificationNumber; \textcolor{comment}{// "{}150140000019"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md368}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}kk\+\_\+\+KZ\textbackslash{}\+Person$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md368}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates an individual identification number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>individualIdentificationNumber; \textcolor{comment}{// "{}780322300455"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md369}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}ko\+\_\+\+KR\textbackslash{}\+Address$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md369}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a metropolitan city}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>metropolitanCity; \textcolor{comment}{// "{}서울특별시"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a borough}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>borough; \textcolor{comment}{// "{}강남구"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md370}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}lv\+\_\+\+LV\textbackslash{}\+Person$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md370}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random personal identity card number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>personalIdentityNumber; \textcolor{comment}{// "{}140190-\/12301"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md371}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}pl\+\_\+\+PL\textbackslash{}\+Person$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md371}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random PESEL number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>pesel; \textcolor{comment}{// "{}40061451555"{}}}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random personal identity card number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>personalIdentityNumber; \textcolor{comment}{// "{}AKX383360"{}}}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random taxpayer identification number (NIP)}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>taxpayerIdentificationNumber; \textcolor{comment}{// '8211575109'}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md372}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}pl\+\_\+\+PL\textbackslash{}\+Company$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md372}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random REGON number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>regon; \textcolor{comment}{// "{}714676680"{}}}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random local REGON number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>regonLocal; \textcolor{comment}{// "{}15346111382836"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md373}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}pl\+\_\+\+PL\textbackslash{}\+Payment$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md373}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random bank name}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>bank; \textcolor{comment}{// "{}Narodowy Bank Polski"{}}}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random bank account number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>bankAccountNumber; \textcolor{comment}{// "{}PL14968907563953822118075816"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md374}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}pt\+\_\+\+PT\textbackslash{}\+Person$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md374}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random taxpayer identification number (in portuguese -\/ Número de Identificação Fiscal NIF)}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>taxpayerIdentificationNumber; \textcolor{comment}{// '165249277'}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md375}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}pt\+\_\+\+BR\textbackslash{}\+Phone\+Number$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md375}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>areaCode;  \textcolor{comment}{// 21}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cellphone; \textcolor{comment}{// 9432-\/5656}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>landline;  \textcolor{comment}{// 2654-\/3445}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>phone;     \textcolor{comment}{// random landline, 8-\/digit or 9-\/digit cellphone number}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Using the phone functions with a false argument returns unformatted numbers}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cellphone(\textcolor{keyword}{false}); \textcolor{comment}{// 74336667}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// cellphone() has a special second argument to add the 9th digit. Ignored if generated a Radio number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cellphone(\textcolor{keyword}{true}, \textcolor{keyword}{true}); \textcolor{comment}{// 98983-\/3945 or 7343-\/1290}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Using the "{}Number"{} suffix adds area code to the phone}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cellphoneNumber;       \textcolor{comment}{// (11) 98309-\/2935}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>landlineNumber(\textcolor{keyword}{false}); \textcolor{comment}{// 3522835934}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>phoneNumber;           \textcolor{comment}{// formatted, random landline or cellphone (obbeying the 9th digit rule)}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>phoneNumberCleared;    \textcolor{comment}{// not formatted, random landline or cellphone (obbeying the 9th digit rule)}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md376}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}pt\+\_\+\+BR\textbackslash{}\+Person$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md376}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// The name generator may include double first or double last names, plus title and suffix}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>name; \textcolor{comment}{// 'Sr. Luis Adriano Sepúlveda Filho'}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Valid document generators have a boolean argument to remove formatting}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cpf;        \textcolor{comment}{// '145.343.345-\/76'}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cpf(\textcolor{keyword}{false}); \textcolor{comment}{// '45623467866'}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>rg;         \textcolor{comment}{// '84.405.736-\/3'}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cnpj;       \textcolor{comment}{// '23.663.478/0001-\/24'}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md377}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}ro\+\_\+\+RO\textbackslash{}\+Person$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md377}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random male name prefix/title}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>prefixMale; \textcolor{comment}{// "{}ing."{}}}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random female name prefix/title}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>prefixFemale; \textcolor{comment}{// "{}d-\/na."{}}}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random male fist name}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>firstNameMale; \textcolor{comment}{// "{}Adrian"{}}}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random female fist name}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>firstNameFemale; \textcolor{comment}{// "{}Miruna"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random Personal Numerical Code (CNP)}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cnp; \textcolor{comment}{// "{}2800523081231"{}}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cnp(\$gender = NULL, \$century = NULL, \$county = NULL);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Valid option values:}}
+\DoxyCodeLine{\textcolor{comment}{//  \$gender: m, f, 1, 2}}
+\DoxyCodeLine{\textcolor{comment}{//  \$century: 1800, 1900, 2000, 1, 2, 3, 4, 5, 6}}
+\DoxyCodeLine{\textcolor{comment}{//  \$county: 2 letter ISO 3166-\/2:RO county codes and B1-\/B6 for Bucharest's 6 sectors}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md378}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}ro\+\_\+\+RO\textbackslash{}\+Phone\+Number$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md378}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random toll-\/free phone number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>tollFreePhoneNumber; \textcolor{comment}{// "{}0800123456"{}}}
+\DoxyCodeLine{\textcolor{comment}{// Generates a random premium-\/rate phone number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>premiumRatePhoneNumber; \textcolor{comment}{// "{}0900123456"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md379}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}ru\+\_\+\+RU\textbackslash{}\+Payment$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md379}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a Russian bank name (based on list of real russian banks)}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>bank; \textcolor{comment}{// "{}ОТП Банк"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md380}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}en\+\_\+\+NZ\textbackslash{}\+Phone$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md380}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a cell (mobile) phone number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cellNumber; \textcolor{comment}{// "{}021 123 4567"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Generates a toll free number}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>tollFreeNumber; \textcolor{comment}{// "{}0800 123 456"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Area Code}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>areaCode; \textcolor{comment}{// "{}03"{}}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md381}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}sv\+\_\+\+SE\textbackslash{}\+Person$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md381}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//Generates a valid Swedish personal identity number (in Swedish -\/ Personnummer)}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>personalIdentityNumber() \textcolor{comment}{// '950910-\/0799'}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//Since the numbers are different for male and female persons, optionally you can specify gender.}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>personalIdentityNumber(\textcolor{stringliteral}{'female'}) \textcolor{comment}{// '950910-\/0781'}}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md382}{}\doxysubsection{$<$tt$>$\+Faker\textbackslash{}\+Provider\textbackslash{}ne\+\_\+\+NP\textbackslash{}\+Address$<$/tt$>$}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md382}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//Generates a Nepali district name}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>district;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//Generates a Nepali city name}}
+\DoxyCodeLine{echo \mbox{\hyperlink{test_8php_a4cbb88b3dda8a7288d3f4d53965190fc}{\$faker}}-\/>cityName;}
+
+\end{DoxyCode}
+\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md383}{}\doxysection{Third-\/\+Party Libraries Extending/\+Based On Faker}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md383}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/willdurand/BazingaFakerBundle}{\texttt{ Bazinga\+Faker\+Bundle}}\+: Put the awesome Faker library into the Symfony2 DIC and populate your database with fake data.
+\item \href{https://github.com/EmanueleMinotto/FakerServiceProvider}{\texttt{ Faker\+Service\+Provider}}\+: Faker Service Provider for Silex
+\item \href{https://github.com/bit3/faker-cli}{\texttt{ faker-\/cli}}\+: Command Line Tool for the Faker PHP library
+\item \href{https://github.com/h4cc/AliceFixturesBundle}{\texttt{ Alice\+Fixtures\+Bundle}}\+: A Symfony2 bundle for using Alice and Faker with data fixtures. Abled to use Doctrine ORM as well as Doctrine Mongo\+DB ODM.
+\item \href{https://github.com/thephpleague/factory-muffin}{\texttt{ Factory Muffin}}\+: enable the rapid creation of objects (PHP port of factory-\/girl)
+\item \href{https://github.com/fzaninotto/CompanyNameGenerator}{\texttt{ Company\+Name\+Generator}}\+: Generate names for English tech companies with class
+\item \href{https://github.com/spyrit/datalea}{\texttt{ datalea}} A highly customizable random test data generator web app
+\item \href{https://github.com/frequenc1/newage-ipsum}{\texttt{ newage-\/ipsum}}\+: A new aged ipsum provider for the faker library inspired by \href{http://sebpearce.com/bullshit/}{\texttt{ http\+://sebpearce.\+com/bullshit/}}
+\item \href{https://github.com/prewk/xml-faker}{\texttt{ xml-\/faker}}\+: Create fake XML with Faker
+\item \href{https://github.com/denheck/faker-context}{\texttt{ faker-\/context}}\+: Behat context using Faker to generate testdata
+\item \href{https://github.com/swekaj/CronExpressionGenerator}{\texttt{ Cron\+Expression\+Generator}}\+: Faker provider for generating random, valid cron expressions.
+\end{DoxyItemize}\hypertarget{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md384}{}\doxysection{License}\label{md_rahman_faker_vendor_fzaninotto_faker_readme_autotoc_md384}
+Faker is released under the MIT Licence. See the bundled LICENSE file for details. 

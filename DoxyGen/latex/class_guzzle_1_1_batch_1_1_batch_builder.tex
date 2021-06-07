@@ -1,0 +1,340 @@
+\hypertarget{class_guzzle_1_1_batch_1_1_batch_builder}{}\doxysection{Batch\+Builder Class Reference}
+\label{class_guzzle_1_1_batch_1_1_batch_builder}\index{BatchBuilder@{BatchBuilder}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_a5257963ee5bb7f3130ed806598253709}{auto\+Flush\+At}} (\$threshold)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_aa7542f744e83617f020c5b324a0026d0}{keep\+History}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_acfbab5b7e69c6aa7d423484f72fc7cbd}{buffer\+Exceptions}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_aaab66ec8b400a723ade58f5629de6f1c}{notify}} (\$callable)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_aaa3fb1931f8f6033f436cb284945dcf5}{transfer\+Requests}} (\$batch\+Size=50)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_ae3171e61aad41e6dcf9ebbcb37fe70a2}{transfer\+Commands}} (\$batch\+Size=50)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_ad7163e04dd8de04c0ca118fba2e097fd}{create\+Batches\+With}} (\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_divisor_interface}{Batch\+Divisor\+Interface}} \$divisor\+Strategy)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_ac543e585deeaf2c4b4b898d571b2d63d}{transfer\+With}} (\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_transfer_interface}{Batch\+Transfer\+Interface}} \$transfer\+Strategy)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_a3928875ef0ceb18a51c1061be3eb3a00}{build}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_a6ccd25adce4691ef9e9b6feabc94a892}{factory}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_aef8c7c76f1d8d3bce4c43e7e6d736f3a}{\$auto\+Flush}} = false
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_a643b6c1895fa14f4f0823c39ca043df1}{\$history}} = false
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_a2ce6bae1201150dd38b337ae7f645ced}{\$exception\+Buffering}} = false
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_a4f96f7d3d9c6749865273c0a5839daa1}{\$after\+Flush}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_aca708a5590ae37164294c6250f85f3fd}{\$transfer\+Strategy}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_a57311e171ea795e9b0540b7e878c49c3}{\$divisor\+Strategy}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder_a2c93d0b89d7eadb6b8dfb7c83bc991f9}{\$mapping}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Builder used to create custom batch objects 
+
+Definition at line 11 of file Batch\+Builder.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_a5257963ee5bb7f3130ed806598253709}\label{class_guzzle_1_1_batch_1_1_batch_builder_a5257963ee5bb7f3130ed806598253709}} 
+\index{BatchBuilder@{BatchBuilder}!autoFlushAt@{autoFlushAt}}
+\index{autoFlushAt@{autoFlushAt}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{autoFlushAt()}{autoFlushAt()}}
+{\footnotesize\ttfamily auto\+Flush\+At (\begin{DoxyParamCaption}\item[{}]{\$threshold }\end{DoxyParamCaption})}
+
+Automatically flush the batch when the size of the queue reaches a certain threshold. Adds \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_flushing_batch}{Flushing\+Batch}}\}.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em \$threshold} & Number of items to allow in the queue before a flush\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder}{Batch\+Builder}} 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_acfbab5b7e69c6aa7d423484f72fc7cbd}\label{class_guzzle_1_1_batch_1_1_batch_builder_acfbab5b7e69c6aa7d423484f72fc7cbd}} 
+\index{BatchBuilder@{BatchBuilder}!bufferExceptions@{bufferExceptions}}
+\index{bufferExceptions@{bufferExceptions}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{bufferExceptions()}{bufferExceptions()}}
+{\footnotesize\ttfamily buffer\+Exceptions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Buffer exceptions thrown during transfer so that you can transfer as much as possible, and after a transfer completes, inspect each exception that was thrown. Enables the \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_buffering_batch}{Exception\+Buffering\+Batch}}\} decorator.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder}{Batch\+Builder}} 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_a3928875ef0ceb18a51c1061be3eb3a00}\label{class_guzzle_1_1_batch_1_1_batch_builder_a3928875ef0ceb18a51c1061be3eb3a00}} 
+\index{BatchBuilder@{BatchBuilder}!build@{build}}
+\index{build@{build}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create and return the instantiated batch
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & if no transfer strategy has been specified \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 169 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_ad7163e04dd8de04c0ca118fba2e097fd}\label{class_guzzle_1_1_batch_1_1_batch_builder_ad7163e04dd8de04c0ca118fba2e097fd}} 
+\index{BatchBuilder@{BatchBuilder}!createBatchesWith@{createBatchesWith}}
+\index{createBatchesWith@{createBatchesWith}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{createBatchesWith()}{createBatchesWith()}}
+{\footnotesize\ttfamily create\+Batches\+With (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_divisor_interface}{Batch\+Divisor\+Interface}}}]{\$divisor\+Strategy }\end{DoxyParamCaption})}
+
+Specify the strategy used to divide the queue into an array of batches
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_divisor_interface}{Batch\+Divisor\+Interface}} & {\em \$divisor\+Strategy} & Strategy used to divide a batch queue into batches\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder}{Batch\+Builder}} 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_a6ccd25adce4691ef9e9b6feabc94a892}\label{class_guzzle_1_1_batch_1_1_batch_builder_a6ccd25adce4691ef9e9b6feabc94a892}} 
+\index{BatchBuilder@{BatchBuilder}!factory@{factory}}
+\index{factory@{factory}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{factory()}{factory()}}
+{\footnotesize\ttfamily static factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a new instance of the \mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder}{Batch\+Builder}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder}{Batch\+Builder}} 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_aa7542f744e83617f020c5b324a0026d0}\label{class_guzzle_1_1_batch_1_1_batch_builder_aa7542f744e83617f020c5b324a0026d0}} 
+\index{BatchBuilder@{BatchBuilder}!keepHistory@{keepHistory}}
+\index{keepHistory@{keepHistory}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{keepHistory()}{keepHistory()}}
+{\footnotesize\ttfamily keep\+History (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Maintain a history of all items that have been transferred using the batch. Adds \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_history_batch}{History\+Batch}}\}.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder}{Batch\+Builder}} 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_aaab66ec8b400a723ade58f5629de6f1c}\label{class_guzzle_1_1_batch_1_1_batch_builder_aaab66ec8b400a723ade58f5629de6f1c}} 
+\index{BatchBuilder@{BatchBuilder}!notify@{notify}}
+\index{notify@{notify}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily notify (\begin{DoxyParamCaption}\item[{}]{\$callable }\end{DoxyParamCaption})}
+
+Notify a callable each time a batch flush completes. Enables the \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_notifying_batch}{Notifying\+Batch}}\} decorator.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$callable} & Callable function to notify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder}{Batch\+Builder}} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & if the argument is not callable \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 94 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_ae3171e61aad41e6dcf9ebbcb37fe70a2}\label{class_guzzle_1_1_batch_1_1_batch_builder_ae3171e61aad41e6dcf9ebbcb37fe70a2}} 
+\index{BatchBuilder@{BatchBuilder}!transferCommands@{transferCommands}}
+\index{transferCommands@{transferCommands}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{transferCommands()}{transferCommands()}}
+{\footnotesize\ttfamily transfer\+Commands (\begin{DoxyParamCaption}\item[{}]{\$batch\+Size = {\ttfamily 50} }\end{DoxyParamCaption})}
+
+Configures the batch to transfer batches commands. Associates as \{\begin{DoxySeeAlso}{See also}
+\textbackslash{}\+Guzzle\textbackslash{}\+Service\textbackslash{}\+Command\textbackslash{}\+Batch\+Command\+Transfer\} as both the transfer and divisor strategy.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$batch\+Size} & \mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch}{Batch}} size for each batch of commands\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder}{Batch\+Builder}} 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_aaa3fb1931f8f6033f436cb284945dcf5}\label{class_guzzle_1_1_batch_1_1_batch_builder_aaa3fb1931f8f6033f436cb284945dcf5}} 
+\index{BatchBuilder@{BatchBuilder}!transferRequests@{transferRequests}}
+\index{transferRequests@{transferRequests}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{transferRequests()}{transferRequests()}}
+{\footnotesize\ttfamily transfer\+Requests (\begin{DoxyParamCaption}\item[{}]{\$batch\+Size = {\ttfamily 50} }\end{DoxyParamCaption})}
+
+Configures the batch to transfer batches of requests. Associates a \{\begin{DoxySeeAlso}{See also}
+\textbackslash{}\+Guzzle\textbackslash{}\+Http\textbackslash{}\+Batch\+Request\+Transfer\} object as both the transfer and divisor strategy.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$batch\+Size} & \mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch}{Batch}} size for each batch of requests\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder}{Batch\+Builder}} 
+\end{DoxyReturn}
+
+
+Definition at line 109 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_ac543e585deeaf2c4b4b898d571b2d63d}\label{class_guzzle_1_1_batch_1_1_batch_builder_ac543e585deeaf2c4b4b898d571b2d63d}} 
+\index{BatchBuilder@{BatchBuilder}!transferWith@{transferWith}}
+\index{transferWith@{transferWith}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{transferWith()}{transferWith()}}
+{\footnotesize\ttfamily transfer\+With (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_transfer_interface}{Batch\+Transfer\+Interface}}}]{\$transfer\+Strategy }\end{DoxyParamCaption})}
+
+Specify the strategy used to transport the items when flush is called
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_transfer_interface}{Batch\+Transfer\+Interface}} & {\em \$transfer\+Strategy} & How items are transferred\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_builder}{Batch\+Builder}} 
+\end{DoxyReturn}
+
+
+Definition at line 156 of file Batch\+Builder.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_a4f96f7d3d9c6749865273c0a5839daa1}\label{class_guzzle_1_1_batch_1_1_batch_builder_a4f96f7d3d9c6749865273c0a5839daa1}} 
+\index{BatchBuilder@{BatchBuilder}!\$afterFlush@{\$afterFlush}}
+\index{\$afterFlush@{\$afterFlush}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{\$afterFlush}{$afterFlush}}
+{\footnotesize\ttfamily \$after\+Flush\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_aef8c7c76f1d8d3bce4c43e7e6d736f3a}\label{class_guzzle_1_1_batch_1_1_batch_builder_aef8c7c76f1d8d3bce4c43e7e6d736f3a}} 
+\index{BatchBuilder@{BatchBuilder}!\$autoFlush@{\$autoFlush}}
+\index{\$autoFlush@{\$autoFlush}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{\$autoFlush}{$autoFlush}}
+{\footnotesize\ttfamily \$auto\+Flush = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_a57311e171ea795e9b0540b7e878c49c3}\label{class_guzzle_1_1_batch_1_1_batch_builder_a57311e171ea795e9b0540b7e878c49c3}} 
+\index{BatchBuilder@{BatchBuilder}!\$divisorStrategy@{\$divisorStrategy}}
+\index{\$divisorStrategy@{\$divisorStrategy}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{\$divisorStrategy}{$divisorStrategy}}
+{\footnotesize\ttfamily \$divisor\+Strategy\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_a2ce6bae1201150dd38b337ae7f645ced}\label{class_guzzle_1_1_batch_1_1_batch_builder_a2ce6bae1201150dd38b337ae7f645ced}} 
+\index{BatchBuilder@{BatchBuilder}!\$exceptionBuffering@{\$exceptionBuffering}}
+\index{\$exceptionBuffering@{\$exceptionBuffering}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{\$exceptionBuffering}{$exceptionBuffering}}
+{\footnotesize\ttfamily \$exception\+Buffering = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 20 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_a643b6c1895fa14f4f0823c39ca043df1}\label{class_guzzle_1_1_batch_1_1_batch_builder_a643b6c1895fa14f4f0823c39ca043df1}} 
+\index{BatchBuilder@{BatchBuilder}!\$history@{\$history}}
+\index{\$history@{\$history}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{\$history}{$history}}
+{\footnotesize\ttfamily \$history = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_a2c93d0b89d7eadb6b8dfb7c83bc991f9}\label{class_guzzle_1_1_batch_1_1_batch_builder_a2c93d0b89d7eadb6b8dfb7c83bc991f9}} 
+\index{BatchBuilder@{BatchBuilder}!\$mapping@{\$mapping}}
+\index{\$mapping@{\$mapping}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{\$mapping}{$mapping}}
+{\footnotesize\ttfamily \$mapping\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'request'} => \textcolor{stringliteral}{'Guzzle\(\backslash\)Batch\(\backslash\)BatchRequestTransfer'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'command'} => \textcolor{stringliteral}{'Guzzle\(\backslash\)Batch\(\backslash\)BatchCommandTransfer'}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Definition at line 32 of file Batch\+Builder.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_builder_aca708a5590ae37164294c6250f85f3fd}\label{class_guzzle_1_1_batch_1_1_batch_builder_aca708a5590ae37164294c6250f85f3fd}} 
+\index{BatchBuilder@{BatchBuilder}!\$transferStrategy@{\$transferStrategy}}
+\index{\$transferStrategy@{\$transferStrategy}!BatchBuilder@{BatchBuilder}}
+\doxysubsubsection{\texorpdfstring{\$transferStrategy}{$transferStrategy}}
+{\footnotesize\ttfamily \$transfer\+Strategy\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Batch\+Builder.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Batch/\mbox{\hyperlink{_batch_builder_8php}{Batch\+Builder.\+php}}\end{DoxyCompactItemize}

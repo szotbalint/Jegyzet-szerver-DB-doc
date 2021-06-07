@@ -1,0 +1,135 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy}{}\doxysection{Callback\+Can\+Cache\+Strategy Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy}\index{CallbackCanCacheStrategy@{CallbackCanCacheStrategy}}
+Inheritance diagram for Callback\+Can\+Cache\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_ae7bdff3f947fcef5ac9c5ab50a780816}{\+\_\+\+\_\+construct}} (\$request\+Callback=null, \$response\+Callback=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_afc839ff17e72531afabfce4c55ba728d}{can\+Cache\+Request}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_adf2b28a387c47779788caae5e752ebc2}{can\+Cache\+Response}} (\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}} \$response)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_aaca7581425d8a791f7fc4cca3e1556c3}{\$request\+Callback}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_ae6f14621ded548cedc2c219d1d814517}{\$response\+Callback}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Determines if a request can be cached using a callback 
+
+Definition at line 12 of file Callback\+Can\+Cache\+Strategy.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_ae7bdff3f947fcef5ac9c5ab50a780816}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_ae7bdff3f947fcef5ac9c5ab50a780816}} 
+\index{CallbackCanCacheStrategy@{CallbackCanCacheStrategy}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CallbackCanCacheStrategy@{CallbackCanCacheStrategy}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$request\+Callback = {\ttfamily null},  }\item[{}]{\$response\+Callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Closure | array | mixed & {\em \$request\+Callback} & Callable method to invoke for requests \\
+\hline
+\textbackslash{}\+Closure | array | mixed & {\em \$response\+Callback} & Callable method to invoke for responses\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 26 of file Callback\+Can\+Cache\+Strategy.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_afc839ff17e72531afabfce4c55ba728d}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_afc839ff17e72531afabfce4c55ba728d}} 
+\index{CallbackCanCacheStrategy@{CallbackCanCacheStrategy}!canCacheRequest@{canCacheRequest}}
+\index{canCacheRequest@{canCacheRequest}!CallbackCanCacheStrategy@{CallbackCanCacheStrategy}}
+\doxysubsubsection{\texorpdfstring{canCacheRequest()}{canCacheRequest()}}
+{\footnotesize\ttfamily can\+Cache\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+Determine if a request can be cached
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to determine\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_can_cache_strategy_afc839ff17e72531afabfce4c55ba728d}{Default\+Can\+Cache\+Strategy}}.
+
+
+
+Definition at line 40 of file Callback\+Can\+Cache\+Strategy.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_adf2b28a387c47779788caae5e752ebc2}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_adf2b28a387c47779788caae5e752ebc2}} 
+\index{CallbackCanCacheStrategy@{CallbackCanCacheStrategy}!canCacheResponse@{canCacheResponse}}
+\index{canCacheResponse@{canCacheResponse}!CallbackCanCacheStrategy@{CallbackCanCacheStrategy}}
+\doxysubsubsection{\texorpdfstring{canCacheResponse()}{canCacheResponse()}}
+{\footnotesize\ttfamily can\+Cache\+Response (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}}}]{\$response }\end{DoxyParamCaption})}
+
+Determine if a response can be cached
+
+
+\begin{DoxyParams}[1]{Parameters}
+Response & {\em \$response} & Response to determine\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_can_cache_strategy_adf2b28a387c47779788caae5e752ebc2}{Default\+Can\+Cache\+Strategy}}.
+
+
+
+Definition at line 47 of file Callback\+Can\+Cache\+Strategy.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_aaca7581425d8a791f7fc4cca3e1556c3}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_aaca7581425d8a791f7fc4cca3e1556c3}} 
+\index{CallbackCanCacheStrategy@{CallbackCanCacheStrategy}!\$requestCallback@{\$requestCallback}}
+\index{\$requestCallback@{\$requestCallback}!CallbackCanCacheStrategy@{CallbackCanCacheStrategy}}
+\doxysubsubsection{\texorpdfstring{\$requestCallback}{$requestCallback}}
+{\footnotesize\ttfamily \$request\+Callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 15 of file Callback\+Can\+Cache\+Strategy.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_ae6f14621ded548cedc2c219d1d814517}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_callback_can_cache_strategy_ae6f14621ded548cedc2c219d1d814517}} 
+\index{CallbackCanCacheStrategy@{CallbackCanCacheStrategy}!\$responseCallback@{\$responseCallback}}
+\index{\$responseCallback@{\$responseCallback}!CallbackCanCacheStrategy@{CallbackCanCacheStrategy}}
+\doxysubsubsection{\texorpdfstring{\$responseCallback}{$responseCallback}}
+{\footnotesize\ttfamily \$response\+Callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 18 of file Callback\+Can\+Cache\+Strategy.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Cache/\mbox{\hyperlink{_callback_can_cache_strategy_8php}{Callback\+Can\+Cache\+Strategy.\+php}}\end{DoxyCompactItemize}

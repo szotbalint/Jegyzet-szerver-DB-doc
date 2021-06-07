@@ -1,0 +1,109 @@
+\hypertarget{class_faker_1_1_provider_1_1_biased}{}\doxysection{Biased Class Reference}
+\label{class_faker_1_1_provider_1_1_biased}\index{Biased@{Biased}}
+Inheritance diagram for Biased\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_faker_1_1_provider_1_1_biased}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_faker_1_1_provider_1_1_biased_abafd2f0e3dae1ffb01f4a5dd972c8318}{biased\+Number\+Between}} (\$min=0, \$max=100, \$function=\textquotesingle{}sqrt\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_biased_adbc19edc67ff86132e7f2a00cdb592ad}{unbiased}} (\$x)
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_biased_a111fb3beed82309d270f03461746aefc}{linear\+Low}} (\$x)
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_biased_a2017e77ac35d90535e47d8792677e813}{linear\+High}} (\$x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 5 of file Biased.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_biased_abafd2f0e3dae1ffb01f4a5dd972c8318}\label{class_faker_1_1_provider_1_1_biased_abafd2f0e3dae1ffb01f4a5dd972c8318}} 
+\index{Biased@{Biased}!biasedNumberBetween@{biasedNumberBetween}}
+\index{biasedNumberBetween@{biasedNumberBetween}!Biased@{Biased}}
+\doxysubsubsection{\texorpdfstring{biasedNumberBetween()}{biasedNumberBetween()}}
+{\footnotesize\ttfamily biased\+Number\+Between (\begin{DoxyParamCaption}\item[{}]{\$min = {\ttfamily 0},  }\item[{}]{\$max = {\ttfamily 100},  }\item[{}]{\$function = {\ttfamily \textquotesingle{}sqrt\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Returns a biased integer between \$min and \$max (both inclusive). The distribution depends on \$function.
+
+The algorithm creates two doubles, x ∈ \mbox{[}0, 1\mbox{]}, y ∈ \mbox{[}0, 1) and checks whether the return value of \$function for x is greater than or equal to y. If this is the case the number is accepted and x is mapped to the appropriate integer between \$min and \$max. Otherwise two new doubles are created until the pair is accepted.
+
+
+\begin{DoxyParams}[1]{Parameters}
+integer & {\em \$min} & Minimum value of the generated integers. \\
+\hline
+integer & {\em \$max} & Maximum value of the generated integers. \\
+\hline
+callable & {\em \$function} & A function mapping x ∈ \mbox{[}0, 1\mbox{]} onto a double ∈ \mbox{[}0, 1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An integer between \$min and \$max. 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file Biased.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_biased_a2017e77ac35d90535e47d8792677e813}\label{class_faker_1_1_provider_1_1_biased_a2017e77ac35d90535e47d8792677e813}} 
+\index{Biased@{Biased}!linearHigh@{linearHigh}}
+\index{linearHigh@{linearHigh}!Biased@{Biased}}
+\doxysubsubsection{\texorpdfstring{linearHigh()}{linearHigh()}}
+{\footnotesize\ttfamily static linear\+High (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\textquotesingle{}linear\+High\textquotesingle{} favors higher numbers. The probability increases in a linear fashion.
+
+\begin{DoxyReturn}{Returns}
+integer 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Biased.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_biased_a111fb3beed82309d270f03461746aefc}\label{class_faker_1_1_provider_1_1_biased_a111fb3beed82309d270f03461746aefc}} 
+\index{Biased@{Biased}!linearLow@{linearLow}}
+\index{linearLow@{linearLow}!Biased@{Biased}}
+\doxysubsubsection{\texorpdfstring{linearLow()}{linearLow()}}
+{\footnotesize\ttfamily static linear\+Low (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\textquotesingle{}linear\+Low\textquotesingle{} favors lower numbers. The probability decreases in a linear fashion.
+
+\begin{DoxyReturn}{Returns}
+integer 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file Biased.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_biased_adbc19edc67ff86132e7f2a00cdb592ad}\label{class_faker_1_1_provider_1_1_biased_adbc19edc67ff86132e7f2a00cdb592ad}} 
+\index{Biased@{Biased}!unbiased@{unbiased}}
+\index{unbiased@{unbiased}!Biased@{Biased}}
+\doxysubsubsection{\texorpdfstring{unbiased()}{unbiased()}}
+{\footnotesize\ttfamily static unbiased (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\textquotesingle{}unbiased\textquotesingle{} creates an unbiased distribution by giving each value the same value of one.
+
+\begin{DoxyReturn}{Returns}
+integer 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Biased.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rahman/faker/vendor/fzaninotto/faker/src/\+Faker/\+Provider/\mbox{\hyperlink{_biased_8php}{Biased.\+php}}\end{DoxyCompactItemize}

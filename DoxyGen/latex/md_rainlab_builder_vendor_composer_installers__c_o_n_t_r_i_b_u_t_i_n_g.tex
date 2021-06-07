@@ -1,0 +1,18 @@
+If you would like to help, please take a look at the list of \href{https://github.com/composer/installers/issues}{\texttt{ issues}}.\hypertarget{md_rainlab_builder_vendor_composer_installers__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md442}{}\doxysection{Pull requests}\label{md_rainlab_builder_vendor_composer_installers__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md442}
+
+\begin{DoxyItemize}
+\item \href{https://help.github.com/articles/fork-a-repo}{\texttt{ Fork and clone}}.
+\item Run the command {\ttfamily php composer.\+phar install} to install dependencies.
+\item Use the command {\ttfamily phpunit} to run the tests.
+\item Create a branch, commit, push and send us a \href{https://help.github.com/articles/using-pull-requests}{\texttt{ pull request}}.
+\end{DoxyItemize}
+
+To ensure a consistent code base, you should make sure the code follows the coding standards \href{http://www.php-fig.org/psr/psr-1/}{\texttt{ PSR-\/1}} and \href{http://www.php-fig.org/psr/psr-2/}{\texttt{ PSR-\/2}}.\hypertarget{md_rainlab_builder_vendor_composer_installers__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md443}{}\doxysection{Creating a new Installer}\label{md_rainlab_builder_vendor_composer_installers__c_o_n_t_r_i_b_u_t_i_n_g_autotoc_md443}
+
+\begin{DoxyItemize}
+\item Create a class with your Installer that extends {\ttfamily Composer\textbackslash{}Installers\textbackslash{}Base\+Installer}.
+\item Add your Installer to {\ttfamily Composer\textbackslash{}Installers\textbackslash{}Installer\+::\$supported\+Types}.
+\item Create unit tests as a separate class or as part of {\ttfamily Composer\textbackslash{}Installers\textbackslash{}Test\textbackslash{}Installer\+Test}.
+\item Add information about your Installer to {\ttfamily README.\+md} in section \char`\"{}\+Current Supported Package Types\char`\"{}.
+\item Run the tests. 
+\end{DoxyItemize}

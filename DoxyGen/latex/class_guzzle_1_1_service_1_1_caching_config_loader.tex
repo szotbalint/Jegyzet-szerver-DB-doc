@@ -1,0 +1,106 @@
+\hypertarget{class_guzzle_1_1_service_1_1_caching_config_loader}{}\doxysection{Caching\+Config\+Loader Class Reference}
+\label{class_guzzle_1_1_service_1_1_caching_config_loader}\index{CachingConfigLoader@{CachingConfigLoader}}
+Inheritance diagram for Caching\+Config\+Loader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_service_1_1_caching_config_loader}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_caching_config_loader_a292796e1c136133d1add2bf3d73db9d0}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_config_loader_interface}{Config\+Loader\+Interface}} \$loader, \mbox{\hyperlink{interface_guzzle_1_1_cache_1_1_cache_adapter_interface}{Cache\+Adapter\+Interface}} \$cache)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_caching_config_loader_ae08c03a4d0a1c9159d18160f243bb50a}{load}} (\$config, array \$options=array())
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_caching_config_loader_ab832f4c463ee1c9ba2e9464265f7ea3b}{\$loader}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_caching_config_loader_ac2dc76d756ec398393d4b1d23659276c}{\$cache}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Decorator that adds caching to a service description loader 
+
+Definition at line 10 of file Caching\+Config\+Loader.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_caching_config_loader_a292796e1c136133d1add2bf3d73db9d0}\label{class_guzzle_1_1_service_1_1_caching_config_loader_a292796e1c136133d1add2bf3d73db9d0}} 
+\index{CachingConfigLoader@{CachingConfigLoader}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CachingConfigLoader@{CachingConfigLoader}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_config_loader_interface}{Config\+Loader\+Interface}}}]{\$loader,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_cache_1_1_cache_adapter_interface}{Cache\+Adapter\+Interface}}}]{\$cache }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_config_loader_interface}{Config\+Loader\+Interface}} & {\em \$loader} & Loader used to load the config when there is a cache miss \\
+\hline
+Cache\+Adapter\+Interface & {\em \$cache} & Object used to cache the loaded result \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file Caching\+Config\+Loader.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_caching_config_loader_ae08c03a4d0a1c9159d18160f243bb50a}\label{class_guzzle_1_1_service_1_1_caching_config_loader_ae08c03a4d0a1c9159d18160f243bb50a}} 
+\index{CachingConfigLoader@{CachingConfigLoader}!load@{load}}
+\index{load@{load}!CachingConfigLoader@{CachingConfigLoader}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily load (\begin{DoxyParamCaption}\item[{}]{\$config,  }\item[{array}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Loads configuration data and returns an array of the loaded result
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$config} & Data to load (filename or array of data) \\
+\hline
+array & {\em \$options} & Array of options to use when loading\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_config_loader_interface_ae08c03a4d0a1c9159d18160f243bb50a}{Config\+Loader\+Interface}}.
+
+
+
+Definition at line 28 of file Caching\+Config\+Loader.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_caching_config_loader_ac2dc76d756ec398393d4b1d23659276c}\label{class_guzzle_1_1_service_1_1_caching_config_loader_ac2dc76d756ec398393d4b1d23659276c}} 
+\index{CachingConfigLoader@{CachingConfigLoader}!\$cache@{\$cache}}
+\index{\$cache@{\$cache}!CachingConfigLoader@{CachingConfigLoader}}
+\doxysubsubsection{\texorpdfstring{\$cache}{$cache}}
+{\footnotesize\ttfamily \$cache\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 16 of file Caching\+Config\+Loader.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_caching_config_loader_ab832f4c463ee1c9ba2e9464265f7ea3b}\label{class_guzzle_1_1_service_1_1_caching_config_loader_ab832f4c463ee1c9ba2e9464265f7ea3b}} 
+\index{CachingConfigLoader@{CachingConfigLoader}!\$loader@{\$loader}}
+\index{\$loader@{\$loader}!CachingConfigLoader@{CachingConfigLoader}}
+\doxysubsubsection{\texorpdfstring{\$loader}{$loader}}
+{\footnotesize\ttfamily \$loader\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file Caching\+Config\+Loader.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\mbox{\hyperlink{_caching_config_loader_8php}{Caching\+Config\+Loader.\+php}}\end{DoxyCompactItemize}

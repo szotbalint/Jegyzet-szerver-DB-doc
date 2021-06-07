@@ -1,0 +1,100 @@
+\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request}{}\doxysection{Rest\+Complete\+Subscription\+Request Class Reference}
+\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request}\index{RestCompleteSubscriptionRequest@{RestCompleteSubscriptionRequest}}
+Inheritance diagram for Rest\+Complete\+Subscription\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST Complete Subscription Request
+
+Use this call to execute an agreement after the buyer approves it.
+
+Note\+: This request is only necessary for \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} payments. Billing agreements for credit card payments execute automatically at the time of creation and so this request is not necessary for credit card payments.\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_autotoc_md150}{}\doxyparagraph{Request Data}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_autotoc_md150}
+Pass the token in the URI of a POST call to execute the subscription agreement after buyer approval. You can find the token in the execute link returned by the request to create a billing agreement.
+
+No other data is required.\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_autotoc_md151}{}\doxyparagraph{Example}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_autotoc_md151}
+To create the agreement, see the code example in \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_subscription_request}{Rest\+Create\+Subscription\+Request}}.
+
+At the completion of a create\+Subscription call, the customer should be redirected to the redirect URL contained in \$response-\/$>$get\+Redirect\+Url(). Once the customer has approved the agreement and be returned to the return\+Url in the call. The return\+Url can contain the following code to complete the agreement\+:
+
+{\ttfamily  // Create a gateway for the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST Gateway // (routes to \mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_add7982ae8c25f1e10b44271426feac99}{Gateway\+Factory\+::create}}) \$gateway = Omnipay\+::create(\textquotesingle{}Pay\+Pal\+\_\+\+Rest\textquotesingle{});}
+
+{\ttfamily  // Initialise the gateway \$gateway-\/$>$initialize(array( \textquotesingle{}client\+Id\textquotesingle{} =$>$ \textquotesingle{}My\+Pay\+Pal\+Client\+Id\textquotesingle{}, \textquotesingle{}secret\textquotesingle{} =$>$ \textquotesingle{}My\+Pay\+Pal\+Secret\textquotesingle{}, \textquotesingle{}test\+Mode\textquotesingle{} =$>$ true, // Or false when you are ready for live transactions ));}
+
+{\ttfamily  // Do a complete subscription transaction on the gateway \$transaction = \$gateway-\/$>$complete\+Subscription(array( \textquotesingle{}transaction\+Reference\textquotesingle{} =$>$ \$subscription\+\_\+id, )); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; if (\$response-\/$>$is\+Successful()) \{ echo \char`\"{}\+Complete Subscription transaction was successful!\textbackslash{}n\char`\"{}; \$subscription\+\_\+id = \$response-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a514421414d937d0a743fe4319458b402}{get\+Transaction\+Reference()}}; echo \char`\"{}\+Subscription reference = \char`\"{} . \$subscription\+\_\+id; \} }
+
+Note that the subscription\+\_\+id that you get from calling the response\textquotesingle{}s \mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a514421414d937d0a743fe4319458b402}{get\+Transaction\+Reference()}} method at the end of the complete\+Subscription call will be different to the one that you got after calling the response\textquotesingle{}s \mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a514421414d937d0a743fe4319458b402}{get\+Transaction\+Reference()}} method at the end of the create\+Subscription call. The one that you get from complete\+Subscription is the correct one to use going forwards (e.\+g. for cancelling or updating the subscription).\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_autotoc_md152}{}\doxyparagraph{Request Sample}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_autotoc_md152}
+This is from the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} web site\+:
+
+{\ttfamily  curl -\/v POST \href{https://api.sandbox.paypal.com/v1/payments/billing-agreements/EC-0JP008296V451950C/agreement-execute}{\texttt{ https\+://api.\+sandbox.\+paypal.\+com/v1/payments/billing-\/agreements/\+EC-\/0\+JP008296\+V451950\+C/agreement-\/execute}} \textbackslash{} -\/H \textquotesingle{}Content-\/\+Type\+:application/json\textquotesingle{} \textbackslash{} -\/H \textquotesingle{}Authorization\+: Bearer $<$Access-\/\+Token$>$\textquotesingle{} \textbackslash{} -\/d \textquotesingle{}\{\}\textquotesingle{} }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_autotoc_md153}{}\doxyparagraph{Response Sample}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_autotoc_md153}
+This is from the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} web site\+:
+
+{\ttfamily  \{ \char`\"{}id\char`\"{}\+: \char`\"{}\+I-\/0\+LN988\+D3\+JACS\char`\"{}, \char`\"{}links\char`\"{}\+: \mbox{[} \{ \char`\"{}href\char`\"{}\+: \char`\"{}https\+://api.\+sandbox.\+paypal.\+com/v1/payments/billing-\/agreements/\+I-\/0\+LN988\+D3\+JACS\char`\"{}, \char`\"{}rel\char`\"{}\+: \char`\"{}self\char`\"{}, \char`\"{}method\char`\"{}\+: \char`\"{}\+GET\char`\"{} \} \mbox{]} \} }
+
+\mbox{\hyperlink{}{Rest\+Create\+Subscription\+Request  Omnipay }}
+
+Definition at line 98 of file Rest\+Complete\+Subscription\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{RestCompleteSubscriptionRequest@{RestCompleteSubscriptionRequest}!getData@{getData}}
+\index{getData@{getData}!RestCompleteSubscriptionRequest@{RestCompleteSubscriptionRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 100 of file Rest\+Complete\+Subscription\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_complete_subscription_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{RestCompleteSubscriptionRequest@{RestCompleteSubscriptionRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!RestCompleteSubscriptionRequest@{RestCompleteSubscriptionRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get transaction endpoint.
+
+Subscriptions are executed using the /billing-\/agreements resource.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 115 of file Rest\+Complete\+Subscription\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/paypal/src/\+Message/\mbox{\hyperlink{_rest_complete_subscription_request_8php}{Rest\+Complete\+Subscription\+Request.\+php}}\end{DoxyCompactItemize}

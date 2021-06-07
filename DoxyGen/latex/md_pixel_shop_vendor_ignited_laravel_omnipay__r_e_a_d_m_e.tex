@@ -1,0 +1,105 @@
+\href{https://packagist.org/packages/ignited/laravel-omnipay}{\texttt{ }} \href{https://github.com/ignited/laravel-omnipay/releases}{\texttt{ }} \href{https://www.versioneye.com/php/ignited:laravel-omnipay}{\texttt{ }}
+
+Integrates the \href{https://github.com/adrianmacneil/omnipay}{\texttt{ Omnipay}} PHP library with Laravel 5 via a Service\+Provider to make Configuring multiple payment tunnels a breeze!\hypertarget{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md122}{}\doxysubsection{Laravel 4 Support}\label{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md122}
+For Laravel 4 see the \href{https://github.com/ignited/laravel-omnipay/tree/1.1.0}{\texttt{ version 1.\+x}} tree\hypertarget{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md123}{}\doxysubsection{Now using Omnipay 2.\+3/2.\+5}\label{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md123}
+Version {\ttfamily 2.\+0} and onwards has been updated to use Omnipay 2.\+3.
+
+Version {\ttfamily 2.\+2} and onwards is using Omnipay 2.\+5\hypertarget{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md124}{}\doxysubsection{Composer Configuration}\label{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md124}
+Include the laravel-\/omnipay package as a dependency in your {\ttfamily composer.\+json}\+: \begin{DoxyVerb}"ignited/laravel-omnipay": "2.*"
+\end{DoxyVerb}
+ {\bfseries{Note\+:}} You don\textquotesingle{}t need to include the {\ttfamily omnipay/common} in your composer.\+json -\/ it is a requirement of the {\ttfamily laravel-\/omnipay} package.
+
+Omnipay recently went refactoring that made it so that each package is now a seperate repository. The {\ttfamily omnipay/common} package includes the core framework. You will then need to include each gateway as you require. For example\+: \begin{DoxyVerb}"omnipay/eway": "*"
+\end{DoxyVerb}
+ Alternatively you can include every gateway by requring\+: \begin{DoxyVerb}"omnipay/omnipay": "*"
+\end{DoxyVerb}
+ {\bfseries{Note\+:}} this requires a large amount of composer work as it needs to fetch each seperate repository. This is not recommended.\hypertarget{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md125}{}\doxysubsection{Installation}\label{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md125}
+Run {\ttfamily composer install} to download the dependencies.\hypertarget{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md126}{}\doxysubsubsection{Laravel 5}\label{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md126}
+Add a Service\+Provider to your providers array in {\ttfamily config/app.\+php}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{stringliteral}{'providers'} => [}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{stringliteral}{'Ignited\(\backslash\)LaravelOmnipay\(\backslash\)LaravelOmnipayServiceProvider'},}
+\DoxyCodeLine{}
+\DoxyCodeLine{]}
+
+\end{DoxyCode}
+
+
+Add the {\ttfamily Omnipay} facade to your facades array\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{stringliteral}{'Omnipay'} => \textcolor{stringliteral}{'Ignited\(\backslash\)LaravelOmnipay\(\backslash\)Facades\(\backslash\)OmnipayFacade'},}
+
+\end{DoxyCode}
+
+
+Finally, publish the configuration files via {\ttfamily php artisan vendor\+:publish}.\hypertarget{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md127}{}\doxysubsubsection{Lumen}\label{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md127}
+For {\ttfamily Lumen} add the following in your bootstrap/app.\+php 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$app-\/>register(Ignited\(\backslash\)LaravelOmnipay\(\backslash\)LumenOmnipayServiceProvider::class);}
+
+\end{DoxyCode}
+
+
+Copy the laravel-\/omnipay.\+php file from the config directory to config/laravel-\/omnipay.\+php
+
+And also add the following to bootstrap/app.\+php 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$app-\/>configure(\textcolor{stringliteral}{'laravel-\/omnipay'});}
+
+\end{DoxyCode}
+\hypertarget{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md128}{}\doxysubsection{Configuration}\label{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md128}
+Once you have published the configuration files, you can add your gateway options to the config file in {\ttfamily config/laravel-\/omnipay.\+php}.\hypertarget{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md129}{}\doxysubsection{Usage}\label{md_pixel_shop_vendor_ignited_laravel_omnipay__r_e_a_d_m_e_autotoc_md129}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$cardInput = [}
+\DoxyCodeLine{    \textcolor{stringliteral}{'number'}      => \textcolor{stringliteral}{'4444333322221111'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'firstName'}   => \textcolor{stringliteral}{'MR. WALTER WHITE'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'expiryMonth'} => \textcolor{stringliteral}{'03'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'expiryYear'}  => \textcolor{stringliteral}{'16'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'cvv'}         => \textcolor{stringliteral}{'333'},}
+\DoxyCodeLine{];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$card = Omnipay::creditCard(\$cardInput);}
+\DoxyCodeLine{\$response = Omnipay::purchase([}
+\DoxyCodeLine{    \textcolor{stringliteral}{'amount'}    => \textcolor{stringliteral}{'100.00'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'returnUrl'} => \textcolor{stringliteral}{'http://bobjones.com/payment/return'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'cancelUrl'} => \textcolor{stringliteral}{'http://bobjones.com/payment/cancel'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'card'}      => \$cardInput}
+\DoxyCodeLine{])-\/>send();}
+\DoxyCodeLine{}
+\DoxyCodeLine{dd(\$response-\/>getMessage());}
+
+\end{DoxyCode}
+
+
+This will use the gateway specified in the config as {\ttfamily default}.
+
+However, you can also specify a gateway to use.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Omnipay::setGateway(\textcolor{stringliteral}{'eway'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$response = Omnipay::purchase([}
+\DoxyCodeLine{    \textcolor{stringliteral}{'amount'} => \textcolor{stringliteral}{'100.00'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'card'}   => \$cardInput}
+\DoxyCodeLine{])-\/>send();}
+\DoxyCodeLine{}
+\DoxyCodeLine{dd(\$response-\/>getMessage());}
+
+\end{DoxyCode}
+
+
+In addition you can take an instance of the gateway.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$gateway = Omnipay::gateway(\textcolor{stringliteral}{'eway'});}
+
+\end{DoxyCode}
+ 

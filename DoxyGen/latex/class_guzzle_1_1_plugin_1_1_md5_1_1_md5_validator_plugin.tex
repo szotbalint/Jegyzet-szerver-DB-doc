@@ -1,0 +1,137 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin}{}\doxysection{Md5\+Validator\+Plugin Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin}\index{Md5ValidatorPlugin@{Md5ValidatorPlugin}}
+Inheritance diagram for Md5\+Validator\+Plugin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_aa34ffd68493e11b26cf2bfe5876d89a8}{\+\_\+\+\_\+construct}} (\$content\+Encoded=true, \$content\+Length\+Cutoff=false)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_ade253882a44f5d803c2d7d2b8e9f471d}{on\+Request\+Complete}} (\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} \$event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_af1f63475927bbcb3bd21b58712076104}{get\+Subscribed\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_a53e1039016a2e030cb5d1b2b301a7217}{\$content\+Length\+Cutoff}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_a2cf662308d16164b2bf8e40817fffb82}{\$content\+Encoded}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ensures that an the MD5 hash of an entity body matches the Content-\/\+MD5 header (if set) of an HTTP response. An exception is thrown if the calculated MD5 does not match the expected MD5. 
+
+Definition at line 14 of file Md5\+Validator\+Plugin.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_aa34ffd68493e11b26cf2bfe5876d89a8}\label{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_aa34ffd68493e11b26cf2bfe5876d89a8}} 
+\index{Md5ValidatorPlugin@{Md5ValidatorPlugin}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Md5ValidatorPlugin@{Md5ValidatorPlugin}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$content\+Encoded = {\ttfamily true},  }\item[{}]{\$content\+Length\+Cutoff = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$content\+Encoded} & Calculating the MD5 hash of an entity body where a Content-\/\+Encoding was applied is a more expensive comparison because the entity body will need to be compressed in order to get the correct hash. Set to FALSE to not validate the MD5 hash of an entity body with an applied Content-\/\+Encoding. \\
+\hline
+bool | int & {\em \$content\+Length\+Cutoff} & Maximum Content-\/\+Length (bytes) in which a MD5 hash will be validated. Any response with a Content-\/\+Length greater than this value will not be validated because it will be deemed too memory intensive. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Md5\+Validator\+Plugin.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_af1f63475927bbcb3bd21b58712076104}\label{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_af1f63475927bbcb3bd21b58712076104}} 
+\index{Md5ValidatorPlugin@{Md5ValidatorPlugin}!getSubscribedEvents@{getSubscribedEvents}}
+\index{getSubscribedEvents@{getSubscribedEvents}!Md5ValidatorPlugin@{Md5ValidatorPlugin}}
+\doxysubsubsection{\texorpdfstring{getSubscribedEvents()}{getSubscribedEvents()}}
+{\footnotesize\ttfamily static get\+Subscribed\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns an array of event names this subscriber wants to listen to.
+
+The array keys are event names and the value can be\+:
+
+
+\begin{DoxyItemize}
+\item The method name to call (priority defaults to 0)
+\item An array composed of the method name to call and the priority
+\item An array of arrays composed of the method names to call and respective priorities, or 0 if unset
+\end{DoxyItemize}
+
+For instance\+:
+
+
+\begin{DoxyItemize}
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ \textquotesingle{}method\+Name\textquotesingle{})
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(\textquotesingle{}method\+Name\textquotesingle{}, \$priority))
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(array(\textquotesingle{}method\+Name1\textquotesingle{}, \$priority), array(\textquotesingle{}method\+Name2\textquotesingle{})))
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+array The event names to listen to 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface_af1f63475927bbcb3bd21b58712076104}{Event\+Subscriber\+Interface}}.
+
+
+
+Definition at line 37 of file Md5\+Validator\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_ade253882a44f5d803c2d7d2b8e9f471d}\label{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_ade253882a44f5d803c2d7d2b8e9f471d}} 
+\index{Md5ValidatorPlugin@{Md5ValidatorPlugin}!onRequestComplete@{onRequestComplete}}
+\index{onRequestComplete@{onRequestComplete}!Md5ValidatorPlugin@{Md5ValidatorPlugin}}
+\doxysubsubsection{\texorpdfstring{onRequestComplete()}{onRequestComplete()}}
+{\footnotesize\ttfamily on\+Request\+Complete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})}
+
+\{\} 
+\begin{DoxyExceptions}{Exceptions}
+{\em Unexpected\+Value\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 46 of file Md5\+Validator\+Plugin.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_a2cf662308d16164b2bf8e40817fffb82}\label{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_a2cf662308d16164b2bf8e40817fffb82}} 
+\index{Md5ValidatorPlugin@{Md5ValidatorPlugin}!\$contentEncoded@{\$contentEncoded}}
+\index{\$contentEncoded@{\$contentEncoded}!Md5ValidatorPlugin@{Md5ValidatorPlugin}}
+\doxysubsubsection{\texorpdfstring{\$contentEncoded}{$contentEncoded}}
+{\footnotesize\ttfamily \$content\+Encoded\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 20 of file Md5\+Validator\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_a53e1039016a2e030cb5d1b2b301a7217}\label{class_guzzle_1_1_plugin_1_1_md5_1_1_md5_validator_plugin_a53e1039016a2e030cb5d1b2b301a7217}} 
+\index{Md5ValidatorPlugin@{Md5ValidatorPlugin}!\$contentLengthCutoff@{\$contentLengthCutoff}}
+\index{\$contentLengthCutoff@{\$contentLengthCutoff}!Md5ValidatorPlugin@{Md5ValidatorPlugin}}
+\doxysubsubsection{\texorpdfstring{\$contentLengthCutoff}{$contentLengthCutoff}}
+{\footnotesize\ttfamily \$content\+Length\+Cutoff\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Md5\+Validator\+Plugin.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Md5/\mbox{\hyperlink{_md5_validator_plugin_8php}{Md5\+Validator\+Plugin.\+php}}\end{DoxyCompactItemize}

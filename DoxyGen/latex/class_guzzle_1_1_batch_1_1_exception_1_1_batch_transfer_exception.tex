@@ -1,0 +1,176 @@
+\hypertarget{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception}{}\doxysection{Batch\+Transfer\+Exception Class Reference}
+\label{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception}\index{BatchTransferException@{BatchTransferException}}
+Inheritance diagram for Batch\+Transfer\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_aef700c360036fefab7d54be5eae24240}{\+\_\+\+\_\+construct}} (array \$batch, array \$transferred\+Items, \textbackslash{}Exception \$exception, Transfer\+Strategy \$transfer\+Strategy=null, Divisor\+Strategy \$divisor\+Strategy=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a9228d116346a58eb5db732edcab2765e}{get\+Batch}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_af023910abf7638dbb01613be9dd99815}{get\+Transferred\+Items}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_ac58e1ae8d345ed39ff0f325f9c1cd346}{get\+Transfer\+Strategy}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_ae4bce5fed3082f776b3f530f69bc1c38}{get\+Divisor\+Strategy}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a8dcc79b6d6f098ffd8ac189b35e7e784}{\$batch}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_aca708a5590ae37164294c6250f85f3fd}{\$transfer\+Strategy}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a57311e171ea795e9b0540b7e878c49c3}{\$divisor\+Strategy}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a364202c1f6bde2606d043f716772b078}{\$transferred\+Items}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_guzzle_1_1_batch_1_1_exception}{Exception}} thrown during a batch transfer 
+
+Definition at line 12 of file Batch\+Transfer\+Exception.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_aef700c360036fefab7d54be5eae24240}\label{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_aef700c360036fefab7d54be5eae24240}} 
+\index{BatchTransferException@{BatchTransferException}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!BatchTransferException@{BatchTransferException}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$batch,  }\item[{array}]{\$transferred\+Items,  }\item[{\textbackslash{}Exception}]{\$exception,  }\item[{Transfer\+Strategy}]{\$transfer\+Strategy = {\ttfamily null},  }\item[{Divisor\+Strategy}]{\$divisor\+Strategy = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$batch} & The batch being sent when the exception occurred \\
+\hline
+array & {\em \$transferred\+Items} & Items transferred at the point in which the exception was encountered \\
+\hline
+\textbackslash{}\+Exception & {\em \$exception} & \mbox{\hyperlink{namespace_guzzle_1_1_batch_1_1_exception}{Exception}} encountered \\
+\hline
+Transfer\+Strategy & {\em \$transfer\+Strategy} & The transfer strategy in use when the exception occurred \\
+\hline
+Divisor\+Strategy & {\em \$divisor\+Strategy} & The divisor strategy in use when the exception occurred \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file Batch\+Transfer\+Exception.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a9228d116346a58eb5db732edcab2765e}\label{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a9228d116346a58eb5db732edcab2765e}} 
+\index{BatchTransferException@{BatchTransferException}!getBatch@{getBatch}}
+\index{getBatch@{getBatch}!BatchTransferException@{BatchTransferException}}
+\doxysubsubsection{\texorpdfstring{getBatch()}{getBatch()}}
+{\footnotesize\ttfamily get\+Batch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the batch that we being sent when the exception occurred
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Batch\+Transfer\+Exception.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_ae4bce5fed3082f776b3f530f69bc1c38}\label{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_ae4bce5fed3082f776b3f530f69bc1c38}} 
+\index{BatchTransferException@{BatchTransferException}!getDivisorStrategy@{getDivisorStrategy}}
+\index{getDivisorStrategy@{getDivisorStrategy}!BatchTransferException@{BatchTransferException}}
+\doxysubsubsection{\texorpdfstring{getDivisorStrategy()}{getDivisorStrategy()}}
+{\footnotesize\ttfamily get\+Divisor\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the divisor strategy
+
+\begin{DoxyReturn}{Returns}
+Divisor\+Strategy 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file Batch\+Transfer\+Exception.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_af023910abf7638dbb01613be9dd99815}\label{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_af023910abf7638dbb01613be9dd99815}} 
+\index{BatchTransferException@{BatchTransferException}!getTransferredItems@{getTransferredItems}}
+\index{getTransferredItems@{getTransferredItems}!BatchTransferException@{BatchTransferException}}
+\doxysubsubsection{\texorpdfstring{getTransferredItems()}{getTransferredItems()}}
+{\footnotesize\ttfamily get\+Transferred\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the items transferred at the point in which the exception was encountered
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file Batch\+Transfer\+Exception.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_ac58e1ae8d345ed39ff0f325f9c1cd346}\label{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_ac58e1ae8d345ed39ff0f325f9c1cd346}} 
+\index{BatchTransferException@{BatchTransferException}!getTransferStrategy@{getTransferStrategy}}
+\index{getTransferStrategy@{getTransferStrategy}!BatchTransferException@{BatchTransferException}}
+\doxysubsubsection{\texorpdfstring{getTransferStrategy()}{getTransferStrategy()}}
+{\footnotesize\ttfamily get\+Transfer\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the transfer strategy
+
+\begin{DoxyReturn}{Returns}
+Transfer\+Strategy 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file Batch\+Transfer\+Exception.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a8dcc79b6d6f098ffd8ac189b35e7e784}\label{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a8dcc79b6d6f098ffd8ac189b35e7e784}} 
+\index{BatchTransferException@{BatchTransferException}!\$batch@{\$batch}}
+\index{\$batch@{\$batch}!BatchTransferException@{BatchTransferException}}
+\doxysubsubsection{\texorpdfstring{\$batch}{$batch}}
+{\footnotesize\ttfamily \$batch\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 15 of file Batch\+Transfer\+Exception.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a57311e171ea795e9b0540b7e878c49c3}\label{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a57311e171ea795e9b0540b7e878c49c3}} 
+\index{BatchTransferException@{BatchTransferException}!\$divisorStrategy@{\$divisorStrategy}}
+\index{\$divisorStrategy@{\$divisorStrategy}!BatchTransferException@{BatchTransferException}}
+\doxysubsubsection{\texorpdfstring{\$divisorStrategy}{$divisorStrategy}}
+{\footnotesize\ttfamily \$divisor\+Strategy\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 21 of file Batch\+Transfer\+Exception.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a364202c1f6bde2606d043f716772b078}\label{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_a364202c1f6bde2606d043f716772b078}} 
+\index{BatchTransferException@{BatchTransferException}!\$transferredItems@{\$transferredItems}}
+\index{\$transferredItems@{\$transferredItems}!BatchTransferException@{BatchTransferException}}
+\doxysubsubsection{\texorpdfstring{\$transferredItems}{$transferredItems}}
+{\footnotesize\ttfamily \$transferred\+Items\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file Batch\+Transfer\+Exception.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_aca708a5590ae37164294c6250f85f3fd}\label{class_guzzle_1_1_batch_1_1_exception_1_1_batch_transfer_exception_aca708a5590ae37164294c6250f85f3fd}} 
+\index{BatchTransferException@{BatchTransferException}!\$transferStrategy@{\$transferStrategy}}
+\index{\$transferStrategy@{\$transferStrategy}!BatchTransferException@{BatchTransferException}}
+\doxysubsubsection{\texorpdfstring{\$transferStrategy}{$transferStrategy}}
+{\footnotesize\ttfamily \$transfer\+Strategy\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 18 of file Batch\+Transfer\+Exception.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Batch/\+Exception/\mbox{\hyperlink{_batch_transfer_exception_8php}{Batch\+Transfer\+Exception.\+php}}\end{DoxyCompactItemize}

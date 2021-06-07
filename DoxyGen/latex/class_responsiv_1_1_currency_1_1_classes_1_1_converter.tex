@@ -1,0 +1,111 @@
+\hypertarget{class_responsiv_1_1_currency_1_1_classes_1_1_converter}{}\doxysection{Converter Class Reference}
+\label{class_responsiv_1_1_currency_1_1_classes_1_1_converter}\index{Converter@{Converter}}
+Inheritance diagram for Converter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_responsiv_1_1_currency_1_1_classes_1_1_converter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_responsiv_1_1_currency_1_1_classes_1_1_converter_a62847f410363e0b4602d295b1e8d1c00}{get\+Rate}} (\$from\+Currency, \$to\+Currency)
+\item 
+\mbox{\hyperlink{class_responsiv_1_1_currency_1_1_classes_1_1_converter_af320f448a502397cf15ea7c4b27f1c10}{convert}} (\$value, \$from\+Currency, \$to\+Currency, \$round=2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_responsiv_1_1_currency_1_1_classes_1_1_converter_aef066c45677cd6dee30d7e9432e113c0}{\$rate\+Cache}} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_responsiv_1_1_currency_1_1_classes_1_1_converter_a4469770cabc76d5de3a81d8197a6928a}{get\+Singleton\+Accessor}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Currency converter
+
+To create an instance of this singleton\+:
+
+Converter\+::instance(); 
+
+Definition at line 18 of file Converter.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_classes_1_1_converter_af320f448a502397cf15ea7c4b27f1c10}\label{class_responsiv_1_1_currency_1_1_classes_1_1_converter_af320f448a502397cf15ea7c4b27f1c10}} 
+\index{Converter@{Converter}!convert@{convert}}
+\index{convert@{convert}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily convert (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{}]{\$from\+Currency,  }\item[{}]{\$to\+Currency,  }\item[{}]{\$round = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+Convert a currency value from one currency to another. 
+\begin{DoxyParams}[1]{Parameters}
+number & {\em \$value} & Specifies a value to convert \\
+\hline
+string & {\em \$from\+Currency} & Currency code to convert from (eg\+: USD) \\
+\hline
+string & {\em \$to\+Currency} & Currency code to convert to (eg\+: AUD) \\
+\hline
+int & {\em \$round} & Number of decimal digits to round the result to. Specify NULL to disable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file Converter.\+php.
+
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_classes_1_1_converter_a62847f410363e0b4602d295b1e8d1c00}\label{class_responsiv_1_1_currency_1_1_classes_1_1_converter_a62847f410363e0b4602d295b1e8d1c00}} 
+\index{Converter@{Converter}!getRate@{getRate}}
+\index{getRate@{getRate}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{getRate()}{getRate()}}
+{\footnotesize\ttfamily get\+Rate (\begin{DoxyParamCaption}\item[{}]{\$from\+Currency,  }\item[{}]{\$to\+Currency }\end{DoxyParamCaption})}
+
+Returns the exchange rate for two currencies. 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$from\+Currency} & Currency code to convert from (eg\+: USD) \\
+\hline
+string & {\em \$to\+Currency} & Currency code to convert to (eg\+: AUD) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file Converter.\+php.
+
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_classes_1_1_converter_a4469770cabc76d5de3a81d8197a6928a}\label{class_responsiv_1_1_currency_1_1_classes_1_1_converter_a4469770cabc76d5de3a81d8197a6928a}} 
+\index{Converter@{Converter}!getSingletonAccessor@{getSingletonAccessor}}
+\index{getSingletonAccessor@{getSingletonAccessor}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{getSingletonAccessor()}{getSingletonAccessor()}}
+{\footnotesize\ttfamily static get\+Singleton\+Accessor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Converter.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_classes_1_1_converter_aef066c45677cd6dee30d7e9432e113c0}\label{class_responsiv_1_1_currency_1_1_classes_1_1_converter_aef066c45677cd6dee30d7e9432e113c0}} 
+\index{Converter@{Converter}!\$rateCache@{\$rateCache}}
+\index{\$rateCache@{\$rateCache}!Converter@{Converter}}
+\doxysubsubsection{\texorpdfstring{\$rateCache}{$rateCache}}
+{\footnotesize\ttfamily \$rate\+Cache = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 20 of file Converter.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+responsiv/currency/classes/\mbox{\hyperlink{_converter_8php}{Converter.\+php}}\end{DoxyCompactItemize}

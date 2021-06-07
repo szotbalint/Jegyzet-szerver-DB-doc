@@ -1,0 +1,181 @@
+\hypertarget{class_guzzle_1_1_batch_1_1_abstract_batch_decorator}{}\doxysection{Abstract\+Batch\+Decorator Class Reference}
+\label{class_guzzle_1_1_batch_1_1_abstract_batch_decorator}\index{AbstractBatchDecorator@{AbstractBatchDecorator}}
+Inheritance diagram for Abstract\+Batch\+Decorator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.641510cm]{class_guzzle_1_1_batch_1_1_abstract_batch_decorator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_aadcc44a4208c358053e05e02ccb78e96}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}} \$decorated\+Batch)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a16bce55a011068c81b25f9c03e079fcc}{\+\_\+\+\_\+call}} (\$method, array \$args)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a9c7899e69ac07d75fa0aa5ef89193a7f}{add}} (\$item)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a7751f77b5263bcf940ece6e824a05b38}{flush}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_aedcc52b3673b8df9425e52f13accb2a1}{is\+Empty}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a14709784de42ac1565c64a09debb7db8}{get\+Decorators}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a334231ac55ed8d172010711bce637597}{\$decorated\+Batch}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract decorator used when decorating a \mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}} 
+
+Definition at line 8 of file Abstract\+Batch\+Decorator.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_aadcc44a4208c358053e05e02ccb78e96}\label{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_aadcc44a4208c358053e05e02ccb78e96}} 
+\index{AbstractBatchDecorator@{AbstractBatchDecorator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!AbstractBatchDecorator@{AbstractBatchDecorator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}}}]{\$decorated\+Batch }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}} & {\em \$decorated\+Batch} & \mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}} that is being decorated \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file Abstract\+Batch\+Decorator.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a16bce55a011068c81b25f9c03e079fcc}\label{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a16bce55a011068c81b25f9c03e079fcc}} 
+\index{AbstractBatchDecorator@{AbstractBatchDecorator}!\_\_call@{\_\_call}}
+\index{\_\_call@{\_\_call}!AbstractBatchDecorator@{AbstractBatchDecorator}}
+\doxysubsubsection{\texorpdfstring{\_\_call()}{\_\_call()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+call (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{array}]{\$args }\end{DoxyParamCaption})}
+
+Allow decorators to implement custom methods
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & Missing method name \\
+\hline
+array & {\em \$args} & Method arguments\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed @code\+Coverage\+Ignore 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file Abstract\+Batch\+Decorator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a9c7899e69ac07d75fa0aa5ef89193a7f}\label{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a9c7899e69ac07d75fa0aa5ef89193a7f}} 
+\index{AbstractBatchDecorator@{AbstractBatchDecorator}!add@{add}}
+\index{add@{add}!AbstractBatchDecorator@{AbstractBatchDecorator}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily add (\begin{DoxyParamCaption}\item[{}]{\$item }\end{DoxyParamCaption})}
+
+Add an item to the queue
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$item} & Item to add\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface_a9c7899e69ac07d75fa0aa5ef89193a7f}{Batch\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_guzzle_1_1_batch_1_1_history_batch_a9c7899e69ac07d75fa0aa5ef89193a7f}{History\+Batch}}, and \mbox{\hyperlink{class_guzzle_1_1_batch_1_1_flushing_batch_a9c7899e69ac07d75fa0aa5ef89193a7f}{Flushing\+Batch}}.
+
+
+
+Definition at line 35 of file Abstract\+Batch\+Decorator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a7751f77b5263bcf940ece6e824a05b38}\label{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a7751f77b5263bcf940ece6e824a05b38}} 
+\index{AbstractBatchDecorator@{AbstractBatchDecorator}!flush@{flush}}
+\index{flush@{flush}!AbstractBatchDecorator@{AbstractBatchDecorator}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Flush the batch and transfer the items
+
+\begin{DoxyReturn}{Returns}
+array Returns an array flushed items 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface_a7751f77b5263bcf940ece6e824a05b38}{Batch\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_guzzle_1_1_batch_1_1_notifying_batch_a7751f77b5263bcf940ece6e824a05b38}{Notifying\+Batch}}, and \mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_buffering_batch_a7751f77b5263bcf940ece6e824a05b38}{Exception\+Buffering\+Batch}}.
+
+
+
+Definition at line 42 of file Abstract\+Batch\+Decorator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a14709784de42ac1565c64a09debb7db8}\label{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a14709784de42ac1565c64a09debb7db8}} 
+\index{AbstractBatchDecorator@{AbstractBatchDecorator}!getDecorators@{getDecorators}}
+\index{getDecorators@{getDecorators}!AbstractBatchDecorator@{AbstractBatchDecorator}}
+\doxysubsubsection{\texorpdfstring{getDecorators()}{getDecorators()}}
+{\footnotesize\ttfamily get\+Decorators (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Trace the decorators associated with the batch
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Abstract\+Batch\+Decorator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_aedcc52b3673b8df9425e52f13accb2a1}\label{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_aedcc52b3673b8df9425e52f13accb2a1}} 
+\index{AbstractBatchDecorator@{AbstractBatchDecorator}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!AbstractBatchDecorator@{AbstractBatchDecorator}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if the batch is empty and has further items to transfer
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface_aedcc52b3673b8df9425e52f13accb2a1}{Batch\+Interface}}.
+
+
+
+Definition at line 47 of file Abstract\+Batch\+Decorator.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a334231ac55ed8d172010711bce637597}\label{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a334231ac55ed8d172010711bce637597}} 
+\index{AbstractBatchDecorator@{AbstractBatchDecorator}!\$decoratedBatch@{\$decoratedBatch}}
+\index{\$decoratedBatch@{\$decoratedBatch}!AbstractBatchDecorator@{AbstractBatchDecorator}}
+\doxysubsubsection{\texorpdfstring{\$decoratedBatch}{$decoratedBatch}}
+{\footnotesize\ttfamily \$decorated\+Batch\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 11 of file Abstract\+Batch\+Decorator.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Batch/\mbox{\hyperlink{_abstract_batch_decorator_8php}{Abstract\+Batch\+Decorator.\+php}}\end{DoxyCompactItemize}

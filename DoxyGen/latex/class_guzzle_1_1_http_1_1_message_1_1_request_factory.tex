@@ -1,0 +1,500 @@
+\hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory}{}\doxysection{Request\+Factory Class Reference}
+\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory}\index{RequestFactory@{RequestFactory}}
+Inheritance diagram for Request\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_http_1_1_message_1_1_request_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ae8a3c34fe58f0ca73229826374a30e50}{from\+Message}} (\$message)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_aa6e79454981dc8e784d4226c086af022}{from\+Parts}} ( \$method, array \$url\+Parts, \$headers=null, \$body=null, \$protocol=\textquotesingle{}HTTP\textquotesingle{}, \$protocol\+Version=\textquotesingle{}1.\+1\textquotesingle{})
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_aa9c317ee267815368ada25c7f48345bf}{create}} (\$method, \$url, \$headers=null, \$body=null, array \$options=array())
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a367513e8fa96a7bdfa929ec009409374}{clone\+Request\+With\+Method}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$method)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a3aa8ce497b08118bbd854f0f43bfaad3}{apply\+Options}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, array \$options=array(), \$flags=self\+::\+OPTIONS\+\_\+\+NONE)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ac93fbec81f07e5d15f80db907e63dc10}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a3b52ae32e90e1004f1d01a59328be9e5}{visit\+\_\+headers}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a862efd1b8b27dbb8b18a8bf9df746c0d}{visit\+\_\+body}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a98145ed1036e07dfca8e2521acc81c58}{visit\+\_\+allow\+\_\+redirects}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a25cd02b16a5ce53b13ebae82f2ed3002}{visit\+\_\+auth}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a900a18cc468803340ef923d5889b87e6}{visit\+\_\+query}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_af04a58ebc6ace5f612e626fed0892d90}{visit\+\_\+cookies}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a04f91558421887387aefad6e886c3710}{visit\+\_\+events}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a5fc709edf7b069e227746c2bea8914dd}{visit\+\_\+plugins}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a36d50b4b0cf686dc91696671269b894f}{visit\+\_\+exceptions}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ac19b5e09ed3907587ddcd0e201dab6d1}{visit\+\_\+save\+\_\+to}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a68b3b4238e638ae11d084b2f252c7309}{visit\+\_\+params}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a34674e3b17b09c8037670110fe9e03a4}{visit\+\_\+timeout}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_aeb45a51d9a2256931406b723d909c85e}{visit\+\_\+connect\+\_\+timeout}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a03f029af077245d6ed528c616a789128}{visit\+\_\+debug}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a55c4615d48d027f72f50c4e8996945ce}{visit\+\_\+verify}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a3832bfb74122ea6697bb8f0a62a4f50a}{visit\+\_\+proxy}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_abf17f8095eee2430cf3b40f411d97ee2}{visit\+\_\+cert}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ae043a0e00706dc348097999a98b5edf4}{visit\+\_\+ssl\+\_\+key}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$value, \$flags)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a802753499268a04da139bd6e6ef89b35}{\$methods}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a2ee678563333dc3b0d998085ad1d2aff}{\$request\+Class}} = \textquotesingle{}Guzzle\textbackslash{}\textbackslash{}\+Http\textbackslash{}\textbackslash{}\+Message\textbackslash{}\textbackslash{}\+Request\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a19a9c0c53afec7457cbf466f9c1e4745}{\$entity\+Enclosing\+Request\+Class}} = \textquotesingle{}Guzzle\textbackslash{}\textbackslash{}\+Http\textbackslash{}\textbackslash{}\+Message\textbackslash{}\textbackslash{}\+Entity\+Enclosing\+Request\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ad9d7ce33ebb142b70e58b68052ca0ea8}{\$instance}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Default HTTP request factory used to create the default \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request}{Request}}\} and \{
+
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_entity_enclosing_request}{Entity\+Enclosing\+Request}}\} objects. 
+\end{DoxySeeAlso}
+
+
+Definition at line 14 of file Request\+Factory.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a095c5d389db211932136b53f25f39685}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a095c5d389db211932136b53f25f39685}} 
+\index{RequestFactory@{RequestFactory}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file Request\+Factory.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a3aa8ce497b08118bbd854f0f43bfaad3}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a3aa8ce497b08118bbd854f0f43bfaad3}} 
+\index{RequestFactory@{RequestFactory}!applyOptions@{applyOptions}}
+\index{applyOptions@{applyOptions}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{applyOptions()}{applyOptions()}}
+{\footnotesize\ttfamily apply\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{array}]{\$options = {\ttfamily array()},  }\item[{}]{\$flags = {\ttfamily self\+:\+:OPTIONS\+\_\+NONE} }\end{DoxyParamCaption})}
+
+Apply an associative array of options to the request
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} & {\em \$request} & \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request}{Request}} to update \\
+\hline
+array & {\em \$options} & Options to use with the request. Available options are\+: \char`\"{}headers\char`\"{}\+: Associative array of headers \char`\"{}query\char`\"{}\+: Associative array of query string values to add to the request \char`\"{}body\char`\"{}\+: Body of a request, including an \mbox{\hyperlink{class_guzzle_1_1_http_1_1_entity_body}{Entity\+Body}}, string, or array when sending POST requests. \char`\"{}auth\char`\"{}\+: Array of HTTP authentication parameters to use with the request. The array must contain the username in index \mbox{[}0\mbox{]}, the password in index \mbox{[}2\mbox{]}, and can optionally contain the authentication type in index \mbox{[}3\mbox{]}. The authentication types are\+: \char`\"{}\+Basic\char`\"{}, \char`\"{}\+Digest\char`\"{}, \char`\"{}\+NTLM\char`\"{}, \char`\"{}\+Any\char`\"{} (defaults to \char`\"{}\+Basic\char`\"{}). \char`\"{}cookies\char`\"{}\+: Associative array of cookies \char`\"{}allow\+\_\+redirects\char`\"{}\+: Set to false to disable redirects \char`\"{}save\+\_\+to\char`\"{}\+: String, fopen resource, or \mbox{\hyperlink{class_guzzle_1_1_http_1_1_entity_body}{Entity\+Body}} object used to store the body of the response \char`\"{}events\char`\"{}\+: Associative array mapping event names to a closure or array of (priority, closure) \char`\"{}plugins\char`\"{}\+: Array of plugins to add to the request \char`\"{}exceptions\char`\"{}\+: Set to false to disable throwing exceptions on an HTTP level error (e.\+g. 404, 500, etc) \char`\"{}params\char`\"{}\+: Set custom request data parameters on a request. (Note\+: these are not query string parameters) \char`\"{}timeout\char`\"{}\+: Float describing the timeout of the request in seconds \char`\"{}connect\+\_\+timeout\char`\"{}\+: Float describing the number of seconds to wait while trying to connect. Use 0 to wait indefinitely. \char`\"{}verify\char`\"{}\+: Set to true to enable SSL cert validation (the default), false to disable, or supply the path to a CA bundle to enable verification using a custom certificate. \char`\"{}cert\char`\"{}\+: Set to a string to specify the path to a file containing a PEM formatted certificate. If a password is required, then set an array containing the path to the PEM file followed by the the password required for the certificate. \char`\"{}ssl\+\_\+key\char`\"{}\+: Specify the path to a file containing a private SSL key in PEM format. If a password is required, then set an array containing the path to the SSL key followed by the password required for the certificate. \char`\"{}proxy\char`\"{}\+: Specify an HTTP proxy (e.\+g. \char`\"{}http\+://username\+:password@192.\+168.\+16.\+1\+:10\char`\"{}) \char`\"{}debug\char`\"{}\+: Set to true to display all data sent over the wire \\
+\hline
+int & {\em \$flags} & Bitwise flags to apply when applying the options to the request. Defaults to no special options. {\ttfamily 1} (OPTIONS\+\_\+\+AS\+\_\+\+DEFAULTS)\+: When specified, options will only update a request when the value does not already exist on the request. This is only supported by \char`\"{}query\char`\"{} and \char`\"{}headers\char`\"{}. Other bitwise options may be added in the future. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_factory_interface_a3aa8ce497b08118bbd854f0f43bfaad3}{Request\+Factory\+Interface}}.
+
+
+
+Definition at line 161 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a367513e8fa96a7bdfa929ec009409374}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a367513e8fa96a7bdfa929ec009409374}} 
+\index{RequestFactory@{RequestFactory}!cloneRequestWithMethod@{cloneRequestWithMethod}}
+\index{cloneRequestWithMethod@{cloneRequestWithMethod}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{cloneRequestWithMethod()}{cloneRequestWithMethod()}}
+{\footnotesize\ttfamily clone\+Request\+With\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$method }\end{DoxyParamCaption})}
+
+Clone a request while changing the method. Emulates the behavior of \{\begin{DoxySeeAlso}{See also}
+Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+::clone\}, but can change the HTTP method.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} & {\em \$request} & \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request}{Request}} to clone \\
+\hline
+string & {\em \$method} & Method to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_aa9c317ee267815368ada25c7f48345bf}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_aa9c317ee267815368ada25c7f48345bf}} 
+\index{RequestFactory@{RequestFactory}!create@{create}}
+\index{create@{create}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily create (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$url,  }\item[{}]{\$headers = {\ttfamily null},  }\item[{}]{\$body = {\ttfamily null},  }\item[{array}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Create a new request based on the HTTP method
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & HTTP method (GET, POST, PUT, PATCH, HEAD, DELETE, ...) \\
+\hline
+string | \mbox{\hyperlink{class_guzzle_1_1_http_1_1_url}{Url}} & {\em \$url} & HTTP URL to connect to \\
+\hline
+array | Collection & {\em \$headers} & HTTP headers \\
+\hline
+string | resource | array | \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface}{Entity\+Body\+Interface}} & {\em \$body} & Body to send in the request \\
+\hline
+array & {\em \$options} & Array of options to apply to the request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_factory_interface_aa9c317ee267815368ada25c7f48345bf}{Request\+Factory\+Interface}}.
+
+
+
+Definition at line 83 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ae8a3c34fe58f0ca73229826374a30e50}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ae8a3c34fe58f0ca73229826374a30e50}} 
+\index{RequestFactory@{RequestFactory}!fromMessage@{fromMessage}}
+\index{fromMessage@{fromMessage}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{fromMessage()}{fromMessage()}}
+{\footnotesize\ttfamily from\+Message (\begin{DoxyParamCaption}\item[{}]{\$message }\end{DoxyParamCaption})}
+
+Create a new request based on an HTTP message
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$message} & HTTP message as a string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_factory_interface_ae8a3c34fe58f0ca73229826374a30e50}{Request\+Factory\+Interface}}.
+
+
+
+Definition at line 49 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_aa6e79454981dc8e784d4226c086af022}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_aa6e79454981dc8e784d4226c086af022}} 
+\index{RequestFactory@{RequestFactory}!fromParts@{fromParts}}
+\index{fromParts@{fromParts}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{fromParts()}{fromParts()}}
+{\footnotesize\ttfamily from\+Parts (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{array}]{\$url\+Parts,  }\item[{}]{\$headers = {\ttfamily null},  }\item[{}]{\$body = {\ttfamily null},  }\item[{}]{\$protocol = {\ttfamily \textquotesingle{}HTTP\textquotesingle{}},  }\item[{}]{\$protocol\+Version = {\ttfamily \textquotesingle{}1.1\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Create a request from URL parts as returned from parse\+\_\+url()
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & HTTP method (GET, POST, PUT, HEAD, DELETE, etc)\\
+\hline
+array & {\em \$url\+Parts} & URL parts containing the same keys as parse\+\_\+url()
+\begin{DoxyItemize}
+\item scheme\+: e.\+g. http
+\item host\+: e.\+g. www.\+guzzle-\/project.\+com
+\item port\+: e.\+g. 80
+\item user\+: e.\+g. michael
+\item pass\+: e.\+g. rocks
+\item path\+: e.\+g. / OR /index.html
+\item query\+: after the question mark ? 
+\end{DoxyItemize}\\
+\hline
+array | Collection & {\em \$headers} & HTTP headers \\
+\hline
+string | resource | array | \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface}{Entity\+Body\+Interface}} & {\em \$body} & Body to send in the request \\
+\hline
+string & {\em \$protocol} & Protocol (HTTP, SPYDY, etc) \\
+\hline
+string & {\em \$protocol\+Version} & 1.\+0, 1.\+1, etc\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_factory_interface_aa6e79454981dc8e784d4226c086af022}{Request\+Factory\+Interface}}.
+
+
+
+Definition at line 71 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ac93fbec81f07e5d15f80db907e63dc10}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ac93fbec81f07e5d15f80db907e63dc10}} 
+\index{RequestFactory@{RequestFactory}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a cached instance of the default request factory
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_request_factory}{Request\+Factory}} 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a98145ed1036e07dfca8e2521acc81c58}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a98145ed1036e07dfca8e2521acc81c58}} 
+\index{RequestFactory@{RequestFactory}!visit\_allow\_redirects@{visit\_allow\_redirects}}
+\index{visit\_allow\_redirects@{visit\_allow\_redirects}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_allow\_redirects()}{visit\_allow\_redirects()}}
+{\footnotesize\ttfamily visit\+\_\+allow\+\_\+redirects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 199 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a25cd02b16a5ce53b13ebae82f2ed3002}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a25cd02b16a5ce53b13ebae82f2ed3002}} 
+\index{RequestFactory@{RequestFactory}!visit\_auth@{visit\_auth}}
+\index{visit\_auth@{visit\_auth}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_auth()}{visit\_auth()}}
+{\footnotesize\ttfamily visit\+\_\+auth (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 206 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a862efd1b8b27dbb8b18a8bf9df746c0d}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a862efd1b8b27dbb8b18a8bf9df746c0d}} 
+\index{RequestFactory@{RequestFactory}!visit\_body@{visit\_body}}
+\index{visit\_body@{visit\_body}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_body()}{visit\_body()}}
+{\footnotesize\ttfamily visit\+\_\+body (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 190 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_abf17f8095eee2430cf3b40f411d97ee2}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_abf17f8095eee2430cf3b40f411d97ee2}} 
+\index{RequestFactory@{RequestFactory}!visit\_cert@{visit\_cert}}
+\index{visit\_cert@{visit\_cert}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_cert()}{visit\_cert()}}
+{\footnotesize\ttfamily visit\+\_\+cert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 340 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_aeb45a51d9a2256931406b723d909c85e}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_aeb45a51d9a2256931406b723d909c85e}} 
+\index{RequestFactory@{RequestFactory}!visit\_connect\_timeout@{visit\_connect\_timeout}}
+\index{visit\_connect\_timeout@{visit\_connect\_timeout}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_connect\_timeout()}{visit\_connect\_timeout()}}
+{\footnotesize\ttfamily visit\+\_\+connect\+\_\+timeout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 303 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_af04a58ebc6ace5f612e626fed0892d90}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_af04a58ebc6ace5f612e626fed0892d90}} 
+\index{RequestFactory@{RequestFactory}!visit\_cookies@{visit\_cookies}}
+\index{visit\_cookies@{visit\_cookies}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_cookies()}{visit\_cookies()}}
+{\footnotesize\ttfamily visit\+\_\+cookies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 230 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a03f029af077245d6ed528c616a789128}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a03f029af077245d6ed528c616a789128}} 
+\index{RequestFactory@{RequestFactory}!visit\_debug@{visit\_debug}}
+\index{visit\_debug@{visit\_debug}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_debug()}{visit\_debug()}}
+{\footnotesize\ttfamily visit\+\_\+debug (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 312 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a04f91558421887387aefad6e886c3710}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a04f91558421887387aefad6e886c3710}} 
+\index{RequestFactory@{RequestFactory}!visit\_events@{visit\_events}}
+\index{visit\_events@{visit\_events}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_events()}{visit\_events()}}
+{\footnotesize\ttfamily visit\+\_\+events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 241 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a36d50b4b0cf686dc91696671269b894f}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a36d50b4b0cf686dc91696671269b894f}} 
+\index{RequestFactory@{RequestFactory}!visit\_exceptions@{visit\_exceptions}}
+\index{visit\_exceptions@{visit\_exceptions}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_exceptions()}{visit\_exceptions()}}
+{\footnotesize\ttfamily visit\+\_\+exceptions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 267 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a3b52ae32e90e1004f1d01a59328be9e5}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a3b52ae32e90e1004f1d01a59328be9e5}} 
+\index{RequestFactory@{RequestFactory}!visit\_headers@{visit\_headers}}
+\index{visit\_headers@{visit\_headers}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_headers()}{visit\_headers()}}
+{\footnotesize\ttfamily visit\+\_\+headers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 172 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a68b3b4238e638ae11d084b2f252c7309}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a68b3b4238e638ae11d084b2f252c7309}} 
+\index{RequestFactory@{RequestFactory}!visit\_params@{visit\_params}}
+\index{visit\_params@{visit\_params}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_params()}{visit\_params()}}
+{\footnotesize\ttfamily visit\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 285 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a5fc709edf7b069e227746c2bea8914dd}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a5fc709edf7b069e227746c2bea8914dd}} 
+\index{RequestFactory@{RequestFactory}!visit\_plugins@{visit\_plugins}}
+\index{visit\_plugins@{visit\_plugins}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_plugins()}{visit\_plugins()}}
+{\footnotesize\ttfamily visit\+\_\+plugins (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 256 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a3832bfb74122ea6697bb8f0a62a4f50a}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a3832bfb74122ea6697bb8f0a62a4f50a}} 
+\index{RequestFactory@{RequestFactory}!visit\_proxy@{visit\_proxy}}
+\index{visit\_proxy@{visit\_proxy}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_proxy()}{visit\_proxy()}}
+{\footnotesize\ttfamily visit\+\_\+proxy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 335 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a900a18cc468803340ef923d5889b87e6}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a900a18cc468803340ef923d5889b87e6}} 
+\index{RequestFactory@{RequestFactory}!visit\_query@{visit\_query}}
+\index{visit\_query@{visit\_query}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_query()}{visit\_query()}}
+{\footnotesize\ttfamily visit\+\_\+query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 215 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ac19b5e09ed3907587ddcd0e201dab6d1}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ac19b5e09ed3907587ddcd0e201dab6d1}} 
+\index{RequestFactory@{RequestFactory}!visit\_save\_to@{visit\_save\_to}}
+\index{visit\_save\_to@{visit\_save\_to}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_save\_to()}{visit\_save\_to()}}
+{\footnotesize\ttfamily visit\+\_\+save\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 280 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ae043a0e00706dc348097999a98b5edf4}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ae043a0e00706dc348097999a98b5edf4}} 
+\index{RequestFactory@{RequestFactory}!visit\_ssl\_key@{visit\_ssl\_key}}
+\index{visit\_ssl\_key@{visit\_ssl\_key}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_ssl\_key()}{visit\_ssl\_key()}}
+{\footnotesize\ttfamily visit\+\_\+ssl\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 350 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a34674e3b17b09c8037670110fe9e03a4}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a34674e3b17b09c8037670110fe9e03a4}} 
+\index{RequestFactory@{RequestFactory}!visit\_timeout@{visit\_timeout}}
+\index{visit\_timeout@{visit\_timeout}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_timeout()}{visit\_timeout()}}
+{\footnotesize\ttfamily visit\+\_\+timeout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 294 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a55c4615d48d027f72f50c4e8996945ce}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a55c4615d48d027f72f50c4e8996945ce}} 
+\index{RequestFactory@{RequestFactory}!visit\_verify@{visit\_verify}}
+\index{visit\_verify@{visit\_verify}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{visit\_verify()}{visit\_verify()}}
+{\footnotesize\ttfamily visit\+\_\+verify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$value,  }\item[{}]{\$flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 319 of file Request\+Factory.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a19a9c0c53afec7457cbf466f9c1e4745}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a19a9c0c53afec7457cbf466f9c1e4745}} 
+\index{RequestFactory@{RequestFactory}!\$entityEnclosingRequestClass@{\$entityEnclosingRequestClass}}
+\index{\$entityEnclosingRequestClass@{\$entityEnclosingRequestClass}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{\$entityEnclosingRequestClass}{$entityEnclosingRequestClass}}
+{\footnotesize\ttfamily \$entity\+Enclosing\+Request\+Class = \textquotesingle{}Guzzle\textbackslash{}\textbackslash{}\+Http\textbackslash{}\textbackslash{}\+Message\textbackslash{}\textbackslash{}\+Entity\+Enclosing\+Request\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ad9d7ce33ebb142b70e58b68052ca0ea8}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_ad9d7ce33ebb142b70e58b68052ca0ea8}} 
+\index{RequestFactory@{RequestFactory}!\$instance@{\$instance}}
+\index{\$instance@{\$instance}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{\$instance}{$instance}}
+{\footnotesize\ttfamily \$instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a802753499268a04da139bd6e6ef89b35}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a802753499268a04da139bd6e6ef89b35}} 
+\index{RequestFactory@{RequestFactory}!\$methods@{\$methods}}
+\index{\$methods@{\$methods}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{\$methods}{$methods}}
+{\footnotesize\ttfamily \$methods\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 20 of file Request\+Factory.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a2ee678563333dc3b0d998085ad1d2aff}\label{class_guzzle_1_1_http_1_1_message_1_1_request_factory_a2ee678563333dc3b0d998085ad1d2aff}} 
+\index{RequestFactory@{RequestFactory}!\$requestClass@{\$requestClass}}
+\index{\$requestClass@{\$requestClass}!RequestFactory@{RequestFactory}}
+\doxysubsubsection{\texorpdfstring{\$requestClass}{$requestClass}}
+{\footnotesize\ttfamily \$request\+Class = \textquotesingle{}Guzzle\textbackslash{}\textbackslash{}\+Http\textbackslash{}\textbackslash{}\+Message\textbackslash{}\textbackslash{}\+Request\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file Request\+Factory.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Http/\+Message/\mbox{\hyperlink{_request_factory_8php}{Request\+Factory.\+php}}\end{DoxyCompactItemize}

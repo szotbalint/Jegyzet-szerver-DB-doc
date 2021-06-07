@@ -1,0 +1,297 @@
+\hypertarget{class_stripe_1_1_customer}{}\doxysection{Customer Class Reference}
+\label{class_stripe_1_1_customer}\index{Customer@{Customer}}
+Inheritance diagram for Customer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_stripe_1_1_customer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stripe_1_1_customer_a36272bc924225238efc2eee854b876ff}{save}} (\$opts=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_customer_af30efeafa3eadade075ef88e5ce4cfd5}{delete}} (\$params=null, \$opts=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_customer_a14b72f0a6f92a7d2b7000539e4101d5b}{add\+Invoice\+Item}} (\$params=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_customer_a63c7587f49e9996ac1693f01a1a1b02f}{invoices}} (\$params=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_customer_af051edf104b650279e37ddad3dce5413}{invoice\+Items}} (\$params=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_customer_aa280207b140c0d54aa5c906de14d628b}{charges}} (\$params=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_customer_a2d625675faffe60c03a9ce92f224973f}{update\+Subscription}} (\$params=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_customer_a4c0fc87a29cb767d90bd05eee1652b64}{cancel\+Subscription}} (\$params=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_customer_a81f04e92fef5c8efa0479b67d644eea3}{delete\+Discount}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_customer_a758a5118de102e5cab5c9c68864b07c7}{retrieve}} (\$id, \$opts=null)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_customer_ac3eba2668dea2e3deac0f09bfea416c2}{all}} (\$params=null, \$opts=null)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_customer_a4dc9366b498ccb081364695d75107775}{create}} (\$params=null, \$opts=null)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_customer_a93a32034843cb2e92901d3e3d90dc1d5}{update}} (\$id, \$params=null, \$options=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 27 of file Customer.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stripe_1_1_customer_a14b72f0a6f92a7d2b7000539e4101d5b}\label{class_stripe_1_1_customer_a14b72f0a6f92a7d2b7000539e4101d5b}} 
+\index{Customer@{Customer}!addInvoiceItem@{addInvoiceItem}}
+\index{addInvoiceItem@{addInvoiceItem}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{addInvoiceItem()}{addInvoiceItem()}}
+{\footnotesize\ttfamily add\+Invoice\+Item (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_invoice_item}{Invoice\+Item}} The resulting invoice item. 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_ac3eba2668dea2e3deac0f09bfea416c2}\label{class_stripe_1_1_customer_ac3eba2668dea2e3deac0f09bfea416c2}} 
+\index{Customer@{Customer}!all@{all}}
+\index{all@{all}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily static all (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_collection}{Collection}} of Customers 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_a4c0fc87a29cb767d90bd05eee1652b64}\label{class_stripe_1_1_customer_a4c0fc87a29cb767d90bd05eee1652b64}} 
+\index{Customer@{Customer}!cancelSubscription@{cancelSubscription}}
+\index{cancelSubscription@{cancelSubscription}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{cancelSubscription()}{cancelSubscription()}}
+{\footnotesize\ttfamily cancel\+Subscription (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_subscription}{Subscription}} The cancelled subscription. 
+\end{DoxyReturn}
+
+
+Definition at line 173 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_aa280207b140c0d54aa5c906de14d628b}\label{class_stripe_1_1_customer_aa280207b140c0d54aa5c906de14d628b}} 
+\index{Customer@{Customer}!charges@{charges}}
+\index{charges@{charges}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{charges()}{charges()}}
+{\footnotesize\ttfamily charges (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of the customer\textquotesingle{}s Charges. 
+\end{DoxyReturn}
+
+
+Definition at line 145 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_a4dc9366b498ccb081364695d75107775}\label{class_stripe_1_1_customer_a4dc9366b498ccb081364695d75107775}} 
+\index{Customer@{Customer}!create@{create}}
+\index{create@{create}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static create (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_customer}{Customer}} The created customer. 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_af30efeafa3eadade075ef88e5ce4cfd5}\label{class_stripe_1_1_customer_af30efeafa3eadade075ef88e5ce4cfd5}} 
+\index{Customer@{Customer}!delete@{delete}}
+\index{delete@{delete}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_customer}{Customer}} The deleted customer. 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_a81f04e92fef5c8efa0479b67d644eea3}\label{class_stripe_1_1_customer_a81f04e92fef5c8efa0479b67d644eea3}} 
+\index{Customer@{Customer}!deleteDiscount@{deleteDiscount}}
+\index{deleteDiscount@{deleteDiscount}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{deleteDiscount()}{deleteDiscount()}}
+{\footnotesize\ttfamily delete\+Discount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_customer}{Customer}} The updated customer. 
+\end{DoxyReturn}
+
+
+Definition at line 184 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_af051edf104b650279e37ddad3dce5413}\label{class_stripe_1_1_customer_af051edf104b650279e37ddad3dce5413}} 
+\index{Customer@{Customer}!invoiceItems@{invoiceItems}}
+\index{invoiceItems@{invoiceItems}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{invoiceItems()}{invoiceItems()}}
+{\footnotesize\ttfamily invoice\+Items (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of the customer\textquotesingle{}s Invoice\+Items. 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_a63c7587f49e9996ac1693f01a1a1b02f}\label{class_stripe_1_1_customer_a63c7587f49e9996ac1693f01a1a1b02f}} 
+\index{Customer@{Customer}!invoices@{invoices}}
+\index{invoices@{invoices}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{invoices()}{invoices()}}
+{\footnotesize\ttfamily invoices (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array of the customer\textquotesingle{}s Invoices. 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_a758a5118de102e5cab5c9c68864b07c7}\label{class_stripe_1_1_customer_a758a5118de102e5cab5c9c68864b07c7}} 
+\index{Customer@{Customer}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{retrieve()}{retrieve()}}
+{\footnotesize\ttfamily static retrieve (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The ID of the customer to retrieve. \\
+\hline
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_customer}{Customer}} 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_a36272bc924225238efc2eee854b876ff}\label{class_stripe_1_1_customer_a36272bc924225238efc2eee854b876ff}} 
+\index{Customer@{Customer}!save@{save}}
+\index{save@{save}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_customer}{Customer}} The saved customer. 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_a93a32034843cb2e92901d3e3d90dc1d5}\label{class_stripe_1_1_customer_a93a32034843cb2e92901d3e3d90dc1d5}} 
+\index{Customer@{Customer}!update@{update}}
+\index{update@{update}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily static update (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The ID of the customer to update. \\
+\hline
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_customer}{Customer}} The updated customer. 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file Customer.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_customer_a2d625675faffe60c03a9ce92f224973f}\label{class_stripe_1_1_customer_a2d625675faffe60c03a9ce92f224973f}} 
+\index{Customer@{Customer}!updateSubscription@{updateSubscription}}
+\index{updateSubscription@{updateSubscription}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{updateSubscription()}{updateSubscription()}}
+{\footnotesize\ttfamily update\+Subscription (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_subscription}{Subscription}} The updated subscription. 
+\end{DoxyReturn}
+
+
+Definition at line 160 of file Customer.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/stripe/stripe-\/php/lib/\mbox{\hyperlink{_customer_8php}{Customer.\+php}}\end{DoxyCompactItemize}

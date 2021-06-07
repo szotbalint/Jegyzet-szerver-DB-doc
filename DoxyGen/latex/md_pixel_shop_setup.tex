@@ -1,0 +1,54 @@
+Before starting it is necessary to install the following plugins\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://octobercms.com/plugin/rainlab-user}{\texttt{ Rain\+Lab.\+User}}
+\item \href{https://octobercms.com/plugin/rainlab-location}{\texttt{ Rain\+Lab.\+Location}}
+\item \href{https://octobercms.com/plugin/responsiv-currency}{\texttt{ Responsiv.\+Currency}}
+\item \href{https://octobercms.com/plugin/rainlab-pages}{\texttt{ Rain\+Lab.\+Pages (Recomendable)}}
+\item \href{https://octobercms.com/plugin/rainlab-translate}{\texttt{ Rain\+Lab.\+Translate (Recomendable)}}
+\end{DoxyItemize}
+
+Then we will begin to integrate the components to our current theme.
+
+The integration of this plugin is very simple and we can finish it in a few steps. You can also download a sample theme from \href{http://demos.pixel.hn/october-plugins/shop/demo.zip}{\texttt{ here}}\hypertarget{md_pixel_shop_setup_autotoc_md22}{}\doxysection{First Step}\label{md_pixel_shop_setup_autotoc_md22}
+We make sure that in the layout we use always contain within the $<$/ head$>$ tag the twig tag {\ttfamily \{\% styles\%\}}, and before closing the $<$body $>$ tag the twig tags {\ttfamily \{\% framework extras\%\}} and {\ttfamily \{\% scripts \%\}}.
+
+… $<$head$>$ … \{\% styles \%\} $<$/head$>$ $<$body$>$ … \{\% framework extras \%\} \{\% scripts \%\} $<$body$>$
+
+Next we will integrate the {\ttfamily Cart Button} component in any part of the layout, this will help us to keep the button always present in any page of the site. We can also configure it to our liking, being able to change the text and background color of the botton.
+
+\hypertarget{md_pixel_shop_setup_autotoc_md23}{}\doxysection{Second Step}\label{md_pixel_shop_setup_autotoc_md23}
+We will create the following pages with their respective routes including the following components\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily /profile} \+: Account
+\item {\ttfamily /cart/\+:step?} \+: Cart
+\item {\ttfamily /products/\+:category?} \+: Products
+\item {\ttfamily /product/\+:slug} \+: Product Detail
+\end{DoxyItemize}
+
+You can include the component inside a div container for better control.
+
+The names of the routes are optional and can vary according to your taste but what can not vary are the names of the parameters of the routes (eg ... /\+: step?)
+
+We make sure that all the configurations of each component are correct. We have to take into account to link each component with its respective page. Below is an example of the default settings of each component\+:\hypertarget{md_pixel_shop_setup_autotoc_md24}{}\doxyparagraph{Account Component}\label{md_pixel_shop_setup_autotoc_md24}
+Component that includes the login and registration functionalities. Once the user is logged in they can show all their data on this page.
+
+\hypertarget{md_pixel_shop_setup_autotoc_md25}{}\doxyparagraph{Cart Component}\label{md_pixel_shop_setup_autotoc_md25}
+This component includes all the functionalities of the final purchase, product summary, shipping information and billing.
+
+\hypertarget{md_pixel_shop_setup_autotoc_md26}{}\doxyparagraph{Products Component}\label{md_pixel_shop_setup_autotoc_md26}
+This component shows a list of all products, you can easily parameterize what products you want to display with a large number of filtering and sorting options.
+
+\hypertarget{md_pixel_shop_setup_autotoc_md27}{}\doxyparagraph{Product Details Component}\label{md_pixel_shop_setup_autotoc_md27}
+This component includes all the independent information and details of each product, including web libraries already integrated for gallery and zoom.
+
+\hypertarget{md_pixel_shop_setup_autotoc_md28}{}\doxysection{Final Step}\label{md_pixel_shop_setup_autotoc_md28}
+To finish that our shop is ready, the next thing is to go to our backend and configure the final details.\hypertarget{md_pixel_shop_setup_autotoc_md29}{}\doxyparagraph{ \+Sales Preferences}\label{md_pixel_shop_setup_autotoc_md29}
+In this section we will make sure to configure the default image for the products, in case a product does not have images in its gallery. We must make sure to enter all the details of our trade such as name, email and address as these will appear on the generated purchase receipts. We will also enter all the existing tax types with their respective description, and then select these taxes when creating/modifying each product.\hypertarget{md_pixel_shop_setup_autotoc_md30}{}\doxyparagraph{Payment Methods}\label{md_pixel_shop_setup_autotoc_md30}
+Here we will configure the payment methods to accept, we can also limit different methods of payment per country. Be sure to enable the methods before you start using.\hypertarget{md_pixel_shop_setup_autotoc_md31}{}\doxyparagraph{Countries \& States}\label{md_pixel_shop_setup_autotoc_md31}
+We will enable the countries and states where we will make shipments and configure shipping fees ​​depending on the place.\hypertarget{md_pixel_shop_setup_autotoc_md32}{}\doxyparagraph{Currencies}\label{md_pixel_shop_setup_autotoc_md32}
+Here we will enable the currencies to be used and we will define the default currency in our store.\hypertarget{md_pixel_shop_setup_autotoc_md33}{}\doxysection{Start Selling}\label{md_pixel_shop_setup_autotoc_md33}
+The next thing will be to start using the plugin by entering all the inventory in order to start making sales on our site and with that we have {\itshape finished}. 

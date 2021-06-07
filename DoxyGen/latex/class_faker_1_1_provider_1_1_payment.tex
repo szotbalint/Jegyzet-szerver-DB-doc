@@ -1,0 +1,225 @@
+\hypertarget{class_faker_1_1_provider_1_1_payment}{}\doxysection{Payment Class Reference}
+\label{class_faker_1_1_provider_1_1_payment}\index{Payment@{Payment}}
+Inheritance diagram for Payment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_faker_1_1_provider_1_1_payment}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_a3280fba97ce422b82a0ba59c72345637}{credit\+Card\+Expiration\+Date}} (\$valid=true)
+\item 
+\mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_a7186be889a542e1dce16181beba2bfe7}{credit\+Card\+Expiration\+Date\+String}} (\$valid=true, \$expiration\+Date\+Format=null)
+\item 
+\mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_a035f137f9657a0927746ed162f1aa6ce}{credit\+Card\+Details}} (\$valid=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_a693f0bf93e15100b4f366008ffc78b72}{credit\+Card\+Type}} ()
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_a394c3dd6d51d955486451f6fdd801b55}{credit\+Card\+Number}} (\$type=null, \$formatted=false, \$separator=\textquotesingle{}-\/\textquotesingle{})
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_a29bca3dd1a9572cce6c264dd56d29d15}{swift\+Bic\+Number}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_ae7294c0d7992159cd1c37f5cfb9181b8}{\$expiration\+Date\+Format}} = \char`\"{}m/y\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_adc06bcb5d726b3556bc0bda961c904a8}{iban}} (\$country\+Code, \$prefix=\textquotesingle{}\textquotesingle{}, \$length=null)
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_ac74bd0112b179a9d17c88d4ffde029db}{add\+Bank\+Code\+Checksum}} (\$\mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_adc06bcb5d726b3556bc0bda961c904a8}{iban}}, \$country\+Code=\textquotesingle{}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_a3680d7915758a5bded055b756cc0eac5}{\$card\+Vendors}}
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_ae0eea0d62b30c9475f2c8e225246b658}{\$card\+Params}}
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_a8d58ebb5ae98d6ad27d6bbdb6099a212}{\$iban\+Formats}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 7 of file Payment.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_ac74bd0112b179a9d17c88d4ffde029db}\label{class_faker_1_1_provider_1_1_payment_ac74bd0112b179a9d17c88d4ffde029db}} 
+\index{Payment@{Payment}!addBankCodeChecksum@{addBankCodeChecksum}}
+\index{addBankCodeChecksum@{addBankCodeChecksum}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{addBankCodeChecksum()}{addBankCodeChecksum()}}
+{\footnotesize\ttfamily static add\+Bank\+Code\+Checksum (\begin{DoxyParamCaption}\item[{}]{\$iban,  }\item[{}]{\$country\+Code = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Calculates a checksum for the national bank and branch code part in the IBAN.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$iban} & randomly generated \$iban \\
+\hline
+string & {\em \$country\+Code} & ISO 3166-\/1 alpha-\/2 country code \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string IBAN with one character altered to a proper checksum 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_a6c581edc70663e25477a875c5765a9f2}{Payment}}.
+
+
+
+Definition at line 282 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_a035f137f9657a0927746ed162f1aa6ce}\label{class_faker_1_1_provider_1_1_payment_a035f137f9657a0927746ed162f1aa6ce}} 
+\index{Payment@{Payment}!creditCardDetails@{creditCardDetails}}
+\index{creditCardDetails@{creditCardDetails}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{creditCardDetails()}{creditCardDetails()}}
+{\footnotesize\ttfamily credit\+Card\+Details (\begin{DoxyParamCaption}\item[{}]{\$valid = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+boolean & {\em \$valid} & True (by default) to get a valid expiration date, false to get a maybe valid date \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_faker_1_1_provider_1_1zh___t_w_1_1_payment_a035f137f9657a0927746ed162f1aa6ce}{Payment}}.
+
+
+
+Definition at line 192 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_a3280fba97ce422b82a0ba59c72345637}\label{class_faker_1_1_provider_1_1_payment_a3280fba97ce422b82a0ba59c72345637}} 
+\index{Payment@{Payment}!creditCardExpirationDate@{creditCardExpirationDate}}
+\index{creditCardExpirationDate@{creditCardExpirationDate}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{creditCardExpirationDate()}{creditCardExpirationDate()}}
+{\footnotesize\ttfamily credit\+Card\+Expiration\+Date (\begin{DoxyParamCaption}\item[{}]{\$valid = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 168 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_a7186be889a542e1dce16181beba2bfe7}\label{class_faker_1_1_provider_1_1_payment_a7186be889a542e1dce16181beba2bfe7}} 
+\index{Payment@{Payment}!creditCardExpirationDateString@{creditCardExpirationDateString}}
+\index{creditCardExpirationDateString@{creditCardExpirationDateString}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{creditCardExpirationDateString()}{creditCardExpirationDateString()}}
+{\footnotesize\ttfamily credit\+Card\+Expiration\+Date\+String (\begin{DoxyParamCaption}\item[{}]{\$valid = {\ttfamily true},  }\item[{}]{\$expiration\+Date\+Format = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 183 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_a394c3dd6d51d955486451f6fdd801b55}\label{class_faker_1_1_provider_1_1_payment_a394c3dd6d51d955486451f6fdd801b55}} 
+\index{Payment@{Payment}!creditCardNumber@{creditCardNumber}}
+\index{creditCardNumber@{creditCardNumber}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{creditCardNumber()}{creditCardNumber()}}
+{\footnotesize\ttfamily static credit\+Card\+Number (\begin{DoxyParamCaption}\item[{}]{\$type = {\ttfamily null},  }\item[{}]{\$formatted = {\ttfamily false},  }\item[{}]{\$separator = {\ttfamily \textquotesingle{}-\/\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 142 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_a693f0bf93e15100b4f366008ffc78b72}\label{class_faker_1_1_provider_1_1_payment_a693f0bf93e15100b4f366008ffc78b72}} 
+\index{Payment@{Payment}!creditCardType@{creditCardType}}
+\index{creditCardType@{creditCardType}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{creditCardType()}{creditCardType()}}
+{\footnotesize\ttfamily static credit\+Card\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 127 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_adc06bcb5d726b3556bc0bda961c904a8}\label{class_faker_1_1_provider_1_1_payment_adc06bcb5d726b3556bc0bda961c904a8}} 
+\index{Payment@{Payment}!iban@{iban}}
+\index{iban@{iban}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{iban()}{iban()}}
+{\footnotesize\ttfamily static iban (\begin{DoxyParamCaption}\item[{}]{\$country\+Code,  }\item[{}]{\$prefix = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$length = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+International Bank Account Number (IBAN)
+
+\mbox{\hyperlink{}{string \$country\+Code ISO 3166-\/1 alpha-\/2 country code  string \$prefix for generating bank account number of a specific bank  integer \$length total length without country code and 2 check digits  string }}
+
+Definition at line 213 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_a29bca3dd1a9572cce6c264dd56d29d15}\label{class_faker_1_1_provider_1_1_payment_a29bca3dd1a9572cce6c264dd56d29d15}} 
+\index{Payment@{Payment}!swiftBicNumber@{swiftBicNumber}}
+\index{swiftBicNumber@{swiftBicNumber}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{swiftBicNumber()}{swiftBicNumber()}}
+{\footnotesize\ttfamily static swift\+Bic\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 294 of file Payment.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_ae0eea0d62b30c9475f2c8e225246b658}\label{class_faker_1_1_provider_1_1_payment_ae0eea0d62b30c9475f2c8e225246b658}} 
+\index{Payment@{Payment}!\$cardParams@{\$cardParams}}
+\index{\$cardParams@{\$cardParams}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{\$cardParams}{$cardParams}}
+{\footnotesize\ttfamily \$card\+Params\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 18 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_a3680d7915758a5bded055b756cc0eac5}\label{class_faker_1_1_provider_1_1_payment_a3680d7915758a5bded055b756cc0eac5}} 
+\index{Payment@{Payment}!\$cardVendors@{\$cardVendors}}
+\index{\$cardVendors@{\$cardVendors}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{\$cardVendors}{$cardVendors}}
+{\footnotesize\ttfamily \$card\+Vendors\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'Visa'}, \textcolor{stringliteral}{'Visa'}, \textcolor{stringliteral}{'Visa'}, \textcolor{stringliteral}{'Visa'}, \textcolor{stringliteral}{'Visa'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'MasterCard'}, \textcolor{stringliteral}{'MasterCard'}, \textcolor{stringliteral}{'MasterCard'}, \textcolor{stringliteral}{'MasterCard'}, \textcolor{stringliteral}{'MasterCard'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'American Express'}, \textcolor{stringliteral}{'Discover Card'}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Definition at line 11 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_ae7294c0d7992159cd1c37f5cfb9181b8}\label{class_faker_1_1_provider_1_1_payment_ae7294c0d7992159cd1c37f5cfb9181b8}} 
+\index{Payment@{Payment}!\$expirationDateFormat@{\$expirationDateFormat}}
+\index{\$expirationDateFormat@{\$expirationDateFormat}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{\$expirationDateFormat}{$expirationDateFormat}}
+{\footnotesize\ttfamily \$expiration\+Date\+Format = \char`\"{}m/y\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 9 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1_payment_a8d58ebb5ae98d6ad27d6bbdb6099a212}\label{class_faker_1_1_provider_1_1_payment_a8d58ebb5ae98d6ad27d6bbdb6099a212}} 
+\index{Payment@{Payment}!\$ibanFormats@{\$ibanFormats}}
+\index{\$ibanFormats@{\$ibanFormats}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{\$ibanFormats}{$ibanFormats}}
+{\footnotesize\ttfamily \$iban\+Formats\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 58 of file Payment.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rahman/faker/vendor/fzaninotto/faker/src/\+Faker/\+Provider/\mbox{\hyperlink{_payment_8php}{Payment.\+php}}\end{DoxyCompactItemize}

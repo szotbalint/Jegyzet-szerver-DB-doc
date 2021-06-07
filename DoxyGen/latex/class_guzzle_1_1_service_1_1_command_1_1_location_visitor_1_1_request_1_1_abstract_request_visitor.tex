@@ -1,0 +1,117 @@
+\hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor}{}\doxysection{Abstract\+Request\+Visitor Class Reference}
+\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor}\index{AbstractRequestVisitor@{AbstractRequestVisitor}}
+Inheritance diagram for Abstract\+Request\+Visitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_accbb76becd0a9e7f0af6bda33af71b3c}{after}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_a2220e64cc1ed46d8ac39aac131e13c38}{visit}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}} \$param, \$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_a1e372e74f4e49a7ad35906cba22c0538}{prepare\+Value}} (\$value, \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}} \$param)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_a25cfc17597d2271c99934747f3ffcb38}{resolve\+Recursively}} (array \$value, \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}} \$param)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Abstract\+Request\+Visitor.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_accbb76becd0a9e7f0af6bda33af71b3c}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_accbb76becd0a9e7f0af6bda33af71b3c}} 
+\index{AbstractRequestVisitor@{AbstractRequestVisitor}!after@{after}}
+\index{after@{after}!AbstractRequestVisitor@{AbstractRequestVisitor}}
+\doxysubsubsection{\texorpdfstring{after()}{after()}}
+{\footnotesize\ttfamily after (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+@code\+Coverage\+Ignore 
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_request_visitor_interface_accbb76becd0a9e7f0af6bda33af71b3c}{Request\+Visitor\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_xml_visitor_accbb76becd0a9e7f0af6bda33af71b3c}{Xml\+Visitor}}, and \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_json_visitor_accbb76becd0a9e7f0af6bda33af71b3c}{Json\+Visitor}}.
+
+
+
+Definition at line 14 of file Abstract\+Request\+Visitor.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_a1e372e74f4e49a7ad35906cba22c0538}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_a1e372e74f4e49a7ad35906cba22c0538}} 
+\index{AbstractRequestVisitor@{AbstractRequestVisitor}!prepareValue@{prepareValue}}
+\index{prepareValue@{prepareValue}!AbstractRequestVisitor@{AbstractRequestVisitor}}
+\doxysubsubsection{\texorpdfstring{prepareValue()}{prepareValue()}}
+{\footnotesize\ttfamily prepare\+Value (\begin{DoxyParamCaption}\item[{}]{\$value,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}}}]{\$param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Prepare (filter and set desired name for request item) the value for request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$value} & \\
+\hline
+\textbackslash{}\+Guzzle\textbackslash{}\+Service\textbackslash{}\+Description\textbackslash{}\+Parameter & {\em \$param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$mixed 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file Abstract\+Request\+Visitor.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_a25cfc17597d2271c99934747f3ffcb38}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_a25cfc17597d2271c99934747f3ffcb38}} 
+\index{AbstractRequestVisitor@{AbstractRequestVisitor}!resolveRecursively@{resolveRecursively}}
+\index{resolveRecursively@{resolveRecursively}!AbstractRequestVisitor@{AbstractRequestVisitor}}
+\doxysubsubsection{\texorpdfstring{resolveRecursively()}{resolveRecursively()}}
+{\footnotesize\ttfamily resolve\+Recursively (\begin{DoxyParamCaption}\item[{array}]{\$value,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}}}]{\$param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Map nested parameters into the location\+\_\+key based parameters
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$value} & Value to map \\
+\hline
+Parameter & {\em \$param} & Parameter that holds information about the current key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array Returns the mapped array 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file Abstract\+Request\+Visitor.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_a2220e64cc1ed46d8ac39aac131e13c38}\label{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_abstract_request_visitor_a2220e64cc1ed46d8ac39aac131e13c38}} 
+\index{AbstractRequestVisitor@{AbstractRequestVisitor}!visit@{visit}}
+\index{visit@{visit}!AbstractRequestVisitor@{AbstractRequestVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}}}]{\$param,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+@code\+Coverage\+Ignore 
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_request_visitor_interface_a2220e64cc1ed46d8ac39aac131e13c38}{Request\+Visitor\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_xml_visitor_a2220e64cc1ed46d8ac39aac131e13c38}{Xml\+Visitor}}, \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_response_body_visitor_a2220e64cc1ed46d8ac39aac131e13c38}{Response\+Body\+Visitor}}, \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_query_visitor_a2220e64cc1ed46d8ac39aac131e13c38}{Query\+Visitor}}, \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_post_file_visitor_a2220e64cc1ed46d8ac39aac131e13c38}{Post\+File\+Visitor}}, \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_post_field_visitor_a2220e64cc1ed46d8ac39aac131e13c38}{Post\+Field\+Visitor}}, \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_json_visitor_a2220e64cc1ed46d8ac39aac131e13c38}{Json\+Visitor}}, \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_header_visitor_a2220e64cc1ed46d8ac39aac131e13c38}{Header\+Visitor}}, and \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_location_visitor_1_1_request_1_1_body_visitor_a2220e64cc1ed46d8ac39aac131e13c38}{Body\+Visitor}}.
+
+
+
+Definition at line 19 of file Abstract\+Request\+Visitor.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Command/\+Location\+Visitor/\+Request/\mbox{\hyperlink{_abstract_request_visitor_8php}{Abstract\+Request\+Visitor.\+php}}\end{DoxyCompactItemize}

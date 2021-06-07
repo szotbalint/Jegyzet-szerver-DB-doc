@@ -1,0 +1,399 @@
+\hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle}{}\doxysection{Curl\+Handle Class Reference}
+\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle}\index{CurlHandle@{CurlHandle}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_aa149d838309aca60e29dae03e8f6f0f8}{\+\_\+\+\_\+construct}} (\$handle, \$options)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_af844bb69744e6d772c53f75c551e2f16}{is\+Available}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a24ada5decce3d1b79cd82f5a90ccf404}{get\+Error}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ac14deb11f798f9033ed2c480d4a83582}{get\+Error\+No}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a7869ea8f925d211cc5292b424dbbf0c5}{set\+Error\+No}} (\$error)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ac509a1695bb2a30ffa0a0e7ff6f32ff9}{get\+Info}} (\$option=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a26364faa8b24115aac58a5f0985099e9}{get\+Stderr}} (\$as\+Resource=false)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_accd14bda49a1044b4d8dd93f020f11ee}{get\+Url}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a4b28feacbac39dacb8204a26d1a0ba7b}{get\+Handle}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a1a49b8dded6e91a52e2fd07195d334da}{get\+Options}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a39f7a86c12774eac1c09d8bd700c42fa}{update\+Request\+From\+Transfer}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a2e2f167ab7d4de2b607a7856898265a1}{factory}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ad195537dfefb82f24d8dc363f9377004}{parse\+Curl\+Config}} (\$config)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a35a36802e748ba9f991d3b8ff5e06adb}{BODY\+\_\+\+AS\+\_\+\+STRING}} = \textquotesingle{}body\+\_\+as\+\_\+string\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a543d52cf14847f61a8d9c2ee74b25b0e}{PROGRESS}} = \textquotesingle{}progress\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a758c150b67e476ecf77478f16b387c61}{DEBUG}} = \textquotesingle{}debug\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a011800c63ece4cbbfa77136a20607023}{\$options}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ad86c3fbc5672e1deeafc5229012b0b5d}{\$handle}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a285f743bb37036275eb852a9defa7b71}{\$error\+No}} = CURLE\+\_\+\+OK
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Immutable wrapper for a c\+URL handle 
+
+Definition at line 16 of file Curl\+Handle.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_aa149d838309aca60e29dae03e8f6f0f8}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_aa149d838309aca60e29dae03e8f6f0f8}} 
+\index{CurlHandle@{CurlHandle}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$handle,  }\item[{}]{\$options }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle}{Curl\+Handle}} object that wraps a c\+URL handle
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$handle} & Configured c\+URL handle resource \\
+\hline
+Collection | array & {\em \$options} & \mbox{\hyperlink{namespace_guzzle_1_1_http_1_1_curl}{Curl}} options to use with the handle\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 234 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a421831a265621325e1fdd19aace0c758}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a421831a265621325e1fdd19aace0c758}} 
+\index{CurlHandle@{CurlHandle}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{\_\_destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 252 of file Curl\+Handle.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{CurlHandle@{CurlHandle}!close@{close}}
+\index{close@{close}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Close the curl handle 
+
+Definition at line 260 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a2e2f167ab7d4de2b607a7856898265a1}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a2e2f167ab7d4de2b607a7856898265a1}} 
+\index{CurlHandle@{CurlHandle}!factory@{factory}}
+\index{factory@{factory}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{factory()}{factory()}}
+{\footnotesize\ttfamily static factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Factory method to create a new curl handle based on an HTTP request.
+
+There are some helpful options you can set to enable specific behavior\+:
+\begin{DoxyItemize}
+\item debug\+: Set to true to enable c\+URL debug functionality to track the actual headers sent over the wire.
+\item progress\+: Set to true to enable progress function callbacks.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle}{Curl\+Handle}} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 43 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a24ada5decce3d1b79cd82f5a90ccf404}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a24ada5decce3d1b79cd82f5a90ccf404}} 
+\index{CurlHandle@{CurlHandle}!getError@{getError}}
+\index{getError@{getError}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{getError()}{getError()}}
+{\footnotesize\ttfamily get\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the last error that occurred on the c\+URL handle
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 283 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ac14deb11f798f9033ed2c480d4a83582}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ac14deb11f798f9033ed2c480d4a83582}} 
+\index{CurlHandle@{CurlHandle}!getErrorNo@{getErrorNo}}
+\index{getErrorNo@{getErrorNo}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{getErrorNo()}{getErrorNo()}}
+{\footnotesize\ttfamily get\+Error\+No (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the last error number that occurred on the c\+URL handle
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 293 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a4b28feacbac39dacb8204a26d1a0ba7b}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a4b28feacbac39dacb8204a26d1a0ba7b}} 
+\index{CurlHandle@{CurlHandle}!getHandle@{getHandle}}
+\index{getHandle@{getHandle}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{getHandle()}{getHandle()}}
+{\footnotesize\ttfamily get\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the wrapped curl handle
+
+\begin{DoxyReturn}{Returns}
+resource$\vert$null Returns the c\+URL handle or null if it was closed 
+\end{DoxyReturn}
+
+
+Definition at line 376 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ac509a1695bb2a30ffa0a0e7ff6f32ff9}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ac509a1695bb2a30ffa0a0e7ff6f32ff9}} 
+\index{CurlHandle@{CurlHandle}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily get\+Info (\begin{DoxyParamCaption}\item[{}]{\$option = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Get c\+URL curl\+\_\+getinfo data
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$option} & Option to retrieve. Pass null to retrieve all data as an array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$mixed 
+\end{DoxyReturn}
+
+
+Definition at line 323 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a1a49b8dded6e91a52e2fd07195d334da}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a1a49b8dded6e91a52e2fd07195d334da}} 
+\index{CurlHandle@{CurlHandle}!getOptions@{getOptions}}
+\index{getOptions@{getOptions}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{getOptions()}{getOptions()}}
+{\footnotesize\ttfamily get\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the c\+URL setopt options of the handle. Changing values in the return object will have no effect on the curl handle after it is created.
+
+\begin{DoxyReturn}{Returns}
+Collection 
+\end{DoxyReturn}
+
+
+Definition at line 387 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a26364faa8b24115aac58a5f0985099e9}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a26364faa8b24115aac58a5f0985099e9}} 
+\index{CurlHandle@{CurlHandle}!getStderr@{getStderr}}
+\index{getStderr@{getStderr}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{getStderr()}{getStderr()}}
+{\footnotesize\ttfamily get\+Stderr (\begin{DoxyParamCaption}\item[{}]{\$as\+Resource = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Get the stderr output
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$as\+Resource} & Set to TRUE to get an fopen resource\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$resource$\vert$null 
+\end{DoxyReturn}
+
+
+Definition at line 343 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_accd14bda49a1044b4d8dd93f020f11ee}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_accd14bda49a1044b4d8dd93f020f11ee}} 
+\index{CurlHandle@{CurlHandle}!getUrl@{getUrl}}
+\index{getUrl@{getUrl}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{getUrl()}{getUrl()}}
+{\footnotesize\ttfamily get\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the URL that this handle is connecting to
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_url}{Url}} 
+\end{DoxyReturn}
+
+
+Definition at line 366 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_af844bb69744e6d772c53f75c551e2f16}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_af844bb69744e6d772c53f75c551e2f16}} 
+\index{CurlHandle@{CurlHandle}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}}
+{\footnotesize\ttfamily is\+Available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if the handle is available and still OK
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 273 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ad195537dfefb82f24d8dc363f9377004}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ad195537dfefb82f24d8dc363f9377004}} 
+\index{CurlHandle@{CurlHandle}!parseCurlConfig@{parseCurlConfig}}
+\index{parseCurlConfig@{parseCurlConfig}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{parseCurlConfig()}{parseCurlConfig()}}
+{\footnotesize\ttfamily static parse\+Curl\+Config (\begin{DoxyParamCaption}\item[{}]{\$config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Parse the config and replace curl.$\ast$ configurators into the constant based values so it can be used elsewhere
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | Collection & {\em \$config} & The configuration we want to parse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 448 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a7869ea8f925d211cc5292b424dbbf0c5}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a7869ea8f925d211cc5292b424dbbf0c5}} 
+\index{CurlHandle@{CurlHandle}!setErrorNo@{setErrorNo}}
+\index{setErrorNo@{setErrorNo}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{setErrorNo()}{setErrorNo()}}
+{\footnotesize\ttfamily set\+Error\+No (\begin{DoxyParamCaption}\item[{}]{\$error }\end{DoxyParamCaption})}
+
+Set the curl error number
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$error} & Error number to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle}{Curl\+Handle}} 
+\end{DoxyReturn}
+
+
+Definition at line 309 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a39f7a86c12774eac1c09d8bd700c42fa}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a39f7a86c12774eac1c09d8bd700c42fa}} 
+\index{CurlHandle@{CurlHandle}!updateRequestFromTransfer@{updateRequestFromTransfer}}
+\index{updateRequestFromTransfer@{updateRequestFromTransfer}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{updateRequestFromTransfer()}{updateRequestFromTransfer()}}
+{\footnotesize\ttfamily update\+Request\+From\+Transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+Update a request based on the log messages of the \mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle}{Curl\+Handle}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to update \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 397 of file Curl\+Handle.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a285f743bb37036275eb852a9defa7b71}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a285f743bb37036275eb852a9defa7b71}} 
+\index{CurlHandle@{CurlHandle}!\$errorNo@{\$errorNo}}
+\index{\$errorNo@{\$errorNo}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{\$errorNo}{$errorNo}}
+{\footnotesize\ttfamily \$error\+No = CURLE\+\_\+\+OK\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ad86c3fbc5672e1deeafc5229012b0b5d}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_ad86c3fbc5672e1deeafc5229012b0b5d}} 
+\index{CurlHandle@{CurlHandle}!\$handle@{\$handle}}
+\index{\$handle@{\$handle}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{\$handle}{$handle}}
+{\footnotesize\ttfamily \$handle\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a011800c63ece4cbbfa77136a20607023}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a011800c63ece4cbbfa77136a20607023}} 
+\index{CurlHandle@{CurlHandle}!\$options@{\$options}}
+\index{\$options@{\$options}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{\$options}{$options}}
+{\footnotesize\ttfamily \$options\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a35a36802e748ba9f991d3b8ff5e06adb}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a35a36802e748ba9f991d3b8ff5e06adb}} 
+\index{CurlHandle@{CurlHandle}!BODY\_AS\_STRING@{BODY\_AS\_STRING}}
+\index{BODY\_AS\_STRING@{BODY\_AS\_STRING}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{BODY\_AS\_STRING}{BODY\_AS\_STRING}}
+{\footnotesize\ttfamily const BODY\+\_\+\+AS\+\_\+\+STRING = \textquotesingle{}body\+\_\+as\+\_\+string\textquotesingle{}}
+
+
+
+Definition at line 18 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a758c150b67e476ecf77478f16b387c61}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a758c150b67e476ecf77478f16b387c61}} 
+\index{CurlHandle@{CurlHandle}!DEBUG@{DEBUG}}
+\index{DEBUG@{DEBUG}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{DEBUG}{DEBUG}}
+{\footnotesize\ttfamily const DEBUG = \textquotesingle{}debug\textquotesingle{}}
+
+
+
+Definition at line 20 of file Curl\+Handle.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a543d52cf14847f61a8d9c2ee74b25b0e}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle_a543d52cf14847f61a8d9c2ee74b25b0e}} 
+\index{CurlHandle@{CurlHandle}!PROGRESS@{PROGRESS}}
+\index{PROGRESS@{PROGRESS}!CurlHandle@{CurlHandle}}
+\doxysubsubsection{\texorpdfstring{PROGRESS}{PROGRESS}}
+{\footnotesize\ttfamily const PROGRESS = \textquotesingle{}progress\textquotesingle{}}
+
+
+
+Definition at line 19 of file Curl\+Handle.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Http/\+Curl/\mbox{\hyperlink{_curl_handle_8php}{Curl\+Handle.\+php}}\end{DoxyCompactItemize}

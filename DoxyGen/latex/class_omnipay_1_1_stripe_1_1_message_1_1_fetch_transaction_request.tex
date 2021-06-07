@@ -1,0 +1,98 @@
+\hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request}{}\doxysection{Fetch\+Transaction\+Request Class Reference}
+\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request}\index{FetchTransactionRequest@{FetchTransactionRequest}}
+Inheritance diagram for Fetch\+Transaction\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a28507580eea1c43f0c9599aa095d09a8}{get\+Http\+Method}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} Fetch Transaction Request.
+
+Example -- note this example assumes that the purchase has been successful and that the transaction ID returned from the purchase is held in \$sale\+\_\+id. See \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_purchase_request}{Purchase\+Request}} for the first part of this example transaction\+:
+
+{\ttfamily  // Fetch the transaction so that details can be found for refund, etc. \$transaction = \$gateway-\/$>$fetch\+Transaction(); \$transaction-\/$>$set\+Transaction\+Reference(\$sale\+\_\+id); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; \$data = \$response-\/$>$\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data()}}; echo \char`\"{}\+Gateway fetch\+Transaction response data == \char`\"{} . print\+\_\+r(\$data, true) . \char`\"{}\textbackslash{}n\char`\"{}; }
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_purchase_request}{Purchase\+Request}} 
+
+\mbox{\hyperlink{class_omnipay_1_1_omnipay}{Omnipay}}\textbackslash{}\+Stripe\textbackslash{}\+Gateway \mbox{\hyperlink{}{https\+://stripe.\+com/docs/api\#retrieve\+\_\+charge}}
+\end{DoxySeeAlso}
+
+
+Definition at line 28 of file Fetch\+Transaction\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{FetchTransactionRequest@{FetchTransactionRequest}!getData@{getData}}
+\index{getData@{getData}!FetchTransactionRequest@{FetchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 30 of file Fetch\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{FetchTransactionRequest@{FetchTransactionRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!FetchTransactionRequest@{FetchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Request}}.
+
+
+
+Definition at line 39 of file Fetch\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a28507580eea1c43f0c9599aa095d09a8}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a28507580eea1c43f0c9599aa095d09a8}} 
+\index{FetchTransactionRequest@{FetchTransactionRequest}!getHttpMethod@{getHttpMethod}}
+\index{getHttpMethod@{getHttpMethod}!FetchTransactionRequest@{FetchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getHttpMethod()}{getHttpMethod()}}
+{\footnotesize\ttfamily get\+Http\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get HTTP Method.
+
+This is nearly always POST but can be over-\/ridden in sub classes.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a28507580eea1c43f0c9599aa095d09a8}{Abstract\+Request}}.
+
+
+
+Definition at line 44 of file Fetch\+Transaction\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/stripe/src/\+Message/\mbox{\hyperlink{stripe_2src_2_message_2_fetch_transaction_request_8php}{Fetch\+Transaction\+Request.\+php}}\end{DoxyCompactItemize}

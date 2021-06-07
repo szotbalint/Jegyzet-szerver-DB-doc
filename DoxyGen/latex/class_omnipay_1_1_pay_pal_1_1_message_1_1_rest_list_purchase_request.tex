@@ -1,0 +1,303 @@
+\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request}{}\doxysection{Rest\+List\+Purchase\+Request Class Reference}
+\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request}\index{RestListPurchaseRequest@{RestListPurchaseRequest}}
+Inheritance diagram for Rest\+List\+Purchase\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a24d4dbc71552d9387256a3cc426e3898}{get\+Count}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_aef524b4587d287f5092584e4d28cfd7c}{set\+Count}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_abeeffa140b38413964d713456ac4b4ab}{get\+Start\+Id}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a1c0540e80ce7b95bc98c6b5376b9d0a6}{set\+Start\+Id}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a9a4a3ac9513b2e6065c6e4a8528034d1}{get\+Start\+Index}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_aceb3d5ca13b2bbb50daacd8eab1f9d17}{set\+Start\+Index}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a568a7fafd601b520ff8c4bd91c962e29}{get\+Start\+Time}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a28e2d22d3b244349fd6d49102eab963c}{set\+Start\+Time}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a553a46d707ec3e83965c44c41f449f68}{get\+End\+Time}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a8337bb3d338158cdbf5edca82d24db02}{set\+End\+Time}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a28507580eea1c43f0c9599aa095d09a8}{get\+Http\+Method}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST List Purchase Request
+
+Use this call to get a list of payments in any state (created, approved, failed, etc.). The payments returned are the payments made to the merchant making the call.\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_autotoc_md169}{}\doxyparagraph{Example}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_autotoc_md169}
+See \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_purchase_request}{Rest\+Purchase\+Request}} for the first part of this example transaction\+:
+
+{\ttfamily  // Make some Date\+Times for start and end times \$start\+\_\+time = new \textbackslash{}\+Date\+Time(\textquotesingle{}yesterday\textquotesingle{}); \$end\+\_\+time = new \textbackslash{}\+Date\+Time(\textquotesingle{}now\textquotesingle{});}
+
+{\ttfamily  // List the transaction so that details can be found for refund, etc. \$transaction = \$gateway-\/$>$list\+Purchase( \textquotesingle{}start\+Time\textquotesingle{} =$>$ \$start\+\_\+time, \textquotesingle{}end\+Time =$>$ \$end\+\_\+time ); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; \$data = \$response-\/$>$\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data()}}; echo \char`\"{}\+Gateway list\+Purchase response data == \char`\"{} . print\+\_\+r(\$data, true) . \char`\"{}\textbackslash{}n\char`\"{}; }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_autotoc_md170}{}\doxyparagraph{Request Sample}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_autotoc_md170}
+This is from the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} web site\+:
+
+{\ttfamily  curl -\/v -\/X GET \href{https://api.sandbox.paypal.com/v1/payments/payment?}{\texttt{ https\+://api.\+sandbox.\+paypal.\+com/v1/payments/payment?}} sort\+\_\+order=asc\&sort\+\_\+by=update\+\_\+time \textbackslash{} -\/H \char`\"{}\+Content-\/\+Type\+:application/json\char`\"{} \textbackslash{} -\/H \char`\"{}\+Authorization\+: Bearer $<$\+Access-\/\+Token$>$\char`\"{} }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_autotoc_md171}{}\doxyparagraph{Response Sample}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_autotoc_md171}
+This is from the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} web site\+:
+
+{\ttfamily  \{ \char`\"{}payments\char`\"{}\+: \mbox{[} \{ \char`\"{}id\char`\"{}\+: \char`\"{}\+PAY-\/4\+D099447\+DD202993\+VKEFMRJQ\char`\"{}, \char`\"{}create\+\_\+time\char`\"{}\+: \char`\"{}2013-\/01-\/31\+T19\+:40\+:22\+Z\char`\"{}, \char`\"{}update\+\_\+time\char`\"{}\+: \char`\"{}2013-\/01-\/31\+T19\+:40\+:24\+Z\char`\"{}, \char`\"{}state\char`\"{}\+: \char`\"{}approved\char`\"{}, \char`\"{}intent\char`\"{}\+: \char`\"{}sale\char`\"{}, \char`\"{}payer\char`\"{}\+: \{ \char`\"{}payment\+\_\+method\char`\"{}\+: \char`\"{}credit\+\_\+card\char`\"{}, \char`\"{}funding\+\_\+instruments\char`\"{}\+: \mbox{[} \{ \char`\"{}credit\+\_\+card\char`\"{}\+: \{ \char`\"{}type\char`\"{}\+: \char`\"{}visa\char`\"{}, \char`\"{}number\char`\"{}\+: \char`\"{}xxxxxxxxxxxx0331\char`\"{}, \char`\"{}expire\+\_\+month\char`\"{}\+: \char`\"{}10\char`\"{}, \char`\"{}expire\+\_\+year\char`\"{}\+: \char`\"{}2018\char`\"{}, \char`\"{}first\+\_\+name\char`\"{}\+: \char`\"{}\+Betsy\char`\"{}, \char`\"{}last\+\_\+name\char`\"{}\+: \char`\"{}\+Buyer\char`\"{}, \char`\"{}billing\+\_\+address\char`\"{}\+: \{ \char`\"{}line1\char`\"{}\+: \char`\"{}111 First Street\char`\"{}, \char`\"{}city\char`\"{}\+: \char`\"{}\+Saratoga\char`\"{}, \char`\"{}state\char`\"{}\+: \char`\"{}\+CA\char`\"{}, \char`\"{}postal\+\_\+code\char`\"{}\+: \char`\"{}95070\char`\"{}, \char`\"{}country\+\_\+code\char`\"{}\+: \char`\"{}\+US\char`\"{} \} \} \} \mbox{]} \}, \char`\"{}transactions\char`\"{}\+: \mbox{[} \{ \char`\"{}amount\char`\"{}\+: \{ \char`\"{}total\char`\"{}\+: \char`\"{}110.\+54\char`\"{}, \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{} \}, \char`\"{}description\char`\"{}\+: \char`\"{}\+This is the payment transaction description.\char`\"{}, \char`\"{}related\+\_\+resources\char`\"{}\+: \mbox{[} \{ \char`\"{}sale\char`\"{}\+: \{ \char`\"{}id\char`\"{}\+: \char`\"{}1\+D971400\+A7097562\+W\char`\"{}, \char`\"{}create\+\_\+time\char`\"{}\+: \char`\"{}2013-\/01-\/31\+T19\+:40\+:23\+Z\char`\"{}, \char`\"{}update\+\_\+time\char`\"{}\+: \char`\"{}2013-\/01-\/31\+T19\+:40\+:25\+Z\char`\"{}, \char`\"{}state\char`\"{}\+: \char`\"{}completed\char`\"{}, \char`\"{}amount\char`\"{}\+: \{ \char`\"{}total\char`\"{}\+: \char`\"{}110.\+54\char`\"{}, \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{} \}, \char`\"{}parent\+\_\+payment\char`\"{}\+: \char`\"{}\+PAY-\/4\+D099447\+DD202993\+VKEFMRJQ\char`\"{}, \char`\"{}links\char`\"{}\+: \mbox{[} \{ \char`\"{}href\char`\"{}\+: \char`\"{}https\+://api.\+sandbox.\+paypal.\+com/v1/payments/sale/1\+D971400\+A7097562\+W\char`\"{}, \char`\"{}rel\char`\"{}\+: \char`\"{}self\char`\"{}, \char`\"{}method\char`\"{}\+: \char`\"{}\+GET\char`\"{} \}, \{ \char`\"{}href\char`\"{}\+: \char`\"{}https\+://api.\+sandbox.\+paypal.\+com/v1/payments/sale/1\+D971400\+A7097562\+W/refund\char`\"{}, \char`\"{}rel\char`\"{}\+: \char`\"{}refund\char`\"{}, \char`\"{}method\char`\"{}\+: \char`\"{}\+POST\char`\"{} \}, \{ \char`\"{}href\char`\"{}\+: \char`\"{}https\+://api.\+sandbox.\+paypal.\+com/v1/payments/payment/\+PAY-\/4\+D099447\+DD202993\+VKEFMRJQ\char`\"{}, \char`\"{}rel\char`\"{}\+: \char`\"{}parent\+\_\+payment\char`\"{}, \char`\"{}method\char`\"{}\+: \char`\"{}\+GET\char`\"{} \} \mbox{]} \} \} \mbox{]} \} \mbox{]}, \char`\"{}links\char`\"{}\+: \mbox{[} \{ \char`\"{}href\char`\"{}\+: \char`\"{}https\+://api.\+sandbox.\+paypal.\+com/v1/payments/payment/\+PAY-\/4\+D099447\+DD202993\+VKEFMRJQ\char`\"{}, \char`\"{}rel\char`\"{}\+: \char`\"{}self\char`\"{}, \char`\"{}method\char`\"{}\+: \char`\"{}\+GET\char`\"{} \} \mbox{]} \} \mbox{]} \} }
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_purchase_request}{Rest\+Purchase\+Request}} \mbox{\hyperlink{}{https\+://developer.\+paypal.\+com/docs/api/\#list-\/payment-\/resources}}
+\end{DoxySeeAlso}
+
+
+Definition at line 140 of file Rest\+List\+Purchase\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a24d4dbc71552d9387256a3cc426e3898}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a24d4dbc71552d9387256a3cc426e3898}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!getCount@{getCount}}
+\index{getCount@{getCount}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the request count
+
+\begin{DoxyReturn}{Returns}
+integer 
+\end{DoxyReturn}
+
+
+Definition at line 147 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!getData@{getData}}
+\index{getData@{getData}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 255 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 278 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a553a46d707ec3e83965c44c41f449f68}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a553a46d707ec3e83965c44c41f449f68}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!getEndTime@{getEndTime}}
+\index{getEndTime@{getEndTime}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{getEndTime()}{getEndTime()}}
+{\footnotesize\ttfamily get\+End\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the request end\+Time
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 235 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a28507580eea1c43f0c9599aa095d09a8}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a28507580eea1c43f0c9599aa095d09a8}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!getHttpMethod@{getHttpMethod}}
+\index{getHttpMethod@{getHttpMethod}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{getHttpMethod()}{getHttpMethod()}}
+{\footnotesize\ttfamily get\+Http\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get HTTP Method.
+
+The HTTP method for list\+Purchase requests must be GET.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a28507580eea1c43f0c9599aa095d09a8}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 273 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_abeeffa140b38413964d713456ac4b4ab}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_abeeffa140b38413964d713456ac4b4ab}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!getStartId@{getStartId}}
+\index{getStartId@{getStartId}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{getStartId()}{getStartId()}}
+{\footnotesize\ttfamily get\+Start\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the request start\+Id
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 168 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a9a4a3ac9513b2e6065c6e4a8528034d1}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a9a4a3ac9513b2e6065c6e4a8528034d1}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!getStartIndex@{getStartIndex}}
+\index{getStartIndex@{getStartIndex}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{getStartIndex()}{getStartIndex()}}
+{\footnotesize\ttfamily get\+Start\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the request start\+Index
+
+\begin{DoxyReturn}{Returns}
+integer 
+\end{DoxyReturn}
+
+
+Definition at line 189 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a568a7fafd601b520ff8c4bd91c962e29}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a568a7fafd601b520ff8c4bd91c962e29}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!getStartTime@{getStartTime}}
+\index{getStartTime@{getStartTime}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{getStartTime()}{getStartTime()}}
+{\footnotesize\ttfamily get\+Start\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the request start\+Time
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 210 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_aef524b4587d287f5092584e4d28cfd7c}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_aef524b4587d287f5092584e4d28cfd7c}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!setCount@{setCount}}
+\index{setCount@{setCount}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{setCount()}{setCount()}}
+{\footnotesize\ttfamily set\+Count (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the request count
+
+
+\begin{DoxyParams}[1]{Parameters}
+integer & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request}{Abstract\+Rest\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 158 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a8337bb3d338158cdbf5edca82d24db02}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a8337bb3d338158cdbf5edca82d24db02}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!setEndTime@{setEndTime}}
+\index{setEndTime@{setEndTime}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{setEndTime()}{setEndTime()}}
+{\footnotesize\ttfamily set\+End\+Time (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the request end\+Time
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | \textbackslash{}\+Date\+Time & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request}{Abstract\+Rest\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 246 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a1c0540e80ce7b95bc98c6b5376b9d0a6}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a1c0540e80ce7b95bc98c6b5376b9d0a6}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!setStartId@{setStartId}}
+\index{setStartId@{setStartId}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{setStartId()}{setStartId()}}
+{\footnotesize\ttfamily set\+Start\+Id (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the request start\+Id
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request}{Abstract\+Rest\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 179 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_aceb3d5ca13b2bbb50daacd8eab1f9d17}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_aceb3d5ca13b2bbb50daacd8eab1f9d17}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!setStartIndex@{setStartIndex}}
+\index{setStartIndex@{setStartIndex}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{setStartIndex()}{setStartIndex()}}
+{\footnotesize\ttfamily set\+Start\+Index (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the request start\+Index
+
+
+\begin{DoxyParams}[1]{Parameters}
+integer & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request}{Abstract\+Rest\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file Rest\+List\+Purchase\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a28e2d22d3b244349fd6d49102eab963c}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request_a28e2d22d3b244349fd6d49102eab963c}} 
+\index{RestListPurchaseRequest@{RestListPurchaseRequest}!setStartTime@{setStartTime}}
+\index{setStartTime@{setStartTime}!RestListPurchaseRequest@{RestListPurchaseRequest}}
+\doxysubsubsection{\texorpdfstring{setStartTime()}{setStartTime()}}
+{\footnotesize\ttfamily set\+Start\+Time (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the request start\+Time
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | \textbackslash{}\+Date\+Time & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request}{Abstract\+Rest\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 221 of file Rest\+List\+Purchase\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/paypal/src/\+Message/\mbox{\hyperlink{_rest_list_purchase_request_8php}{Rest\+List\+Purchase\+Request.\+php}}\end{DoxyCompactItemize}

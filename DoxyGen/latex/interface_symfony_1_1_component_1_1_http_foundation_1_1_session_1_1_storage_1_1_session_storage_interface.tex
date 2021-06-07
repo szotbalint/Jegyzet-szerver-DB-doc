@@ -1,0 +1,266 @@
+\hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface}{}\doxysection{Session\+Storage\+Interface Interface Reference}
+\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface}\index{SessionStorageInterface@{SessionStorageInterface}}
+Inheritance diagram for Session\+Storage\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_af8fa59992209e36dccb3eefb0f75531f}{start}} ()
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a1ffe0e26cd53b764f58c5bbed489c278}{is\+Started}} ()
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a12251d0c022e9e21c137a105ff683f13}{get\+Id}} ()
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a87313ad678fb2a2a8efb435cf0bdb9a0}{set\+Id}} (\$id)
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a2fe666694997d047711d7653eca2f132}{set\+Name}} (\$name)
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_aeb0b5bdaa103935ac1950fd06febc413}{regenerate}} (\$destroy=false, \$lifetime=null)
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_afc8a3c62679cf00ade9f15fb2a6d6132}{save}} ()
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_aa821bec12eaa7e0f649397c9675ff505}{clear}} ()
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a760b5434be3756081f7e76557e3b50e3}{get\+Bag}} (\$name)
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a2024067b6a9efc942ee5dfe06d5b1ac5}{register\+Bag}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_session_bag_interface}{Session\+Bag\+Interface}} \$bag)
+\item 
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a9a1b173d31b64c649accf679f98ce93c}{get\+Metadata\+Bag}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Storage\+Interface.
+
+\begin{DoxyAuthor}{Author}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\texttt{ fabien@symfony.\+com}} 
+
+Drak \href{mailto:drak@zikula.org}{\texttt{ drak@zikula.\+org}} 
+\end{DoxyAuthor}
+
+
+Definition at line 22 of file Session\+Storage\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_aa821bec12eaa7e0f649397c9675ff505}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_aa821bec12eaa7e0f649397c9675ff505}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!clear@{clear}}
+\index{clear@{clear}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear all session data in memory. 
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_php_bridge_session_storage_aa821bec12eaa7e0f649397c9675ff505}{Php\+Bridge\+Session\+Storage}}, \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_aa821bec12eaa7e0f649397c9675ff505}{Native\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_aa821bec12eaa7e0f649397c9675ff505}{Mock\+Array\+Session\+Storage}}.
+
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a760b5434be3756081f7e76557e3b50e3}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a760b5434be3756081f7e76557e3b50e3}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!getBag@{getBag}}
+\index{getBag@{getBag}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{getBag()}{getBag()}}
+{\footnotesize\ttfamily get\+Bag (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Gets a \mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_session_bag_interface}{Session\+Bag\+Interface}} by name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_session_bag_interface}{Session\+Bag\+Interface}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_a760b5434be3756081f7e76557e3b50e3}{Native\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_a760b5434be3756081f7e76557e3b50e3}{Mock\+Array\+Session\+Storage}}.
+
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a12251d0c022e9e21c137a105ff683f13}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a12251d0c022e9e21c137a105ff683f13}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!getId@{getId}}
+\index{getId@{getId}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the session ID.
+
+\begin{DoxyReturn}{Returns}
+string The session ID or empty 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_a12251d0c022e9e21c137a105ff683f13}{Native\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_a12251d0c022e9e21c137a105ff683f13}{Mock\+Array\+Session\+Storage}}.
+
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a9a1b173d31b64c649accf679f98ce93c}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a9a1b173d31b64c649accf679f98ce93c}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!getMetadataBag@{getMetadataBag}}
+\index{getMetadataBag@{getMetadataBag}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{getMetadataBag()}{getMetadataBag()}}
+{\footnotesize\ttfamily get\+Metadata\+Bag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_metadata_bag}{Metadata\+Bag}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_a9a1b173d31b64c649accf679f98ce93c}{Native\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_a9a1b173d31b64c649accf679f98ce93c}{Mock\+Array\+Session\+Storage}}.
+
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a3d0963e68bb313b163a73f2803c64600}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a3d0963e68bb313b163a73f2803c64600}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!getName@{getName}}
+\index{getName@{getName}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the session name.
+
+\begin{DoxyReturn}{Returns}
+mixed The session name 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_a3d0963e68bb313b163a73f2803c64600}{Native\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_a3d0963e68bb313b163a73f2803c64600}{Mock\+Array\+Session\+Storage}}.
+
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a1ffe0e26cd53b764f58c5bbed489c278}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a1ffe0e26cd53b764f58c5bbed489c278}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!isStarted@{isStarted}}
+\index{isStarted@{isStarted}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{isStarted()}{isStarted()}}
+{\footnotesize\ttfamily is\+Started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the session is started.
+
+\begin{DoxyReturn}{Returns}
+bool True if started, false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_a1ffe0e26cd53b764f58c5bbed489c278}{Native\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_a1ffe0e26cd53b764f58c5bbed489c278}{Mock\+Array\+Session\+Storage}}.
+
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_aeb0b5bdaa103935ac1950fd06febc413}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_aeb0b5bdaa103935ac1950fd06febc413}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!regenerate@{regenerate}}
+\index{regenerate@{regenerate}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{regenerate()}{regenerate()}}
+{\footnotesize\ttfamily regenerate (\begin{DoxyParamCaption}\item[{}]{\$destroy = {\ttfamily false},  }\item[{}]{\$lifetime = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Regenerates id that represents this storage.
+
+This method must invoke session\+\_\+regenerate\+\_\+id(\$destroy) unless this interface is used for a storage object designed for unit or functional testing where a real PHP session would interfere with testing.
+
+Note regenerate+destroy should not clear the session data in memory only delete the session data from persistent storage.
+
+Care\+: When regenerating the session ID no locking is involved in PHP\textquotesingle{}s session design. See \href{https://bugs.php.net/61470}{\texttt{ https\+://bugs.\+php.\+net/61470}} for a discussion. So you must make sure the regenerated session is saved BEFORE sending the headers with the new ID. Symfony\textquotesingle{}s Http\+Kernel offers a listener for this. See Symfony\textbackslash{}\+Component\textbackslash{}\+Http\+Kernel\textbackslash{}\+Event\+Listener\textbackslash{}\+Save\+Session\+Listener. Otherwise session data could get lost again for concurrent requests with the new ID. One result could be that you get logged out after just logging in.
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$destroy} & Destroy session when regenerating? \\
+\hline
+int & {\em \$lifetime} & Sets the cookie lifetime for the session cookie. A null value will leave the system settings unchanged, 0 sets the cookie to expire with browser session. Time is in seconds, and is not a Unix timestamp.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if session regenerated, false if error
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_aeb0b5bdaa103935ac1950fd06febc413}{Native\+Session\+Storage}}, \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_file_session_storage_aeb0b5bdaa103935ac1950fd06febc413}{Mock\+File\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_aeb0b5bdaa103935ac1950fd06febc413}{Mock\+Array\+Session\+Storage}}.
+
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a2024067b6a9efc942ee5dfe06d5b1ac5}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a2024067b6a9efc942ee5dfe06d5b1ac5}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!registerBag@{registerBag}}
+\index{registerBag@{registerBag}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{registerBag()}{registerBag()}}
+{\footnotesize\ttfamily register\+Bag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_session_bag_interface}{Session\+Bag\+Interface}}}]{\$bag }\end{DoxyParamCaption})}
+
+Registers a \mbox{\hyperlink{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_session_bag_interface}{Session\+Bag\+Interface}} for use. 
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_a2024067b6a9efc942ee5dfe06d5b1ac5}{Native\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_a2024067b6a9efc942ee5dfe06d5b1ac5}{Mock\+Array\+Session\+Storage}}.
+
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_afc8a3c62679cf00ade9f15fb2a6d6132}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_afc8a3c62679cf00ade9f15fb2a6d6132}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!save@{save}}
+\index{save@{save}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Force the session to be saved and closed.
+
+This method must invoke session\+\_\+write\+\_\+close() unless this interface is used for a storage object design for unit or functional testing where a real PHP session would interfere with testing, in which case it should actually persist the session data if required.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_afc8a3c62679cf00ade9f15fb2a6d6132}{Native\+Session\+Storage}}, \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_file_session_storage_afc8a3c62679cf00ade9f15fb2a6d6132}{Mock\+File\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_afc8a3c62679cf00ade9f15fb2a6d6132}{Mock\+Array\+Session\+Storage}}.
+
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a87313ad678fb2a2a8efb435cf0bdb9a0}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a87313ad678fb2a2a8efb435cf0bdb9a0}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!setId@{setId}}
+\index{setId@{setId}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily set\+Id (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Sets the session ID.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_a87313ad678fb2a2a8efb435cf0bdb9a0}{Native\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_a87313ad678fb2a2a8efb435cf0bdb9a0}{Mock\+Array\+Session\+Storage}}.
+
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a2fe666694997d047711d7653eca2f132}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_a2fe666694997d047711d7653eca2f132}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!setName@{setName}}
+\index{setName@{setName}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily set\+Name (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Sets the session name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_a2fe666694997d047711d7653eca2f132}{Native\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_a2fe666694997d047711d7653eca2f132}{Mock\+Array\+Session\+Storage}}.
+
+\mbox{\Hypertarget{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_af8fa59992209e36dccb3eefb0f75531f}\label{interface_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_session_storage_interface_af8fa59992209e36dccb3eefb0f75531f}} 
+\index{SessionStorageInterface@{SessionStorageInterface}!start@{start}}
+\index{start@{start}!SessionStorageInterface@{SessionStorageInterface}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Starts the session.
+
+\begin{DoxyReturn}{Returns}
+bool True if started
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_php_bridge_session_storage_af8fa59992209e36dccb3eefb0f75531f}{Php\+Bridge\+Session\+Storage}}, \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_native_session_storage_af8fa59992209e36dccb3eefb0f75531f}{Native\+Session\+Storage}}, \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_file_session_storage_af8fa59992209e36dccb3eefb0f75531f}{Mock\+File\+Session\+Storage}}, and \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_mock_array_session_storage_af8fa59992209e36dccb3eefb0f75531f}{Mock\+Array\+Session\+Storage}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/symfony/http-\/foundation/\+Session/\+Storage/\mbox{\hyperlink{_session_storage_interface_8php}{Session\+Storage\+Interface.\+php}}\end{DoxyCompactItemize}

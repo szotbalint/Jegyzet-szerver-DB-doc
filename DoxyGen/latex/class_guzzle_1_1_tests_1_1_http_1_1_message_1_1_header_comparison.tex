@@ -1,0 +1,99 @@
+\hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_message_1_1_header_comparison}{}\doxysection{Header\+Comparison Class Reference}
+\label{class_guzzle_1_1_tests_1_1_http_1_1_message_1_1_header_comparison}\index{HeaderComparison@{HeaderComparison}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_message_1_1_header_comparison_af8b08522e731763507b843e626317028}{compare}} (\$filtered\+Headers, \$actual\+Headers)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_message_1_1_header_comparison_a6c00c5b10085df3be2ef7e2246311d09}{compare\+Array}} (array \$expected, \$actual, array \$ignore=array(), array \$absent=array())
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_http_1_1_message_1_1_header_comparison_a3a1762c7abce5cbb8a9afbea0a87a5ec}{has\+Key}} (\$key, \$array)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class used to compare HTTP headers using a custom DSL 
+
+Definition at line 11 of file Header\+Comparison.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_message_1_1_header_comparison_af8b08522e731763507b843e626317028}\label{class_guzzle_1_1_tests_1_1_http_1_1_message_1_1_header_comparison_af8b08522e731763507b843e626317028}} 
+\index{HeaderComparison@{HeaderComparison}!compare@{compare}}
+\index{compare@{compare}!HeaderComparison@{HeaderComparison}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily compare (\begin{DoxyParamCaption}\item[{}]{\$filtered\+Headers,  }\item[{}]{\$actual\+Headers }\end{DoxyParamCaption})}
+
+Compare HTTP headers and use special markup to filter values A header prefixed with \textquotesingle{}!\textquotesingle{} means it must not exist A header prefixed with \textquotesingle{}\+\_\+\textquotesingle{} means it must be ignored A header value of \textquotesingle{}$\ast$\textquotesingle{} means anything after the $\ast$ will be ignored
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$filtered\+Headers} & Array of special headers \\
+\hline
+array & {\em \$actual\+Headers} & Array of headers to check against\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$bool Returns an array of the differences or FALSE if none 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file Header\+Comparison.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_message_1_1_header_comparison_a6c00c5b10085df3be2ef7e2246311d09}\label{class_guzzle_1_1_tests_1_1_http_1_1_message_1_1_header_comparison_a6c00c5b10085df3be2ef7e2246311d09}} 
+\index{HeaderComparison@{HeaderComparison}!compareArray@{compareArray}}
+\index{compareArray@{compareArray}!HeaderComparison@{HeaderComparison}}
+\doxysubsubsection{\texorpdfstring{compareArray()}{compareArray()}}
+{\footnotesize\ttfamily compare\+Array (\begin{DoxyParamCaption}\item[{array}]{\$expected,  }\item[{}]{\$actual,  }\item[{array}]{\$ignore = {\ttfamily array()},  }\item[{array}]{\$absent = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Check if an array of HTTP headers matches another array of HTTP headers while taking $\ast$ into account as a wildcard
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$expected} & Expected HTTP headers (allows wildcard values) \\
+\hline
+array | Collection & {\em \$actual} & Actual HTTP header array \\
+\hline
+array & {\em \$ignore} & Headers to ignore from the comparison \\
+\hline
+array & {\em \$absent} & Array of headers that must not be present\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$bool Returns an array of the differences or FALSE if none 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file Header\+Comparison.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_http_1_1_message_1_1_header_comparison_a3a1762c7abce5cbb8a9afbea0a87a5ec}\label{class_guzzle_1_1_tests_1_1_http_1_1_message_1_1_header_comparison_a3a1762c7abce5cbb8a9afbea0a87a5ec}} 
+\index{HeaderComparison@{HeaderComparison}!hasKey@{hasKey}}
+\index{hasKey@{hasKey}!HeaderComparison@{HeaderComparison}}
+\doxysubsubsection{\texorpdfstring{hasKey()}{hasKey()}}
+{\footnotesize\ttfamily has\+Key (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Case insensitive check if an array have a key
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & Key to check \\
+\hline
+array & {\em \$array} & Array to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Header\+Comparison.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/tests/\+Guzzle/\+Tests/\+Http/\+Message/\mbox{\hyperlink{_header_comparison_8php}{Header\+Comparison.\+php}}\end{DoxyCompactItemize}

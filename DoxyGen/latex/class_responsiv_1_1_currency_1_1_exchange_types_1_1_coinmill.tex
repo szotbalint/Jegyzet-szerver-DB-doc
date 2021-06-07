@@ -1,0 +1,110 @@
+\hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill}{}\doxysection{Coinmill Class Reference}
+\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill}\index{Coinmill@{Coinmill}}
+Inheritance diagram for Coinmill\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_ac4b6c9de73b5801b5ae7072e42fa5b35}{converter\+Details}} ()
+\item 
+\mbox{\hyperlink{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_a796d684dfe8bb4371b6cd84518324984}{get\+Exchange\+Rate}} (\$from\+Currency, \$to\+Currency)
+\item 
+\mbox{\hyperlink{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_a41e204d237cd3933aacaec11c46a31b7}{define\+Form\+Fields}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_aa9c3f00ad89212e52eb3139dbebbfc28}{API\+\_\+\+URL}} = \textquotesingle{}http\+://coinmill.\+com/rss/AUD\+\_\+\+USD.\+xml\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 5 of file Coinmill.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_ac4b6c9de73b5801b5ae7072e42fa5b35}\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_ac4b6c9de73b5801b5ae7072e42fa5b35}} 
+\index{Coinmill@{Coinmill}!converterDetails@{converterDetails}}
+\index{converterDetails@{converterDetails}!Coinmill@{Coinmill}}
+\doxysubsubsection{\texorpdfstring{converterDetails()}{converterDetails()}}
+{\footnotesize\ttfamily converter\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns information about the converter type Must return array\+:
+
+\mbox{[} \textquotesingle{}name\textquotesingle{} =$>$ \textquotesingle{}XE.\+com\textquotesingle{}, \textquotesingle{}description\textquotesingle{} =$>$ \textquotesingle{}Conversion services provided by XE.\textquotesingle{} \mbox{]}
+
+\begin{DoxyReturn}{Returns}
+array
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_responsiv_1_1_currency_1_1_classes_1_1_exchange_base_ac4b6c9de73b5801b5ae7072e42fa5b35}{Exchange\+Base}}.
+
+
+
+Definition at line 12 of file Coinmill.\+php.
+
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_a41e204d237cd3933aacaec11c46a31b7}\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_a41e204d237cd3933aacaec11c46a31b7}} 
+\index{Coinmill@{Coinmill}!defineFormFields@{defineFormFields}}
+\index{defineFormFields@{defineFormFields}!Coinmill@{Coinmill}}
+\doxysubsubsection{\texorpdfstring{defineFormFields()}{defineFormFields()}}
+{\footnotesize\ttfamily define\+Form\+Fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Extra field configuration for the converter type. 
+
+Reimplemented from \mbox{\hyperlink{class_responsiv_1_1_currency_1_1_classes_1_1_exchange_base_a41e204d237cd3933aacaec11c46a31b7}{Exchange\+Base}}.
+
+
+
+Definition at line 31 of file Coinmill.\+php.
+
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_a796d684dfe8bb4371b6cd84518324984}\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_a796d684dfe8bb4371b6cd84518324984}} 
+\index{Coinmill@{Coinmill}!getExchangeRate@{getExchangeRate}}
+\index{getExchangeRate@{getExchangeRate}!Coinmill@{Coinmill}}
+\doxysubsubsection{\texorpdfstring{getExchangeRate()}{getExchangeRate()}}
+{\footnotesize\ttfamily get\+Exchange\+Rate (\begin{DoxyParamCaption}\item[{}]{\$from\+Currency,  }\item[{}]{\$to\+Currency }\end{DoxyParamCaption})}
+
+Returns an exchange rate for two currencies. 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$from\+Currency} & Currency code to convert from (eg\+: USD) \\
+\hline
+string & {\em \$to\+Currency} & Currency code to convert to (eg\+: AUD) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_responsiv_1_1_currency_1_1_classes_1_1_exchange_base_a796d684dfe8bb4371b6cd84518324984}{Exchange\+Base}}.
+
+
+
+Definition at line 23 of file Coinmill.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_aa9c3f00ad89212e52eb3139dbebbfc28}\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coinmill_aa9c3f00ad89212e52eb3139dbebbfc28}} 
+\index{Coinmill@{Coinmill}!API\_URL@{API\_URL}}
+\index{API\_URL@{API\_URL}!Coinmill@{Coinmill}}
+\doxysubsubsection{\texorpdfstring{API\_URL}{API\_URL}}
+{\footnotesize\ttfamily const API\+\_\+\+URL = \textquotesingle{}http\+://coinmill.\+com/rss/AUD\+\_\+\+USD.\+xml\textquotesingle{}}
+
+
+
+Definition at line 7 of file Coinmill.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+responsiv/currency/exchangetypes/\mbox{\hyperlink{_coinmill_8php}{Coinmill.\+php}}\end{DoxyCompactItemize}

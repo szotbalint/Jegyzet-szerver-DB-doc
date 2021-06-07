@@ -1,0 +1,221 @@
+\hypertarget{class_guzzle_1_1_http_1_1_io_emitting_entity_body}{}\doxysection{Io\+Emitting\+Entity\+Body Class Reference}
+\label{class_guzzle_1_1_http_1_1_io_emitting_entity_body}\index{IoEmittingEntityBody@{IoEmittingEntityBody}}
+Inheritance diagram for Io\+Emitting\+Entity\+Body\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_guzzle_1_1_http_1_1_io_emitting_entity_body}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_io_emitting_entity_body_ab221482695dcfcfd27f5324a3be8a9ce}{set\+Event\+Dispatcher}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface}{Event\+Dispatcher\+Interface}} \$event\+Dispatcher)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a1038704d0a304d447214b6a700e7607f}{get\+Event\+Dispatcher}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a4832696f62fa06e2cb7345019826c118}{dispatch}} (\$event\+Name, array \$context=array())
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a2f54737e2e4b383a901cae736143bd2d}{add\+Subscriber}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface}{Event\+Subscriber\+Interface}} \$subscriber)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a2acacba716a933935d63b2bacf52cff6}{read}} (\$length)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_io_emitting_entity_body_abf9a4eaa4b5194cc450e80c1a0c23a5a}{write}} (\$string)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a0cf9c0f01ef8b36bdd76aa204c35c194}{get\+All\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a9defbea70f3dcceef0b7b148a11e3e5e}{\$event\+Dispatcher}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_entity_body}{Entity\+Body}} decorator that emits events for read and write methods 
+
+Definition at line 14 of file Io\+Emitting\+Entity\+Body.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a2f54737e2e4b383a901cae736143bd2d}\label{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a2f54737e2e4b383a901cae736143bd2d}} 
+\index{IoEmittingEntityBody@{IoEmittingEntityBody}!addSubscriber@{addSubscriber}}
+\index{addSubscriber@{addSubscriber}!IoEmittingEntityBody@{IoEmittingEntityBody}}
+\doxysubsubsection{\texorpdfstring{addSubscriber()}{addSubscriber()}}
+{\footnotesize\ttfamily add\+Subscriber (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface}{Event\+Subscriber\+Interface}}}]{\$subscriber }\end{DoxyParamCaption})}
+
+\{Add an event subscriber to the dispatcher
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event\+Subscriber\+Interface & {\em \$subscriber} & \mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} subscriber\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self
+\end{DoxyReturn}
+\} @code\+Coverage\+Ignore 
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_common_1_1_has_dispatcher_interface_a2f54737e2e4b383a901cae736143bd2d}{Has\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 53 of file Io\+Emitting\+Entity\+Body.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a4832696f62fa06e2cb7345019826c118}\label{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a4832696f62fa06e2cb7345019826c118}} 
+\index{IoEmittingEntityBody@{IoEmittingEntityBody}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!IoEmittingEntityBody@{IoEmittingEntityBody}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$event\+Name,  }\item[{array}]{\$context = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Helper to dispatch Guzzle events and set the event name on the event
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & Name of the event to dispatch \\
+\hline
+array & {\em \$context} & Context of the event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Event Returns the created event object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_common_1_1_has_dispatcher_interface_a4832696f62fa06e2cb7345019826c118}{Has\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 44 of file Io\+Emitting\+Entity\+Body.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a0cf9c0f01ef8b36bdd76aa204c35c194}\label{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a0cf9c0f01ef8b36bdd76aa204c35c194}} 
+\index{IoEmittingEntityBody@{IoEmittingEntityBody}!getAllEvents@{getAllEvents}}
+\index{getAllEvents@{getAllEvents}!IoEmittingEntityBody@{IoEmittingEntityBody}}
+\doxysubsubsection{\texorpdfstring{getAllEvents()}{getAllEvents()}}
+{\footnotesize\ttfamily static get\+All\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a list of all of the events emitted from the class
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_common_1_1_has_dispatcher_interface_a0cf9c0f01ef8b36bdd76aa204c35c194}{Has\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 19 of file Io\+Emitting\+Entity\+Body.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a1038704d0a304d447214b6a700e7607f}\label{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a1038704d0a304d447214b6a700e7607f}} 
+\index{IoEmittingEntityBody@{IoEmittingEntityBody}!getEventDispatcher@{getEventDispatcher}}
+\index{getEventDispatcher@{getEventDispatcher}!IoEmittingEntityBody@{IoEmittingEntityBody}}
+\doxysubsubsection{\texorpdfstring{getEventDispatcher()}{getEventDispatcher()}}
+{\footnotesize\ttfamily get\+Event\+Dispatcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the Event\+Dispatcher of the request
+
+\begin{DoxyReturn}{Returns}
+Event\+Dispatcher\+Interface 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_common_1_1_has_dispatcher_interface_a1038704d0a304d447214b6a700e7607f}{Has\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 35 of file Io\+Emitting\+Entity\+Body.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a2acacba716a933935d63b2bacf52cff6}\label{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a2acacba716a933935d63b2bacf52cff6}} 
+\index{IoEmittingEntityBody@{IoEmittingEntityBody}!read@{read}}
+\index{read@{read}!IoEmittingEntityBody@{IoEmittingEntityBody}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily read (\begin{DoxyParamCaption}\item[{}]{\$length }\end{DoxyParamCaption})}
+
+Read data from the stream
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$length} & Up to length number of bytes read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$bool Returns the data read from the stream or FALSE on failure or EOF 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_http_1_1_abstract_entity_body_decorator_a2acacba716a933935d63b2bacf52cff6}{Abstract\+Entity\+Body\+Decorator}}.
+
+
+
+Definition at line 60 of file Io\+Emitting\+Entity\+Body.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_io_emitting_entity_body_ab221482695dcfcfd27f5324a3be8a9ce}\label{class_guzzle_1_1_http_1_1_io_emitting_entity_body_ab221482695dcfcfd27f5324a3be8a9ce}} 
+\index{IoEmittingEntityBody@{IoEmittingEntityBody}!setEventDispatcher@{setEventDispatcher}}
+\index{setEventDispatcher@{setEventDispatcher}!IoEmittingEntityBody@{IoEmittingEntityBody}}
+\doxysubsubsection{\texorpdfstring{setEventDispatcher()}{setEventDispatcher()}}
+{\footnotesize\ttfamily set\+Event\+Dispatcher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface}{Event\+Dispatcher\+Interface}}}]{\$event\+Dispatcher }\end{DoxyParamCaption})}
+
+\{Set the Event\+Dispatcher of the request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event\+Dispatcher\+Interface & {\em \$event\+Dispatcher} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self
+\end{DoxyReturn}
+\} @code\+Coverage\+Ignore 
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_common_1_1_has_dispatcher_interface_ab221482695dcfcfd27f5324a3be8a9ce}{Has\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 28 of file Io\+Emitting\+Entity\+Body.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_io_emitting_entity_body_abf9a4eaa4b5194cc450e80c1a0c23a5a}\label{class_guzzle_1_1_http_1_1_io_emitting_entity_body_abf9a4eaa4b5194cc450e80c1a0c23a5a}} 
+\index{IoEmittingEntityBody@{IoEmittingEntityBody}!write@{write}}
+\index{write@{write}!IoEmittingEntityBody@{IoEmittingEntityBody}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{}]{\$string }\end{DoxyParamCaption})}
+
+Write data to the stream
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$string} & The string that is to be written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int$\vert$bool Returns the number of bytes written to the stream on success or FALSE on failure. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_http_1_1_abstract_entity_body_decorator_abf9a4eaa4b5194cc450e80c1a0c23a5a}{Abstract\+Entity\+Body\+Decorator}}.
+
+
+
+Definition at line 72 of file Io\+Emitting\+Entity\+Body.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a9defbea70f3dcceef0b7b148a11e3e5e}\label{class_guzzle_1_1_http_1_1_io_emitting_entity_body_a9defbea70f3dcceef0b7b148a11e3e5e}} 
+\index{IoEmittingEntityBody@{IoEmittingEntityBody}!\$eventDispatcher@{\$eventDispatcher}}
+\index{\$eventDispatcher@{\$eventDispatcher}!IoEmittingEntityBody@{IoEmittingEntityBody}}
+\doxysubsubsection{\texorpdfstring{\$eventDispatcher}{$eventDispatcher}}
+{\footnotesize\ttfamily \$event\+Dispatcher\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Io\+Emitting\+Entity\+Body.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Http/\mbox{\hyperlink{_io_emitting_entity_body_8php}{Io\+Emitting\+Entity\+Body.\+php}}\end{DoxyCompactItemize}

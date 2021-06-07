@@ -1,0 +1,132 @@
+\hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_version}{}\doxysection{Curl\+Version Class Reference}
+\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_version}\index{CurlVersion@{CurlVersion}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_aba0d5b303383fb5b1fabb5fd01cd3800}{get\+All}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_aeb77cb61bb1cfe36bef32411a042f0e5}{get}} (\$type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_ac93fbec81f07e5d15f80db907e63dc10}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_a17c8948c68aa44fa9961ae169b6a8961}{\$version}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_a500e55626e728acd7010143dc0e56b8b}{\$user\+Agent}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_ad9d7ce33ebb142b70e58b68052ca0ea8}{\$instance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class used for querying curl\+\_\+version data 
+
+Definition at line 8 of file Curl\+Version.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_aeb77cb61bb1cfe36bef32411a042f0e5}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_aeb77cb61bb1cfe36bef32411a042f0e5}} 
+\index{CurlVersion@{CurlVersion}!get@{get}}
+\index{get@{get}!CurlVersion@{CurlVersion}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{}]{\$type }\end{DoxyParamCaption})}
+
+Get a specific type of curl information
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & Version information to retrieve. This value is one of\+:
+\begin{DoxyItemize}
+\item version\+\_\+number\+: c\+URL 24 bit version number
+\item version\+: c\+URL version number, as a string
+\item ssl\+\_\+version\+\_\+number\+: Open\+SSL 24 bit version number
+\item ssl\+\_\+version\+: Open\+SSL version number, as a string
+\item libz\+\_\+version\+: zlib version number, as a string
+\item host\+: Information about the host where c\+URL was built
+\item features\+: A bitmask of the CURL\+\_\+\+VERSION\+\_\+\+XXX constants
+\item protocols\+: An array of protocols names supported by c\+URL
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$float$\vert$bool if the \$type is found, and false if not found 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Curl\+Version.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_aba0d5b303383fb5b1fabb5fd01cd3800}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_aba0d5b303383fb5b1fabb5fd01cd3800}} 
+\index{CurlVersion@{CurlVersion}!getAll@{getAll}}
+\index{getAll@{getAll}!CurlVersion@{CurlVersion}}
+\doxysubsubsection{\texorpdfstring{getAll()}{getAll()}}
+{\footnotesize\ttfamily get\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get all of the curl\+\_\+version() data
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file Curl\+Version.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_ac93fbec81f07e5d15f80db907e63dc10}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_ac93fbec81f07e5d15f80db907e63dc10}} 
+\index{CurlVersion@{CurlVersion}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!CurlVersion@{CurlVersion}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_version}{Curl\+Version}} 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file Curl\+Version.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_ad9d7ce33ebb142b70e58b68052ca0ea8}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_ad9d7ce33ebb142b70e58b68052ca0ea8}} 
+\index{CurlVersion@{CurlVersion}!\$instance@{\$instance}}
+\index{\$instance@{\$instance}!CurlVersion@{CurlVersion}}
+\doxysubsubsection{\texorpdfstring{\$instance}{$instance}}
+{\footnotesize\ttfamily \$instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file Curl\+Version.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_a500e55626e728acd7010143dc0e56b8b}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_a500e55626e728acd7010143dc0e56b8b}} 
+\index{CurlVersion@{CurlVersion}!\$userAgent@{\$userAgent}}
+\index{\$userAgent@{\$userAgent}!CurlVersion@{CurlVersion}}
+\doxysubsubsection{\texorpdfstring{\$userAgent}{$userAgent}}
+{\footnotesize\ttfamily \$user\+Agent\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Curl\+Version.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_a17c8948c68aa44fa9961ae169b6a8961}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_version_a17c8948c68aa44fa9961ae169b6a8961}} 
+\index{CurlVersion@{CurlVersion}!\$version@{\$version}}
+\index{\$version@{\$version}!CurlVersion@{CurlVersion}}
+\doxysubsubsection{\texorpdfstring{\$version}{$version}}
+{\footnotesize\ttfamily \$version\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 11 of file Curl\+Version.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Http/\+Curl/\mbox{\hyperlink{_curl_version_8php}{Curl\+Version.\+php}}\end{DoxyCompactItemize}

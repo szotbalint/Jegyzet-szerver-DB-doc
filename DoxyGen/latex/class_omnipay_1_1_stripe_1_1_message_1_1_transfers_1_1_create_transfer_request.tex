@@ -1,0 +1,112 @@
+\hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request}{}\doxysection{Create\+Transfer\+Request Class Reference}
+\label{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request}\index{CreateTransferRequest@{CreateTransferRequest}}
+Inheritance diagram for Create\+Transfer\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_a820362ea438c510468481c9d3e095593}{get\+Source\+Transaction}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_afb8b68a41835fa2b47354035f8b39a3b}{set\+Source\+Transaction}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} Transfer Request.
+
+To send funds from your \mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} account to a connected account, you create a new transfer object. Your \mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} balance must be able to cover the transfer amount, or you\textquotesingle{}ll receive an \char`\"{}\+Insufficient Funds\char`\"{} error.
+
+Example -- note this example assumes that the original charge was successful
+
+{\ttfamily  // Create the transfer object when moving funds between \mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} accounts \$transaction = \$gateway-\/$>$transfer(array( \textquotesingle{}amount\textquotesingle{} =$>$ \textquotesingle{}10.\+00\textquotesingle{}, \textquotesingle{}currency\textquotesingle{} =$>$ \textquotesingle{}AUD\textquotesingle{}, \textquotesingle{}transfer\+Group\textquotesingle{} =$>$ \textquotesingle{}\{ORDER10\}\textquotesingle{}, \textquotesingle{}destination\textquotesingle{} =$>$ \textquotesingle{}\{CONNECTED\+\_\+\+STRIPE\+\_\+\+ACCOUNT\+\_\+\+ID\}\textquotesingle{}, )); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; }
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_authorize_request}{Authorize\+Request}} \mbox{\hyperlink{}{https\+://stripe.\+com/docs/connect/charges-\/transfers}}
+\end{DoxySeeAlso}
+
+
+Definition at line 35 of file Create\+Transfer\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{CreateTransferRequest@{CreateTransferRequest}!getData@{getData}}
+\index{getData@{getData}!CreateTransferRequest@{CreateTransferRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_authorize_request_a81a67162a6288d78fc4c55283325f0b4}{Authorize\+Request}}.
+
+
+
+Definition at line 64 of file Create\+Transfer\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{CreateTransferRequest@{CreateTransferRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!CreateTransferRequest@{CreateTransferRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_authorize_request_a7b3348502e757cb471a0507924c336a1}{Authorize\+Request}}.
+
+
+
+Definition at line 89 of file Create\+Transfer\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_a820362ea438c510468481c9d3e095593}\label{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_a820362ea438c510468481c9d3e095593}} 
+\index{CreateTransferRequest@{CreateTransferRequest}!getSourceTransaction@{getSourceTransaction}}
+\index{getSourceTransaction@{getSourceTransaction}!CreateTransferRequest@{CreateTransferRequest}}
+\doxysubsubsection{\texorpdfstring{getSourceTransaction()}{getSourceTransaction()}}
+{\footnotesize\ttfamily get\+Source\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Create\+Transfer\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_afb8b68a41835fa2b47354035f8b39a3b}\label{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_afb8b68a41835fa2b47354035f8b39a3b}} 
+\index{CreateTransferRequest@{CreateTransferRequest}!setSourceTransaction@{setSourceTransaction}}
+\index{setSourceTransaction@{setSourceTransaction}!CreateTransferRequest@{CreateTransferRequest}}
+\doxysubsubsection{\texorpdfstring{setSourceTransaction()}{setSourceTransaction()}}
+{\footnotesize\ttfamily set\+Source\+Transaction (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+When creating separate charges and transfers, your platform can inadvertently attempt a transfer without having a sufficient available balance. Doing so raises an error and the transfer attempt fails. If you’re commonly experiencing this problem, you can use the {\ttfamily source\+\_\+transaction} parameter to tie a transfer to an existing charge. By using {\ttfamily source\+\_\+transaction}, the transfer request succeeds regardless of your available balance and the transfer itself only occurs once the charge’s funds become available.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Abstract\+Request 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file Create\+Transfer\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/stripe/src/\+Message/\+Transfers/\mbox{\hyperlink{_create_transfer_request_8php}{Create\+Transfer\+Request.\+php}}\end{DoxyCompactItemize}

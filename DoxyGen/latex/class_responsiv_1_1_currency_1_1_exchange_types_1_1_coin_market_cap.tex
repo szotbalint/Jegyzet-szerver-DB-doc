@@ -1,0 +1,137 @@
+\hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap}{}\doxysection{Coin\+Market\+Cap Class Reference}
+\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap}\index{CoinMarketCap@{CoinMarketCap}}
+Inheritance diagram for Coin\+Market\+Cap\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_ac4b6c9de73b5801b5ae7072e42fa5b35}{converter\+Details}} ()
+\item 
+\mbox{\hyperlink{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a796d684dfe8bb4371b6cd84518324984}{get\+Exchange\+Rate}} (\$from\+Currency, \$to\+Currency)
+\item 
+\mbox{\hyperlink{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a41e204d237cd3933aacaec11c46a31b7}{define\+Form\+Fields}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_aa9c3f00ad89212e52eb3139dbebbfc28}{API\+\_\+\+URL}} = \textquotesingle{}https\+://api.\+coinmarketcap.\+com/v1/ticker/\%s/?convert=\%s\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a0f6bf48ff3e80e3e7d616a3d1be5b0f4}{get\+Crypto\+Name\+From\+Code}} (\$code)
+\item 
+\mbox{\hyperlink{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a485fdaacb0c79288a112998658be7e33}{get\+Crypto\+Code\+Map}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 8 of file Coin\+Market\+Cap.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_ac4b6c9de73b5801b5ae7072e42fa5b35}\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_ac4b6c9de73b5801b5ae7072e42fa5b35}} 
+\index{CoinMarketCap@{CoinMarketCap}!converterDetails@{converterDetails}}
+\index{converterDetails@{converterDetails}!CoinMarketCap@{CoinMarketCap}}
+\doxysubsubsection{\texorpdfstring{converterDetails()}{converterDetails()}}
+{\footnotesize\ttfamily converter\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns information about the converter type Must return array\+:
+
+\mbox{[} \textquotesingle{}name\textquotesingle{} =$>$ \textquotesingle{}XE.\+com\textquotesingle{}, \textquotesingle{}description\textquotesingle{} =$>$ \textquotesingle{}Conversion services provided by XE.\textquotesingle{} \mbox{]}
+
+\begin{DoxyReturn}{Returns}
+array
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_responsiv_1_1_currency_1_1_classes_1_1_exchange_base_ac4b6c9de73b5801b5ae7072e42fa5b35}{Exchange\+Base}}.
+
+
+
+Definition at line 15 of file Coin\+Market\+Cap.\+php.
+
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a41e204d237cd3933aacaec11c46a31b7}\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a41e204d237cd3933aacaec11c46a31b7}} 
+\index{CoinMarketCap@{CoinMarketCap}!defineFormFields@{defineFormFields}}
+\index{defineFormFields@{defineFormFields}!CoinMarketCap@{CoinMarketCap}}
+\doxysubsubsection{\texorpdfstring{defineFormFields()}{defineFormFields()}}
+{\footnotesize\ttfamily define\+Form\+Fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Extra field configuration for the converter type. 
+
+Reimplemented from \mbox{\hyperlink{class_responsiv_1_1_currency_1_1_classes_1_1_exchange_base_a41e204d237cd3933aacaec11c46a31b7}{Exchange\+Base}}.
+
+
+
+Definition at line 105 of file Coin\+Market\+Cap.\+php.
+
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a485fdaacb0c79288a112998658be7e33}\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a485fdaacb0c79288a112998658be7e33}} 
+\index{CoinMarketCap@{CoinMarketCap}!getCryptoCodeMap@{getCryptoCodeMap}}
+\index{getCryptoCodeMap@{getCryptoCodeMap}!CoinMarketCap@{CoinMarketCap}}
+\doxysubsubsection{\texorpdfstring{getCryptoCodeMap()}{getCryptoCodeMap()}}
+{\footnotesize\ttfamily get\+Crypto\+Code\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 90 of file Coin\+Market\+Cap.\+php.
+
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a0f6bf48ff3e80e3e7d616a3d1be5b0f4}\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a0f6bf48ff3e80e3e7d616a3d1be5b0f4}} 
+\index{CoinMarketCap@{CoinMarketCap}!getCryptoNameFromCode@{getCryptoNameFromCode}}
+\index{getCryptoNameFromCode@{getCryptoNameFromCode}!CoinMarketCap@{CoinMarketCap}}
+\doxysubsubsection{\texorpdfstring{getCryptoNameFromCode()}{getCryptoNameFromCode()}}
+{\footnotesize\ttfamily get\+Crypto\+Name\+From\+Code (\begin{DoxyParamCaption}\item[{}]{\$code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 83 of file Coin\+Market\+Cap.\+php.
+
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a796d684dfe8bb4371b6cd84518324984}\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_a796d684dfe8bb4371b6cd84518324984}} 
+\index{CoinMarketCap@{CoinMarketCap}!getExchangeRate@{getExchangeRate}}
+\index{getExchangeRate@{getExchangeRate}!CoinMarketCap@{CoinMarketCap}}
+\doxysubsubsection{\texorpdfstring{getExchangeRate()}{getExchangeRate()}}
+{\footnotesize\ttfamily get\+Exchange\+Rate (\begin{DoxyParamCaption}\item[{}]{\$from\+Currency,  }\item[{}]{\$to\+Currency }\end{DoxyParamCaption})}
+
+Returns an exchange rate for two currencies. 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$from\+Currency} & Currency code to convert from (eg\+: USD) \\
+\hline
+string & {\em \$to\+Currency} & Currency code to convert to (eg\+: AUD) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float
+\end{DoxyReturn}
+ 
+
+Reimplemented from \mbox{\hyperlink{class_responsiv_1_1_currency_1_1_classes_1_1_exchange_base_a796d684dfe8bb4371b6cd84518324984}{Exchange\+Base}}.
+
+
+
+Definition at line 26 of file Coin\+Market\+Cap.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_aa9c3f00ad89212e52eb3139dbebbfc28}\label{class_responsiv_1_1_currency_1_1_exchange_types_1_1_coin_market_cap_aa9c3f00ad89212e52eb3139dbebbfc28}} 
+\index{CoinMarketCap@{CoinMarketCap}!API\_URL@{API\_URL}}
+\index{API\_URL@{API\_URL}!CoinMarketCap@{CoinMarketCap}}
+\doxysubsubsection{\texorpdfstring{API\_URL}{API\_URL}}
+{\footnotesize\ttfamily const API\+\_\+\+URL = \textquotesingle{}https\+://api.\+coinmarketcap.\+com/v1/ticker/\%s/?convert=\%s\textquotesingle{}}
+
+
+
+Definition at line 10 of file Coin\+Market\+Cap.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+responsiv/currency/exchangetypes/\mbox{\hyperlink{_coin_market_cap_8php}{Coin\+Market\+Cap.\+php}}\end{DoxyCompactItemize}

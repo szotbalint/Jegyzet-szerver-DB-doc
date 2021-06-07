@@ -1,0 +1,150 @@
+\hypertarget{interface_guzzle_1_1_service_1_1_client_interface}{}\doxysection{Client\+Interface Interface Reference}
+\label{interface_guzzle_1_1_service_1_1_client_interface}\index{ClientInterface@{ClientInterface}}
+Inheritance diagram for Client\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{interface_guzzle_1_1_service_1_1_client_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_client_interface_ac1d1f0c2f4ec56f0d74dc47529979de1}{get\+Command}} (\$name, array \$args=array())
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_client_interface_a5704439633de497abe437bb32a0d8de1}{execute}} (\$command)
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_client_interface_a9d998d1a1549669b56a3c2912470f3b5}{set\+Description}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_description_1_1_service_description_interface}{Service\+Description\+Interface}} \$service)
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_client_interface_a2e7bb35c71bf1824456ceb944cb7a845}{get\+Description}} ()
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_client_interface_a237e25fa0facca9ac4dd54312605cbf0}{get\+Iterator}} (\$command, array \$command\+Options=null, array \$iterator\+Options=array())
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_client}{Client}} interface for executing commands on a web service. 
+
+Definition at line 16 of file Client\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_client_interface_a5704439633de497abe437bb32a0d8de1}\label{interface_guzzle_1_1_service_1_1_client_interface_a5704439633de497abe437bb32a0d8de1}} 
+\index{ClientInterface@{ClientInterface}!execute@{execute}}
+\index{execute@{execute}!ClientInterface@{ClientInterface}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily execute (\begin{DoxyParamCaption}\item[{}]{\$command }\end{DoxyParamCaption})}
+
+Execute one or more commands
+
+
+\begin{DoxyParams}[1]{Parameters}
+Command\+Interface | array | Traversable & {\em \$command} & \mbox{\hyperlink{namespace_guzzle_1_1_service_1_1_command}{Command}}, array of commands or Traversable object containing commands to execute\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed Returns the result of the executed command or an array of commands if executing multiple commands 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & if an invalid command is passed \\
+\hline
+{\em Command\+Transfer\+Exception} & if an exception is encountered when transferring multiple commands \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_client_a5704439633de497abe437bb32a0d8de1}{Client}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_client_interface_ac1d1f0c2f4ec56f0d74dc47529979de1}\label{interface_guzzle_1_1_service_1_1_client_interface_ac1d1f0c2f4ec56f0d74dc47529979de1}} 
+\index{ClientInterface@{ClientInterface}!getCommand@{getCommand}}
+\index{getCommand@{getCommand}!ClientInterface@{ClientInterface}}
+\doxysubsubsection{\texorpdfstring{getCommand()}{getCommand()}}
+{\footnotesize\ttfamily get\+Command (\begin{DoxyParamCaption}\item[{}]{\$name,  }\item[{array}]{\$args = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Get a command by name. First, the client will see if it has a service description and if the service description defines a command by the supplied name. If no dynamic command is found, the client will look for a concrete command class exists matching the name supplied. If neither are found, an Invalid\+Argument\+Exception is thrown.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & Name of the command to retrieve \\
+\hline
+array & {\em \$args} & Arguments to pass to the command\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Command\+Interface 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Argument\+Exception} & if no command can be found by name \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_client_ac1d1f0c2f4ec56f0d74dc47529979de1}{Client}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_client_interface_a2e7bb35c71bf1824456ceb944cb7a845}\label{interface_guzzle_1_1_service_1_1_client_interface_a2e7bb35c71bf1824456ceb944cb7a845}} 
+\index{ClientInterface@{ClientInterface}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!ClientInterface@{ClientInterface}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the service description of the client
+
+\begin{DoxyReturn}{Returns}
+Service\+Description\+Interface$\vert$null 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_client_a2e7bb35c71bf1824456ceb944cb7a845}{Client}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_client_interface_a237e25fa0facca9ac4dd54312605cbf0}\label{interface_guzzle_1_1_service_1_1_client_interface_a237e25fa0facca9ac4dd54312605cbf0}} 
+\index{ClientInterface@{ClientInterface}!getIterator@{getIterator}}
+\index{getIterator@{getIterator}!ClientInterface@{ClientInterface}}
+\doxysubsubsection{\texorpdfstring{getIterator()}{getIterator()}}
+{\footnotesize\ttfamily get\+Iterator (\begin{DoxyParamCaption}\item[{}]{\$command,  }\item[{array}]{\$command\+Options = {\ttfamily null},  }\item[{array}]{\$iterator\+Options = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Get a resource iterator from the client.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | Command\+Interface & {\em \$command} & \mbox{\hyperlink{namespace_guzzle_1_1_service_1_1_command}{Command}} class or command name. \\
+\hline
+array & {\em \$command\+Options} & \mbox{\hyperlink{namespace_guzzle_1_1_service_1_1_command}{Command}} options used when creating commands. \\
+\hline
+array & {\em \$iterator\+Options} & \mbox{\hyperlink{namespace_guzzle_1_1_iterator}{Iterator}} options passed to the iterator when it is instantiated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resource\+Iterator\+Interface 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_client_a237e25fa0facca9ac4dd54312605cbf0}{Client}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_client_interface_a9d998d1a1549669b56a3c2912470f3b5}\label{interface_guzzle_1_1_service_1_1_client_interface_a9d998d1a1549669b56a3c2912470f3b5}} 
+\index{ClientInterface@{ClientInterface}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!ClientInterface@{ClientInterface}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily set\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_description_1_1_service_description_interface}{Service\+Description\+Interface}}}]{\$service }\end{DoxyParamCaption})}
+
+Set the service description of the client
+
+
+\begin{DoxyParams}[1]{Parameters}
+Service\+Description\+Interface & {\em \$service} & \mbox{\hyperlink{namespace_guzzle_1_1_service}{Service}} description\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_client_interface}{Client\+Interface}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_client_a9d998d1a1549669b56a3c2912470f3b5}{Client}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\mbox{\hyperlink{guzzle_2guzzle_2src_2_guzzle_2_service_2_client_interface_8php}{Client\+Interface.\+php}}\end{DoxyCompactItemize}

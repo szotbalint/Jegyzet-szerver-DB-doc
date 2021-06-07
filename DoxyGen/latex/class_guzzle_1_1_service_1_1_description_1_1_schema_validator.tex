@@ -1,0 +1,213 @@
+\hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_validator}{}\doxysection{Schema\+Validator Class Reference}
+\label{class_guzzle_1_1_service_1_1_description_1_1_schema_validator}\index{SchemaValidator@{SchemaValidator}}
+Inheritance diagram for Schema\+Validator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_service_1_1_description_1_1_schema_validator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ac67f6616cba87ef9eb98d07d9e319ef9}{\+\_\+\+\_\+construct}} (\$cast\+Integer\+To\+String\+Type=true)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_af75c7a88c4b27b1b4f3bc56de331e869}{validate}} (\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}} \$param, \&\$value)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_a6e548ebf2656742bfd19939ead923ed2}{get\+Errors}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ac93fbec81f07e5d15f80db907e63dc10}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ac05d5072c4cb5c309e553659ec24f2f6}{recursive\+Process}} (\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}} \$param, \&\$value, \$path=\textquotesingle{}\textquotesingle{}, \$depth=0)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_aea0cf7caee3b149b4c68c7f0702691e5}{determine\+Type}} (\$type, \$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_a06fa693817788516288adc8ea28ecad4}{\$cast\+Integer\+To\+String\+Type}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ab24faf4aa647cdcee494fc48524ad4ff}{\$errors}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ad9d7ce33ebb142b70e58b68052ca0ea8}{\$instance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Default parameter validator 
+
+Definition at line 10 of file Schema\+Validator.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ac67f6616cba87ef9eb98d07d9e319ef9}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ac67f6616cba87ef9eb98d07d9e319ef9}} 
+\index{SchemaValidator@{SchemaValidator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$cast\+Integer\+To\+String\+Type = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$cast\+Integer\+To\+String\+Type} & Set to true to convert integers into strings when a required type is a string and the input value is an integer. Defaults to true. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 38 of file Schema\+Validator.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_aea0cf7caee3b149b4c68c7f0702691e5}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_aea0cf7caee3b149b4c68c7f0702691e5}} 
+\index{SchemaValidator@{SchemaValidator}!determineType@{determineType}}
+\index{determineType@{determineType}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{determineType()}{determineType()}}
+{\footnotesize\ttfamily determine\+Type (\begin{DoxyParamCaption}\item[{}]{\$type,  }\item[{}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+From the allowable types, determine the type that the variable matches
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}} type \\
+\hline
+mixed & {\em \$value} & Value to determine the type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string$\vert$bool Returns the matching type on 
+\end{DoxyReturn}
+
+
+Definition at line 265 of file Schema\+Validator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_a6e548ebf2656742bfd19939ead923ed2}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_a6e548ebf2656742bfd19939ead923ed2}} 
+\index{SchemaValidator@{SchemaValidator}!getErrors@{getErrors}}
+\index{getErrors@{getErrors}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{getErrors()}{getErrors()}}
+{\footnotesize\ttfamily get\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the errors encountered while validating
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_description_1_1_validator_interface_a6e548ebf2656742bfd19939ead923ed2}{Validator\+Interface}}.
+
+
+
+Definition at line 61 of file Schema\+Validator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ac93fbec81f07e5d15f80db907e63dc10}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ac93fbec81f07e5d15f80db907e63dc10}} 
+\index{SchemaValidator@{SchemaValidator}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+self @code\+Coverage\+Ignore 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file Schema\+Validator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ac05d5072c4cb5c309e553659ec24f2f6}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ac05d5072c4cb5c309e553659ec24f2f6}} 
+\index{SchemaValidator@{SchemaValidator}!recursiveProcess@{recursiveProcess}}
+\index{recursiveProcess@{recursiveProcess}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{recursiveProcess()}{recursiveProcess()}}
+{\footnotesize\ttfamily recursive\+Process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}}}]{\$param,  }\item[{\&}]{\$value,  }\item[{}]{\$path = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$depth = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Recursively validate a parameter
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}} & {\em \$param} & API parameter being validated \\
+\hline
+mixed & {\em \$value} & Value to validate and validate. The value may change during this validate. \\
+\hline
+string & {\em \$path} & Current validation path (used for error reporting) \\
+\hline
+int & {\em \$depth} & Current depth in the validation validate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true if valid, or false if invalid 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file Schema\+Validator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_af75c7a88c4b27b1b4f3bc56de331e869}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_af75c7a88c4b27b1b4f3bc56de331e869}} 
+\index{SchemaValidator@{SchemaValidator}!validate@{validate}}
+\index{validate@{validate}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}}}]{\$param,  }\item[{\&}]{\$value }\end{DoxyParamCaption})}
+
+Validate a value against the acceptable types, regular expressions, minimum, maximums, instance\+Of, enums, etc Add default and static values to the passed in variable. If the validation completes successfully, the input must be run correctly through the matching schema\textquotesingle{}s filters attribute.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_parameter}{Parameter}} & {\em \$param} & Schema that is being validated against the value \\
+\hline
+mixed & {\em \$value} & Value to validate and process. The value may change during this process.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true if the input data is valid for the schema 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_description_1_1_validator_interface_af75c7a88c4b27b1b4f3bc56de331e869}{Validator\+Interface}}.
+
+
+
+Definition at line 43 of file Schema\+Validator.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_a06fa693817788516288adc8ea28ecad4}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_a06fa693817788516288adc8ea28ecad4}} 
+\index{SchemaValidator@{SchemaValidator}!\$castIntegerToStringType@{\$castIntegerToStringType}}
+\index{\$castIntegerToStringType@{\$castIntegerToStringType}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{\$castIntegerToStringType}{$castIntegerToStringType}}
+{\footnotesize\ttfamily \$cast\+Integer\+To\+String\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 16 of file Schema\+Validator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ab24faf4aa647cdcee494fc48524ad4ff}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ab24faf4aa647cdcee494fc48524ad4ff}} 
+\index{SchemaValidator@{SchemaValidator}!\$errors@{\$errors}}
+\index{\$errors@{\$errors}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{\$errors}{$errors}}
+{\footnotesize\ttfamily \$errors\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 19 of file Schema\+Validator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ad9d7ce33ebb142b70e58b68052ca0ea8}\label{class_guzzle_1_1_service_1_1_description_1_1_schema_validator_ad9d7ce33ebb142b70e58b68052ca0ea8}} 
+\index{SchemaValidator@{SchemaValidator}!\$instance@{\$instance}}
+\index{\$instance@{\$instance}!SchemaValidator@{SchemaValidator}}
+\doxysubsubsection{\texorpdfstring{\$instance}{$instance}}
+{\footnotesize\ttfamily \$instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file Schema\+Validator.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Description/\mbox{\hyperlink{_schema_validator_8php}{Schema\+Validator.\+php}}\end{DoxyCompactItemize}

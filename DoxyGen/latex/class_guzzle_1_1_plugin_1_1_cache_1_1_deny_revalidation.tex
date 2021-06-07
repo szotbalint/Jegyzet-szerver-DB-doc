@@ -1,0 +1,70 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_deny_revalidation}{}\doxysection{Deny\+Revalidation Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_cache_1_1_deny_revalidation}\index{DenyRevalidation@{DenyRevalidation}}
+Inheritance diagram for Deny\+Revalidation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_plugin_1_1_cache_1_1_deny_revalidation}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_deny_revalidation_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_deny_revalidation_ad1dc0ff7b0cf6cb566181197d8b699e1}{revalidate}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}} \$response)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Never performs cache revalidation and just assumes the request is invalid 
+
+Definition at line 11 of file Deny\+Revalidation.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_deny_revalidation_a095c5d389db211932136b53f25f39685}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_deny_revalidation_a095c5d389db211932136b53f25f39685}} 
+\index{DenyRevalidation@{DenyRevalidation}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DenyRevalidation@{DenyRevalidation}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file Deny\+Revalidation.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_cache_1_1_deny_revalidation_ad1dc0ff7b0cf6cb566181197d8b699e1}\label{class_guzzle_1_1_plugin_1_1_cache_1_1_deny_revalidation_ad1dc0ff7b0cf6cb566181197d8b699e1}} 
+\index{DenyRevalidation@{DenyRevalidation}!revalidate@{revalidate}}
+\index{revalidate@{revalidate}!DenyRevalidation@{DenyRevalidation}}
+\doxysubsubsection{\texorpdfstring{revalidate()}{revalidate()}}
+{\footnotesize\ttfamily revalidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}}}]{\$response }\end{DoxyParamCaption})}
+
+Performs a cache revalidation
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to revalidate \\
+\hline
+Response & {\em \$response} & Response that was received\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true if the request can be cached 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_cache_1_1_default_revalidation_ad1dc0ff7b0cf6cb566181197d8b699e1}{Default\+Revalidation}}.
+
+
+
+Definition at line 15 of file Deny\+Revalidation.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Cache/\mbox{\hyperlink{_deny_revalidation_8php}{Deny\+Revalidation.\+php}}\end{DoxyCompactItemize}

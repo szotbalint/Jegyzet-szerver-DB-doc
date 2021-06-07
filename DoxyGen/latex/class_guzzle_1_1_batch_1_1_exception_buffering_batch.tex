@@ -1,0 +1,94 @@
+\hypertarget{class_guzzle_1_1_batch_1_1_exception_buffering_batch}{}\doxysection{Exception\+Buffering\+Batch Class Reference}
+\label{class_guzzle_1_1_batch_1_1_exception_buffering_batch}\index{ExceptionBufferingBatch@{ExceptionBufferingBatch}}
+Inheritance diagram for Exception\+Buffering\+Batch\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_batch_1_1_exception_buffering_batch}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_buffering_batch_a7751f77b5263bcf940ece6e824a05b38}{flush}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_buffering_batch_af9d088fef34b6b110d9a272eebe6a72e}{get\+Exceptions}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_buffering_batch_a7f923c62692bfb15314cd26e50c8d797}{clear\+Exceptions}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_exception_buffering_batch_a7b3cdaf64a0a391d40bc8ecd4008218a}{\$exceptions}} = array()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}} decorator used to buffer exceptions encountered during a transfer. The exceptions can then later be processed after a batch flush has completed. 
+
+Definition at line 11 of file Exception\+Buffering\+Batch.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_buffering_batch_a7f923c62692bfb15314cd26e50c8d797}\label{class_guzzle_1_1_batch_1_1_exception_buffering_batch_a7f923c62692bfb15314cd26e50c8d797}} 
+\index{ExceptionBufferingBatch@{ExceptionBufferingBatch}!clearExceptions@{clearExceptions}}
+\index{clearExceptions@{clearExceptions}!ExceptionBufferingBatch@{ExceptionBufferingBatch}}
+\doxysubsubsection{\texorpdfstring{clearExceptions()}{clearExceptions()}}
+{\footnotesize\ttfamily clear\+Exceptions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear the buffered exceptions 
+
+Definition at line 46 of file Exception\+Buffering\+Batch.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_buffering_batch_a7751f77b5263bcf940ece6e824a05b38}\label{class_guzzle_1_1_batch_1_1_exception_buffering_batch_a7751f77b5263bcf940ece6e824a05b38}} 
+\index{ExceptionBufferingBatch@{ExceptionBufferingBatch}!flush@{flush}}
+\index{flush@{flush}!ExceptionBufferingBatch@{ExceptionBufferingBatch}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Flush the batch and transfer the items
+
+\begin{DoxyReturn}{Returns}
+array Returns an array flushed items 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a7751f77b5263bcf940ece6e824a05b38}{Abstract\+Batch\+Decorator}}.
+
+
+
+Definition at line 16 of file Exception\+Buffering\+Batch.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_buffering_batch_af9d088fef34b6b110d9a272eebe6a72e}\label{class_guzzle_1_1_batch_1_1_exception_buffering_batch_af9d088fef34b6b110d9a272eebe6a72e}} 
+\index{ExceptionBufferingBatch@{ExceptionBufferingBatch}!getExceptions@{getExceptions}}
+\index{getExceptions@{getExceptions}!ExceptionBufferingBatch@{ExceptionBufferingBatch}}
+\doxysubsubsection{\texorpdfstring{getExceptions()}{getExceptions()}}
+{\footnotesize\ttfamily get\+Exceptions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the buffered exceptions
+
+\begin{DoxyReturn}{Returns}
+array Array of Batch\+Transfer\+Exception objects 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Exception\+Buffering\+Batch.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_exception_buffering_batch_a7b3cdaf64a0a391d40bc8ecd4008218a}\label{class_guzzle_1_1_batch_1_1_exception_buffering_batch_a7b3cdaf64a0a391d40bc8ecd4008218a}} 
+\index{ExceptionBufferingBatch@{ExceptionBufferingBatch}!\$exceptions@{\$exceptions}}
+\index{\$exceptions@{\$exceptions}!ExceptionBufferingBatch@{ExceptionBufferingBatch}}
+\doxysubsubsection{\texorpdfstring{\$exceptions}{$exceptions}}
+{\footnotesize\ttfamily \$exceptions = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file Exception\+Buffering\+Batch.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Batch/\mbox{\hyperlink{_exception_buffering_batch_8php}{Exception\+Buffering\+Batch.\+php}}\end{DoxyCompactItemize}

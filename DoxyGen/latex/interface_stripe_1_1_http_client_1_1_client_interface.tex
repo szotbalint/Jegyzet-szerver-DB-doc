@@ -1,0 +1,56 @@
+\hypertarget{interface_stripe_1_1_http_client_1_1_client_interface}{}\doxysection{Client\+Interface Interface Reference}
+\label{interface_stripe_1_1_http_client_1_1_client_interface}\index{ClientInterface@{ClientInterface}}
+Inheritance diagram for Client\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_stripe_1_1_http_client_1_1_client_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_stripe_1_1_http_client_1_1_client_interface_ac931426d5baf2373053abfde3e08f3fe}{request}} (\$method, \$abs\+Url, \$headers, \$params, \$has\+File)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 5 of file Client\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_stripe_1_1_http_client_1_1_client_interface_ac931426d5baf2373053abfde3e08f3fe}\label{interface_stripe_1_1_http_client_1_1_client_interface_ac931426d5baf2373053abfde3e08f3fe}} 
+\index{ClientInterface@{ClientInterface}!request@{request}}
+\index{request@{request}!ClientInterface@{ClientInterface}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily request (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$abs\+Url,  }\item[{}]{\$headers,  }\item[{}]{\$params,  }\item[{}]{\$has\+File }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & The HTTP method being used \\
+\hline
+string & {\em \$abs\+Url} & The URL being requested, including domain and protocol \\
+\hline
+array & {\em \$headers} & Headers to be used in the request (full strings, not KV pairs) \\
+\hline
+array & {\em \$params} & KV pairs for parameters. Can be nested for arrays and hashes \\
+\hline
+boolean & {\em \$has\+File} & Whether or not \$params references a file (via an @ prefix or Curl\+File) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{namespace_stripe_1_1_error}{Error}}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_stripe_1_1_http_client_1_1_curl_client_ac931426d5baf2373053abfde3e08f3fe}{Curl\+Client}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/stripe/stripe-\/php/lib/\+Http\+Client/\mbox{\hyperlink{stripe_2stripe-php_2lib_2_http_client_2_client_interface_8php}{Client\+Interface.\+php}}\end{DoxyCompactItemize}

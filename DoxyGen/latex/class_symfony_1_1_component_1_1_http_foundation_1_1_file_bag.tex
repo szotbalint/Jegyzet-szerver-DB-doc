@@ -1,0 +1,182 @@
+\hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag}{}\doxysection{File\+Bag Class Reference}
+\label{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag}\index{FileBag@{FileBag}}
+Inheritance diagram for File\+Bag\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_a44cfc9a8708c0590bb63bfbff2b9e0b3}{\+\_\+\+\_\+construct}} (array \$parameters=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_aaa3e269c3d0ba09810d371321095d3fb}{replace}} (array \$files=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_aab787bd83f84f4215dceb35f7c305eee}{set}} (\$key, \$value)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_a40cc3638351682a3c0ffca71ce7a24ec}{add}} (array \$files=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_ac209eb8fc84def9efff422b7cf71f6ea}{convert\+File\+Information}} (\$file)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_a25b4debae47aba411a3fa66f03a0b339}{fix\+Php\+Files\+Array}} (\$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag}{File\+Bag}} is a container for uploaded files.
+
+\begin{DoxyAuthor}{Author}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\texttt{ fabien@symfony.\+com}} 
+
+Bulat Shakirzyanov \href{mailto:mallluhuct@gmail.com}{\texttt{ mallluhuct@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+Definition at line 22 of file File\+Bag.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_a44cfc9a8708c0590bb63bfbff2b9e0b3}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_a44cfc9a8708c0590bb63bfbff2b9e0b3}} 
+\index{FileBag@{FileBag}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FileBag@{FileBag}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$parameters = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$parameters} & An array of HTTP files \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_parameter_bag_a44cfc9a8708c0590bb63bfbff2b9e0b3}{Parameter\+Bag}}.
+
+
+
+Definition at line 29 of file File\+Bag.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_a40cc3638351682a3c0ffca71ce7a24ec}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_a40cc3638351682a3c0ffca71ce7a24ec}} 
+\index{FileBag@{FileBag}!add@{add}}
+\index{add@{add}!FileBag@{FileBag}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily add (\begin{DoxyParamCaption}\item[{array}]{\$files = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\{Adds parameters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$parameters} & An array of parameters\\
+\hline
+\end{DoxyParams}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_parameter_bag_a001a884126c48a65a946ad8d4d8b4131}{Parameter\+Bag}}.
+
+
+
+Definition at line 58 of file File\+Bag.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_ac209eb8fc84def9efff422b7cf71f6ea}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_ac209eb8fc84def9efff422b7cf71f6ea}} 
+\index{FileBag@{FileBag}!convertFileInformation@{convertFileInformation}}
+\index{convertFileInformation@{convertFileInformation}!FileBag@{FileBag}}
+\doxysubsubsection{\texorpdfstring{convertFileInformation()}{convertFileInformation()}}
+{\footnotesize\ttfamily convert\+File\+Information (\begin{DoxyParamCaption}\item[{}]{\$file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Converts uploaded files to Uploaded\+File instances.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | Uploaded\+File & {\em \$file} & A (multi-\/dimensional) array of uploaded file information\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uploaded\+File\mbox{[}\mbox{]}$\vert$\+Uploaded\+File$\vert$null A (multi-\/dimensional) array of Uploaded\+File instances 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file File\+Bag.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_a25b4debae47aba411a3fa66f03a0b339}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_a25b4debae47aba411a3fa66f03a0b339}} 
+\index{FileBag@{FileBag}!fixPhpFilesArray@{fixPhpFilesArray}}
+\index{fixPhpFilesArray@{fixPhpFilesArray}!FileBag@{FileBag}}
+\doxysubsubsection{\texorpdfstring{fixPhpFilesArray()}{fixPhpFilesArray()}}
+{\footnotesize\ttfamily fix\+Php\+Files\+Array (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fixes a malformed PHP \$\+\_\+\+FILES array.
+
+PHP has a bug that the format of the \$\+\_\+\+FILES array differs, depending on whether the uploaded file fields had normal field names or array-\/like field names (\char`\"{}normal\char`\"{} vs. \char`\"{}parent\mbox{[}child\mbox{]}\char`\"{}).
+
+This method fixes the array to look like the \char`\"{}normal\char`\"{} \$\+\_\+\+FILES array.
+
+It\textquotesingle{}s safe to pass an already converted array, in which case this method just returns the original array unmodified.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file File\+Bag.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_aaa3e269c3d0ba09810d371321095d3fb}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_aaa3e269c3d0ba09810d371321095d3fb}} 
+\index{FileBag@{FileBag}!replace@{replace}}
+\index{replace@{replace}!FileBag@{FileBag}}
+\doxysubsubsection{\texorpdfstring{replace()}{replace()}}
+{\footnotesize\ttfamily replace (\begin{DoxyParamCaption}\item[{array}]{\$files = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\{Replaces the current parameters by a new set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$parameters} & An array of parameters\\
+\hline
+\end{DoxyParams}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_parameter_bag_a0ab02885664cffb16f8ee37edc804f5d}{Parameter\+Bag}}.
+
+
+
+Definition at line 37 of file File\+Bag.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_aab787bd83f84f4215dceb35f7c305eee}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_file_bag_aab787bd83f84f4215dceb35f7c305eee}} 
+\index{FileBag@{FileBag}!set@{set}}
+\index{set@{set}!FileBag@{FileBag}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+\{Sets a parameter by name.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & The key \\
+\hline
+mixed & {\em \$value} & The value\\
+\hline
+\end{DoxyParams}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_parameter_bag_aab787bd83f84f4215dceb35f7c305eee}{Parameter\+Bag}}.
+
+
+
+Definition at line 46 of file File\+Bag.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/symfony/http-\/foundation/\mbox{\hyperlink{_file_bag_8php}{File\+Bag.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,115 @@
+\hypertarget{class_omnipay_1_1_common_1_1_currency}{}\doxysection{Currency Class Reference}
+\label{class_omnipay_1_1_common_1_1_currency}\index{Currency@{Currency}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_currency_ab5e24da53b4a0d0848b18c1e832f47ff}{get\+Code}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_currency_a4e994d6a138045bdb6ab5486da9b80af}{get\+Numeric}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_currency_a4a85a0dbbf0e340e82f1fcf7c066cd89}{get\+Decimals}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_omnipay_1_1_common_1_1_currency_a2776a1e65de72b556bf9e3c0f696b126}{find}} (\$code)
+\item 
+static \mbox{\hyperlink{class_omnipay_1_1_common_1_1_currency_a211470a063d4e3972d3c2e4541c38707}{all}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_currency}{Currency}} class
+
+This class abstracts certain functionality around currency objects, currency codes and currency numbers relating to global currencies used in the \mbox{\hyperlink{class_omnipay_1_1_omnipay}{Omnipay}} system. 
+
+Definition at line 15 of file Currency.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_currency_a211470a063d4e3972d3c2e4541c38707}\label{class_omnipay_1_1_common_1_1_currency_a211470a063d4e3972d3c2e4541c38707}} 
+\index{Currency@{Currency}!all@{all}}
+\index{all@{all}!Currency@{Currency}}
+\doxysubsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily static all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get an array of all supported currencies
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file Currency.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_currency_a2776a1e65de72b556bf9e3c0f696b126}\label{class_omnipay_1_1_common_1_1_currency_a2776a1e65de72b556bf9e3c0f696b126}} 
+\index{Currency@{Currency}!find@{find}}
+\index{find@{find}!Currency@{Currency}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily static find (\begin{DoxyParamCaption}\item[{}]{\$code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Find a specific currency
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$code} & The three letter currency code \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed A \mbox{\hyperlink{class_omnipay_1_1_common_1_1_currency}{Currency}} object, or null if no currency was found 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Currency.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_currency_ab5e24da53b4a0d0848b18c1e832f47ff}\label{class_omnipay_1_1_common_1_1_currency_ab5e24da53b4a0d0848b18c1e832f47ff}} 
+\index{Currency@{Currency}!getCode@{getCode}}
+\index{getCode@{getCode}!Currency@{Currency}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the three letter code for the currency
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file Currency.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_currency_a4a85a0dbbf0e340e82f1fcf7c066cd89}\label{class_omnipay_1_1_common_1_1_currency_a4a85a0dbbf0e340e82f1fcf7c066cd89}} 
+\index{Currency@{Currency}!getDecimals@{getDecimals}}
+\index{getDecimals@{getDecimals}!Currency@{Currency}}
+\doxysubsubsection{\texorpdfstring{getDecimals()}{getDecimals()}}
+{\footnotesize\ttfamily get\+Decimals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the number of decimal places for this currency
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Currency.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_currency_a4e994d6a138045bdb6ab5486da9b80af}\label{class_omnipay_1_1_common_1_1_currency_a4e994d6a138045bdb6ab5486da9b80af}} 
+\index{Currency@{Currency}!getNumeric@{getNumeric}}
+\index{getNumeric@{getNumeric}!Currency@{Currency}}
+\doxysubsubsection{\texorpdfstring{getNumeric()}{getNumeric()}}
+{\footnotesize\ttfamily get\+Numeric (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the numeric code for this currency
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Currency.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/common/src/\+Omnipay/\+Common/\mbox{\hyperlink{pixel_2shop_2vendor_2omnipay_2common_2src_2_omnipay_2_common_2_currency_8php}{Currency.\+php}}\end{DoxyCompactItemize}

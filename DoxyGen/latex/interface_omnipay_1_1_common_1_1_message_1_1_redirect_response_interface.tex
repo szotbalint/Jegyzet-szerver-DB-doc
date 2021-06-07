@@ -1,0 +1,97 @@
+\hypertarget{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface}{}\doxysection{Redirect\+Response\+Interface Interface Reference}
+\label{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface}\index{RedirectResponseInterface@{RedirectResponseInterface}}
+Inheritance diagram for Redirect\+Response\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.274854cm]{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a320f8cf6bf704c301b24f83e4d0c3a22}{get\+Redirect\+Url}} ()
+\item 
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a18ab6bbcc61f346555fa5379061fe9d6}{get\+Redirect\+Method}} ()
+\item 
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a29663a5a3f887ac0aa019b96f4c34013}{get\+Redirect\+Data}} ()
+\item 
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_aadcf85c7b70a9b228b9f66c691f33d56}{redirect}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Redirect Response interface
+
+This interface class defines the functionality of a response that is a redirect response. It extends the \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_response_interface}{Response\+Interface}} interface class with some extra functions relating to the specifics of a redirect response from the gateway.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_response_interface}{Response\+Interface}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 18 of file Redirect\+Response\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a29663a5a3f887ac0aa019b96f4c34013}\label{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a29663a5a3f887ac0aa019b96f4c34013}} 
+\index{RedirectResponseInterface@{RedirectResponseInterface}!getRedirectData@{getRedirectData}}
+\index{getRedirectData@{getRedirectData}!RedirectResponseInterface@{RedirectResponseInterface}}
+\doxysubsubsection{\texorpdfstring{getRedirectData()}{getRedirectData()}}
+{\footnotesize\ttfamily get\+Redirect\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the redirect form data array, if the redirect method is POST.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a29663a5a3f887ac0aa019b96f4c34013}{Rest\+Authorize\+Response}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_express_authorize_response_a29663a5a3f887ac0aa019b96f4c34013}{Express\+Authorize\+Response}}, and \mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_test___mock_redirect_response_a29663a5a3f887ac0aa019b96f4c34013}{Abstract\+Response\+Test\+\_\+\+Mock\+Redirect\+Response}}.
+
+\mbox{\Hypertarget{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a18ab6bbcc61f346555fa5379061fe9d6}\label{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a18ab6bbcc61f346555fa5379061fe9d6}} 
+\index{RedirectResponseInterface@{RedirectResponseInterface}!getRedirectMethod@{getRedirectMethod}}
+\index{getRedirectMethod@{getRedirectMethod}!RedirectResponseInterface@{RedirectResponseInterface}}
+\doxysubsubsection{\texorpdfstring{getRedirectMethod()}{getRedirectMethod()}}
+{\footnotesize\ttfamily get\+Redirect\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the required redirect method (either GET or POST).
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a18ab6bbcc61f346555fa5379061fe9d6}{Rest\+Authorize\+Response}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_express_authorize_response_a18ab6bbcc61f346555fa5379061fe9d6}{Express\+Authorize\+Response}}, and \mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_test___mock_redirect_response_a18ab6bbcc61f346555fa5379061fe9d6}{Abstract\+Response\+Test\+\_\+\+Mock\+Redirect\+Response}}.
+
+\mbox{\Hypertarget{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a320f8cf6bf704c301b24f83e4d0c3a22}\label{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_a320f8cf6bf704c301b24f83e4d0c3a22}} 
+\index{RedirectResponseInterface@{RedirectResponseInterface}!getRedirectUrl@{getRedirectUrl}}
+\index{getRedirectUrl@{getRedirectUrl}!RedirectResponseInterface@{RedirectResponseInterface}}
+\doxysubsubsection{\texorpdfstring{getRedirectUrl()}{getRedirectUrl()}}
+{\footnotesize\ttfamily get\+Redirect\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the redirect target url.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a320f8cf6bf704c301b24f83e4d0c3a22}{Rest\+Authorize\+Response}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_express_authorize_response_a320f8cf6bf704c301b24f83e4d0c3a22}{Express\+Authorize\+Response}}, and \mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_test___mock_redirect_response_a320f8cf6bf704c301b24f83e4d0c3a22}{Abstract\+Response\+Test\+\_\+\+Mock\+Redirect\+Response}}.
+
+\mbox{\Hypertarget{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_aadcf85c7b70a9b228b9f66c691f33d56}\label{interface_omnipay_1_1_common_1_1_message_1_1_redirect_response_interface_aadcf85c7b70a9b228b9f66c691f33d56}} 
+\index{RedirectResponseInterface@{RedirectResponseInterface}!redirect@{redirect}}
+\index{redirect@{redirect}!RedirectResponseInterface@{RedirectResponseInterface}}
+\doxysubsubsection{\texorpdfstring{redirect()}{redirect()}}
+{\footnotesize\ttfamily redirect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Perform the required redirect.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/common/src/\+Omnipay/\+Common/\+Message/\mbox{\hyperlink{_redirect_response_interface_8php}{Redirect\+Response\+Interface.\+php}}\end{DoxyCompactItemize}

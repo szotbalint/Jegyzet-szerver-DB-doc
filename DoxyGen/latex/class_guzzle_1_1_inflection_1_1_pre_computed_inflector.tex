@@ -1,0 +1,142 @@
+\hypertarget{class_guzzle_1_1_inflection_1_1_pre_computed_inflector}{}\doxysection{Pre\+Computed\+Inflector Class Reference}
+\label{class_guzzle_1_1_inflection_1_1_pre_computed_inflector}\index{PreComputedInflector@{PreComputedInflector}}
+Inheritance diagram for Pre\+Computed\+Inflector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_inflection_1_1_pre_computed_inflector}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_abb31cfc79a76b7bdadc59ffc52b1859c}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_guzzle_1_1_inflection_1_1_inflector_interface}{Inflector\+Interface}} \$inflector, array \$\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_ad01d48f21224e98a8d2000362a26797f}{snake}}=array(), array \$\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_a90e8a36fdc9368bc410736f432e741f0}{camel}}=array(), \$mirror=false)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_ad01d48f21224e98a8d2000362a26797f}{snake}} (\$word)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_a90e8a36fdc9368bc410736f432e741f0}{camel}} (\$word)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_a2c93d0b89d7eadb6b8dfb7c83bc991f9}{\$mapping}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_a3881dc7860ccbbad88d920f8f0de307f}{\$decorated\+Inflector}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Decorator used to add pre-\/computed inflection mappings to an inflector 
+
+Definition at line 8 of file Pre\+Computed\+Inflector.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_abb31cfc79a76b7bdadc59ffc52b1859c}\label{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_abb31cfc79a76b7bdadc59ffc52b1859c}} 
+\index{PreComputedInflector@{PreComputedInflector}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!PreComputedInflector@{PreComputedInflector}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_inflection_1_1_inflector_interface}{Inflector\+Interface}}}]{\$inflector,  }\item[{array}]{\$snake = {\ttfamily array()},  }\item[{array}]{\$camel = {\ttfamily array()},  }\item[{}]{\$mirror = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_inflection_1_1_inflector_interface}{Inflector\+Interface}} & {\em \$inflector} & \mbox{\hyperlink{class_guzzle_1_1_inflection_1_1_inflector}{Inflector}} being decorated \\
+\hline
+array & {\em \$snake} & Hash of pre-\/computed camel to snake \\
+\hline
+array & {\em \$camel} & Hash of pre-\/computed snake to camel \\
+\hline
+bool & {\em \$mirror} & Mirror snake and camel reflections \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file Pre\+Computed\+Inflector.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_a90e8a36fdc9368bc410736f432e741f0}\label{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_a90e8a36fdc9368bc410736f432e741f0}} 
+\index{PreComputedInflector@{PreComputedInflector}!camel@{camel}}
+\index{camel@{camel}!PreComputedInflector@{PreComputedInflector}}
+\doxysubsubsection{\texorpdfstring{camel()}{camel()}}
+{\footnotesize\ttfamily camel (\begin{DoxyParamCaption}\item[{}]{\$word }\end{DoxyParamCaption})}
+
+Converts strings from snake\+\_\+case to upper Camel\+Case
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$word} & Value to convert into upper Camel\+Case\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_inflection_1_1_inflector_interface_a90e8a36fdc9368bc410736f432e741f0}{Inflector\+Interface}}.
+
+
+
+Definition at line 53 of file Pre\+Computed\+Inflector.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_ad01d48f21224e98a8d2000362a26797f}\label{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_ad01d48f21224e98a8d2000362a26797f}} 
+\index{PreComputedInflector@{PreComputedInflector}!snake@{snake}}
+\index{snake@{snake}!PreComputedInflector@{PreComputedInflector}}
+\doxysubsubsection{\texorpdfstring{snake()}{snake()}}
+{\footnotesize\ttfamily snake (\begin{DoxyParamCaption}\item[{}]{\$word }\end{DoxyParamCaption})}
+
+Converts strings from camel case to snake case (e.\+g. Camel\+Case camel\+\_\+case).
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$word} & Word to convert to snake case\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_inflection_1_1_inflector_interface_ad01d48f21224e98a8d2000362a26797f}{Inflector\+Interface}}.
+
+
+
+Definition at line 39 of file Pre\+Computed\+Inflector.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_a3881dc7860ccbbad88d920f8f0de307f}\label{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_a3881dc7860ccbbad88d920f8f0de307f}} 
+\index{PreComputedInflector@{PreComputedInflector}!\$decoratedInflector@{\$decoratedInflector}}
+\index{\$decoratedInflector@{\$decoratedInflector}!PreComputedInflector@{PreComputedInflector}}
+\doxysubsubsection{\texorpdfstring{\$decoratedInflector}{$decoratedInflector}}
+{\footnotesize\ttfamily \$decorated\+Inflector\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Pre\+Computed\+Inflector.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_a2c93d0b89d7eadb6b8dfb7c83bc991f9}\label{class_guzzle_1_1_inflection_1_1_pre_computed_inflector_a2c93d0b89d7eadb6b8dfb7c83bc991f9}} 
+\index{PreComputedInflector@{PreComputedInflector}!\$mapping@{\$mapping}}
+\index{\$mapping@{\$mapping}!PreComputedInflector@{PreComputedInflector}}
+\doxysubsubsection{\texorpdfstring{\$mapping}{$mapping}}
+{\footnotesize\ttfamily \$mapping\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'snake'} => array(),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'camel'} => array()}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Definition at line 11 of file Pre\+Computed\+Inflector.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Inflection/\mbox{\hyperlink{_pre_computed_inflector_8php}{Pre\+Computed\+Inflector.\+php}}\end{DoxyCompactItemize}

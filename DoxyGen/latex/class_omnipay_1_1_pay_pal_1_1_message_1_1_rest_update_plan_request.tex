@@ -1,0 +1,152 @@
+\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request}{}\doxysection{Rest\+Update\+Plan\+Request Class Reference}
+\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request}\index{RestUpdatePlanRequest@{RestUpdatePlanRequest}}
+Inheritance diagram for Rest\+Update\+Plan\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_afbf787ced76807989fb3093e1772c5a1}{get\+State}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a9f35feeb1f65c0dd3de57bb6f923f566}{set\+State}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a28507580eea1c43f0c9599aa095d09a8}{get\+Http\+Method}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST Update Plan Request
+
+You can update the information for an existing billing plan. The state of a plan must be active before a billing agreement is created.\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_autotoc_md188}{}\doxyparagraph{Request Data}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_autotoc_md188}
+Pass the billing plan id in the URI of a PATCH call, including the replace operation in the body. Other operations in the patch\+\_\+request object will throw validation exceptions.\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_autotoc_md189}{}\doxyparagraph{Example}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_autotoc_md189}
+To create the billing plan, see the code example in \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request}{Rest\+Create\+Plan\+Request}}.
+
+{\ttfamily  // Create a gateway for the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST Gateway // (routes to \mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_add7982ae8c25f1e10b44271426feac99}{Gateway\+Factory\+::create}}) \$gateway = Omnipay\+::create(\textquotesingle{}Pay\+Pal\+\_\+\+Rest\textquotesingle{});}
+
+{\ttfamily  // Initialise the gateway \$gateway-\/$>$initialize(array( \textquotesingle{}client\+Id\textquotesingle{} =$>$ \textquotesingle{}My\+Pay\+Pal\+Client\+Id\textquotesingle{}, \textquotesingle{}secret\textquotesingle{} =$>$ \textquotesingle{}My\+Pay\+Pal\+Secret\textquotesingle{}, \textquotesingle{}test\+Mode\textquotesingle{} =$>$ true, // Or false when you are ready for live transactions ));}
+
+{\ttfamily  // Update the billing plan \$transaction = \$gateway-\/$>$update\+Plan(array( \textquotesingle{}transaction\+Reference\textquotesingle{} =$>$ \$plan\+\_\+id, \textquotesingle{}state\textquotesingle{} =$>$ \$gateway\+::\+BILLING\+\_\+\+PLAN\+\_\+\+STATE\+\_\+\+ACTIVE, )); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; if (\$response-\/$>$is\+Successful()) \{ echo \char`\"{}\+Update Plan transaction was successful!\textbackslash{}n\char`\"{}; \} }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_autotoc_md190}{}\doxyparagraph{Request Sample}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_autotoc_md190}
+This is from the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} web site\+:
+
+{\ttfamily  curl -\/v -\/k -\/X PATCH \textquotesingle{}\href{https://api.sandbox.paypal.com/v1/payments/billing-plans/P-94458432VR012762KRWBZEUA'}{\texttt{ https\+://api.\+sandbox.\+paypal.\+com/v1/payments/billing-\/plans/\+P-\/94458432\+VR012762\+KRWBZEUA\textquotesingle{}}} \textbackslash{} -\/H \char`\"{}\+Content-\/\+Type\+: application/json\char`\"{} \textbackslash{} -\/H \char`\"{}\+Authorization\+: Bearer $<$\+Access-\/\+Token$>$\char`\"{} \textbackslash{} -\/d \textquotesingle{}\mbox{[} \{ \char`\"{}path\char`\"{}\+: \char`\"{}/\char`\"{}, \char`\"{}value\char`\"{}\+: \{ \char`\"{}state\char`\"{}\+: \char`\"{}\+ACTIVE\char`\"{} \}, \char`\"{}op\char`\"{}\+: \char`\"{}replace\char`\"{} \} \mbox{]}\textquotesingle{} }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_autotoc_md191}{}\doxyparagraph{Response}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_autotoc_md191}
+Returns the HTTP status of 200 if the call is successful.
+
+\mbox{\hyperlink{}{Rest\+Create\+Subscription\+Request  Omnipay }}
+
+Definition at line 74 of file Rest\+Update\+Plan\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{RestUpdatePlanRequest@{RestUpdatePlanRequest}!getData@{getData}}
+\index{getData@{getData}!RestUpdatePlanRequest@{RestUpdatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 97 of file Rest\+Update\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{RestUpdatePlanRequest@{RestUpdatePlanRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!RestUpdatePlanRequest@{RestUpdatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get transaction endpoint.
+
+Billing plans are managed using the /billing-\/plans resource.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 118 of file Rest\+Update\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a28507580eea1c43f0c9599aa095d09a8}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a28507580eea1c43f0c9599aa095d09a8}} 
+\index{RestUpdatePlanRequest@{RestUpdatePlanRequest}!getHttpMethod@{getHttpMethod}}
+\index{getHttpMethod@{getHttpMethod}!RestUpdatePlanRequest@{RestUpdatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{getHttpMethod()}{getHttpMethod()}}
+{\footnotesize\ttfamily get\+Http\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get HTTP Method.
+
+This is nearly always POST but can be over-\/ridden in sub classes.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a28507580eea1c43f0c9599aa095d09a8}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 123 of file Rest\+Update\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_afbf787ced76807989fb3093e1772c5a1}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_afbf787ced76807989fb3093e1772c5a1}} 
+\index{RestUpdatePlanRequest@{RestUpdatePlanRequest}!getState@{getState}}
+\index{getState@{getState}!RestUpdatePlanRequest@{RestUpdatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the plan state
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file Rest\+Update\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a9f35feeb1f65c0dd3de57bb6f923f566}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request_a9f35feeb1f65c0dd3de57bb6f923f566}} 
+\index{RestUpdatePlanRequest@{RestUpdatePlanRequest}!setState@{setState}}
+\index{setState@{setState}!RestUpdatePlanRequest@{RestUpdatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily set\+State (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the plan state
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_update_plan_request}{Rest\+Update\+Plan\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file Rest\+Update\+Plan\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/paypal/src/\+Message/\mbox{\hyperlink{_rest_update_plan_request_8php}{Rest\+Update\+Plan\+Request.\+php}}\end{DoxyCompactItemize}

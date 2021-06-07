@@ -1,0 +1,224 @@
+\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request}{}\doxysection{Rest\+Search\+Transaction\+Request Class Reference}
+\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request}\index{RestSearchTransactionRequest@{RestSearchTransactionRequest}}
+Inheritance diagram for Rest\+Search\+Transaction\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_afdd7b880685580bdb33d9324501e17ed}{get\+Agreement\+Id}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a1bf1dfa2f0a253e1be302a6d189e2cfe}{set\+Agreement\+Id}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a0c44cbed4e674365b58324212de2e05e}{get\+Start\+Date}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_ae46fd053c5c916f96e6e5c1ca33c8343}{set\+Start\+Date}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a5776ab464f7733284408dc2fa5e907e9}{get\+End\+Date}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a419539b8509b832c0f24112c97aa701b}{set\+End\+Date}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a28507580eea1c43f0c9599aa095d09a8}{get\+Http\+Method}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST Search Transaction Request
+
+Use this call to search for the transactions within a billing agreement. Note that this is not a generic transaction search function -- for that see \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_list_purchase_request}{Rest\+List\+Purchase\+Request}}. It only searches for transactions within a billing agreement.
+
+This should be used on a regular basis to determine the success / failure state of transactions on active billing agreements.\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_autotoc_md181}{}\doxyparagraph{Example}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_autotoc_md181}
+{\ttfamily  // List the transactions for a billing agreement. \$transaction = \$gateway-\/$>$list\+Purchase(); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; \$data = \$response-\/$>$\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data()}}; echo \char`\"{}\+Gateway list\+Purchase response data == \char`\"{} . print\+\_\+r(\$data, true) . \char`\"{}\textbackslash{}n\char`\"{}; }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_autotoc_md182}{}\doxyparagraph{Request Sample}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_autotoc_md182}
+This is from the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} web site\+:
+
+{\ttfamily  curl -\/v GET \href{https://api.sandbox.paypal.com/v1/payments/billing-agreements/I-0LN988D3JACS/transactions}{\texttt{ https\+://api.\+sandbox.\+paypal.\+com/v1/payments/billing-\/agreements/\+I-\/0\+LN988\+D3\+JACS/transactions}} \textbackslash{} -\/H \textquotesingle{}Content-\/\+Type\+:application/json\textquotesingle{} \textbackslash{} -\/H \textquotesingle{}Authorization\+: Bearer $<$Access-\/\+Token$>$\textquotesingle{} }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_autotoc_md183}{}\doxyparagraph{Response Sample}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_autotoc_md183}
+This is from the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} web site\+:
+
+{\ttfamily  \{ \char`\"{}agreement\+\_\+transaction\+\_\+list\char`\"{}\+: \mbox{[} \{ \char`\"{}transaction\+\_\+id\char`\"{}\+: \char`\"{}\+I-\/0\+LN988\+D3\+JACS\char`\"{}, \char`\"{}status\char`\"{}\+: \char`\"{}\+Created\char`\"{}, \char`\"{}transaction\+\_\+type\char`\"{}\+: \char`\"{}\+Recurring Payment\char`\"{}, \char`\"{}payer\+\_\+email\char`\"{}\+: \char`\"{}bbuyer@example.\+com\char`\"{}, \char`\"{}payer\+\_\+name\char`\"{}\+: \char`\"{}\+Betsy Buyer\char`\"{}, \char`\"{}time\+\_\+stamp\char`\"{}\+: \char`\"{}2014-\/06-\/09\+T09\+:29\+:36\+Z\char`\"{}, \char`\"{}time\+\_\+zone\char`\"{}\+: \char`\"{}\+GMT\char`\"{} \}, \{ \char`\"{}transaction\+\_\+id\char`\"{}\+: \char`\"{}928415314\+Y5640008\char`\"{}, \char`\"{}status\char`\"{}\+: \char`\"{}\+Completed\char`\"{}, \char`\"{}transaction\+\_\+type\char`\"{}\+: \char`\"{}\+Recurring Payment\char`\"{}, \char`\"{}amount\char`\"{}\+: \{ \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{}, \char`\"{}value\char`\"{}\+: \char`\"{}1.\+00\char`\"{} \}, \char`\"{}fee\+\_\+amount\char`\"{}\+: \{ \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{}, \char`\"{}value\char`\"{}\+: \char`\"{}-\/0.\+33\char`\"{} \}, \char`\"{}net\+\_\+amount\char`\"{}\+: \{ \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{}, \char`\"{}value\char`\"{}\+: \char`\"{}0.\+67\char`\"{} \}, \char`\"{}payer\+\_\+email\char`\"{}\+: \char`\"{}bbuyer@example.\+com\char`\"{}, \char`\"{}payer\+\_\+name\char`\"{}\+: \char`\"{}\+Betsy Buyer\char`\"{}, \char`\"{}time\+\_\+stamp\char`\"{}\+: \char`\"{}2014-\/06-\/09\+T09\+:42\+:47\+Z\char`\"{}, \char`\"{}time\+\_\+zone\char`\"{}\+: \char`\"{}\+GMT\char`\"{} \}, \{ \char`\"{}transaction\+\_\+id\char`\"{}\+: \char`\"{}\+I-\/0\+LN988\+D3\+JACS\char`\"{}, \char`\"{}status\char`\"{}\+: \char`\"{}\+Suspended\char`\"{}, \char`\"{}transaction\+\_\+type\char`\"{}\+: \char`\"{}\+Recurring Payment\char`\"{}, \char`\"{}payer\+\_\+email\char`\"{}\+: \char`\"{}bbuyer@example.\+com\char`\"{}, \char`\"{}payer\+\_\+name\char`\"{}\+: \char`\"{}\+Betsy Buyer\char`\"{}, \char`\"{}time\+\_\+stamp\char`\"{}\+: \char`\"{}2014-\/06-\/09\+T11\+:18\+:34\+Z\char`\"{}, \char`\"{}time\+\_\+zone\char`\"{}\+: \char`\"{}\+GMT\char`\"{} \}, \{ \char`\"{}transaction\+\_\+id\char`\"{}\+: \char`\"{}\+I-\/0\+LN988\+D3\+JACS\char`\"{}, \char`\"{}status\char`\"{}\+: \char`\"{}\+Reactivated\char`\"{}, \char`\"{}transaction\+\_\+type\char`\"{}\+: \char`\"{}\+Recurring Payment\char`\"{}, \char`\"{}payer\+\_\+email\char`\"{}\+: \char`\"{}bbuyer@example.\+com\char`\"{}, \char`\"{}payer\+\_\+name\char`\"{}\+: \char`\"{}\+Betsy Buyer\char`\"{}, \char`\"{}time\+\_\+stamp\char`\"{}\+: \char`\"{}2014-\/06-\/09\+T11\+:18\+:48\+Z\char`\"{}, \char`\"{}time\+\_\+zone\char`\"{}\+: \char`\"{}\+GMT\char`\"{} \} \mbox{]} \} }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_autotoc_md184}{}\doxyparagraph{Known Issues}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_autotoc_md184}
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} subscription payments cannot be refunded. \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} is working on this functionality for their future API release. In order to refund a \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} subscription payment, you will need to use the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} web interface to refund it manually.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_subscription_request}{Rest\+Create\+Subscription\+Request}} \mbox{\hyperlink{}{https\+://developer.\+paypal.\+com/docs/api/\#search-\/for-\/transactions}}
+\end{DoxySeeAlso}
+
+
+Definition at line 107 of file Rest\+Search\+Transaction\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_afdd7b880685580bdb33d9324501e17ed}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_afdd7b880685580bdb33d9324501e17ed}} 
+\index{RestSearchTransactionRequest@{RestSearchTransactionRequest}!getAgreementId@{getAgreementId}}
+\index{getAgreementId@{getAgreementId}!RestSearchTransactionRequest@{RestSearchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getAgreementId()}{getAgreementId()}}
+{\footnotesize\ttfamily get\+Agreement\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the agreement ID
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Rest\+Search\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{RestSearchTransactionRequest@{RestSearchTransactionRequest}!getData@{getData}}
+\index{getData@{getData}!RestSearchTransactionRequest@{RestSearchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 172 of file Rest\+Search\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a5776ab464f7733284408dc2fa5e907e9}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a5776ab464f7733284408dc2fa5e907e9}} 
+\index{RestSearchTransactionRequest@{RestSearchTransactionRequest}!getEndDate@{getEndDate}}
+\index{getEndDate@{getEndDate}!RestSearchTransactionRequest@{RestSearchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getEndDate()}{getEndDate()}}
+{\footnotesize\ttfamily get\+End\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the request end\+Date
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 156 of file Rest\+Search\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{RestSearchTransactionRequest@{RestSearchTransactionRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!RestSearchTransactionRequest@{RestSearchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 193 of file Rest\+Search\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a28507580eea1c43f0c9599aa095d09a8}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a28507580eea1c43f0c9599aa095d09a8}} 
+\index{RestSearchTransactionRequest@{RestSearchTransactionRequest}!getHttpMethod@{getHttpMethod}}
+\index{getHttpMethod@{getHttpMethod}!RestSearchTransactionRequest@{RestSearchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getHttpMethod()}{getHttpMethod()}}
+{\footnotesize\ttfamily get\+Http\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get HTTP Method.
+
+The HTTP method for search\+Transaction requests must be GET.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a28507580eea1c43f0c9599aa095d09a8}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 188 of file Rest\+Search\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a0c44cbed4e674365b58324212de2e05e}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a0c44cbed4e674365b58324212de2e05e}} 
+\index{RestSearchTransactionRequest@{RestSearchTransactionRequest}!getStartDate@{getStartDate}}
+\index{getStartDate@{getStartDate}!RestSearchTransactionRequest@{RestSearchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getStartDate()}{getStartDate()}}
+{\footnotesize\ttfamily get\+Start\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the request start\+Date
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 135 of file Rest\+Search\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a1bf1dfa2f0a253e1be302a6d189e2cfe}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a1bf1dfa2f0a253e1be302a6d189e2cfe}} 
+\index{RestSearchTransactionRequest@{RestSearchTransactionRequest}!setAgreementId@{setAgreementId}}
+\index{setAgreementId@{setAgreementId}!RestSearchTransactionRequest@{RestSearchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{setAgreementId()}{setAgreementId()}}
+{\footnotesize\ttfamily set\+Agreement\+Id (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the agreement ID
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request}{Rest\+Search\+Transaction\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file Rest\+Search\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a419539b8509b832c0f24112c97aa701b}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_a419539b8509b832c0f24112c97aa701b}} 
+\index{RestSearchTransactionRequest@{RestSearchTransactionRequest}!setEndDate@{setEndDate}}
+\index{setEndDate@{setEndDate}!RestSearchTransactionRequest@{RestSearchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{setEndDate()}{setEndDate()}}
+{\footnotesize\ttfamily set\+End\+Date (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the request end\+Date
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | Date\+Time & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request}{Rest\+Search\+Transaction\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 167 of file Rest\+Search\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_ae46fd053c5c916f96e6e5c1ca33c8343}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request_ae46fd053c5c916f96e6e5c1ca33c8343}} 
+\index{RestSearchTransactionRequest@{RestSearchTransactionRequest}!setStartDate@{setStartDate}}
+\index{setStartDate@{setStartDate}!RestSearchTransactionRequest@{RestSearchTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{setStartDate()}{setStartDate()}}
+{\footnotesize\ttfamily set\+Start\+Date (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the request start\+Date
+
+
+\begin{DoxyParams}[1]{Parameters}
+string | Date\+Time & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_search_transaction_request}{Rest\+Search\+Transaction\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 146 of file Rest\+Search\+Transaction\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/paypal/src/\+Message/\mbox{\hyperlink{_rest_search_transaction_request_8php}{Rest\+Search\+Transaction\+Request.\+php}}\end{DoxyCompactItemize}

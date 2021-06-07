@@ -1,0 +1,691 @@
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md35}{}\doxysection{3.\+9.\+3 -\/ 2015-\/03-\/18}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md35}
+
+\begin{DoxyItemize}
+\item Ensuring Content-\/\+Length is not stripped from a request when it is {\ttfamily 0}.
+\item Added more information to stream wrapper exceptions.
+\item Message parser will no longer throw warnings for malformed messages.
+\item Giving a valid cache TTL when max-\/age is 0.
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md36}{}\doxysection{3.\+9.\+2 -\/ 2014-\/09-\/10}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md36}
+
+\begin{DoxyItemize}
+\item Retrying \char`\"{}\+Connection died, retrying a fresh connect\char`\"{} curl errors.
+\item Automatically extracting the cacert from the phar in client constructor.
+\item Added Entity\+Body support for OPTIONS requests.
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md37}{}\doxysection{3.\+9.\+1 -\/ 2014-\/05-\/07}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md37}
+
+\begin{DoxyItemize}
+\item Added a fix to Read\+Limit\+Entity\+Body to ensure it doesn\textquotesingle{}t infinitely loop.
+\item Added a fix to the stream checksum function so that when the first read returns a falsey value, it still continues to consume the stream until EOF.
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md38}{}\doxysection{3.\+9.\+0 -\/ 2014-\/04-\/23}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md38}
+
+\begin{DoxyItemize}
+\item {\ttfamily null}, {\ttfamily false}, and {\ttfamily \char`\"{}\+\_\+guzzle\+\_\+blank\+\_\+\char`\"{}} all now serialize as an empty value with no trailing \char`\"{}=\char`\"{}. See dc1d824277.
+\item No longer performing an MD5 check on the cacert each time the phar is used, but rather copying the cacert to the temp directory.
+\item {\ttfamily \char`\"{}0\char`\"{}} can now be added as a URL path
+\item Deleting cookies that are set to empty
+\item If-\/\+Modified-\/\+Since is no longer unnecessarily added to the Cache\+Plugin
+\item Cookie path matching now follows RFC 6265 s5.\+1.\+4
+\item Updated service descriptions are now added to a service client\textquotesingle{}s composite factory.
+\item Mock\+Plugin now throws an exception if the queue is empty.
+\item Properly parsing URLs that start with \char`\"{}http\char`\"{} but are not absolute
+\item Added the ability to configure the curl\+\_\+multi\+\_\+select timeout setting
+\item OAuth parameters are now sorted using lexicographical byte value ordering
+\item Fixing invalid usage of an out of range PHP feature in the Error\+Response\+Plugin
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md39}{}\doxysection{3.\+8.\+1 -\/2014-\/01-\/28}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md39}
+
+\begin{DoxyItemize}
+\item Bug\+: Always using GET requests when redirecting from a 303 response
+\item Bug\+: CURLOPT\+\_\+\+SSL\+\_\+\+VERIFYHOST is now correctly set to false when setting {\ttfamily \$certificate\+Authority} to false in {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Client\+Interface\+::set\+Ssl\+Verification()}
+\item Bug\+: Redirect\+Plugin now uses strict RFC 3986 compliance when combining a base URL with a relative URL
+\item Bug\+: The body of a request can now be set to {\ttfamily \char`\"{}0\char`\"{}}
+\item Sending PHP stream requests no longer forces {\ttfamily HTTP/1.\+0}
+\item Adding more information to Exception\+Collection exceptions so that users have more context, including a stack trace of each sub-\/exception
+\item Updated the {\ttfamily \$ref} attribute in service descriptions to merge over any existing parameters of a schema (rather than clobbering everything).
+\item Merging URLs will now use the query string object from the relative URL (thus allowing custom query aggregators)
+\item Query strings are now parsed in a way that they do no convert empty keys with no value to have a dangling {\ttfamily =}. For example {\ttfamily foo\&bar=baz} is now correctly parsed and recognized as {\ttfamily foo\&bar=baz} rather than {\ttfamily foo=\&bar=baz}.
+\item Now properly escaping the regular expression delimiter when matching Cookie domains.
+\item Network access is now disabled when loading XML documents
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md40}{}\doxysection{3.\+8.\+0 -\/ 2013-\/12-\/05}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md40}
+
+\begin{DoxyItemize}
+\item Added the ability to define a POST name for a file
+\item JSON response parsing now properly walks additional\+Properties
+\item c\+URL error code 18 is now retried automatically in the Backoff\+Plugin
+\item Fixed a c\+URL error when URLs contain fragments
+\item Fixed an issue in the Backoff\+Plugin retry event where it was trying to access all exceptions as if they were Curl\+Exceptions
+\item CURLOPT\+\_\+\+PROGRESS function fix for PHP 5.\+5 (69fcc1e)
+\item Added the ability for Guzzle to work with older versions of c\+URL that do not support {\ttfamily CURLOPT\+\_\+\+TIMEOUT\+\_\+\+MS}
+\item Fixed a bug that was encountered when parsing empty header parameters
+\item Uri\+Template now has a {\ttfamily set\+Regex()} method to match the docs
+\item The {\ttfamily debug} request parameter now checks if it is truthy rather than if it exists
+\item Setting the {\ttfamily debug} request parameter to true shows verbose c\+URL output instead of using the Log\+Plugin
+\item Added the ability to combine URLs using strict RFC 3986 compliance
+\item Command objects can now return the validation errors encountered by the command
+\item Various fixes to cache revalidation (\#437 and 29797e5)
+\item Various fixes to the Async\+Plugin
+\item Cleaned up build scripts
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md41}{}\doxysection{3.\+7.\+4 -\/ 2013-\/10-\/02}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md41}
+
+\begin{DoxyItemize}
+\item Bug fix\+: 0 is now an allowed value in a description parameter that has a default value (\#430)
+\item Bug fix\+: Schema\+Formatter now returns an integer when formatting to a Unix timestamp (see \href{https://github.com/aws/aws-sdk-php/issues/147}{\texttt{ https\+://github.\+com/aws/aws-\/sdk-\/php/issues/147}})
+\item Bug fix\+: Cleaned up and fixed URL dot segment removal to properly resolve internal dots
+\item Minimum PHP version is now properly specified as 5.\+3.\+3 (up from 5.\+3.\+2) (\#420)
+\item Updated the bundled cacert.\+pem (\#419)
+\item Oauth\+Plugin now supports adding authentication to headers or query string (\#425)
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md42}{}\doxysection{3.\+7.\+3 -\/ 2013-\/09-\/08}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md42}
+
+\begin{DoxyItemize}
+\item Added the ability to get the exception associated with a request/command when using {\ttfamily Multi\+Transfer\+Exception} and {\ttfamily Command\+Transfer\+Exception}.
+\item Setting {\ttfamily additional\+Parameters} of a response to false is now honored when parsing responses with a service description
+\item Schemas are only injected into response models when explicitly configured.
+\item No longer guessing Content-\/\+Type based on the path of a request. Content-\/\+Type is now only guessed based on the path of an Entity\+Body.
+\item Bug fix\+: Chunked\+Iterator can now properly chunk a \textbackslash{}\+Traversable as well as an \textbackslash{}\+Iterator.
+\item Bug fix\+: Filter\+Iterator now relies on {\ttfamily \textbackslash{}Iterator} instead of {\ttfamily \textbackslash{}Traversable}.
+\item Bug fix\+: Gracefully handling malformed responses in Request\+Mediator\+::write\+Response\+Body()
+\item Bug fix\+: Replaced call to can\+Cache with can\+Cache\+Request in the Callback\+Can\+Cache\+Strategy of the Cache\+Plugin
+\item Bug fix\+: Visiting XML attributes first before visting XML children when serializing requests
+\item Bug fix\+: Properly parsing headers that contain commas contained in quotes
+\item Bug fix\+: mimetype guessing based on a filename is now case-\/insensitive
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md43}{}\doxysection{3.\+7.\+2 -\/ 2013-\/08-\/02}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md43}
+
+\begin{DoxyItemize}
+\item Bug fix\+: Properly URL encoding paths when using the PHP-\/only version of the Uri\+Template expander See \href{https://github.com/guzzle/guzzle/issues/371}{\texttt{ https\+://github.\+com/guzzle/guzzle/issues/371}}
+\item Bug fix\+: Cookie domains are now matched correctly according to RFC 6265 See \href{https://github.com/guzzle/guzzle/issues/377}{\texttt{ https\+://github.\+com/guzzle/guzzle/issues/377}}
+\item Bug fix\+: GET parameters are now used when calculating an OAuth signature
+\item Bug fix\+: Fixed an issue with cache revalidation where the If-\/\+None-\/\+Match header was being double quoted
+\item {\ttfamily Guzzle\textbackslash{}Common\textbackslash{}Abstract\+Has\+Dispatcher\+::dispatch()} now returns the event that was dispatched
+\item {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Query\+String\+::factory()} now guesses the most appropriate query aggregator to used based on the input. See \href{https://github.com/guzzle/guzzle/issues/379}{\texttt{ https\+://github.\+com/guzzle/guzzle/issues/379}}
+\item Added a way to add custom domain objects to service description parsing using the {\ttfamily operation.\+parse\+\_\+class} event. See \href{https://github.com/guzzle/guzzle/pull/380}{\texttt{ https\+://github.\+com/guzzle/guzzle/pull/380}}
+\item c\+URL multi cleanup and optimizations
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md44}{}\doxysection{3.\+7.\+1 -\/ 2013-\/07-\/05}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md44}
+
+\begin{DoxyItemize}
+\item Bug fix\+: Setting default options on a client now works
+\item Bug fix\+: Setting options on HEAD requests now works. See \#352
+\item Bug fix\+: Moving stream factory before send event to before building the stream. See \#353
+\item Bug fix\+: Cookies no longer match on IP addresses per RFC 6265
+\item Bug fix\+: Correctly parsing header parameters that are in {\ttfamily $<$$>$} and quotes
+\item Added {\ttfamily cert} and {\ttfamily ssl\+\_\+key} as request options
+\item {\ttfamily Host} header can now diverge from the host part of a URL if the header is set manually
+\item {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Command\textbackslash{}Location\+Visitor\textbackslash{}Request\textbackslash{}Xml\+Visitor} was rewritten to change from using Simple\+XML to XMLWriter
+\item OAuth parameters are only added via the plugin if they aren\textquotesingle{}t already set
+\item Exceptions are now thrown when a URL cannot be parsed
+\item Returning {\ttfamily false} if {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Entity\+Body\+::get\+Content\+Md5()} fails
+\item Not setting a {\ttfamily Content-\/\+MD5} on a command if calculating the Content-\/\+MD5 fails via the Command\+Content\+Md5\+Plugin
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md45}{}\doxysection{3.\+7.\+0 -\/ 2013-\/06-\/10}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md45}
+
+\begin{DoxyItemize}
+\item See \mbox{\hyperlink{_u_p_g_r_a_d_i_n_g_8md}{UPGRADING.\+md}} for more information on how to upgrade.
+\item Requests now support the ability to specify an array of \$options when creating a request to more easily modify a request. You can pass a \textquotesingle{}request.\+options\textquotesingle{} configuration setting to a client to apply default request options to every request created by a client (e.\+g. default query string variables, headers, curl options, etc).
+\item Added a static facade class that allows you to use Guzzle with static methods and mount the class to {\ttfamily \textbackslash{}Guzzle}. See {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Static\+Client\+::mount}.
+\item Added {\ttfamily command.\+request\+\_\+options} to {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Command\textbackslash{}Abstract\+Command} to pass request options to requests created by a command (e.\+g. custom headers, query string variables, timeout settings, etc).
+\item Stream size in {\ttfamily Guzzle\textbackslash{}Stream\textbackslash{}Php\+Stream\+Request\+Factory} will now be set if Content-\/\+Length is returned in the headers of a response
+\item Added {\ttfamily Guzzle\textbackslash{}Common\textbackslash{}Collection\+::set\+Path(\$path, \$value)} to set a value into an array using a nested key (e.\+g. `\$collection-\/$>$set\+Path(\textquotesingle{}foo/baz/bar', \textquotesingle{}test\textquotesingle{}); echo \$collection\mbox{[}\textquotesingle{}foo\textquotesingle{}\mbox{]}\mbox{[}\textquotesingle{}bar\textquotesingle{}\mbox{]}\mbox{[}\textquotesingle{}bar\textquotesingle{}\mbox{]};\`{})
+\item Service\+Builders now support storing and retrieving arbitrary data
+\item Cache\+Plugin can now purge all resources for a given URI
+\item Cache\+Plugin can automatically purge matching cached items when a non-\/idempotent request is sent to a resource
+\item Cache\+Plugin now uses the Vary header to determine if a resource is a cache hit
+\item {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Response} now implements {\ttfamily \textbackslash{}Serializable}
+\item Added {\ttfamily Guzzle\textbackslash{}Cache\textbackslash{}Cache\+Adapter\+Factory\+::from\+Cache()} to more easily create cache adapters
+\item {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Client\+Interface\+::execute()} now accepts an array, single command, or Traversable
+\item Fixed a bug in {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Header\textbackslash{}Link\+::add\+Link()}
+\item Better handling of calculating the size of a stream in {\ttfamily Guzzle\textbackslash{}Stream\textbackslash{}Stream} using fstat() and caching the size
+\item {\ttfamily Guzzle\textbackslash{}Common\textbackslash{}Exception\textbackslash{}Exception\+Collection} now creates a more readable exception message
+\item Fixing BC break\+: Added back the Monolog\+Log\+Adapter implementation rather than extending from Psr\+Log so that older Symfony users can still use the old version of Monolog.
+\item Fixing BC break\+: Added the implementation back in for {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Abstract\+Message\+::get\+Tokenized\+Header()}. Now triggering an E\+\_\+\+USER\+\_\+\+DEPRECATED warning when used. Use {\ttfamily \$message-\/$>$get\+Header()-\/$>$parse\+Params()}.
+\item Several performance improvements to {\ttfamily Guzzle\textbackslash{}Common\textbackslash{}Collection}
+\item Added an {\ttfamily \$options} argument to the end of the following methods of {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Client\+Interface}\+: create\+Request, head, delete, put, patch, post, options, prepare\+Request
+\item Added an {\ttfamily \$options} argument to the end of {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\textbackslash{}Request\+Factory\+Interface\+::create\+Request()}
+\item Added an {\ttfamily apply\+Options()} method to {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\textbackslash{}Request\+Factory\+Interface}
+\item Changed {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Client\+Interface\+::get(\$uri = null, \$headers = null, \$body = null)} to {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Client\+Interface\+::get(\$uri = null, \$headers = null, \$options = array())}. You can still pass in a resource, string, or Entity\+Body into the \$options parameter to specify the download location of the response.
+\item Changed {\ttfamily Guzzle\textbackslash{}Common\textbackslash{}Collection\+::\+\_\+\+\_\+construct(\$data)} to no longer accepts a null value for {\ttfamily \$data} but a default {\ttfamily array()}
+\item Added {\ttfamily Guzzle\textbackslash{}Stream\textbackslash{}Stream\+Interface\+::is\+Repeatable}
+\item Removed `Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::set\+Default\+Headers(). Use \$client-\/$>$get\+Config()-\/$>$set\+Path(\textquotesingle{}request.\+options/headers/\{header\+\_\+name\}', \textquotesingle{}value\textquotesingle{})`. or \$client-\/$>$get\+Config()-\/$>$set\+Path(\textquotesingle{}request.\+options/headers', array(\textquotesingle{}header\+\_\+name\textquotesingle{} =$>$ \textquotesingle{}value\textquotesingle{})){\ttfamily .}
+\item {\ttfamily Removed}Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::get\+Default\+Headers(). Use \$client-\/$>$get\+Config()-\/$>$get\+Path(\textquotesingle{}request.\+options/headers\textquotesingle{}){\ttfamily .}
+\item {\ttfamily Removed}Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::expand\+Template(){\ttfamily }
+\item {\ttfamily Removed}Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::set\+Request\+Factory(){\ttfamily }
+\item {\ttfamily Removed}Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::get\+Curl\+Multi(){\ttfamily }
+\item {\ttfamily Removed}Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+Interface\+::can\+Cache$<$tt$>$
+\item RemovedGuzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+Interface\+::set\+Is\+Redirect$<$tt$>$
+\item RemovedGuzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+Interface\+::is\+Redirect$<$tt$>$
+\item MadeGuzzle\textbackslash{}\+Http\textbackslash{}\+Client\+::expand\+Template$<$tt$>$andget\+Uri\+Template\`{} protected methods.
+\item You can now enable E\+\_\+\+USER\+\_\+\+DEPRECATED warnings to see if you are using a deprecated method by setting {\ttfamily Guzzle\textbackslash{}Common\textbackslash{}Version\+::\$emit\+Warnings} to true.
+\item Marked {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+::is\+Response\+Body\+Repeatable()} as deprecated. Use {\ttfamily \$request-\/$>$get\+Response\+Body()-\/$>$is\+Repeatable()} instead.
+\item Marked {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+::can\+Cache()} as deprecated. Use {\ttfamily Guzzle\textbackslash{}Plugin\textbackslash{}Cache\textbackslash{}Default\+Can\+Cache\+Strategy-\/$>$can\+Cache\+Request()} instead.
+\item Marked {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+::can\+Cache()} as deprecated. Use {\ttfamily Guzzle\textbackslash{}Plugin\textbackslash{}Cache\textbackslash{}Default\+Can\+Cache\+Strategy-\/$>$can\+Cache\+Request()} instead.
+\item Marked {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+::set\+Is\+Redirect()} as deprecated. Use the History\+Plugin instead.
+\item Marked {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+::is\+Redirect()} as deprecated. Use the History\+Plugin instead.
+\item Marked {\ttfamily Guzzle\textbackslash{}Cache\textbackslash{}Cache\+Adapter\+Factory\+::factory()} as deprecated
+\item Marked \textquotesingle{}command.\+headers\textquotesingle{}, \textquotesingle{}command.\+response\+\_\+body\textquotesingle{} and \textquotesingle{}command.\+on\+\_\+complete\textquotesingle{} as deprecated for Abstract\+Command. These will work through Guzzle 4.\+0
+\item Marked \textquotesingle{}request.\+params\textquotesingle{} for {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Client} as deprecated. Use \mbox{[}request.\+options\mbox{]}\mbox{[}params\mbox{]}.
+\item Marked {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Client\+::enable\+Magic\+Methods()} as deprecated. Magic methods can no longer be disabled on a Guzzle\textbackslash{}\+Service\textbackslash{}\+Client.
+\item Marked {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Client\+::get\+Default\+Headers()} as deprecated. Use \$client-\/$>$get\+Config()-\/$>$get\+Path(\textquotesingle{}request.\+options/headers\textquotesingle{}){\ttfamily .}
+\item {\ttfamily Marked}Guzzle\textbackslash{}\+Service\textbackslash{}\+Client\+::set\+Default\+Headers()` as deprecated. Use \$client-\/$>$get\+Config()-\/$>$set\+Path(\textquotesingle{}request.\+options/headers/\{header\+\_\+name\}', \textquotesingle{}value\textquotesingle{}){\ttfamily .}
+\item {\ttfamily Marked}Guzzle\textbackslash{}\+Parser\textbackslash{}\+Url\textbackslash{}\+Url\+Parser{\ttfamily as deprecated. Just use PHP\textquotesingle{}s}parse\+\_\+url(){\ttfamily and percent encode your UTF-\/8.}
+\item {\ttfamily Marked}Guzzle\textbackslash{}\+Common\textbackslash{}\+Collection\+::inject(){\ttfamily as deprecated.}
+\item {\ttfamily Marked}Guzzle\textbackslash{}\+Plugin\textbackslash{}\+Curl\+Auth\textbackslash{}\+Curl\+Auth\+Plugin{\ttfamily as deprecated. Use}\$client-\/$>$get\+Config()-\/$>$set\+Path(\textquotesingle{}request.\+options/auth\textquotesingle{}, array(\textquotesingle{}user\textquotesingle{}, \textquotesingle{}pass\textquotesingle{}, \textquotesingle{}Basic$\vert$\+Digest\textquotesingle{});\`{}
+\item Cache\+Key\+Provider\+Interface and Default\+Cache\+Key\+Provider are no longer used. All of this logic is handled in a Cache\+Storage\+Interface. These two objects and interface will be removed in a future version.
+\item Always setting X-\/cache headers on cached responses
+\item Default cache TTLs are now handled by the Cache\+Storage\+Interface of a Cache\+Plugin
+\item {\ttfamily Cache\+Storage\+Interface\+::cache(\$key, Response \$response, \$ttl = null)} has changed to {\ttfamily cache(Request\+Interface \$request, Response \$response);}
+\item {\ttfamily Cache\+Storage\+Interface\+::fetch(\$key)} has changed to {\ttfamily fetch(Request\+Interface \$request);}
+\item {\ttfamily Cache\+Storage\+Interface\+::delete(\$key)} has changed to {\ttfamily delete(Request\+Interface \$request);}
+\item Added {\ttfamily Cache\+Storage\+Interface\+::purge(\$url)}
+\item {\ttfamily Default\+Revalidation\+::\+\_\+\+\_\+construct(Cache\+Key\+Provider\+Interface \$cache\+Key, Cache\+Storage\+Interface \$cache, Cache\+Plugin \$plugin)} has changed to {\ttfamily Default\+Revalidation\+::\+\_\+\+\_\+construct(Cache\+Storage\+Interface \$cache, Can\+Cache\+Strategy\+Interface \$can\+Cache = null)}
+\item Added {\ttfamily Revalidation\+Interface\+::should\+Revalidate(Request\+Interface \$request, Response \$response)}
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md46}{}\doxysection{3.\+6.\+0 -\/ 2013-\/05-\/29}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md46}
+
+\begin{DoxyItemize}
+\item Service\+Description now implements To\+Array\+Interface
+\item Added command.\+hidden\+\_\+params to blacklist certain headers from being treated as additional\+Parameters
+\item Guzzle can now correctly parse incomplete URLs
+\item Mixed casing of headers are now forced to be a single consistent casing across all values for that header.
+\item Messages internally use a Header\+Collection object to delegate handling case-\/insensitive header resolution
+\item Removed the whole changed\+Header() function system of messages because all header changes now go through add\+Header().
+\item Specific header implementations can be created for complex headers. When a message creates a header, it uses a Header\+Factory which can map specific headers to specific header classes. There is now a Link header and Cache\+Control header implementation.
+\item Removed from interface\+: Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::set\+Uri\+Template
+\item Removed from interface\+: Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::set\+Curl\+Multi()
+\item Removed Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+::received\+Request\+Header() and implemented this functionality in Guzzle\textbackslash{}\+Http\textbackslash{}\+Curl\textbackslash{}\+Request\+Mediator
+\item Removed the optional \$as\+String parameter from Message\+Interface\+::get\+Header(). Just cast the header to a string.
+\item Removed the optional \$try\+Chunked\+Transfer option from Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Entity\+Enclosing\+Request\+Interface
+\item Removed the \$as\+Objects argument from Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Message\+Interface\+::get\+Headers()
+\item Removed Guzzle\textbackslash{}\+Parser\textbackslash{}\+Parser\+Register\mbox{\hyperlink{_service_locator_trait_8php_a1daf468da92d39bf50b3cf737cf8f32b}{get()}}. Use get\+Parser()
+\item Removed Guzzle\textbackslash{}\+Parser\textbackslash{}\+Parser\+Register\+::set(). Use register\+Parser().
+\item All response header helper functions return a string rather than mixing Header objects and strings inconsistently
+\item Removed c\+URL blacklist support. This is no longer necessary now that Expect, Accept, etc are managed by Guzzle directly via interfaces
+\item Removed the injecting of a request object onto a response object. The methods to get and set a request still exist but are a no-\/op until removed.
+\item Most classes that used to require a \`{}{\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Command\textbackslash{}Command\+Interface} typehint now request a {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Command\textbackslash{}Array\+Command\+Interface}.
+\item Added {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+Interface\+::start\+Response()} to the Request\+Interface to handle injecting a response on a request while the request is still being transferred
+\item The ability to case-\/insensitively search for header values
+\item Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Header\+::has\+Exact\+Header
+\item Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Header\+::raw. Use get\+All()
+\item Deprecated cache control specific methods on Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Abstract\+Message. Use the Cache\+Control header object instead.
+\item {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Command\textbackslash{}Command\+Interface} now extends from To\+Array\+Interface and Array\+Access
+\item Added the ability to cast \mbox{\hyperlink{class_model}{Model}} objects to a string to view debug information.
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md47}{}\doxysection{3.\+5.\+0 -\/ 2013-\/05-\/13}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md47}
+
+\begin{DoxyItemize}
+\item Bug\+: Fixed a regression so that request responses are parsed only once per oncomplete event rather than multiple times
+\item Bug\+: Better cleanup of one-\/time events accross the board (when an event is meant to fire once, it will now remove itself from the Event\+Dispatcher)
+\item Bug\+: {\ttfamily Guzzle\textbackslash{}Log\textbackslash{}Message\+Formatter} now properly writes \char`\"{}total\+\_\+time\char`\"{} and \char`\"{}connect\+\_\+time\char`\"{} values
+\item Bug\+: Cloning an Entity\+Enclosing\+Request now clones the Entity\+Body too
+\item Bug\+: Fixed an undefined index error when parsing nested JSON responses with a sent\+As parameter that reference a non-\/existent key
+\item Bug\+: All \+\_\+\+\_\+call() method arguments are now required (helps with mocking frameworks)
+\item Deprecating Response\+::get\+Request() and now using a shallow clone of a request object to remove a circular reference to help with refcount based garbage collection of resources created by sending a request
+\item Deprecating ZF1 cache and log adapters. These will be removed in the next major version.
+\item Deprecating {\ttfamily Response\+::get\+Previous\+Response()} (method signature still exists, but it\textquotesingle{}sdeprecated). Use the History\+Plugin for a history.
+\item Added a {\ttfamily response\+Body} alias for the {\ttfamily response\+\_\+body} location
+\item Refactored internals to no longer rely on Response\+::get\+Request()
+\item History\+Plugin can now be cast to a string
+\item History\+Plugin now logs transactions rather than requests and responses to more accurately keep track of the requests and responses that are sent over the wire
+\item Added {\ttfamily get\+Effective\+Url()} and {\ttfamily get\+Redirect\+Count()} to Response objects
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md48}{}\doxysection{3.\+4.\+3 -\/ 2013-\/04-\/30}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md48}
+
+\begin{DoxyItemize}
+\item Bug fix\+: Fixing bug introduced in 3.\+4.\+2 where redirect responses are duplicated on the final redirected response
+\item Added a check to re-\/extract the temp cacert bundle from the phar before sending each request
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md49}{}\doxysection{3.\+4.\+2 -\/ 2013-\/04-\/29}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md49}
+
+\begin{DoxyItemize}
+\item Bug fix\+: Stream objects now work correctly with \char`\"{}a\char`\"{} and \char`\"{}a+\char`\"{} modes
+\item Bug fix\+: Removing {\ttfamily Transfer-\/\+Encoding\+: chunked} header when a Content-\/\+Length is present
+\item Bug fix\+: Async\+Plugin no longer forces HEAD requests
+\item Bug fix\+: Date\+Time timezones are now properly handled when using the service description schema formatter
+\item Bug fix\+: Cache\+Plugin now properly handles stale-\/if-\/error directives when a request to the origin server fails
+\item Setting a response on a request will write to the custom request body from the response body if one is specified
+\item Log\+Plugin now writes to php\+://output when STDERR is undefined
+\item Added the ability to set multiple POST files for the same key in a single call
+\item application/x-\/www-\/form-\/urlencoded POSTs now use the utf-\/8 charset by default
+\item Added the ability to queue Curl\+Exceptions to the Mock\+Plugin
+\item Cleaned up how manual responses are queued on requests (removed \char`\"{}queued\+\_\+response\char`\"{} and now using request.\+before\+\_\+send)
+\item Configuration loading now allows remote files
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md50}{}\doxysection{3.\+4.\+1 -\/ 2013-\/04-\/16}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md50}
+
+\begin{DoxyItemize}
+\item Large refactoring to how Curl\+Multi handles work. There is now a proxy that sits in front of a pool of Curl\+Multi handles. This greatly simplifies the implementation, fixes a couple bugs, and provides a small performance boost.
+\item Exceptions are now properly grouped when sending requests in parallel
+\item Redirects are now properly aggregated when a multi transaction fails
+\item Redirects now set the response on the original object even in the event of a failure
+\item Bug fix\+: \mbox{\hyperlink{class_model}{Model}} names are now properly set even when using \$refs
+\item Added support for PHP 5.\+5\textquotesingle{}s Curl\+File to prevent warnings with the deprecated @ syntax
+\item Added support for oauth\+\_\+callback in OAuth signatures
+\item Added support for oauth\+\_\+verifier in OAuth signatures
+\item Added support to attempt to retrieve a command first literally, then ucfirst, the with inflection
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md51}{}\doxysection{3.\+4.\+0 -\/ 2013-\/04-\/11}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md51}
+
+\begin{DoxyItemize}
+\item Bug fix\+: URLs are now resolved correctly based on \href{http://tools.ietf.org/html/rfc3986\#section-5.2}{\texttt{ http\+://tools.\+ietf.\+org/html/rfc3986\#section-\/5.\+2}}. \#289
+\item Bug fix\+: Absolute URLs with a path in a service description will now properly override the base URL. \#289
+\item Bug fix\+: Parsing a query string with a single PHP array value will now result in an array. \#263
+\item Bug fix\+: Better normalization of the User-\/\+Agent header to prevent duplicate headers. \#264.
+\item Bug fix\+: Added {\ttfamily number} type to service descriptions.
+\item Bug fix\+: empty parameters are removed from an OAuth signature
+\item Bug fix\+: Revalidating a cache entry prefers the Last-\/\+Modified over the Date header
+\item Bug fix\+: Fixed \char`\"{}array to string\char`\"{} error when validating a union of types in a service description
+\item Bug fix\+: Removed code that attempted to determine the size of a stream when data is written to the stream
+\item Bug fix\+: Not including an {\ttfamily oauth\+\_\+token} if the value is null in the Oauth\+Plugin.
+\item Bug fix\+: Now correctly aggregating successful requests and failed requests in Curl\+Multi when a redirect occurs.
+\item The new default CURLOPT\+\_\+\+TIMEOUT setting has been increased to 150 seconds so that Guzzle works on poor connections.
+\item Added a feature to Entity\+Enclosing\+Request\+::set\+Body() that will automatically set the Content-\/\+Type of the request if the Content-\/\+Type can be determined based on the entity body or the path of the request.
+\item Added the ability to overwrite configuration settings in a client when grabbing a throwaway client from a builder.
+\item Added support for a PSR-\/3 Log\+Adapter.
+\item Added a {\ttfamily command.\+after\+\_\+prepare} event
+\item Added {\ttfamily oauth\+\_\+callback} parameter to the Oauth\+Plugin
+\item Added the ability to create a custom stream class when using a stream factory
+\item Added a Caching\+Entity\+Body decorator
+\item Added support for {\ttfamily additional\+Parameters} in service descriptions to define how custom parameters are serialized.
+\item The bundled SSL certificate is now provided in the phar file and extracted when running Guzzle from a phar.
+\item You can now send any Entity\+Enclosing\+Request with POST fields or POST files and c\+URL will handle creating bodies
+\item POST requests using a custom entity body are now treated exactly like PUT requests but with a custom c\+URL method. This means that the redirect behavior of POST requests with custom bodies will not be the same as POST requests that use POST fields or files (the latter is only used when emulating a form POST in the browser).
+\item Lots of cleanup to Curl\+Handle\+::factory and Request\+Factory\+::create\+Request
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md52}{}\doxysection{3.\+3.\+1 -\/ 2013-\/03-\/10}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md52}
+
+\begin{DoxyItemize}
+\item Added the ability to create PHP streaming responses from HTTP requests
+\item Bug fix\+: Running any filters when parsing response headers with service descriptions
+\item Bug fix\+: Oauth\+Plugin fixes to allow for multi-\/dimensional array signing, and sorting parameters before signing
+\item Bug fix\+: Removed the adding of default empty arrays and false Booleans to responses in order to be consistent across response location visitors.
+\item Bug fix\+: Removed the possibility of creating configuration files with circular dependencies
+\item Request\+Factory\+::create() now uses the key of a POST file when setting the POST file name
+\item Added xml\+Allow\+Empty to serialize an XML body even if no XML specific parameters are set
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md53}{}\doxysection{3.\+3.\+0 -\/ 2013-\/03-\/03}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md53}
+
+\begin{DoxyItemize}
+\item A large number of performance optimizations have been made
+\item Bug fix\+: Added \textquotesingle{}wb\textquotesingle{} as a valid write mode for streams
+\item Bug fix\+: {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Response\+::json()} now allows scalar values to be returned
+\item Bug fix\+: Fixed bug in {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Response} where wrapping quotes were stripped from {\ttfamily get\+Etag()}
+\item BC\+: Removed {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Utils} class
+\item BC\+: Setting a service description on a client will no longer modify the client\textquotesingle{}s command factories.
+\item BC\+: Emitting IO events from a Request\+Mediator is now a parameter that must be set in a request\textquotesingle{}s curl options using the \textquotesingle{}emit\+\_\+io\textquotesingle{} key. This was previously set under a request\textquotesingle{}s parameters using \textquotesingle{}curl.\+emit\+\_\+io\textquotesingle{}
+\item BC\+: {\ttfamily Guzzle\textbackslash{}Stream\textbackslash{}Stream\+::get\+Wrapper()} and {\ttfamily Guzzle\textbackslash{}Stream\textbackslash{}Stream\+::get\+Steam\+Type()} are no longer converted to lowercase
+\item Operation parameter objects are now lazy loaded internally
+\item Added Error\+Response\+Plugin that can throw errors for responses defined in service description operations\textquotesingle{} error\+Responses
+\item Added support for instantiating response\+Type=class response\+Class classes. Classes must implement {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Command\textbackslash{}Response\+Class\+Interface}
+\item Added support for additional\+Properties for top-\/level parameters in response\+Type=model response\+Classes. These additional properties also support locations and can be used to parse JSON responses where the outermost part of the JSON is an array
+\item Added support for nested renaming of JSON models (rename sent\+As to name)
+\item Cache\+Plugin
+\begin{DoxyItemize}
+\item Added support for stale-\/if-\/error so that the Cache\+Plugin can now serve stale content from the cache on error
+\item Debug headers can now added to cached response in the Cache\+Plugin
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md54}{}\doxysection{3.\+2.\+0 -\/ 2013-\/02-\/14}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md54}
+
+\begin{DoxyItemize}
+\item Curl\+Multi is no longer reused globally. A new multi object is created per-\/client. This helps to isolate clients.
+\item URLs with no path no longer contain a \char`\"{}/\char`\"{} by default
+\item Guzzle\textbackslash{}\+Http\textbackslash{}\+Query\+String does no longer manages the leading \char`\"{}?\char`\"{}. This is now handled in Guzzle\textbackslash{}\+Http\textbackslash{}\+Url.
+\item Bad\+Response\+Exception no longer includes the full request and response message
+\item Adding \mbox{\hyperlink{namespace_davaxi_1_1_sparkline_a189b6c7f0ac0c55a0d5ee52497a7b433}{set\+Data()}} to Guzzle\textbackslash{}\+Service\textbackslash{}\+Description\textbackslash{}\+Service\+Description\+Interface
+\item Adding get\+Response\+Body() to Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+Interface
+\item Various updates to classes to use Service\+Description\+Interface type hints rather than Service\+Description
+\item Header values can now be normalized into distinct values when multiple headers are combined with a comma separated list
+\item xml\+Encoding can now be customized for the XML declaration of a XML service description operation
+\item Guzzle\textbackslash{}\+Http\textbackslash{}\+Query\+String now uses Guzzle\textbackslash{}\+Http\textbackslash{}\+Query\+Aggregator\textbackslash{}\+Query\+Aggregator\+Interface objects to add custom value aggregation and no longer uses callbacks
+\item The URL encoding implementation of Guzzle\textbackslash{}\+Http\textbackslash{}\+Query\+String can now be customized
+\item Bug fix\+: Filters were not always invoked for array service description parameters
+\item Bug fix\+: Redirects now use a target response body rather than a temporary response body
+\item Bug fix\+: The default exponential backoff Backoff\+Plugin was not giving when the request threshold was exceeded
+\item Bug fix\+: Guzzle now takes the first found value when grabbing Cache-\/\+Control directives
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md55}{}\doxysection{3.\+1.\+2 -\/ 2013-\/01-\/27}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md55}
+
+\begin{DoxyItemize}
+\item Refactored how operation responses are parsed. Visitors now include a before() method responsible for parsing the response body. For example, the Xml\+Visitor now parses the XML response into an array in the before() method.
+\item Fixed an issue where c\+URL would not automatically decompress responses when the Accept-\/\+Encoding header was sent
+\item CURLOPT\+\_\+\+SSL\+\_\+\+VERIFYHOST is never set to 1 because it is deprecated (see 5e0ff2ef20f839e19d1eeb298f90ba3598784444)
+\item Fixed a bug where redirect responses were not chained correctly using get\+Previous\+Response()
+\item Setting default headers on a client after setting the user-\/agent will not erase the user-\/agent setting
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md56}{}\doxysection{3.\+1.\+1 -\/ 2013-\/01-\/20}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md56}
+
+\begin{DoxyItemize}
+\item Adding wildcard support to Guzzle\textbackslash{}\+Common\textbackslash{}\+Collection\+::get\+Path()
+\item Adding alias support to Service\+Builder configs
+\item Adding Guzzle\textbackslash{}\+Service\textbackslash{}\+Resource\textbackslash{}\+Composite\+Resource\+Iterator\+Factory and cleaning up factory interface
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md57}{}\doxysection{3.\+1.\+0 -\/ 2013-\/01-\/12}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md57}
+
+\begin{DoxyItemize}
+\item BC\+: Curl\+Exception now extends from Request\+Exception rather than Bad\+Response\+Exception
+\item BC\+: Renamed Guzzle\textbackslash{}\+Plugin\textbackslash{}\+Cache\textbackslash{}\+Can\+Cache\+Strategy\+Interface\+::can\+Cache() to can\+Cache\+Request() and added Can\+Cache\+Response()
+\item Added get\+Data to Service\+Description\+Interface
+\item Added context array to Request\+Interface\+::set\+State()
+\item Bug\+: Removing hard dependency on the Backoff\+Plugin from Guzzle\textbackslash{}\+Http
+\item Bug\+: Adding required content-\/type when JSON request visitor adds JSON to a command
+\item Bug\+: Fixing the serialization of a service description with custom data
+\item Made it easier to deal with exceptions thrown when transferring commands or requests in parallel by providing an array of successful and failed responses
+\item Moved get\+Path from Guzzle\textbackslash{}\+Service\textbackslash{}\+Resource\textbackslash{}\+Model to Guzzle\textbackslash{}\+Common\textbackslash{}\+Collection
+\item Added Guzzle\textbackslash{}\+Http\textbackslash{}\+Io\+Emitting\+Entity\+Body
+\item Moved command filtration from validators to location visitors
+\item Added {\ttfamily extends} attributes to service description parameters
+\item Added get\+Models to Service\+Description\+Interface
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md58}{}\doxysection{3.\+0.\+7 -\/ 2012-\/12-\/19}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md58}
+
+\begin{DoxyItemize}
+\item Fixing phar detection when forcing a cacert to system if null or true
+\item Allowing filename to be passed to {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+::set\+Response\+Body()}
+\item Cleaning up {\ttfamily Guzzle\textbackslash{}Common\textbackslash{}Collection\+::inject} method
+\item Adding a response\+\_\+body location to service descriptions
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md59}{}\doxysection{3.\+0.\+6 -\/ 2012-\/12-\/09}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md59}
+
+\begin{DoxyItemize}
+\item Curl\+Multi performance improvements
+\item Adding set\+Error\+Responses() to Operation
+\item composer.\+json tweaks
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md60}{}\doxysection{3.\+0.\+5 -\/ 2012-\/11-\/18}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md60}
+
+\begin{DoxyItemize}
+\item Bug\+: Fixing an infinite recursion bug caused from revalidating with the Cache\+Plugin
+\item Bug\+: Response body can now be a string containing \char`\"{}0\char`\"{}
+\item Bug\+: Using Guzzle inside of a phar uses system by default but now allows for a custom cacert
+\item Bug\+: Query\+String\+::from\+String now properly parses query string parameters that contain equal signs
+\item Added support for XML attributes in service description responses
+\item Default\+Request\+Serializer now supports array URI parameter values for URI template expansion
+\item Added better mimetype guessing to requests and post files
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md61}{}\doxysection{3.\+0.\+4 -\/ 2012-\/11-\/11}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md61}
+
+\begin{DoxyItemize}
+\item Bug\+: Fixed a bug when adding multiple cookies to a request to use the correct glue value
+\item Bug\+: Cookies can now be added that have a name, domain, or value set to \char`\"{}0\char`\"{}
+\item Bug\+: Using the system cacert bundle when using the Phar
+\item Added json and xml methods to Response to make it easier to parse JSON and XML response data into data structures
+\item Enhanced cookie jar de-\/duplication
+\item Added the ability to enable strict cookie jars that throw exceptions when invalid cookies are added
+\item Added set\+Stream to Stream\+Interface to actually make it possible to implement custom rewind behavior for entity bodies
+\item Added the ability to create any sort of hash for a stream rather than just an MD5 hash
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md62}{}\doxysection{3.\+0.\+3 -\/ 2012-\/11-\/04}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md62}
+
+\begin{DoxyItemize}
+\item Implementing redirects in PHP rather than c\+URL
+\item Added PECL URI template extension and using as default parser if available
+\item Bug\+: Fixed Content-\/\+Length parsing of Response factory
+\item Adding rewind() method to entity bodies and streams. Allows for custom rewinding of non-\/repeatable streams.
+\item Adding To\+Array\+Interface throughout library
+\item Fixing Oauth\+Plugin to create unique nonce values per request
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md63}{}\doxysection{3.\+0.\+2 -\/ 2012-\/10-\/25}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md63}
+
+\begin{DoxyItemize}
+\item Magic methods are enabled by default on clients
+\item Magic methods return the result of a command
+\item Service clients no longer require a base\+\_\+url option in the factory
+\item Bug\+: Fixed an issue with URI templates where null template variables were being expanded
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md64}{}\doxysection{3.\+0.\+1 -\/ 2012-\/10-\/22}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md64}
+
+\begin{DoxyItemize}
+\item Models can now be used like regular collection objects by calling filter, map, etc
+\item Models no longer require a Parameter structure or initial data in the constructor
+\item Added a custom Append\+Iterator to get around a PHP bug with the {\ttfamily \textbackslash{}Append\+Iterator}
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md65}{}\doxysection{3.\+0.\+0 -\/ 2012-\/10-\/15}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md65}
+
+\begin{DoxyItemize}
+\item Rewrote service description format to be based on Swagger
+\begin{DoxyItemize}
+\item Now based on JSON schema
+\item Added nested input structures and nested response models
+\item Support for JSON and XML input and output models
+\item Renamed {\ttfamily commands} to {\ttfamily operations}
+\item Removed dot class notation
+\item Removed custom types
+\end{DoxyItemize}
+\item Broke the project into smaller top-\/level namespaces to be more component friendly
+\item Removed support for XML configs and descriptions. Use arrays or JSON files.
+\item Removed the Validation component and Inspector
+\item Moved all cookie code to Guzzle\textbackslash{}\+Plugin\textbackslash{}\+Cookie
+\item Magic methods on a Guzzle\textbackslash{}\+Service\textbackslash{}\+Client now return the command un-\/executed.
+\item Calling get\+Result() or get\+Response() on a command will lazily execute the command if needed.
+\item Now shipping with c\+URL\textquotesingle{}s CA certs and using it by default
+\item Added previous\+Response() method to response objects
+\item No longer sending Accept and Accept-\/\+Encoding headers on every request
+\item Only sending an Expect header by default when a payload is greater than 1MB
+\item Added/moved client options\+:
+\begin{DoxyItemize}
+\item curl.\+blacklist to curl.\+option.\+blacklist
+\item Added ssl.\+certificate\+\_\+authority
+\end{DoxyItemize}
+\item Added a Guzzle\textbackslash{}\+Iterator component
+\item Moved plugins from Guzzle\textbackslash{}\+Http\textbackslash{}\+Plugin to Guzzle\textbackslash{}\+Plugin
+\item Added a more robust backoff retry strategy (replaced the Exponential\+Backoff\+Plugin)
+\item Added a more robust caching plugin
+\item Added set\+Body to response objects
+\item Updating Log\+Plugin to use a more flexible Message\+Formatter
+\item Added a completely revamped build process
+\item Cleaning up Collection class and removing default values from the get method
+\item Fixed ZF2 cache adapters
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md66}{}\doxysection{2.\+8.\+8 -\/ 2012-\/10-\/15}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md66}
+
+\begin{DoxyItemize}
+\item Bug\+: Fixed a cookie issue that caused dot prefixed domains to not match where popular browsers did
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md67}{}\doxysection{2.\+8.\+7 -\/ 2012-\/09-\/30}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md67}
+
+\begin{DoxyItemize}
+\item Bug\+: Fixed config file aliases for JSON includes
+\item Bug\+: Fixed cookie bug on a request object by using Cookie\+Parser to parse cookies on requests
+\item Bug\+: Removing the path to a file when sending a Content-\/\+Disposition header on a POST upload
+\item Bug\+: Hardening request and response parsing to account for missing parts
+\item Bug\+: Fixed PEAR packaging
+\item Bug\+: Fixed Request\+::get\+Info
+\item Bug\+: Fixed cases where CURLM\+\_\+\+CALL\+\_\+\+MULTI\+\_\+\+PERFORM return codes were causing curl transactions to fail
+\item Adding the ability for the namespace Iterator factory to look in multiple directories
+\item Added more getters/setters/removers from service descriptions
+\item Added the ability to remove POST fields from OAuth signatures
+\item OAuth plugin now supports 2-\/legged OAuth
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md68}{}\doxysection{2.\+8.\+6 -\/ 2012-\/09-\/05}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md68}
+
+\begin{DoxyItemize}
+\item Added the ability to modify and build service descriptions
+\item Added the use of visitors to apply parameters to locations in service descriptions using the dynamic command
+\item Added a {\ttfamily json} parameter location
+\item Now allowing dot notation for classes in the Cache\+Adapter\+Factory
+\item Using the union of two arrays rather than an array\+\_\+merge when extending service builder services and service params
+\item Ensuring that a service is a string before doing strpos() checks on it when substituting services for references in service builder config files.
+\item Services defined in two different config files that include one another will by default replace the previously defined service, but you can now create services that extend themselves and merge their settings over the previous
+\item The Json\+Loader now supports aliasing filenames with different filenames. This allows you to alias something like \textquotesingle{}\+\_\+default\textquotesingle{} with a default JSON configuration file.
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md69}{}\doxysection{2.\+8.\+5 -\/ 2012-\/08-\/29}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md69}
+
+\begin{DoxyItemize}
+\item Bug\+: Suppressed empty arrays from URI templates
+\item Bug\+: Added the missing \$options argument from Service\+Description\+::factory to enable caching
+\item Added support for HTTP responses that do not contain a reason phrase in the start-\/line
+\item Abstract\+Command commands are now invokable
+\item Added a way to get the data used when signing an Oauth request before a request is sent
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md70}{}\doxysection{2.\+8.\+4 -\/ 2012-\/08-\/15}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md70}
+
+\begin{DoxyItemize}
+\item Bug\+: Custom delay time calculations are no longer ignored in the Exponential\+Backoff\+Plugin
+\item Added the ability to transfer entity bodies as a string rather than streamed. This gets around curl error 65. Set {\ttfamily body\+\_\+as\+\_\+string} in a request\textquotesingle{}s curl options to enable.
+\item Added a Stream\+Interface, Entity\+Body\+Interface, and added ftell() to Guzzle\textbackslash{}\+Common\textbackslash{}\+Stream
+\item Added an Abstract\+Entity\+Body\+Decorator and a Read\+Limit\+Entity\+Body decorator to transfer only a subset of a decorated stream
+\item Stream and Entity\+Body objects will now return the file position to the previous position after a read required operation (e.\+g. get\+Content\+Md5())
+\item Added additional response status codes
+\item Removed SSL information from the default User-\/\+Agent header
+\item DELETE requests can now send an entity body
+\item Added an Event\+Dispatcher to the Exponential\+Backoff\+Plugin and added an Exponential\+Backoff\+Logger to log backoff retries
+\item Added the ability of the Mock\+Plugin to consume mocked request bodies
+\item Log\+Plugin now exposes request and response objects in the extras array
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md71}{}\doxysection{2.\+8.\+3 -\/ 2012-\/07-\/30}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md71}
+
+\begin{DoxyItemize}
+\item Bug\+: Fixed a case where empty POST requests were sent as GET requests
+\item Bug\+: Fixed a bug in Exponential\+Backoff\+Plugin that caused fatal errors when retrying an Entity\+Enclosing\+Request that does not have a body
+\item Bug\+: Setting the response body of a request to null after completing a request, not when setting the state of a request to new
+\item Added multiple inheritance to service description commands
+\item Added an Api\+Command\+Interface and added {\ttfamily get\+Param\+Names()} and {\ttfamily has\+Param()}
+\item Removed the default 2mb size cutoff from the Md5\+Validator\+Plugin so that it now defaults to validating everything
+\item Changed Curl\+Multi\+::perform to pass a smaller timeout to Curl\+Multi\+::execute\+Handles
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md72}{}\doxysection{2.\+8.\+2 -\/ 2012-\/07-\/24}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md72}
+
+\begin{DoxyItemize}
+\item Bug\+: Query string values set to 0 are no longer dropped from the query string
+\item Bug\+: A Collection object is no longer created each time a call is made to {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Command\textbackslash{}Abstract\+Command\+::get\+Request\+Headers()}
+\item Bug\+: {\ttfamily +} is now treated as an encoded space when parsing query strings
+\item Query\+String and Collection performance improvements
+\item Allowing dot notation for class paths in filters attribute of a service descriptions
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md73}{}\doxysection{2.\+8.\+1 -\/ 2012-\/07-\/16}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md73}
+
+\begin{DoxyItemize}
+\item Loosening Event Dispatcher dependency
+\item POST redirects can now be customized using CURLOPT\+\_\+\+POSTREDIR
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md74}{}\doxysection{2.\+8.\+0 -\/ 2012-\/07-\/15}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md74}
+
+\begin{DoxyItemize}
+\item BC\+: Guzzle\textbackslash{}\+Http\textbackslash{}\+Query
+\begin{DoxyItemize}
+\item Query strings with empty variables will always show an equal sign unless the variable is set to Query\+String\+::\+BLANK (e.\+g. ?acl= vs ?acl)
+\item Changed is\+Encoding\+Values() and is\+Encoding\+Fields() to is\+Url\+Encoding()
+\item Changed set\+Encode\+Values(bool) and set\+Encode\+Fields(bool) to use\+Url\+Encoding(bool)
+\item Changed the aggregation functions of Query\+String to be static methods
+\item Can now use from\+String() with querystrings that have a leading ?
+\end{DoxyItemize}
+\item c\+URL configuration values can be specified in service descriptions using {\ttfamily curl.} prefixed parameters
+\item Content-\/\+Length is set to 0 before emitting the request.\+before\+\_\+send event when sending an empty request body
+\item Cookies are no longer URL decoded by default
+\item Bug\+: URI template variables set to null are no longer expanded
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md75}{}\doxysection{2.\+7.\+2 -\/ 2012-\/07-\/02}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md75}
+
+\begin{DoxyItemize}
+\item BC\+: Moving things to get ready for subtree splits. Moving Inflection into Common. Moving Guzzle\textbackslash{}\+Http\textbackslash{}\+Parser to Guzzle\textbackslash{}\+Parser.
+\item BC\+: Removing Guzzle\textbackslash{}\+Common\textbackslash{}\+Batch\textbackslash{}\+Batch\+::count() and replacing it with is\+Empty()
+\item Cache\+Plugin now allows for a custom request parameter function to check if a request can be cached
+\item Bug fix\+: Cache\+Plugin now only caches GET and HEAD requests by default
+\item Bug fix\+: Using header glue when transferring headers over the wire
+\item Allowing deeply nested arrays for composite variables in URI templates
+\item Batch divisors can now return iterators or arrays
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md76}{}\doxysection{2.\+7.\+1 -\/ 2012-\/06-\/26}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md76}
+
+\begin{DoxyItemize}
+\item Minor patch to update version number in UA string
+\item Updating build process
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md77}{}\doxysection{2.\+7.\+0 -\/ 2012-\/06-\/25}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md77}
+
+\begin{DoxyItemize}
+\item BC\+: Inflection classes moved to Guzzle\textbackslash{}\+Inflection. No longer static methods. Can now inject custom inflectors into classes.
+\item BC\+: Removed magic setX methods from commands
+\item BC\+: Magic methods mapped to service description commands are now inflected in the command factory rather than the client \+\_\+\+\_\+call() method
+\item Verbose c\+URL options are no longer enabled by default. Set curl.\+debug to true on a client to enable.
+\item Bug\+: Now allowing colons in a response start-\/line (e.\+g. HTTP/1.\+1 503 Service Unavailable\+: Back-\/end server is at capacity)
+\item Guzzle\textbackslash{}\+Service\textbackslash{}\+Resource\textbackslash{}\+Resource\+Iterator\+Apply\+Batched now internally uses the Guzzle\textbackslash{}\+Common\textbackslash{}\+Batch namespace
+\item Added Guzzle\textbackslash{}\+Service\textbackslash{}\+Plugin namespace and a Plugin\+Collection\+Plugin
+\item Added the ability to set POST fields and files in a service description
+\item Guzzle\textbackslash{}\+Http\textbackslash{}\+Entity\+Body\+::factory() now accepts objects with a \+\_\+\+\_\+to\+String() method
+\item Adding a command.\+before\+\_\+prepare event to clients
+\item Added Batch\+Closure\+Transfer and Batch\+Closure\+Divisor
+\item Batch\+Transfer\+Exception now includes references to the batch divisor and transfer strategies
+\item Fixed some tests so that they pass more reliably
+\item Added Guzzle\textbackslash{}\+Common\textbackslash{}\+Log\textbackslash{}\+Array\+Log\+Adapter
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md78}{}\doxysection{2.\+6.\+6 -\/ 2012-\/06-\/10}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md78}
+
+\begin{DoxyItemize}
+\item BC\+: Removing Guzzle\textbackslash{}\+Http\textbackslash{}\+Plugin\textbackslash{}\+Batch\+Queue\+Plugin
+\item BC\+: Removing Guzzle\textbackslash{}\+Service\textbackslash{}\+Command\textbackslash{}\+Command\+Set
+\item Adding generic batching system (replaces the batch queue plugin and command set)
+\item Updating ZF cache and log adapters and now using ZF\textquotesingle{}s composer repository
+\item Bug\+: Setting the name of each Api\+Param when creating through an Api\+Command
+\item Adding result\+\_\+type, result\+\_\+doc, deprecated, and doc\+\_\+url to service descriptions
+\item Bug\+: Changed the default cookie header casing back to \textquotesingle{}Cookie\textquotesingle{}
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md79}{}\doxysection{2.\+6.\+5 -\/ 2012-\/06-\/03}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md79}
+
+\begin{DoxyItemize}
+\item BC\+: Renaming Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+Interface\+::get\+Resource\+Uri() to get\+Resource()
+\item BC\+: Removing unused AUTH\+\_\+\+BASIC and AUTH\+\_\+\+DIGEST constants from
+\item BC\+: Guzzle\textbackslash{}\+Http\textbackslash{}\+Cookie is now used to manage Set-\/\+Cookie data, not Cookie data
+\item BC\+: Renaming methods in the Cookie\+Jar\+Interface
+\item Moving almost all cookie logic out of the Cookie\+Plugin and into the Cookie or Cookie\+Jar implementations
+\item Making the default glue for HTTP headers \textquotesingle{};\textquotesingle{} instead of \textquotesingle{},\textquotesingle{}
+\item Adding a remove\+Value to Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Header
+\item Adding get\+Cookies() to request interface.
+\item Making it easier to add event subscribers to Has\+Dispatcher\+Interface classes. Can now directly call add\+Subscriber()
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md80}{}\doxysection{2.\+6.\+4 -\/ 2012-\/05-\/30}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md80}
+
+\begin{DoxyItemize}
+\item BC\+: Cleaning up how POST files are stored in Entity\+Enclosing\+Request objects. Adding Post\+File class.
+\item BC\+: Moving Api\+Command specific functionality from the Inspector and on to the Api\+Command
+\item Bug\+: Fixing magic method command calls on clients
+\item Bug\+: Email constraint only validates strings
+\item Bug\+: Aggregate POST fields when POST files are present in curl handle
+\item Bug\+: Fixing default User-\/\+Agent header
+\item Bug\+: Only appending or prepending parameters in commands if they are specified
+\item Bug\+: Not requiring response reason phrases or status codes to match a predefined list of codes
+\item Allowing the use of dot notation for class namespaces when using instance\+\_\+of constraint
+\item Added any\+\_\+match validation constraint
+\item Added an Async\+Plugin
+\item Passing request object to the calculate\+Wait method of the Exponential\+Backoff\+Plugin
+\item Allowing the result of a command object to be changed
+\item Parsing location and type sub values when instantiating a service description rather than over and over at runtime
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md81}{}\doxysection{2.\+6.\+3 -\/ 2012-\/05-\/23}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md81}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC\mbox{]} Guzzle\textbackslash{}\+Common\textbackslash{}\+From\+Config\+Interface no longer requires any config options.
+\item \mbox{[}BC\mbox{]} Refactoring how POST files are stored on an Entity\+Enclosing\+Request. They are now separate from POST fields.
+\item You can now use an array of data when creating PUT request bodies in the request factory.
+\item Removing the requirement that HTTPS requests needed a Cache-\/\+Control\+: public directive to be cacheable.
+\item \mbox{[}Http\mbox{]} Adding support for Content-\/\+Type in multipart POST uploads per upload
+\item \mbox{[}Http\mbox{]} Added support for uploading multiple files using the same name (foo\mbox{[}0\mbox{]}, foo\mbox{[}1\mbox{]})
+\item Adding more POST data operations for easier manipulation of POST data.
+\item You can now set empty POST fields.
+\item The body of a request is only shown on Entity\+Enclosing\+Request objects that do not use POST files.
+\item Split the Guzzle\textbackslash{}\+Service\textbackslash{}\+Inspector\+::validate\+Config method into two methods. One to initialize when a command is created, and one to validate.
+\item CS updates
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md82}{}\doxysection{2.\+6.\+2 -\/ 2012-\/05-\/19}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md82}
+
+\begin{DoxyItemize}
+\item \mbox{[}Http\mbox{]} Better handling of nested scope requests in Curl\+Multi. Requests are now always prepares in the send() method rather than the add\+Request() method.
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md83}{}\doxysection{2.\+6.\+1 -\/ 2012-\/05-\/19}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md83}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC\mbox{]} Removing \textquotesingle{}path\textquotesingle{} support in service descriptions. Use \textquotesingle{}uri\textquotesingle{}.
+\item \mbox{[}BC\mbox{]} Guzzle\textbackslash{}\+Service\textbackslash{}\+Inspector\+::parse\+Doc\+Block is now protected. Adding get\+Api\+Params\+For\+Class() with cache.
+\item \mbox{[}BC\mbox{]} Removing Guzzle\textbackslash{}\+Common\textbackslash{}\+Null\+Object. Use \href{https://github.com/mtdowling/NullObject}{\texttt{ https\+://github.\+com/mtdowling/\+Null\+Object}} if you need it.
+\item \mbox{[}BC\mbox{]} Removing Guzzle\textbackslash{}\+Common\textbackslash{}\+Xml\+Element.
+\item All commands, both dynamic and concrete, have Api\+Command objects.
+\item Adding a fix for Curl\+Multi so that if all of the connections encounter some sort of curl error, then the loop exits.
+\item Adding checks to Entity\+Enclosing\+Request so that empty POST files and fields are ignored.
+\item Making the method signature of Guzzle\textbackslash{}\+Service\textbackslash{}\+Builder\textbackslash{}\+Service\+Builder\+::factory more flexible.
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md84}{}\doxysection{2.\+6.\+0 -\/ 2012-\/05-\/15}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md84}
+
+\begin{DoxyItemize}
+\item \mbox{[}BC\mbox{]} Moving Guzzle\textbackslash{}\+Service\textbackslash{}\+Builder to Guzzle\textbackslash{}\+Service\textbackslash{}\+Builder\textbackslash{}\+Service\+Builder
+\item \mbox{[}BC\mbox{]} Executing a Command returns the result of the command rather than the command
+\item \mbox{[}BC\mbox{]} Moving all HTTP parsing logic to Guzzle\textbackslash{}\+Http\textbackslash{}\+Parsers. Allows for faster C implementations if needed.
+\item \mbox{[}BC\mbox{]} Changing the Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Response\+::set\+Protocol() method to accept a protocol and version in separate args.
+\item \mbox{[}BC\mbox{]} Moving Resource\+Iterator$\ast$ to Guzzle\textbackslash{}\+Service\textbackslash{}\+Resource
+\item \mbox{[}BC\mbox{]} Completely refactored Resource\+Iterators to iterate over a cloned command object
+\item \mbox{[}BC\mbox{]} Moved Guzzle\textbackslash{}\+Http\textbackslash{}\+Uri\+Template to Guzzle\textbackslash{}\+Http\textbackslash{}\+Parser\textbackslash{}\+Uri\+Template\textbackslash{}\+Uri\+Template
+\item \mbox{[}BC\mbox{]} Guzzle\textbackslash{}\+Guzzle is now deprecated
+\item Moving Guzzle\textbackslash{}\+Common\textbackslash{}\+Guzzle\+::inject to Guzzle\textbackslash{}\+Common\textbackslash{}\+Collection\+::inject
+\item Adding Guzzle\textbackslash{}\+Version class to give version information about Guzzle
+\item Adding Guzzle\textbackslash{}\+Http\textbackslash{}\+Utils class to provide get\+Default\+User\+Agent() and get\+Http\+Date()
+\item Adding Guzzle\textbackslash{}\+Curl\textbackslash{}\+Curl\+Version to manage caching curl\+\_\+version() data
+\item Service\+Description and Service\+Builder are now cacheable using similar configs
+\item Changing the format of XML and JSON service builder configs. Backwards compatible.
+\item Cleaned up Cookie parsing
+\item Trimming the default Guzzle User-\/\+Agent header
+\item Adding a set\+On\+Complete() method to Commands that is called when a command completes
+\item Keeping track of requests that were mocked in the Mock\+Plugin
+\item Fixed a caching bug in the Cache\+Adapter\+Factory
+\item Inspector objects can be injected into a Command object
+\item Refactoring a lot of code and tests to be case insensitive when dealing with headers
+\item Adding Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Header\+Comparison for easy comparison of HTTP headers using a DSL
+\item Adding the ability to set global option overrides to service builder configs
+\item Adding the ability to include other service builder config files from within XML and JSON files
+\item Moving the parse\+Query method out of Url and on to Query\+String\+::from\+String() as a static factory method.
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md85}{}\doxysection{2.\+5.\+0 -\/ 2012-\/05-\/08}\label{md_pixel_shop_vendor_guzzle_guzzle__c_h_a_n_g_e_l_o_g_autotoc_md85}
+
+\begin{DoxyItemize}
+\item Major performance improvements
+\item \mbox{[}BC\mbox{]} Simplifying Guzzle\textbackslash{}\+Common\textbackslash{}\+Collection. Please check to see if you are using features that are now deprecated.
+\item \mbox{[}BC\mbox{]} Using a custom validation system that allows a flyweight implementation for much faster validation. No longer using Symfony2 Validation component.
+\item \mbox{[}BC\mbox{]} No longer supporting \char`\"{}\{\{ \}\}\char`\"{} for injecting into command or Uri\+Templates. Use \char`\"{}\{\}\char`\"{}
+\item Added the ability to passed parameters to all requests created by a client
+\item Added callback functionality to the Exponential\+Backoff\+Plugin
+\item Using microtime in Exponential\+Backoff\+Plugin to allow more granular backoff strategies.
+\item Rewinding request stream bodies when retrying requests
+\item Exception is thrown when JSON response body cannot be decoded
+\item Added configurable magic method calls to clients and commands. This is off by default.
+\item Fixed a defect that added a hash to every parsed URL part
+\item Fixed duplicate none generation for Oauth\+Plugin.
+\item Emitting an event each time a client is generated by a Service\+Builder
+\item Using an Api\+Params object instead of a Collection for parameters of an Api\+Command
+\item cache.$\ast$ request parameters should be renamed to params.\+cache.$\ast$
+\item Added the ability to set arbitrary curl options on requests (disable\+\_\+wire, progress, etc). See Curl\+Handle.
+\item Added the ability to disable type validation of service descriptions
+\item Service\+Descriptions and Service\+Builders are now Serializable 
+\end{DoxyItemize}

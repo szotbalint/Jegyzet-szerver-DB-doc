@@ -1,0 +1,104 @@
+\hypertarget{interface_omnipay_1_1_common_1_1_gateway_interface}{}\doxysection{Gateway\+Interface Interface Reference}
+\label{interface_omnipay_1_1_common_1_1_gateway_interface}\index{GatewayInterface@{GatewayInterface}}
+Inheritance diagram for Gateway\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.564103cm]{interface_omnipay_1_1_common_1_1_gateway_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_gateway_interface_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_gateway_interface_a8722a2197880ef7d3f01238d2e97bfe5}{get\+Short\+Name}} ()
+\item 
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_gateway_interface_afc7285c6639730467eb4a71daae1c985}{get\+Default\+Parameters}} ()
+\item 
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_gateway_interface_abc89e563d63f99f53f3d7bbb2327c7c2}{initialize}} (array \$parameters=array())
+\item 
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_gateway_interface_a015cb52e5774a1972d296c9694d2a3c3}{get\+Parameters}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Payment gateway interface
+
+This interface class defines the standard functions that any \mbox{\hyperlink{class_omnipay_1_1_omnipay}{Omnipay}} gateway needs to define.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_abstract_gateway}{Abstract\+Gateway}}
+\end{DoxySeeAlso}
+@method \textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Request\+Interface authorize(array \$options = array()) (Optional method) Authorize an amount on the customers card @method \textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Request\+Interface complete\+Authorize(array \$options = array()) (Optional method) Handle return from off-\/site gateways after authorization @method \textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Request\+Interface capture(array \$options = array()) (Optional method) Capture an amount you have previously authorized @method \textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Request\+Interface purchase(array \$options = array()) (Optional method) Authorize and immediately capture an amount on the customers card @method \textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Request\+Interface complete\+Purchase(array \$options = array()) (Optional method) Handle return from off-\/site gateways after purchase @method \textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Request\+Interface refund(array \$options = array()) (Optional method) Refund an already processed transaction @method \textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Request\+Interface void(array \$options = array()) (Optional method) Generally can only be called up to 24 hours after submitting a transaction @method \textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Request\+Interface create\+Card(array \$options = array()) (Optional method) The returned response object includes a card\+Reference, which can be used for future transactions @method \textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Request\+Interface update\+Card(array \$options = array()) (Optional method) Update a stored card @method \textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Request\+Interface delete\+Card(array \$options = array()) (Optional method) Delete a stored card 
+
+Definition at line 37 of file Gateway\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_omnipay_1_1_common_1_1_gateway_interface_afc7285c6639730467eb4a71daae1c985}\label{interface_omnipay_1_1_common_1_1_gateway_interface_afc7285c6639730467eb4a71daae1c985}} 
+\index{GatewayInterface@{GatewayInterface}!getDefaultParameters@{getDefaultParameters}}
+\index{getDefaultParameters@{getDefaultParameters}!GatewayInterface@{GatewayInterface}}
+\doxysubsubsection{\texorpdfstring{getDefaultParameters()}{getDefaultParameters()}}
+{\footnotesize\ttfamily get\+Default\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Define gateway parameters, in the following format\+:
+
+array( \textquotesingle{}username\textquotesingle{} =$>$ \textquotesingle{}\textquotesingle{}, // string variable \textquotesingle{}test\+Mode\textquotesingle{} =$>$ false, // boolean variable \textquotesingle{}landing\+Page\textquotesingle{} =$>$ array(\textquotesingle{}billing\textquotesingle{}, \textquotesingle{}login\textquotesingle{}), // enum variable, first item is default ); 
+
+Implemented in \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_gateway_afc7285c6639730467eb4a71daae1c985}{Gateway}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_rest_gateway_afc7285c6639730467eb4a71daae1c985}{Rest\+Gateway}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_pro_gateway_afc7285c6639730467eb4a71daae1c985}{Pro\+Gateway}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_express_gateway_afc7285c6639730467eb4a71daae1c985}{Express\+Gateway}}, and \mbox{\hyperlink{class_omnipay_1_1_common_1_1_abstract_gateway_afc7285c6639730467eb4a71daae1c985}{Abstract\+Gateway}}.
+
+\mbox{\Hypertarget{interface_omnipay_1_1_common_1_1_gateway_interface_a3d0963e68bb313b163a73f2803c64600}\label{interface_omnipay_1_1_common_1_1_gateway_interface_a3d0963e68bb313b163a73f2803c64600}} 
+\index{GatewayInterface@{GatewayInterface}!getName@{getName}}
+\index{getName@{getName}!GatewayInterface@{GatewayInterface}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get gateway display name
+
+This can be used by carts to get the display name for each gateway. 
+
+Implemented in \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_gateway_a3d0963e68bb313b163a73f2803c64600}{Gateway}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_rest_gateway_a3d0963e68bb313b163a73f2803c64600}{Rest\+Gateway}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_pro_gateway_a3d0963e68bb313b163a73f2803c64600}{Pro\+Gateway}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_express_in_context_gateway_a3d0963e68bb313b163a73f2803c64600}{Express\+In\+Context\+Gateway}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_express_gateway_a3d0963e68bb313b163a73f2803c64600}{Express\+Gateway}}, and \mbox{\hyperlink{class_omnipay_1_1_common_1_1_abstract_gateway_test___mock_abstract_gateway_a3d0963e68bb313b163a73f2803c64600}{Abstract\+Gateway\+Test\+\_\+\+Mock\+Abstract\+Gateway}}.
+
+\mbox{\Hypertarget{interface_omnipay_1_1_common_1_1_gateway_interface_a015cb52e5774a1972d296c9694d2a3c3}\label{interface_omnipay_1_1_common_1_1_gateway_interface_a015cb52e5774a1972d296c9694d2a3c3}} 
+\index{GatewayInterface@{GatewayInterface}!getParameters@{getParameters}}
+\index{getParameters@{getParameters}!GatewayInterface@{GatewayInterface}}
+\doxysubsubsection{\texorpdfstring{getParameters()}{getParameters()}}
+{\footnotesize\ttfamily get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get all gateway parameters
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_omnipay_1_1_common_1_1_abstract_gateway_a015cb52e5774a1972d296c9694d2a3c3}{Abstract\+Gateway}}.
+
+\mbox{\Hypertarget{interface_omnipay_1_1_common_1_1_gateway_interface_a8722a2197880ef7d3f01238d2e97bfe5}\label{interface_omnipay_1_1_common_1_1_gateway_interface_a8722a2197880ef7d3f01238d2e97bfe5}} 
+\index{GatewayInterface@{GatewayInterface}!getShortName@{getShortName}}
+\index{getShortName@{getShortName}!GatewayInterface@{GatewayInterface}}
+\doxysubsubsection{\texorpdfstring{getShortName()}{getShortName()}}
+{\footnotesize\ttfamily get\+Short\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get gateway short name
+
+This name can be used with \mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory}{Gateway\+Factory}} as an alias of the gateway class, to create new instances of this gateway. 
+
+Implemented in \mbox{\hyperlink{class_omnipay_1_1_common_1_1_abstract_gateway_a8722a2197880ef7d3f01238d2e97bfe5}{Abstract\+Gateway}}.
+
+\mbox{\Hypertarget{interface_omnipay_1_1_common_1_1_gateway_interface_abc89e563d63f99f53f3d7bbb2327c7c2}\label{interface_omnipay_1_1_common_1_1_gateway_interface_abc89e563d63f99f53f3d7bbb2327c7c2}} 
+\index{GatewayInterface@{GatewayInterface}!initialize@{initialize}}
+\index{initialize@{initialize}!GatewayInterface@{GatewayInterface}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily initialize (\begin{DoxyParamCaption}\item[{array}]{\$parameters = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Initialize gateway with parameters 
+
+Implemented in \mbox{\hyperlink{class_omnipay_1_1_common_1_1_abstract_gateway_abc89e563d63f99f53f3d7bbb2327c7c2}{Abstract\+Gateway}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/common/src/\+Omnipay/\+Common/\mbox{\hyperlink{_gateway_interface_8php}{Gateway\+Interface.\+php}}\end{DoxyCompactItemize}

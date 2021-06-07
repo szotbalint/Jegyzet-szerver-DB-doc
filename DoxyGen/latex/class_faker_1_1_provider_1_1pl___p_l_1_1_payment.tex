@@ -1,0 +1,100 @@
+\hypertarget{class_faker_1_1_provider_1_1pl___p_l_1_1_payment}{}\doxysection{Payment Class Reference}
+\label{class_faker_1_1_provider_1_1pl___p_l_1_1_payment}\index{Payment@{Payment}}
+Inheritance diagram for Payment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_faker_1_1_provider_1_1pl___p_l_1_1_payment}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_a1aeaa8026e66a4c54650080c27b3e706}{bank}} ()
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_a1d0afe824667d5f52b18e75f2ef08631}{bank\+Account\+Number}} (\$prefix=\textquotesingle{}\textquotesingle{}, \$country\+Code=\textquotesingle{}PL\textquotesingle{}, \$length=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_a6c581edc70663e25477a875c5765a9f2}{add\+Bank\+Code\+Checksum}} (\$\mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_adc06bcb5d726b3556bc0bda961c904a8}{iban}}, \$country\+Code=\textquotesingle{}PL\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_afeec9e8e0c9dea22ba919fced45148d9}{\$banks}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 5 of file Payment.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_a6c581edc70663e25477a875c5765a9f2}\label{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_a6c581edc70663e25477a875c5765a9f2}} 
+\index{Payment@{Payment}!addBankCodeChecksum@{addBankCodeChecksum}}
+\index{addBankCodeChecksum@{addBankCodeChecksum}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{addBankCodeChecksum()}{addBankCodeChecksum()}}
+{\footnotesize\ttfamily static add\+Bank\+Code\+Checksum (\begin{DoxyParamCaption}\item[{}]{\$iban,  }\item[{}]{\$country\+Code = {\ttfamily \textquotesingle{}PL\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Calculates a checksum for the national bank and branch code part in the IBAN.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$iban} & randomly generated \$iban \\
+\hline
+string & {\em \$country\+Code} & ISO 3166-\/1 alpha-\/2 country code \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string IBAN with one character altered to a proper checksum 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_faker_1_1_provider_1_1_payment_ac74bd0112b179a9d17c88d4ffde029db}{Payment}}.
+
+
+
+Definition at line 106 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_a1aeaa8026e66a4c54650080c27b3e706}\label{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_a1aeaa8026e66a4c54650080c27b3e706}} 
+\index{Payment@{Payment}!bank@{bank}}
+\index{bank@{bank}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{bank()}{bank()}}
+{\footnotesize\ttfamily static bank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 88 of file Payment.\+php.
+
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_a1d0afe824667d5f52b18e75f2ef08631}\label{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_a1d0afe824667d5f52b18e75f2ef08631}} 
+\index{Payment@{Payment}!bankAccountNumber@{bankAccountNumber}}
+\index{bankAccountNumber@{bankAccountNumber}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{bankAccountNumber()}{bankAccountNumber()}}
+{\footnotesize\ttfamily static bank\+Account\+Number (\begin{DoxyParamCaption}\item[{}]{\$prefix = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$country\+Code = {\ttfamily \textquotesingle{}PL\textquotesingle{}},  }\item[{}]{\$length = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+International Bank Account Number (IBAN) \mbox{\hyperlink{}{string \$prefix for generating bank account number of a specific bank  string \$country\+Code ISO 3166-\/1 alpha-\/2 country code  integer \$length total length without country code and 2 check digits  string }}
+
+Definition at line 101 of file Payment.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_afeec9e8e0c9dea22ba919fced45148d9}\label{class_faker_1_1_provider_1_1pl___p_l_1_1_payment_afeec9e8e0c9dea22ba919fced45148d9}} 
+\index{Payment@{Payment}!\$banks@{\$banks}}
+\index{\$banks@{\$banks}!Payment@{Payment}}
+\doxysubsubsection{\texorpdfstring{\$banks}{$banks}}
+{\footnotesize\ttfamily \$banks\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 10 of file Payment.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rahman/faker/vendor/fzaninotto/faker/src/\+Faker/\+Provider/pl\+\_\+\+PL/\mbox{\hyperlink{pl___p_l_2_payment_8php}{Payment.\+php}}\end{DoxyCompactItemize}

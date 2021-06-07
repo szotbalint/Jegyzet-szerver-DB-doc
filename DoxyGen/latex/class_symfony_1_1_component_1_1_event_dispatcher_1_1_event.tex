@@ -1,0 +1,155 @@
+\hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{}\doxysection{Event Class Reference}
+\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}\index{Event@{Event}}
+Inheritance diagram for Event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_aabfd0a1205a80881b10962db51a2902c}{is\+Propagation\+Stopped}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_adc3f4b7596e176069cd179814c05c66d}{stop\+Propagation}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a252ca50faa2dd791f777a5ee40ee27ae}{set\+Dispatcher}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface}{Event\+Dispatcher\+Interface}} \$dispatcher)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a2c6ae191baffbfeb2260f88736bbb15b}{get\+Dispatcher}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a2fe666694997d047711d7653eca2f132}{set\+Name}} (\$name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}} is the base class for classes containing event data.
+
+This class contains no event data. It is used by events that do not pass state information to an event handler when an event is raised.
+
+You can call the method \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_adc3f4b7596e176069cd179814c05c66d}{stop\+Propagation()}} to abort the execution of further listeners in your event listener.
+
+\begin{DoxyAuthor}{Author}
+Guilherme Blanco \href{mailto:guilhermeblanco@hotmail.com}{\texttt{ guilhermeblanco@hotmail.\+com}} 
+
+Jonathan Wage \href{mailto:jonwage@gmail.com}{\texttt{ jonwage@gmail.\+com}} 
+
+Roman Borschel \href{mailto:roman@code-factory.org}{\texttt{ roman@code-\/factory.\+org}} 
+
+Bernhard Schussek \href{mailto:bschussek@gmail.com}{\texttt{ bschussek@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+Definition at line 28 of file Event.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a2c6ae191baffbfeb2260f88736bbb15b}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a2c6ae191baffbfeb2260f88736bbb15b}} 
+\index{Event@{Event}!getDispatcher@{getDispatcher}}
+\index{getDispatcher@{getDispatcher}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{getDispatcher()}{getDispatcher()}}
+{\footnotesize\ttfamily get\+Dispatcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher}{Event\+Dispatcher}} that dispatches this \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}}.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface}{Event\+Dispatcher\+Interface}}
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000044}{Deprecated}}]since version 2.\+4, to be removed in 3.\+0. The event dispatcher is passed to the listener call. \end{DoxyRefDesc}
+
+
+Definition at line 88 of file Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a3d0963e68bb313b163a73f2803c64600}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a3d0963e68bb313b163a73f2803c64600}} 
+\index{Event@{Event}!getName@{getName}}
+\index{getName@{getName}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the event\textquotesingle{}s name.
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000045}{Deprecated}}]since version 2.\+4, to be removed in 3.\+0. The event name is passed to the listener call. \end{DoxyRefDesc}
+
+
+Definition at line 102 of file Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_aabfd0a1205a80881b10962db51a2902c}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_aabfd0a1205a80881b10962db51a2902c}} 
+\index{Event@{Event}!isPropagationStopped@{isPropagationStopped}}
+\index{isPropagationStopped@{isPropagationStopped}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{isPropagationStopped()}{isPropagationStopped()}}
+{\footnotesize\ttfamily is\+Propagation\+Stopped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns whether further event listeners should be triggered.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_adc3f4b7596e176069cd179814c05c66d}{Event\+::stop\+Propagation()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+bool Whether propagation was already stopped for this event 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a252ca50faa2dd791f777a5ee40ee27ae}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a252ca50faa2dd791f777a5ee40ee27ae}} 
+\index{Event@{Event}!setDispatcher@{setDispatcher}}
+\index{setDispatcher@{setDispatcher}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{setDispatcher()}{setDispatcher()}}
+{\footnotesize\ttfamily set\+Dispatcher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface}{Event\+Dispatcher\+Interface}}}]{\$dispatcher }\end{DoxyParamCaption})}
+
+Stores the \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher}{Event\+Dispatcher}} that dispatches this \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface}{Event\+Dispatcher\+Interface}} & {\em \$dispatcher} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000043}{Deprecated}}]since version 2.\+4, to be removed in 3.\+0. The event dispatcher is passed to the listener call. \end{DoxyRefDesc}
+
+
+Definition at line 76 of file Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a2fe666694997d047711d7653eca2f132}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_a2fe666694997d047711d7653eca2f132}} 
+\index{Event@{Event}!setName@{setName}}
+\index{setName@{setName}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily set\+Name (\begin{DoxyParamCaption}\item[{}]{\$name }\end{DoxyParamCaption})}
+
+Sets the event\textquotesingle{}s name property.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$name} & The event name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000046}{Deprecated}}]since version 2.\+4, to be removed in 3.\+0. The event name is passed to the listener call. \end{DoxyRefDesc}
+
+
+Definition at line 116 of file Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_adc3f4b7596e176069cd179814c05c66d}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_adc3f4b7596e176069cd179814c05c66d}} 
+\index{Event@{Event}!stopPropagation@{stopPropagation}}
+\index{stopPropagation@{stopPropagation}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{stopPropagation()}{stopPropagation()}}
+{\footnotesize\ttfamily stop\+Propagation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stops the propagation of the event to further event listeners.
+
+If multiple event listeners are connected to the same event, no further event listener will be triggered once any trigger calls \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_adc3f4b7596e176069cd179814c05c66d}{stop\+Propagation()}}. 
+
+Definition at line 64 of file Event.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/symfony/event-\/dispatcher/\mbox{\hyperlink{symfony_2event-dispatcher_2_event_8php}{Event.\+php}}\end{DoxyCompactItemize}

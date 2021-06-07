@@ -1,0 +1,274 @@
+\hypertarget{class_stripe_1_1_charge}{}\doxysection{Charge Class Reference}
+\label{class_stripe_1_1_charge}\index{Charge@{Charge}}
+Inheritance diagram for Charge\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_stripe_1_1_charge}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stripe_1_1_charge_aa1302e3400c42db58edcb419a40c1ab4}{save}} (\$options=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_charge_a4324d1c76955d17a1e99dd2203af4c87}{refund}} (\$params=null, \$options=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_charge_a35635297f1bf9b2010b5f4fe307a0510}{capture}} (\$params=null, \$options=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_charge_a5913ea85080d2a1cfaf6ab7111cd2373}{update\+Dispute}} (\$params=null, \$options=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_charge_a2b6facd42c7157fba26affa01293ef3c}{close\+Dispute}} (\$options=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_charge_a076b2b539debe76ca4d05f86fa7c6072}{mark\+As\+Fraudulent}} (\$opts=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_charge_ae4846135bc8a565b4eb3b465ca0fbcbb}{mark\+As\+Safe}} (\$opts=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_charge_af7f2385154ca537d1374615963d8aa51}{retrieve}} (\$id, \$options=null)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_charge_af27f4a15968a37a71f6cce1704f25f75}{all}} (\$params=null, \$options=null)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_charge_a1a3b119495f0471b3d00dacccacfc1d6}{create}} (\$params=null, \$options=null)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_charge_a93a32034843cb2e92901d3e3d90dc1d5}{update}} (\$id, \$params=null, \$options=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 41 of file Charge.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stripe_1_1_charge_af27f4a15968a37a71f6cce1704f25f75}\label{class_stripe_1_1_charge_af27f4a15968a37a71f6cce1704f25f75}} 
+\index{Charge@{Charge}!all@{all}}
+\index{all@{all}!Charge@{Charge}}
+\doxysubsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily static all (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_collection}{Collection}} of Charges 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Charge.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_charge_a35635297f1bf9b2010b5f4fe307a0510}\label{class_stripe_1_1_charge_a35635297f1bf9b2010b5f4fe307a0510}} 
+\index{Charge@{Charge}!capture@{capture}}
+\index{capture@{capture}!Charge@{Charge}}
+\doxysubsubsection{\texorpdfstring{capture()}{capture()}}
+{\footnotesize\ttfamily capture (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_charge}{Charge}} The captured charge. 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file Charge.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_charge_a2b6facd42c7157fba26affa01293ef3c}\label{class_stripe_1_1_charge_a2b6facd42c7157fba26affa01293ef3c}} 
+\index{Charge@{Charge}!closeDispute@{closeDispute}}
+\index{closeDispute@{closeDispute}!Charge@{Charge}}
+\doxysubsubsection{\texorpdfstring{closeDispute()}{closeDispute()}}
+{\footnotesize\ttfamily close\+Dispute (\begin{DoxyParamCaption}\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string | null & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000042}{Deprecated}}]Use the {\ttfamily close} method on the \mbox{\hyperlink{class_stripe_1_1_dispute}{Dispute}} object\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_charge}{Charge}} The updated charge. 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file Charge.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_charge_a1a3b119495f0471b3d00dacccacfc1d6}\label{class_stripe_1_1_charge_a1a3b119495f0471b3d00dacccacfc1d6}} 
+\index{Charge@{Charge}!create@{create}}
+\index{create@{create}!Charge@{Charge}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static create (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_charge}{Charge}} The created charge. 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Charge.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_charge_a076b2b539debe76ca4d05f86fa7c6072}\label{class_stripe_1_1_charge_a076b2b539debe76ca4d05f86fa7c6072}} 
+\index{Charge@{Charge}!markAsFraudulent@{markAsFraudulent}}
+\index{markAsFraudulent@{markAsFraudulent}!Charge@{Charge}}
+\doxysubsubsection{\texorpdfstring{markAsFraudulent()}{markAsFraudulent()}}
+{\footnotesize\ttfamily mark\+As\+Fraudulent (\begin{DoxyParamCaption}\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_charge}{Charge}} The updated charge. 
+\end{DoxyReturn}
+
+
+Definition at line 162 of file Charge.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_charge_ae4846135bc8a565b4eb3b465ca0fbcbb}\label{class_stripe_1_1_charge_ae4846135bc8a565b4eb3b465ca0fbcbb}} 
+\index{Charge@{Charge}!markAsSafe@{markAsSafe}}
+\index{markAsSafe@{markAsSafe}!Charge@{Charge}}
+\doxysubsubsection{\texorpdfstring{markAsSafe()}{markAsSafe()}}
+{\footnotesize\ttfamily mark\+As\+Safe (\begin{DoxyParamCaption}\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_charge}{Charge}} The updated charge. 
+\end{DoxyReturn}
+
+
+Definition at line 176 of file Charge.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_charge_a4324d1c76955d17a1e99dd2203af4c87}\label{class_stripe_1_1_charge_a4324d1c76955d17a1e99dd2203af4c87}} 
+\index{Charge@{Charge}!refund@{refund}}
+\index{refund@{refund}!Charge@{Charge}}
+\doxysubsubsection{\texorpdfstring{refund()}{refund()}}
+{\footnotesize\ttfamily refund (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_charge}{Charge}} The refunded charge. 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file Charge.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_charge_af7f2385154ca537d1374615963d8aa51}\label{class_stripe_1_1_charge_af7f2385154ca537d1374615963d8aa51}} 
+\index{Charge@{Charge}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!Charge@{Charge}}
+\doxysubsubsection{\texorpdfstring{retrieve()}{retrieve()}}
+{\footnotesize\ttfamily static retrieve (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The ID of the charge to retrieve. \\
+\hline
+array | string | null & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_charge}{Charge}} 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file Charge.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_charge_aa1302e3400c42db58edcb419a40c1ab4}\label{class_stripe_1_1_charge_aa1302e3400c42db58edcb419a40c1ab4}} 
+\index{Charge@{Charge}!save@{save}}
+\index{save@{save}!Charge@{Charge}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string | null & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_charge}{Charge}} The saved charge. 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file Charge.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_charge_a93a32034843cb2e92901d3e3d90dc1d5}\label{class_stripe_1_1_charge_a93a32034843cb2e92901d3e3d90dc1d5}} 
+\index{Charge@{Charge}!update@{update}}
+\index{update@{update}!Charge@{Charge}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily static update (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The ID of the charge to update. \\
+\hline
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_charge}{Charge}} The updated charge. 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Charge.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_charge_a5913ea85080d2a1cfaf6ab7111cd2373}\label{class_stripe_1_1_charge_a5913ea85080d2a1cfaf6ab7111cd2373}} 
+\index{Charge@{Charge}!updateDispute@{updateDispute}}
+\index{updateDispute@{updateDispute}!Charge@{Charge}}
+\doxysubsubsection{\texorpdfstring{updateDispute()}{updateDispute()}}
+{\footnotesize\ttfamily update\+Dispute (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000041}{Deprecated}}]Use the {\ttfamily save} method on the \mbox{\hyperlink{class_stripe_1_1_dispute}{Dispute}} object\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+array The updated dispute. 
+\end{DoxyReturn}
+
+
+Definition at line 134 of file Charge.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/stripe/stripe-\/php/lib/\mbox{\hyperlink{_charge_8php}{Charge.\+php}}\end{DoxyCompactItemize}

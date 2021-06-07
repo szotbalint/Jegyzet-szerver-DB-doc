@@ -1,0 +1,75 @@
+\hypertarget{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_factory_interface}{}\doxysection{Resource\+Iterator\+Factory\+Interface Interface Reference}
+\label{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_factory_interface}\index{ResourceIteratorFactoryInterface@{ResourceIteratorFactoryInterface}}
+Inheritance diagram for Resource\+Iterator\+Factory\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.592592cm]{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_factory_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_factory_interface_a4346bc8e6ef72cac9383fa80f7237b92}{build}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command, array \$options=array())
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_factory_interface_a99278793e0f07f87c0b8754f05274411}{can\+Build}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory for creating \{\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}}\} objects 
+\end{DoxySeeAlso}
+
+
+Definition at line 10 of file Resource\+Iterator\+Factory\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_factory_interface_a4346bc8e6ef72cac9383fa80f7237b92}\label{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_factory_interface_a4346bc8e6ef72cac9383fa80f7237b92}} 
+\index{ResourceIteratorFactoryInterface@{ResourceIteratorFactoryInterface}!build@{build}}
+\index{build@{build}!ResourceIteratorFactoryInterface@{ResourceIteratorFactoryInterface}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command,  }\item[{array}]{\$options = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Create a resource iterator
+
+
+\begin{DoxyParams}[1]{Parameters}
+Command\+Interface & {\em \$command} & \mbox{\hyperlink{namespace_guzzle_1_1_service_1_1_command}{Command}} to create an iterator for \\
+\hline
+array & {\em \$options} & \mbox{\hyperlink{namespace_guzzle_1_1_iterator}{Iterator}} options that are exposed as data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_composite_resource_iterator_factory_a4346bc8e6ef72cac9383fa80f7237b92}{Composite\+Resource\+Iterator\+Factory}}, and \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory_a4346bc8e6ef72cac9383fa80f7237b92}{Abstract\+Resource\+Iterator\+Factory}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_factory_interface_a99278793e0f07f87c0b8754f05274411}\label{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_factory_interface_a99278793e0f07f87c0b8754f05274411}} 
+\index{ResourceIteratorFactoryInterface@{ResourceIteratorFactoryInterface}!canBuild@{canBuild}}
+\index{canBuild@{canBuild}!ResourceIteratorFactoryInterface@{ResourceIteratorFactoryInterface}}
+\doxysubsubsection{\texorpdfstring{canBuild()}{canBuild()}}
+{\footnotesize\ttfamily can\+Build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command }\end{DoxyParamCaption})}
+
+Check if the factory can create an iterator
+
+
+\begin{DoxyParams}[1]{Parameters}
+Command\+Interface & {\em \$command} & \mbox{\hyperlink{namespace_guzzle_1_1_service_1_1_command}{Command}} to create an iterator for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_composite_resource_iterator_factory_a99278793e0f07f87c0b8754f05274411}{Composite\+Resource\+Iterator\+Factory}}, and \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_abstract_resource_iterator_factory_a99278793e0f07f87c0b8754f05274411}{Abstract\+Resource\+Iterator\+Factory}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Resource/\mbox{\hyperlink{_resource_iterator_factory_interface_8php}{Resource\+Iterator\+Factory\+Interface.\+php}}\end{DoxyCompactItemize}

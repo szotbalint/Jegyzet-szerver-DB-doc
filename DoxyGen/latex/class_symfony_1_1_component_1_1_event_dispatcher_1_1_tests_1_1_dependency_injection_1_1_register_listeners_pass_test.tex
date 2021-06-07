@@ -1,0 +1,124 @@
+\hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test}{}\doxysection{Register\+Listeners\+Pass\+Test Class Reference}
+\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test}\index{RegisterListenersPassTest@{RegisterListenersPassTest}}
+Inheritance diagram for Register\+Listeners\+Pass\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_aef6ac15117007584a985ee247b0b6886}{test\+Event\+Subscriber\+Without\+Interface}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a59dd7940a5c17902687c6c563863e18c}{test\+Valid\+Event\+Subscriber}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a83d25820e02a58d8a00f07ce2fa7a46d}{test\+Private\+Event\+Listener}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a9f74a6d6b6c11523b5d056256f91cbc0}{test\+Private\+Event\+Subscriber}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_ac08a9e95c0ff653679a4f825d62ecb43}{test\+Abstract\+Event\+Listener}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_ae64f47b40bc508e4bf9754ba04dbe391}{test\+Abstract\+Event\+Subscriber}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a4543cdc0740b3ed2f15fb78eab590a10}{test\+Event\+Subscriber\+Resolvable\+Class\+Name}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_ac8e1102bc02489f77a594ef6ef096b5e}{test\+Event\+Subscriber\+Unresolvable\+Class\+Name}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 18 of file Register\+Listeners\+Pass\+Test.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_ac08a9e95c0ff653679a4f825d62ecb43}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_ac08a9e95c0ff653679a4f825d62ecb43}} 
+\index{RegisterListenersPassTest@{RegisterListenersPassTest}!testAbstractEventListener@{testAbstractEventListener}}
+\index{testAbstractEventListener@{testAbstractEventListener}!RegisterListenersPassTest@{RegisterListenersPassTest}}
+\doxysubsubsection{\texorpdfstring{testAbstractEventListener()}{testAbstractEventListener()}}
+{\footnotesize\ttfamily test\+Abstract\+Event\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@expected\+Exception \textbackslash{}\+Invalid\+Argument\+Exception @expected\+Exception\+Message The service \char`\"{}foo\char`\"{} must not be abstract as event listeners are lazy-\/loaded. 
+
+Definition at line 86 of file Register\+Listeners\+Pass\+Test.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_ae64f47b40bc508e4bf9754ba04dbe391}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_ae64f47b40bc508e4bf9754ba04dbe391}} 
+\index{RegisterListenersPassTest@{RegisterListenersPassTest}!testAbstractEventSubscriber@{testAbstractEventSubscriber}}
+\index{testAbstractEventSubscriber@{testAbstractEventSubscriber}!RegisterListenersPassTest@{RegisterListenersPassTest}}
+\doxysubsubsection{\texorpdfstring{testAbstractEventSubscriber()}{testAbstractEventSubscriber()}}
+{\footnotesize\ttfamily test\+Abstract\+Event\+Subscriber (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@expected\+Exception \textbackslash{}\+Invalid\+Argument\+Exception @expected\+Exception\+Message The service \char`\"{}foo\char`\"{} must not be abstract as event subscribers are lazy-\/loaded. 
+
+Definition at line 100 of file Register\+Listeners\+Pass\+Test.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a4543cdc0740b3ed2f15fb78eab590a10}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a4543cdc0740b3ed2f15fb78eab590a10}} 
+\index{RegisterListenersPassTest@{RegisterListenersPassTest}!testEventSubscriberResolvableClassName@{testEventSubscriberResolvableClassName}}
+\index{testEventSubscriberResolvableClassName@{testEventSubscriberResolvableClassName}!RegisterListenersPassTest@{RegisterListenersPassTest}}
+\doxysubsubsection{\texorpdfstring{testEventSubscriberResolvableClassName()}{testEventSubscriberResolvableClassName()}}
+{\footnotesize\ttfamily test\+Event\+Subscriber\+Resolvable\+Class\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file Register\+Listeners\+Pass\+Test.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_ac8e1102bc02489f77a594ef6ef096b5e}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_ac8e1102bc02489f77a594ef6ef096b5e}} 
+\index{RegisterListenersPassTest@{RegisterListenersPassTest}!testEventSubscriberUnresolvableClassName@{testEventSubscriberUnresolvableClassName}}
+\index{testEventSubscriberUnresolvableClassName@{testEventSubscriberUnresolvableClassName}!RegisterListenersPassTest@{RegisterListenersPassTest}}
+\doxysubsubsection{\texorpdfstring{testEventSubscriberUnresolvableClassName()}{testEventSubscriberUnresolvableClassName()}}
+{\footnotesize\ttfamily test\+Event\+Subscriber\+Unresolvable\+Class\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@expected\+Exception \textbackslash{}\+Invalid\+Argument\+Exception @expected\+Exception\+Message You have requested a non-\/existent parameter \char`\"{}subscriber.\+class\char`\"{} 
+
+Definition at line 138 of file Register\+Listeners\+Pass\+Test.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_aef6ac15117007584a985ee247b0b6886}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_aef6ac15117007584a985ee247b0b6886}} 
+\index{RegisterListenersPassTest@{RegisterListenersPassTest}!testEventSubscriberWithoutInterface@{testEventSubscriberWithoutInterface}}
+\index{testEventSubscriberWithoutInterface@{testEventSubscriberWithoutInterface}!RegisterListenersPassTest@{RegisterListenersPassTest}}
+\doxysubsubsection{\texorpdfstring{testEventSubscriberWithoutInterface()}{testEventSubscriberWithoutInterface()}}
+{\footnotesize\ttfamily test\+Event\+Subscriber\+Without\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{namespace_symfony_1_1_component_1_1_event_dispatcher_1_1_tests}{Tests}} that event subscribers not implementing \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface}{Event\+Subscriber\+Interface}} trigger an exception.
+
+@expected\+Exception \textbackslash{}\+Invalid\+Argument\+Exception 
+
+Definition at line 26 of file Register\+Listeners\+Pass\+Test.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a83d25820e02a58d8a00f07ce2fa7a46d}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a83d25820e02a58d8a00f07ce2fa7a46d}} 
+\index{RegisterListenersPassTest@{RegisterListenersPassTest}!testPrivateEventListener@{testPrivateEventListener}}
+\index{testPrivateEventListener@{testPrivateEventListener}!RegisterListenersPassTest@{RegisterListenersPassTest}}
+\doxysubsubsection{\texorpdfstring{testPrivateEventListener()}{testPrivateEventListener()}}
+{\footnotesize\ttfamily test\+Private\+Event\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@expected\+Exception \textbackslash{}\+Invalid\+Argument\+Exception @expected\+Exception\+Message The service \char`\"{}foo\char`\"{} must be public as event listeners are lazy-\/loaded. 
+
+Definition at line 58 of file Register\+Listeners\+Pass\+Test.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a9f74a6d6b6c11523b5d056256f91cbc0}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a9f74a6d6b6c11523b5d056256f91cbc0}} 
+\index{RegisterListenersPassTest@{RegisterListenersPassTest}!testPrivateEventSubscriber@{testPrivateEventSubscriber}}
+\index{testPrivateEventSubscriber@{testPrivateEventSubscriber}!RegisterListenersPassTest@{RegisterListenersPassTest}}
+\doxysubsubsection{\texorpdfstring{testPrivateEventSubscriber()}{testPrivateEventSubscriber()}}
+{\footnotesize\ttfamily test\+Private\+Event\+Subscriber (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@expected\+Exception \textbackslash{}\+Invalid\+Argument\+Exception @expected\+Exception\+Message The service \char`\"{}foo\char`\"{} must be public as event subscribers are lazy-\/loaded. 
+
+Definition at line 72 of file Register\+Listeners\+Pass\+Test.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a59dd7940a5c17902687c6c563863e18c}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_tests_1_1_dependency_injection_1_1_register_listeners_pass_test_a59dd7940a5c17902687c6c563863e18c}} 
+\index{RegisterListenersPassTest@{RegisterListenersPassTest}!testValidEventSubscriber@{testValidEventSubscriber}}
+\index{testValidEventSubscriber@{testValidEventSubscriber}!RegisterListenersPassTest@{RegisterListenersPassTest}}
+\doxysubsubsection{\texorpdfstring{testValidEventSubscriber()}{testValidEventSubscriber()}}
+{\footnotesize\ttfamily test\+Valid\+Event\+Subscriber (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file Register\+Listeners\+Pass\+Test.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/symfony/event-\/dispatcher/\+Tests/\+Dependency\+Injection/\mbox{\hyperlink{_register_listeners_pass_test_8php}{Register\+Listeners\+Pass\+Test.\+php}}\end{DoxyCompactItemize}

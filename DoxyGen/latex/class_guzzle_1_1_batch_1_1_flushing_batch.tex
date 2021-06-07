@@ -1,0 +1,143 @@
+\hypertarget{class_guzzle_1_1_batch_1_1_flushing_batch}{}\doxysection{Flushing\+Batch Class Reference}
+\label{class_guzzle_1_1_batch_1_1_flushing_batch}\index{FlushingBatch@{FlushingBatch}}
+Inheritance diagram for Flushing\+Batch\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_batch_1_1_flushing_batch}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_flushing_batch_a0abf54f98dcc32566b500c7eec011e70}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}} \$decorated\+Batch, \$threshold)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_flushing_batch_a9c3571c0ccc50bef6fc9a58cf56a5f80}{set\+Threshold}} (\$threshold)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_flushing_batch_af8a92c09b90e58d1e6509243a1b5bb48}{get\+Threshold}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_flushing_batch_a9c7899e69ac07d75fa0aa5ef89193a7f}{add}} (\$item)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_flushing_batch_ab1128feadf0049dd1af715cf251ac0e9}{\$threshold}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_flushing_batch_a6c668776754bdfdc2c0be747c4033b27}{\$current\+Total}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}} decorator used to add automatic flushing of the queue when the size of the queue reaches a threshold. 
+
+Definition at line 8 of file Flushing\+Batch.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_flushing_batch_a0abf54f98dcc32566b500c7eec011e70}\label{class_guzzle_1_1_batch_1_1_flushing_batch_a0abf54f98dcc32566b500c7eec011e70}} 
+\index{FlushingBatch@{FlushingBatch}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FlushingBatch@{FlushingBatch}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}}}]{\$decorated\+Batch,  }\item[{}]{\$threshold }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}} & {\em \$decorated\+Batch} & \mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_interface}{Batch\+Interface}} that is being decorated \\
+\hline
+int & {\em \$threshold} & Flush when the number in queue matches the threshold \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file Flushing\+Batch.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_flushing_batch_a9c7899e69ac07d75fa0aa5ef89193a7f}\label{class_guzzle_1_1_batch_1_1_flushing_batch_a9c7899e69ac07d75fa0aa5ef89193a7f}} 
+\index{FlushingBatch@{FlushingBatch}!add@{add}}
+\index{add@{add}!FlushingBatch@{FlushingBatch}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily add (\begin{DoxyParamCaption}\item[{}]{\$item }\end{DoxyParamCaption})}
+
+Add an item to the queue
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$item} & Item to add\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_batch_1_1_abstract_batch_decorator_a9c7899e69ac07d75fa0aa5ef89193a7f}{Abstract\+Batch\+Decorator}}.
+
+
+
+Definition at line 50 of file Flushing\+Batch.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_flushing_batch_af8a92c09b90e58d1e6509243a1b5bb48}\label{class_guzzle_1_1_batch_1_1_flushing_batch_af8a92c09b90e58d1e6509243a1b5bb48}} 
+\index{FlushingBatch@{FlushingBatch}!getThreshold@{getThreshold}}
+\index{getThreshold@{getThreshold}!FlushingBatch@{FlushingBatch}}
+\doxysubsubsection{\texorpdfstring{getThreshold()}{getThreshold()}}
+{\footnotesize\ttfamily get\+Threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the auto-\/flush threshold
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file Flushing\+Batch.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_flushing_batch_a9c3571c0ccc50bef6fc9a58cf56a5f80}\label{class_guzzle_1_1_batch_1_1_flushing_batch_a9c3571c0ccc50bef6fc9a58cf56a5f80}} 
+\index{FlushingBatch@{FlushingBatch}!setThreshold@{setThreshold}}
+\index{setThreshold@{setThreshold}!FlushingBatch@{FlushingBatch}}
+\doxysubsubsection{\texorpdfstring{setThreshold()}{setThreshold()}}
+{\footnotesize\ttfamily set\+Threshold (\begin{DoxyParamCaption}\item[{}]{\$threshold }\end{DoxyParamCaption})}
+
+Set the auto-\/flush threshold
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$threshold} & The auto-\/flush threshold\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_flushing_batch}{Flushing\+Batch}} 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file Flushing\+Batch.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_flushing_batch_a6c668776754bdfdc2c0be747c4033b27}\label{class_guzzle_1_1_batch_1_1_flushing_batch_a6c668776754bdfdc2c0be747c4033b27}} 
+\index{FlushingBatch@{FlushingBatch}!\$currentTotal@{\$currentTotal}}
+\index{\$currentTotal@{\$currentTotal}!FlushingBatch@{FlushingBatch}}
+\doxysubsubsection{\texorpdfstring{\$currentTotal}{$currentTotal}}
+{\footnotesize\ttfamily \$current\+Total = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file Flushing\+Batch.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_flushing_batch_ab1128feadf0049dd1af715cf251ac0e9}\label{class_guzzle_1_1_batch_1_1_flushing_batch_ab1128feadf0049dd1af715cf251ac0e9}} 
+\index{FlushingBatch@{FlushingBatch}!\$threshold@{\$threshold}}
+\index{\$threshold@{\$threshold}!FlushingBatch@{FlushingBatch}}
+\doxysubsubsection{\texorpdfstring{\$threshold}{$threshold}}
+{\footnotesize\ttfamily \$threshold\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 11 of file Flushing\+Batch.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Batch/\mbox{\hyperlink{_flushing_batch_8php}{Flushing\+Batch.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,327 @@
+\hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin}{}\doxysection{Redirect\+Plugin Class Reference}
+\label{class_guzzle_1_1_http_1_1_redirect_plugin}\index{RedirectPlugin@{RedirectPlugin}}
+Inheritance diagram for Redirect\+Plugin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_http_1_1_redirect_plugin}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_a2f16ee6c2d6fc6798f5413cb84cef83a}{cleanup\+Request}} (\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} \$event)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_a47008d4ea14170e1e63d2b4409f49b34}{on\+Request\+Sent}} (\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} \$event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_af1f63475927bbcb3bd21b58712076104}{get\+Subscribed\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_acfd677247fdafff5c3824094876be4a6}{REDIRECT\+\_\+\+COUNT}} = \textquotesingle{}redirect.\+count\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_aaea203d9cfd91ab0d611a0d29482e511}{MAX\+\_\+\+REDIRECTS}} = \textquotesingle{}redirect.\+max\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_a219e00c8452f7be0b666eb34d1c49625}{STRICT\+\_\+\+REDIRECTS}} = \textquotesingle{}redirect.\+strict\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_a381c9717347644e4956073e510ce956d}{PARENT\+\_\+\+REQUEST}} = \textquotesingle{}redirect.\+parent\+\_\+request\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_a81451d45f1a132df642c55bcd7d7fc7c}{DISABLE}} = \textquotesingle{}redirect.\+disable\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_a5584e939a70223bc343e7591c6f578c2}{get\+Original\+Request}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_a92161f0de93d6b0afd620e9675c08359}{create\+Redirect\+Request}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$status\+Code, \$location, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$original)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_a6c86579c30fb7ce0abda80def5aee594}{prepare\+Redirection}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$original, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}} \$response)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_a1a62ce12f24c8dbe965ab563f50dd733}{send\+Redirect\+Request}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$original, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}} \$response)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_a6a1c12ffccf3cae457e2f955ac1a56f2}{throw\+Too\+Many\+Redirects\+Exception}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$original, \$max)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_redirect_plugin_a1d98c39d13e4135e13fe7c1e94aa327b}{\$default\+Max\+Redirects}} = 5
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Plugin to implement HTTP redirects. Can redirect like a web browser or using strict RFC 2616 compliance 
+
+Definition at line 19 of file Redirect\+Plugin.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_a2f16ee6c2d6fc6798f5413cb84cef83a}\label{class_guzzle_1_1_http_1_1_redirect_plugin_a2f16ee6c2d6fc6798f5413cb84cef83a}} 
+\index{RedirectPlugin@{RedirectPlugin}!cleanupRequest@{cleanupRequest}}
+\index{cleanupRequest@{cleanupRequest}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{cleanupRequest()}{cleanupRequest()}}
+{\footnotesize\ttfamily cleanup\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})}
+
+Clean up the parameters of a request when it is cloned
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event & {\em \$event} & Event emitted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_a92161f0de93d6b0afd620e9675c08359}\label{class_guzzle_1_1_http_1_1_redirect_plugin_a92161f0de93d6b0afd620e9675c08359}} 
+\index{RedirectPlugin@{RedirectPlugin}!createRedirectRequest@{createRedirectRequest}}
+\index{createRedirectRequest@{createRedirectRequest}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{createRedirectRequest()}{createRedirectRequest()}}
+{\footnotesize\ttfamily create\+Redirect\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$status\+Code,  }\item[{}]{\$location,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$original }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create a redirect request for a specific request object
+
+Takes into account strict RFC compliant redirection (e.\+g. redirect POST with POST) vs doing what most clients do (e.\+g. redirect POST with GET).
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request being redirected \\
+\hline
+Request\+Interface & {\em \$original} & Original request \\
+\hline
+int & {\em \$status\+Code} & Status code of the redirect \\
+\hline
+string & {\em \$location} & Location header of the redirect\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Request\+Interface Returns a new redirect request 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Could\+Not\+Rewind\+Stream\+Exception} & If the body needs to be rewound but cannot \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 117 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_a5584e939a70223bc343e7591c6f578c2}\label{class_guzzle_1_1_http_1_1_redirect_plugin_a5584e939a70223bc343e7591c6f578c2}} 
+\index{RedirectPlugin@{RedirectPlugin}!getOriginalRequest@{getOriginalRequest}}
+\index{getOriginalRequest@{getOriginalRequest}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{getOriginalRequest()}{getOriginalRequest()}}
+{\footnotesize\ttfamily get\+Original\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get the original request that initiated a series of redirects
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to get the original request from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Request\+Interface 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_af1f63475927bbcb3bd21b58712076104}\label{class_guzzle_1_1_http_1_1_redirect_plugin_af1f63475927bbcb3bd21b58712076104}} 
+\index{RedirectPlugin@{RedirectPlugin}!getSubscribedEvents@{getSubscribedEvents}}
+\index{getSubscribedEvents@{getSubscribedEvents}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{getSubscribedEvents()}{getSubscribedEvents()}}
+{\footnotesize\ttfamily static get\+Subscribed\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns an array of event names this subscriber wants to listen to.
+
+The array keys are event names and the value can be\+:
+
+
+\begin{DoxyItemize}
+\item The method name to call (priority defaults to 0)
+\item An array composed of the method name to call and the priority
+\item An array of arrays composed of the method names to call and respective priorities, or 0 if unset
+\end{DoxyItemize}
+
+For instance\+:
+
+
+\begin{DoxyItemize}
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ \textquotesingle{}method\+Name\textquotesingle{})
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(\textquotesingle{}method\+Name\textquotesingle{}, \$priority))
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(array(\textquotesingle{}method\+Name1\textquotesingle{}, \$priority), array(\textquotesingle{}method\+Name2\textquotesingle{})))
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+array The event names to listen to 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface_af1f63475927bbcb3bd21b58712076104}{Event\+Subscriber\+Interface}}.
+
+
+
+Definition at line 32 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_a47008d4ea14170e1e63d2b4409f49b34}\label{class_guzzle_1_1_http_1_1_redirect_plugin_a47008d4ea14170e1e63d2b4409f49b34}} 
+\index{RedirectPlugin@{RedirectPlugin}!onRequestSent@{onRequestSent}}
+\index{onRequestSent@{onRequestSent}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{onRequestSent()}{onRequestSent()}}
+{\footnotesize\ttfamily on\+Request\+Sent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})}
+
+Called when a request receives a redirect response
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event & {\em \$event} & Event emitted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_a6c86579c30fb7ce0abda80def5aee594}\label{class_guzzle_1_1_http_1_1_redirect_plugin_a6c86579c30fb7ce0abda80def5aee594}} 
+\index{RedirectPlugin@{RedirectPlugin}!prepareRedirection@{prepareRedirection}}
+\index{prepareRedirection@{prepareRedirection}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{prepareRedirection()}{prepareRedirection()}}
+{\footnotesize\ttfamily prepare\+Redirection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$original,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}}}]{\$response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Prepare the request for redirection and enforce the maximum number of allowed redirects per client
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$original} & Original request \\
+\hline
+Request\+Interface & {\em \$request} & Request to prepare and validate \\
+\hline
+Response & {\em \$response} & The current response\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Request\+Interface 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_a1a62ce12f24c8dbe965ab563f50dd733}\label{class_guzzle_1_1_http_1_1_redirect_plugin_a1a62ce12f24c8dbe965ab563f50dd733}} 
+\index{RedirectPlugin@{RedirectPlugin}!sendRedirectRequest@{sendRedirectRequest}}
+\index{sendRedirectRequest@{sendRedirectRequest}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{sendRedirectRequest()}{sendRedirectRequest()}}
+{\footnotesize\ttfamily send\+Redirect\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$original,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}}}]{\$response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send a redirect request and handle any errors
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$original} & The originating request \\
+\hline
+Request\+Interface & {\em \$request} & The current request being redirected \\
+\hline
+Response & {\em \$response} & The response of the current request\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Bad\+Response\+Exception$\vert$} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 216 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_a6a1c12ffccf3cae457e2f955ac1a56f2}\label{class_guzzle_1_1_http_1_1_redirect_plugin_a6a1c12ffccf3cae457e2f955ac1a56f2}} 
+\index{RedirectPlugin@{RedirectPlugin}!throwTooManyRedirectsException@{throwTooManyRedirectsException}}
+\index{throwTooManyRedirectsException@{throwTooManyRedirectsException}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{throwTooManyRedirectsException()}{throwTooManyRedirectsException()}}
+{\footnotesize\ttfamily throw\+Too\+Many\+Redirects\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$original,  }\item[{}]{\$max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Throw a too many redirects exception for a request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$original} & Request \\
+\hline
+int & {\em \$max} & Max allowed redirects\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Too\+Many\+Redirects\+Exception} & when too many redirects have been issued \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 239 of file Redirect\+Plugin.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_a1d98c39d13e4135e13fe7c1e94aa327b}\label{class_guzzle_1_1_http_1_1_redirect_plugin_a1d98c39d13e4135e13fe7c1e94aa327b}} 
+\index{RedirectPlugin@{RedirectPlugin}!\$defaultMaxRedirects@{\$defaultMaxRedirects}}
+\index{\$defaultMaxRedirects@{\$defaultMaxRedirects}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{\$defaultMaxRedirects}{$defaultMaxRedirects}}
+{\footnotesize\ttfamily \$default\+Max\+Redirects = 5\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 30 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_a81451d45f1a132df642c55bcd7d7fc7c}\label{class_guzzle_1_1_http_1_1_redirect_plugin_a81451d45f1a132df642c55bcd7d7fc7c}} 
+\index{RedirectPlugin@{RedirectPlugin}!DISABLE@{DISABLE}}
+\index{DISABLE@{DISABLE}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{DISABLE}{DISABLE}}
+{\footnotesize\ttfamily const DISABLE = \textquotesingle{}redirect.\+disable\textquotesingle{}}
+
+
+
+Definition at line 25 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_aaea203d9cfd91ab0d611a0d29482e511}\label{class_guzzle_1_1_http_1_1_redirect_plugin_aaea203d9cfd91ab0d611a0d29482e511}} 
+\index{RedirectPlugin@{RedirectPlugin}!MAX\_REDIRECTS@{MAX\_REDIRECTS}}
+\index{MAX\_REDIRECTS@{MAX\_REDIRECTS}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{MAX\_REDIRECTS}{MAX\_REDIRECTS}}
+{\footnotesize\ttfamily const MAX\+\_\+\+REDIRECTS = \textquotesingle{}redirect.\+max\textquotesingle{}}
+
+
+
+Definition at line 22 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_a381c9717347644e4956073e510ce956d}\label{class_guzzle_1_1_http_1_1_redirect_plugin_a381c9717347644e4956073e510ce956d}} 
+\index{RedirectPlugin@{RedirectPlugin}!PARENT\_REQUEST@{PARENT\_REQUEST}}
+\index{PARENT\_REQUEST@{PARENT\_REQUEST}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{PARENT\_REQUEST}{PARENT\_REQUEST}}
+{\footnotesize\ttfamily const PARENT\+\_\+\+REQUEST = \textquotesingle{}redirect.\+parent\+\_\+request\textquotesingle{}}
+
+
+
+Definition at line 24 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_acfd677247fdafff5c3824094876be4a6}\label{class_guzzle_1_1_http_1_1_redirect_plugin_acfd677247fdafff5c3824094876be4a6}} 
+\index{RedirectPlugin@{RedirectPlugin}!REDIRECT\_COUNT@{REDIRECT\_COUNT}}
+\index{REDIRECT\_COUNT@{REDIRECT\_COUNT}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{REDIRECT\_COUNT}{REDIRECT\_COUNT}}
+{\footnotesize\ttfamily const REDIRECT\+\_\+\+COUNT = \textquotesingle{}redirect.\+count\textquotesingle{}}
+
+
+
+Definition at line 21 of file Redirect\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_redirect_plugin_a219e00c8452f7be0b666eb34d1c49625}\label{class_guzzle_1_1_http_1_1_redirect_plugin_a219e00c8452f7be0b666eb34d1c49625}} 
+\index{RedirectPlugin@{RedirectPlugin}!STRICT\_REDIRECTS@{STRICT\_REDIRECTS}}
+\index{STRICT\_REDIRECTS@{STRICT\_REDIRECTS}!RedirectPlugin@{RedirectPlugin}}
+\doxysubsubsection{\texorpdfstring{STRICT\_REDIRECTS}{STRICT\_REDIRECTS}}
+{\footnotesize\ttfamily const STRICT\+\_\+\+REDIRECTS = \textquotesingle{}redirect.\+strict\textquotesingle{}}
+
+
+
+Definition at line 23 of file Redirect\+Plugin.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Http/\mbox{\hyperlink{_redirect_plugin_8php}{Redirect\+Plugin.\+php}}\end{DoxyCompactItemize}

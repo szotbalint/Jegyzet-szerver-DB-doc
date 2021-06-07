@@ -1,0 +1,240 @@
+\hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher}{}\doxysection{Container\+Aware\+Event\+Dispatcher Class Reference}
+\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher}\index{ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}}
+Inheritance diagram for Container\+Aware\+Event\+Dispatcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a485ae35e25eed5f2bd7053b14a12bc78}{\+\_\+\+\_\+construct}} (Container\+Interface \$container)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a03f1a3698a82c80fa70288f395f44337}{add\+Listener\+Service}} (\$event\+Name, \$callback, \$priority=0)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a285fd905f94dafed0c6007527b9d66fc}{remove\+Listener}} (\$event\+Name, \$listener)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_ab616bc1ac4c11b03413416c7a26785e5}{has\+Listeners}} (\$event\+Name=null)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a60846fb0ce44f706f2394a670fcdce9a}{get\+Listeners}} (\$event\+Name=null)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a953c2056734fc61d5f0c4245a700b00d}{get\+Listener\+Priority}} (\$event\+Name, \$listener)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_aa9b81bdd8c7edce3d44da246fb0c3006}{add\+Subscriber\+Service}} (\$service\+Id, \$class)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a53e2ca32cf29808b0b18cd5accf3c4db}{get\+Container}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_ad84368d063db177eb5c5d9eff4942e01}{lazy\+Load}} (\$event\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Lazily loads listeners and subscribers from the dependency injection container.
+
+\begin{DoxyAuthor}{Author}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\texttt{ fabien@symfony.\+com}} 
+
+Bernhard Schussek \href{mailto:bschussek@gmail.com}{\texttt{ bschussek@gmail.\+com}} 
+
+Jordan Alliot \href{mailto:jordan.alliot@gmail.com}{\texttt{ jordan.\+alliot@gmail.\+com}} 
+\end{DoxyAuthor}
+
+
+Definition at line 24 of file Container\+Aware\+Event\+Dispatcher.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a485ae35e25eed5f2bd7053b14a12bc78}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a485ae35e25eed5f2bd7053b14a12bc78}} 
+\index{ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Container\+Interface}]{\$container }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Container\+Aware\+Event\+Dispatcher.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a03f1a3698a82c80fa70288f395f44337}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a03f1a3698a82c80fa70288f395f44337}} 
+\index{ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}!addListenerService@{addListenerService}}
+\index{addListenerService@{addListenerService}!ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{addListenerService()}{addListenerService()}}
+{\footnotesize\ttfamily add\+Listener\+Service (\begin{DoxyParamCaption}\item[{}]{\$event\+Name,  }\item[{}]{\$callback,  }\item[{}]{\$priority = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Adds a service as event listener.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}} for which the listener is added \\
+\hline
+array & {\em \$callback} & The service ID of the listener service \& the method name that has to be called \\
+\hline
+int & {\em \$priority} & The higher this value, the earlier an event listener will be triggered in the chain. Defaults to 0.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 55 of file Container\+Aware\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_aa9b81bdd8c7edce3d44da246fb0c3006}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_aa9b81bdd8c7edce3d44da246fb0c3006}} 
+\index{ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}!addSubscriberService@{addSubscriberService}}
+\index{addSubscriberService@{addSubscriberService}!ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{addSubscriberService()}{addSubscriberService()}}
+{\footnotesize\ttfamily add\+Subscriber\+Service (\begin{DoxyParamCaption}\item[{}]{\$service\+Id,  }\item[{}]{\$class }\end{DoxyParamCaption})}
+
+Adds a service as event subscriber.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$service\+Id} & The service ID of the subscriber service \\
+\hline
+string & {\em \$class} & The service\textquotesingle{}s class name (which must implement \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface}{Event\+Subscriber\+Interface}}) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 136 of file Container\+Aware\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a53e2ca32cf29808b0b18cd5accf3c4db}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a53e2ca32cf29808b0b18cd5accf3c4db}} 
+\index{ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}!getContainer@{getContainer}}
+\index{getContainer@{getContainer}!ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{getContainer()}{getContainer()}}
+{\footnotesize\ttfamily get\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 151 of file Container\+Aware\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a953c2056734fc61d5f0c4245a700b00d}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a953c2056734fc61d5f0c4245a700b00d}} 
+\index{ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}!getListenerPriority@{getListenerPriority}}
+\index{getListenerPriority@{getListenerPriority}!ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{getListenerPriority()}{getListenerPriority()}}
+{\footnotesize\ttfamily get\+Listener\+Priority (\begin{DoxyParamCaption}\item[{}]{\$event\+Name,  }\item[{}]{\$listener }\end{DoxyParamCaption})}
+
+\{Gets the listener priority for a specific event.
+
+Returns null if the event or the listener does not exist.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The name of the event \\
+\hline
+callable & {\em \$listener} & The listener\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int$\vert$null The event listener priority
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_a953c2056734fc61d5f0c4245a700b00d}{Event\+Dispatcher}}.
+
+
+
+Definition at line 123 of file Container\+Aware\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a60846fb0ce44f706f2394a670fcdce9a}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a60846fb0ce44f706f2394a670fcdce9a}} 
+\index{ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}!getListeners@{getListeners}}
+\index{getListeners@{getListeners}!ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{getListeners()}{getListeners()}}
+{\footnotesize\ttfamily get\+Listeners (\begin{DoxyParamCaption}\item[{}]{\$event\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{\{Gets the listeners of a specific event or all listeners sorted by descending priority.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The name of the event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array The event listeners for the specified event, or all event listeners by event name
+\end{DoxyReturn}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_a60846fb0ce44f706f2394a670fcdce9a}{Event\+Dispatcher}}.
+
+
+
+Definition at line 107 of file Container\+Aware\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_ab616bc1ac4c11b03413416c7a26785e5}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_ab616bc1ac4c11b03413416c7a26785e5}} 
+\index{ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}!hasListeners@{hasListeners}}
+\index{hasListeners@{hasListeners}!ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{hasListeners()}{hasListeners()}}
+{\footnotesize\ttfamily has\+Listeners (\begin{DoxyParamCaption}\item[{}]{\$event\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{\{Checks whether an event has any registered listeners.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The name of the event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the specified event has any listeners, false otherwise
+\end{DoxyReturn}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_ab616bc1ac4c11b03413416c7a26785e5}{Event\+Dispatcher}}.
+
+
+
+Definition at line 91 of file Container\+Aware\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_ad84368d063db177eb5c5d9eff4942e01}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_ad84368d063db177eb5c5d9eff4942e01}} 
+\index{ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}!lazyLoad@{lazyLoad}}
+\index{lazyLoad@{lazyLoad}!ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{lazyLoad()}{lazyLoad()}}
+{\footnotesize\ttfamily lazy\+Load (\begin{DoxyParamCaption}\item[{}]{\$event\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Lazily loads listeners for this event from the dependency injection container.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The name of the event to dispatch. The name of the event is the name of the method that is invoked on listeners. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 164 of file Container\+Aware\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a285fd905f94dafed0c6007527b9d66fc}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_container_aware_event_dispatcher_a285fd905f94dafed0c6007527b9d66fc}} 
+\index{ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}!removeListener@{removeListener}}
+\index{removeListener@{removeListener}!ContainerAwareEventDispatcher@{ContainerAwareEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{removeListener()}{removeListener()}}
+{\footnotesize\ttfamily remove\+Listener (\begin{DoxyParamCaption}\item[{}]{\$event\+Name,  }\item[{}]{\$listener }\end{DoxyParamCaption})}
+
+\{\{Removes an event listener from the specified events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The event to remove a listener from \\
+\hline
+callable & {\em \$listener} & The listener to remove\\
+\hline
+\end{DoxyParams}
+\}\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_a285fd905f94dafed0c6007527b9d66fc}{Event\+Dispatcher}}.
+
+
+
+Definition at line 64 of file Container\+Aware\+Event\+Dispatcher.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/symfony/event-\/dispatcher/\mbox{\hyperlink{_container_aware_event_dispatcher_8php}{Container\+Aware\+Event\+Dispatcher.\+php}}\end{DoxyCompactItemize}

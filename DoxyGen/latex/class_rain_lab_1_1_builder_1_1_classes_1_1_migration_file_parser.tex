@@ -1,0 +1,67 @@
+\hypertarget{class_rain_lab_1_1_builder_1_1_classes_1_1_migration_file_parser}{}\doxysection{Migration\+File\+Parser Class Reference}
+\label{class_rain_lab_1_1_builder_1_1_classes_1_1_migration_file_parser}\index{MigrationFileParser@{MigrationFileParser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_builder_1_1_classes_1_1_migration_file_parser_af987b73928d4e8f010d7229796c7f298}{extract\+Migration\+Info\+From\+Source}} (\$file\+Contents)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_builder_1_1_classes_1_1_migration_file_parser_ae5f35ef7bf3ab99e112d4d3af7848462}{extract\+Class\+Name}} (\$stream)
+\item 
+\mbox{\hyperlink{class_rain_lab_1_1_builder_1_1_classes_1_1_migration_file_parser_a24df7175fd03cbb64ac8bb2d2e2371ad}{extract\+Namespace}} (\$stream)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Migration\+File\+Parser.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rain_lab_1_1_builder_1_1_classes_1_1_migration_file_parser_ae5f35ef7bf3ab99e112d4d3af7848462}\label{class_rain_lab_1_1_builder_1_1_classes_1_1_migration_file_parser_ae5f35ef7bf3ab99e112d4d3af7848462}} 
+\index{MigrationFileParser@{MigrationFileParser}!extractClassName@{extractClassName}}
+\index{extractClassName@{extractClassName}!MigrationFileParser@{MigrationFileParser}}
+\doxysubsubsection{\texorpdfstring{extractClassName()}{extractClassName()}}
+{\footnotesize\ttfamily extract\+Class\+Name (\begin{DoxyParamCaption}\item[{}]{\$stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 52 of file Migration\+File\+Parser.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_builder_1_1_classes_1_1_migration_file_parser_af987b73928d4e8f010d7229796c7f298}\label{class_rain_lab_1_1_builder_1_1_classes_1_1_migration_file_parser_af987b73928d4e8f010d7229796c7f298}} 
+\index{MigrationFileParser@{MigrationFileParser}!extractMigrationInfoFromSource@{extractMigrationInfoFromSource}}
+\index{extractMigrationInfoFromSource@{extractMigrationInfoFromSource}!MigrationFileParser@{MigrationFileParser}}
+\doxysubsubsection{\texorpdfstring{extractMigrationInfoFromSource()}{extractMigrationInfoFromSource()}}
+{\footnotesize\ttfamily extract\+Migration\+Info\+From\+Source (\begin{DoxyParamCaption}\item[{}]{\$file\+Contents }\end{DoxyParamCaption})}
+
+Returns the migration namespace and class name. 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$file\+Contents} & Specifies the file contents. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$null Returns an array with keys \textquotesingle{}class\textquotesingle{}, \textquotesingle{}namespace\textquotesingle{}. Returns null if the parsing fails. 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file Migration\+File\+Parser.\+php.
+
+\mbox{\Hypertarget{class_rain_lab_1_1_builder_1_1_classes_1_1_migration_file_parser_a24df7175fd03cbb64ac8bb2d2e2371ad}\label{class_rain_lab_1_1_builder_1_1_classes_1_1_migration_file_parser_a24df7175fd03cbb64ac8bb2d2e2371ad}} 
+\index{MigrationFileParser@{MigrationFileParser}!extractNamespace@{extractNamespace}}
+\index{extractNamespace@{extractNamespace}!MigrationFileParser@{MigrationFileParser}}
+\doxysubsubsection{\texorpdfstring{extractNamespace()}{extractNamespace()}}
+{\footnotesize\ttfamily extract\+Namespace (\begin{DoxyParamCaption}\item[{}]{\$stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 61 of file Migration\+File\+Parser.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rainlab/builder/classes/\mbox{\hyperlink{_migration_file_parser_8php}{Migration\+File\+Parser.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_curl_backoff_strategy}{}\doxysection{Curl\+Backoff\+Strategy Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_curl_backoff_strategy}\index{CurlBackoffStrategy@{CurlBackoffStrategy}}
+Inheritance diagram for Curl\+Backoff\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_guzzle_1_1_plugin_1_1_backoff_1_1_curl_backoff_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_curl_backoff_strategy_a28bad9e3cfc885d6860831b04acdb496}{get\+Delay}} (\$retries, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}} \$response=null, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_exception_1_1_http_exception}{Http\+Exception}} \$e=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_curl_backoff_strategy_a3beb89c4150ae99562602a7f1e1970eb}{\$default\+Error\+Codes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Strategy used to retry when certain c\+URL error codes are encountered. 
+
+Definition at line 13 of file Curl\+Backoff\+Strategy.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_curl_backoff_strategy_a28bad9e3cfc885d6860831b04acdb496}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_curl_backoff_strategy_a28bad9e3cfc885d6860831b04acdb496}} 
+\index{CurlBackoffStrategy@{CurlBackoffStrategy}!getDelay@{getDelay}}
+\index{getDelay@{getDelay}!CurlBackoffStrategy@{CurlBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{getDelay()}{getDelay()}}
+{\footnotesize\ttfamily get\+Delay (\begin{DoxyParamCaption}\item[{}]{\$retries,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}}}]{\$response = {\ttfamily null},  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_exception_1_1_http_exception}{Http\+Exception}}}]{\$e = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Implement the concrete strategy
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$retries} & Number of retries of the request \\
+\hline
+Request\+Interface & {\em \$request} & Request that was sent \\
+\hline
+Response & {\em \$response} & Response that was received. Note that there may not be a response \\
+\hline
+Http\+Exception & {\em \$e} & Exception that was encountered if any\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool$\vert$int$\vert$null Returns false to not retry or the number of seconds to delay between retries. Return true or null to defer to the next strategy if available, and if not, return 0. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_backoff_strategy_a7797eb59fe0453dc5fd8c28b5bba4612}{Abstract\+Backoff\+Strategy}}.
+
+
+
+Definition at line 22 of file Curl\+Backoff\+Strategy.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_curl_backoff_strategy_a3beb89c4150ae99562602a7f1e1970eb}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_curl_backoff_strategy_a3beb89c4150ae99562602a7f1e1970eb}} 
+\index{CurlBackoffStrategy@{CurlBackoffStrategy}!\$defaultErrorCodes@{\$defaultErrorCodes}}
+\index{\$defaultErrorCodes@{\$defaultErrorCodes}!CurlBackoffStrategy@{CurlBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{\$defaultErrorCodes}{$defaultErrorCodes}}
+{\footnotesize\ttfamily \$default\+Error\+Codes\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        CURLE\_COULDNT\_RESOLVE\_HOST, CURLE\_COULDNT\_CONNECT, CURLE\_PARTIAL\_FILE, CURLE\_WRITE\_ERROR, CURLE\_READ\_ERROR,}
+\DoxyCodeLine{        CURLE\_OPERATION\_TIMEOUTED, CURLE\_SSL\_CONNECT\_ERROR, CURLE\_HTTP\_PORT\_FAILED, CURLE\_GOT\_NOTHING,}
+\DoxyCodeLine{        CURLE\_SEND\_ERROR, CURLE\_RECV\_ERROR}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Definition at line 16 of file Curl\+Backoff\+Strategy.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Backoff/\mbox{\hyperlink{_curl_backoff_strategy_8php}{Curl\+Backoff\+Strategy.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,45 @@
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__r_e_a_d_m_e_autotoc_md86}{}\doxysection{This is an old version of Guzzle}\label{md_pixel_shop_vendor_guzzle_guzzle__r_e_a_d_m_e_autotoc_md86}
+This repository is for Guzzle 3.\+x. Guzzle 5.\+x, the new version of Guzzle, has been released and is available at \href{https://github.com/guzzle/guzzle}{\texttt{ https\+://github.\+com/guzzle/guzzle}}. The documentation for Guzzle version 5+ can be found at \href{http://guzzlephp.org}{\texttt{ http\+://guzzlephp.\+org}}.
+
+Guzzle 3 is only maintained for bug and security fixes. Guzzle 3 will be EOL at some point in late 2015.\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__r_e_a_d_m_e_autotoc_md87}{}\doxysubsubsection{About Guzzle 3}\label{md_pixel_shop_vendor_guzzle_guzzle__r_e_a_d_m_e_autotoc_md87}
+\href{https://packagist.org/packages/guzzle/guzzle}{\texttt{ }} \href{http://travis-ci.org/guzzle/guzzle3}{\texttt{ }}
+
+
+\begin{DoxyItemize}
+\item Extremely powerful API provides all the power of c\+URL with a simple interface.
+\item Truly take advantage of HTTP/1.\+1 with persistent connections, connection pooling, and parallel requests.
+\item Service description DSL allows you build awesome web service clients faster.
+\item Symfony2 event-\/based plugin system allows you to completely modify the behavior of a request.
+\end{DoxyItemize}
+
+Get answers with\+: \href{http://guzzle3.readthedocs.org/en/latest/}{\texttt{ Documentation}}, \href{https://groups.google.com/forum/?hl=en\#!forum/guzzle}{\texttt{ Forums}}, IRC (\href{irc://irc.freenode.net/\#guzzlephp}{\texttt{ \#guzzlephp}} @ irc.\+freenode.\+net)\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__r_e_a_d_m_e_autotoc_md88}{}\doxysubsubsection{Installing via Composer}\label{md_pixel_shop_vendor_guzzle_guzzle__r_e_a_d_m_e_autotoc_md88}
+The recommended way to install Guzzle is through \href{http://getcomposer.org}{\texttt{ Composer}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Install Composer}
+\DoxyCodeLine{curl -\/sS https://getcomposer.org/installer | php}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Add Guzzle as a dependency}
+\DoxyCodeLine{php composer.phar require guzzle/guzzle:\string~3.9}
+
+\end{DoxyCode}
+
+
+After installing, you need to require Composer\textquotesingle{}s autoloader\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{require \textcolor{stringliteral}{'vendor/autoload.php'};}
+
+\end{DoxyCode}
+ \hypertarget{md_pixel_shop_vendor_guzzle_guzzle__r_e_a_d_m_e_autotoc_md89}{}\doxysubsection{Known Issues}\label{md_pixel_shop_vendor_guzzle_guzzle__r_e_a_d_m_e_autotoc_md89}
+
+\begin{DoxyEnumerate}
+\item Problem following a specific redirect\+: \href{https://github.com/guzzle/guzzle/issues/385}{\texttt{ https\+://github.\+com/guzzle/guzzle/issues/385}}. This has been fixed in Guzzle 4/5.
+\item Root XML attributes not serialized in a service description\+: \href{https://github.com/guzzle/guzzle3/issues/5}{\texttt{ https\+://github.\+com/guzzle/guzzle3/issues/5}}. This has been fixed in Guzzle 4/5.
+\item Accept-\/\+Encoding not preserved when following redirect\+: \href{https://github.com/guzzle/guzzle3/issues/9}{\texttt{ https\+://github.\+com/guzzle/guzzle3/issues/9}} Fixed in Guzzle 4/5.
+\item String \char`\"{}\+Array\char`\"{} Transmitted w/ Post\+Files and Duplicate Aggregator\+: \href{https://github.com/guzzle/guzzle3/issues/10}{\texttt{ https\+://github.\+com/guzzle/guzzle3/issues/10}} Fixed in Guzzle 4/5.
+\item Recursive model references with array items\+: \href{https://github.com/guzzle/guzzle3/issues/13}{\texttt{ https\+://github.\+com/guzzle/guzzle3/issues/13}} Fixed in Guzzle 4/5
+\item String \char`\"{}\+Array\char`\"{} Transmitted w/ Post\+Files and Duplicate Aggregator\+: \href{https://github.com/guzzle/guzzle3/issues/10}{\texttt{ https\+://github.\+com/guzzle/guzzle3/issues/10}} Fixed in Guzzle 4/5. 
+\end{DoxyEnumerate}

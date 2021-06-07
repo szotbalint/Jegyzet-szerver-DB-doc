@@ -1,0 +1,166 @@
+\hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler}{}\doxysection{Null\+Session\+Handler Class Reference}
+\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler}\index{NullSessionHandler@{NullSessionHandler}}
+Inheritance diagram for Null\+Session\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}{close}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_ad8d2ba9e1eb926689bcfcb4ad105df50}{validate\+Id}} (\$session\+Id)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_adfa934d99b3938f501cfb33c362ce3f4}{update\+Timestamp}} (\$session\+Id, \$data)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_a57aff7ee0656d8aa75d545fb8b3ae35d}{gc}} (\$maxlifetime)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_a7fe594bee4463519712242def0bc39aa}{do\+Read}} (\$session\+Id)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_a0654f136ee2b202c3313c5a14f73767c}{do\+Write}} (\$session\+Id, \$data)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_aa1cd066a5d990e81f148008d71891f5f}{do\+Destroy}} (\$session\+Id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Can be used in unit testing or in a situations where persisted sessions are not desired.
+
+\begin{DoxyAuthor}{Author}
+Drak \href{mailto:drak@zikula.org}{\texttt{ drak@zikula.\+org}} 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file Null\+Session\+Handler.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_aa69c8bf1f1dcf4e72552efff1fe3e87e}} 
+\index{NullSessionHandler@{NullSessionHandler}!close@{close}}
+\index{close@{close}!NullSessionHandler@{NullSessionHandler}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{\} 
+
+Definition at line 24 of file Null\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_aa1cd066a5d990e81f148008d71891f5f}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_aa1cd066a5d990e81f148008d71891f5f}} 
+\index{NullSessionHandler@{NullSessionHandler}!doDestroy@{doDestroy}}
+\index{doDestroy@{doDestroy}!NullSessionHandler@{NullSessionHandler}}
+\doxysubsubsection{\texorpdfstring{doDestroy()}{doDestroy()}}
+{\footnotesize\ttfamily do\+Destroy (\begin{DoxyParamCaption}\item[{}]{\$session\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$session\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_abstract_session_handler_aa1cd066a5d990e81f148008d71891f5f}{Abstract\+Session\+Handler}}.
+
+
+
+Definition at line 64 of file Null\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_a7fe594bee4463519712242def0bc39aa}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_a7fe594bee4463519712242def0bc39aa}} 
+\index{NullSessionHandler@{NullSessionHandler}!doRead@{doRead}}
+\index{doRead@{doRead}!NullSessionHandler@{NullSessionHandler}}
+\doxysubsubsection{\texorpdfstring{doRead()}{doRead()}}
+{\footnotesize\ttfamily do\+Read (\begin{DoxyParamCaption}\item[{}]{\$session\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$session\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_abstract_session_handler_a7fe594bee4463519712242def0bc39aa}{Abstract\+Session\+Handler}}.
+
+
+
+Definition at line 40 of file Null\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_a0654f136ee2b202c3313c5a14f73767c}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_a0654f136ee2b202c3313c5a14f73767c}} 
+\index{NullSessionHandler@{NullSessionHandler}!doWrite@{doWrite}}
+\index{doWrite@{doWrite}!NullSessionHandler@{NullSessionHandler}}
+\doxysubsubsection{\texorpdfstring{doWrite()}{doWrite()}}
+{\footnotesize\ttfamily do\+Write (\begin{DoxyParamCaption}\item[{}]{\$session\+Id,  }\item[{}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\{
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$session\+Id} & \\
+\hline
+string & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_abstract_session_handler_a0654f136ee2b202c3313c5a14f73767c}{Abstract\+Session\+Handler}}.
+
+
+
+Definition at line 56 of file Null\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_a57aff7ee0656d8aa75d545fb8b3ae35d}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_a57aff7ee0656d8aa75d545fb8b3ae35d}} 
+\index{NullSessionHandler@{NullSessionHandler}!gc@{gc}}
+\index{gc@{gc}!NullSessionHandler@{NullSessionHandler}}
+\doxysubsubsection{\texorpdfstring{gc()}{gc()}}
+{\footnotesize\ttfamily gc (\begin{DoxyParamCaption}\item[{}]{\$maxlifetime }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file Null\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_adfa934d99b3938f501cfb33c362ce3f4}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_adfa934d99b3938f501cfb33c362ce3f4}} 
+\index{NullSessionHandler@{NullSessionHandler}!updateTimestamp@{updateTimestamp}}
+\index{updateTimestamp@{updateTimestamp}!NullSessionHandler@{NullSessionHandler}}
+\doxysubsubsection{\texorpdfstring{updateTimestamp()}{updateTimestamp()}}
+{\footnotesize\ttfamily update\+Timestamp (\begin{DoxyParamCaption}\item[{}]{\$session\+Id,  }\item[{}]{\$data }\end{DoxyParamCaption})}
+
+\{\} 
+
+Definition at line 48 of file Null\+Session\+Handler.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_ad8d2ba9e1eb926689bcfcb4ad105df50}\label{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_null_session_handler_ad8d2ba9e1eb926689bcfcb4ad105df50}} 
+\index{NullSessionHandler@{NullSessionHandler}!validateId@{validateId}}
+\index{validateId@{validateId}!NullSessionHandler@{NullSessionHandler}}
+\doxysubsubsection{\texorpdfstring{validateId()}{validateId()}}
+{\footnotesize\ttfamily validate\+Id (\begin{DoxyParamCaption}\item[{}]{\$session\+Id }\end{DoxyParamCaption})}
+
+\{\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+\} 
+
+Reimplemented from \mbox{\hyperlink{class_symfony_1_1_component_1_1_http_foundation_1_1_session_1_1_storage_1_1_handler_1_1_abstract_session_handler_ad8d2ba9e1eb926689bcfcb4ad105df50}{Abstract\+Session\+Handler}}.
+
+
+
+Definition at line 32 of file Null\+Session\+Handler.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/symfony/http-\/foundation/\+Session/\+Storage/\+Handler/\mbox{\hyperlink{_null_session_handler_8php}{Null\+Session\+Handler.\+php}}\end{DoxyCompactItemize}

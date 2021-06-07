@@ -1,0 +1,48 @@
+\hypertarget{interface_guzzle_1_1_service_1_1_command_1_1_response_parser_interface}{}\doxysection{Response\+Parser\+Interface Interface Reference}
+\label{interface_guzzle_1_1_service_1_1_command_1_1_response_parser_interface}\index{ResponseParserInterface@{ResponseParserInterface}}
+Inheritance diagram for Response\+Parser\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_guzzle_1_1_service_1_1_command_1_1_response_parser_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_response_parser_interface_a14b653d3be380ce5f71a76cd30711ebd}{parse}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parses the HTTP response of a command and sets the appropriate result on a command object 
+
+Definition at line 8 of file Response\+Parser\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_command_1_1_response_parser_interface_a14b653d3be380ce5f71a76cd30711ebd}\label{interface_guzzle_1_1_service_1_1_command_1_1_response_parser_interface_a14b653d3be380ce5f71a76cd30711ebd}} 
+\index{ResponseParserInterface@{ResponseParserInterface}!parse@{parse}}
+\index{parse@{parse}!ResponseParserInterface@{ResponseParserInterface}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command }\end{DoxyParamCaption})}
+
+Parse the HTTP response received by the command and update the command\textquotesingle{}s result contents
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} & {\em \$command} & \mbox{\hyperlink{namespace_guzzle_1_1_service_1_1_command}{Command}} to parse and update\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed Returns the result to set on the command 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_command_1_1_default_response_parser_a14b653d3be380ce5f71a76cd30711ebd}{Default\+Response\+Parser}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Command/\mbox{\hyperlink{_response_parser_interface_8php}{Response\+Parser\+Interface.\+php}}\end{DoxyCompactItemize}

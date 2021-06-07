@@ -1,0 +1,50 @@
+\hypertarget{interface_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_exception_interface}{}\doxysection{Error\+Response\+Exception\+Interface Interface Reference}
+\label{interface_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_exception_interface}\index{ErrorResponseExceptionInterface@{ErrorResponseExceptionInterface}}
+Inheritance diagram for Error\+Response\+Exception\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_exception_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_exception_interface_a289fa91d093a9299dfd422bff8be0ca5}{from\+Command}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}} \$response)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface used to create an exception from an error response 
+
+Definition at line 11 of file Error\+Response\+Exception\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_exception_interface_a289fa91d093a9299dfd422bff8be0ca5}\label{interface_guzzle_1_1_plugin_1_1_error_response_1_1_error_response_exception_interface_a289fa91d093a9299dfd422bff8be0ca5}} 
+\index{ErrorResponseExceptionInterface@{ErrorResponseExceptionInterface}!fromCommand@{fromCommand}}
+\index{fromCommand@{fromCommand}!ErrorResponseExceptionInterface@{ErrorResponseExceptionInterface}}
+\doxysubsubsection{\texorpdfstring{fromCommand()}{fromCommand()}}
+{\footnotesize\ttfamily static from\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command,  }\item[{\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_response}{Response}}}]{\$response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create an exception for a command based on a command and an error response definition
+
+
+\begin{DoxyParams}[1]{Parameters}
+Command\+Interface & {\em \$command} & Command that was sent \\
+\hline
+Response & {\em \$response} & The error response\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_tests_1_1_mock_1_1_error_response_mock_a289fa91d093a9299dfd422bff8be0ca5}{Error\+Response\+Mock}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Error\+Response/\mbox{\hyperlink{_error_response_exception_interface_8php}{Error\+Response\+Exception\+Interface.\+php}}\end{DoxyCompactItemize}

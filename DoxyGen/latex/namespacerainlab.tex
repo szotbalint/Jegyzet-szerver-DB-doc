@@ -1,0 +1,314 @@
+\hypertarget{namespacerainlab}{}\doxysection{rainlab Namespace Reference}
+\label{namespacerainlab}\index{rainlab@{rainlab}}
+
+
+\doxysubsection{Detailed Description}
+Plugin controller management functionality for the Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Database table management functionality for the Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Plugin data registry functionality for the Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Plugin localization management functionality for the Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Plugin back-\/end menu management functionality for the Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+\mbox{\hyperlink{class_model}{Model}} form management functionality for the Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+\mbox{\hyperlink{class_model}{Model}} list management functionality for the Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+\mbox{\hyperlink{class_model}{Model}} management functionality for the Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Plugin permissions management functionality for the Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Plugin management functionality for the Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Plugin version management functionality for the Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Base class for Builder models.
+
+Builder models manage various types of records -\/ database metadata objects, YAML files, etc.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Provides helper methods for Builder CMS components.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Manages Builder controller behavior library.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Parses controller source files.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Helper class for generating controller class files and associated files.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Represents and manages plugin controllers.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Manages Builder form control library.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Manages plugin database tables.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Creates Doctrine table schema basing on the column information array.
+
+The class is used by Database\+Table\+Model class.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Enum column type.
+
+Currently this class is used as a placeholder. Enum columns are not supported by the Builder table management UI.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Generates filesystem objects basing on a structure provided with an array and using file templates and variables. Variables in template files use the Twig syntax, but processed with October\textbackslash{}\+Rain\textbackslash{}\+Syntax\textbackslash{}\+Bracket.
+
+Example -\/ generate a plugin directory containing the plugin.\+php file. The file is created from a template, which uses a couple of variables.
+
+\$structure = \mbox{[} \textquotesingle{}author\textquotesingle{}, \textquotesingle{}author/plugin\textquotesingle{}, \textquotesingle{}author/plugin/plugin.\+php\textquotesingle{} =$>$ \textquotesingle{}plugin.\+php.\+tpl\textquotesingle{} \mbox{]}; \$generator = new Filesystem\+Generator(\textquotesingle{}\$\textquotesingle{}, \$structure, \textquotesingle{}\$/\+Author/\+Plugin/templates/plugin\textquotesingle{});
+
+\$variables = \mbox{[} \textquotesingle{}namespace\textquotesingle{} =$>$ \textquotesingle{}Author/\+Plugin\textquotesingle{} \mbox{]}; \$generator-\/$>$set\+Variables(\$variables); \$generator-\/$>$generate();
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Contains a list of icons that can be used by plugins. \begin{DoxySeeAlso}{See also}
+\href{http://octobercms.com/docs/ui/icon}{\texttt{ http\+://octobercms.\+com/docs/ui/icon}}
+\end{DoxySeeAlso}
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Base class for index operation behaviors
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Represents and manages plugin localization files.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Manages plugin back-\/end menus.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Represents a database column type used in migrations.
+
+Important\+: some Doctrine types map to multiple migration types, for example -\/ Doctrine boolean could be boolean and tiny\+Integer in migrations. To eliminate the the necessity of guessing, the following migration column types are removed from the list\+:
+
+
+\begin{DoxyItemize}
+\item tiny\+Integer
+\item medium\+Integer
+\item char
+\item medium\+Text
+\item long\+Text
+\item float
+\end{DoxyItemize}
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Parses migrations source files.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Manages plugin migrations
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Parses models source files.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Represents and manages model forms.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Represents and manages model lists.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Manages plugin models.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+A base class for models belonging to databse models (forms, lists, etc.).
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Manages plugin permissions information.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Represents a PHP source code token stream.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Manages plugin basic information.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Represents a plugin code and provides basic code operations.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Holds a plugin code object and a plugin information class instancd.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Helper class for managing plugin versions
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+A base class for models that keep data in the plugin.\+yaml file.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Utility class for registering standard controller behaviors.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Utility class for registering standard back-\/end controls.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Generates migration code for creating, updates and deleting tables.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Base class for models that store data in YAML files.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Builder index controller
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Builder settings model
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Plugin controller list widget.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Database table list widget.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Default behavior design-\/time provider.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Default control design-\/time provider.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Plugin language list widget.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+\mbox{\hyperlink{class_model}{Model}} list widget.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Plugin list widget.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Plugin version list widget.
+
+\textbackslash{}builder \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges
+\end{DoxyAuthor}
+Address finder Renders a Google Place address field.
+
+Usage\+:
+
+address\+: label\+: Address type\+: addressfinder country\+Restriction\+: \textquotesingle{}us,ch\textquotesingle{} field\+Map\+: latitude\+: latitude longitude\+: longitude city\+: city zip\+: zip
+
+\textbackslash{}location \begin{DoxyAuthor}{Author}
+Alexey Bobkov, Samuel Georges 
+\end{DoxyAuthor}

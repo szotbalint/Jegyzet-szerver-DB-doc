@@ -1,0 +1,351 @@
+\hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response}{}\doxysection{Abstract\+Response Class Reference}
+\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response}\index{AbstractResponse@{AbstractResponse}}
+Inheritance diagram for Abstract\+Response\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.357895cm]{class_omnipay_1_1_common_1_1_message_1_1_abstract_response}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a90b8f8bad9d5c63c5840fdc8e93f5a38}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$data)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_adf1a35ad20e475c59cc0967d5764aa22}{get\+Request}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a1b9dd1bc447501ffdd8d816c3bf80e2b}{is\+Pending}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_ad698db94bdfd49c67d2a3ed2d0999908}{is\+Redirect}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_aa67d88f7281a9e8a7e5daf9677c09c07}{is\+Transparent\+Redirect}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a51a81576ba4e9a7ec70e8684c78d4a70}{is\+Cancelled}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a0b0e611236742aac18ba1936d03ba89a}{get\+Message}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_ab5e24da53b4a0d0848b18c1e832f47ff}{get\+Code}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a514421414d937d0a743fe4319458b402}{get\+Transaction\+Reference}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a83a4c2954e4da6dad24e596265e33d0a}{get\+Transaction\+Id}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_aadcf85c7b70a9b228b9f66c691f33d56}{redirect}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a5b9ddf5b95cff33b5161d56d1adbed3e}{get\+Redirect\+Response}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_abb35c8495a232b510389fa6d7b15d38a}{\$request}}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a6efc15b5a2314dd4b5aaa556a375c6d6}{\$data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract Response
+
+This abstract class implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_response_interface}{Response\+Interface}} and defines a basic set of functions that all \mbox{\hyperlink{class_omnipay_1_1_omnipay}{Omnipay}} Requests are intended to include.
+
+Objects of this class or a subclass are usually created in the Request object (subclass of \mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request}{Abstract\+Request}}) as the return parameters from the send() function.
+
+Example -- validating and sending a request\+:
+
+{\ttfamily  \$my\+Response = \$my\+Request-\/$>$send(); // now do something with the \$my\+Response object, test for success, etc. }
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_response_interface}{Response\+Interface}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 31 of file Abstract\+Response.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a90b8f8bad9d5c63c5840fdc8e93f5a38}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a90b8f8bad9d5c63c5840fdc8e93f5a38}} 
+\index{AbstractResponse@{AbstractResponse}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$data }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_request_interface}{Request\+Interface}} & {\em \$request} & the initiating request. \\
+\hline
+mixed & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_response_a90b8f8bad9d5c63c5840fdc8e93f5a38}{Response}}, and \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_express_transaction_search_response_a90b8f8bad9d5c63c5840fdc8e93f5a38}{Express\+Transaction\+Search\+Response}}.
+
+
+
+Definition at line 54 of file Abstract\+Response.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_ab5e24da53b4a0d0848b18c1e832f47ff}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_ab5e24da53b4a0d0848b18c1e832f47ff}} 
+\index{AbstractResponse@{AbstractResponse}!getCode@{getCode}}
+\index{getCode@{getCode}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Response code
+
+\begin{DoxyReturn}{Returns}
+null$\vert$string A response code from the payment gateway 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_response_interface_ab5e24da53b4a0d0848b18c1e832f47ff}{Response\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_response_ab5e24da53b4a0d0848b18c1e832f47ff}{Response}}, and \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_response_ab5e24da53b4a0d0848b18c1e832f47ff}{Rest\+Response}}.
+
+
+
+Definition at line 135 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{AbstractResponse@{AbstractResponse}!getData@{getData}}
+\index{getData@{getData}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the response data.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 115 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a0b0e611236742aac18ba1936d03ba89a}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a0b0e611236742aac18ba1936d03ba89a}} 
+\index{AbstractResponse@{AbstractResponse}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Response \mbox{\hyperlink{namespace_omnipay_1_1_common_1_1_message}{Message}}
+
+\begin{DoxyReturn}{Returns}
+null$\vert$string A response message from the payment gateway 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_response_interface_a0b0e611236742aac18ba1936d03ba89a}{Response\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_response_a0b0e611236742aac18ba1936d03ba89a}{Response}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_response_a0b0e611236742aac18ba1936d03ba89a}{Rest\+Response}}, and \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_response_a0b0e611236742aac18ba1936d03ba89a}{Response}}.
+
+
+
+Definition at line 125 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a5b9ddf5b95cff33b5161d56d1adbed3e}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a5b9ddf5b95cff33b5161d56d1adbed3e}} 
+\index{AbstractResponse@{AbstractResponse}!getRedirectResponse@{getRedirectResponse}}
+\index{getRedirectResponse@{getRedirectResponse}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{getRedirectResponse()}{getRedirectResponse()}}
+{\footnotesize\ttfamily get\+Redirect\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Http\+Redirect\+Response 
+\end{DoxyReturn}
+
+
+Definition at line 179 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_adf1a35ad20e475c59cc0967d5764aa22}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_adf1a35ad20e475c59cc0967d5764aa22}} 
+\index{AbstractResponse@{AbstractResponse}!getRequest@{getRequest}}
+\index{getRequest@{getRequest}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{getRequest()}{getRequest()}}
+{\footnotesize\ttfamily get\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the initiating request object.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_request_interface}{Request\+Interface}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_response_interface_adf1a35ad20e475c59cc0967d5764aa22}{Response\+Interface}}.
+
+
+
+Definition at line 65 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a83a4c2954e4da6dad24e596265e33d0a}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a83a4c2954e4da6dad24e596265e33d0a}} 
+\index{AbstractResponse@{AbstractResponse}!getTransactionId@{getTransactionId}}
+\index{getTransactionId@{getTransactionId}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{getTransactionId()}{getTransactionId()}}
+{\footnotesize\ttfamily get\+Transaction\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the transaction ID as generated by the merchant website.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 155 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a514421414d937d0a743fe4319458b402}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a514421414d937d0a743fe4319458b402}} 
+\index{AbstractResponse@{AbstractResponse}!getTransactionReference@{getTransactionReference}}
+\index{getTransactionReference@{getTransactionReference}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{getTransactionReference()}{getTransactionReference()}}
+{\footnotesize\ttfamily get\+Transaction\+Reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gateway Reference
+
+\begin{DoxyReturn}{Returns}
+null$\vert$string A reference provided by the gateway to represent this transaction 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_response_interface_a514421414d937d0a743fe4319458b402}{Response\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_response_a514421414d937d0a743fe4319458b402}{Response}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_response_a514421414d937d0a743fe4319458b402}{Rest\+Response}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_a514421414d937d0a743fe4319458b402}{Rest\+Authorize\+Response}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_response_a514421414d937d0a743fe4319458b402}{Response}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_express_complete_purchase_response_a514421414d937d0a743fe4319458b402}{Express\+Complete\+Purchase\+Response}}, and \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_express_authorize_response_a514421414d937d0a743fe4319458b402}{Express\+Authorize\+Response}}.
+
+
+
+Definition at line 145 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a51a81576ba4e9a7ec70e8684c78d4a70}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a51a81576ba4e9a7ec70e8684c78d4a70}} 
+\index{AbstractResponse@{AbstractResponse}!isCancelled@{isCancelled}}
+\index{isCancelled@{isCancelled}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{isCancelled()}{isCancelled()}}
+{\footnotesize\ttfamily is\+Cancelled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Is the transaction cancelled by the user?
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_response_interface_a51a81576ba4e9a7ec70e8684c78d4a70}{Response\+Interface}}.
+
+
+
+Definition at line 105 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a1b9dd1bc447501ffdd8d816c3bf80e2b}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a1b9dd1bc447501ffdd8d816c3bf80e2b}} 
+\index{AbstractResponse@{AbstractResponse}!isPending@{isPending}}
+\index{isPending@{isPending}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{isPending()}{isPending()}}
+{\footnotesize\ttfamily is\+Pending (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Is the response successful?
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_response_a1b9dd1bc447501ffdd8d816c3bf80e2b}{Response}}, and \mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_test___mock_redirect_response_a1b9dd1bc447501ffdd8d816c3bf80e2b}{Abstract\+Response\+Test\+\_\+\+Mock\+Redirect\+Response}}.
+
+
+
+Definition at line 75 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_ad698db94bdfd49c67d2a3ed2d0999908}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_ad698db94bdfd49c67d2a3ed2d0999908}} 
+\index{AbstractResponse@{AbstractResponse}!isRedirect@{isRedirect}}
+\index{isRedirect@{isRedirect}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{isRedirect()}{isRedirect()}}
+{\footnotesize\ttfamily is\+Redirect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Does the response require a redirect?
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_response_interface_ad698db94bdfd49c67d2a3ed2d0999908}{Response\+Interface}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_response_ad698db94bdfd49c67d2a3ed2d0999908}{Rest\+Authorize\+Response}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_express_complete_purchase_response_ad698db94bdfd49c67d2a3ed2d0999908}{Express\+Complete\+Purchase\+Response}}, \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_express_authorize_response_ad698db94bdfd49c67d2a3ed2d0999908}{Express\+Authorize\+Response}}, and \mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_test___mock_redirect_response_ad698db94bdfd49c67d2a3ed2d0999908}{Abstract\+Response\+Test\+\_\+\+Mock\+Redirect\+Response}}.
+
+
+
+Definition at line 85 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_aa67d88f7281a9e8a7e5daf9677c09c07}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_aa67d88f7281a9e8a7e5daf9677c09c07}} 
+\index{AbstractResponse@{AbstractResponse}!isTransparentRedirect@{isTransparentRedirect}}
+\index{isTransparentRedirect@{isTransparentRedirect}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{isTransparentRedirect()}{isTransparentRedirect()}}
+{\footnotesize\ttfamily is\+Transparent\+Redirect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Is the response a transparent redirect?
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_aadcf85c7b70a9b228b9f66c691f33d56}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_aadcf85c7b70a9b228b9f66c691f33d56}} 
+\index{AbstractResponse@{AbstractResponse}!redirect@{redirect}}
+\index{redirect@{redirect}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{redirect()}{redirect()}}
+{\footnotesize\ttfamily redirect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Automatically perform any required redirect
+
+This method is meant to be a helper for simple scenarios. If you want to customize the redirection page, just call the get\+Redirect\+Url() and get\+Redirect\+Data() methods directly.
+
+@code\+Coverage\+Ignore
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 170 of file Abstract\+Response.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a6efc15b5a2314dd4b5aaa556a375c6d6}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_a6efc15b5a2314dd4b5aaa556a375c6d6}} 
+\index{AbstractResponse@{AbstractResponse}!\$data@{\$data}}
+\index{\$data@{\$data}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{\$data}{$data}}
+{\footnotesize\ttfamily \$data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file Abstract\+Response.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_abb35c8495a232b510389fa6d7b15d38a}\label{class_omnipay_1_1_common_1_1_message_1_1_abstract_response_abb35c8495a232b510389fa6d7b15d38a}} 
+\index{AbstractResponse@{AbstractResponse}!\$request@{\$request}}
+\index{\$request@{\$request}!AbstractResponse@{AbstractResponse}}
+\doxysubsubsection{\texorpdfstring{\$request}{$request}}
+{\footnotesize\ttfamily \$request\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 39 of file Abstract\+Response.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/common/src/\+Omnipay/\+Common/\+Message/\mbox{\hyperlink{_abstract_response_8php}{Abstract\+Response.\+php}}\end{DoxyCompactItemize}

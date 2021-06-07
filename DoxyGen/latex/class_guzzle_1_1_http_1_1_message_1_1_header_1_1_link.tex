@@ -1,0 +1,118 @@
+\hypertarget{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link}{}\doxysection{Link Class Reference}
+\label{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link}\index{Link@{Link}}
+Inheritance diagram for Link\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_af43c081771851f7837457275d6b67274}{add\+Link}} (\$url, \$rel, array \$params=array())
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_a50c71b685538c15db5f133d9433e54f7}{has\+Link}} (\$rel)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_a84536ed4eaf75d9c078e634e0a5852b4}{get\+Link}} (\$rel)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_a09967788c0b5ec97029e46a2d1980d08}{get\+Links}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Provides helpful functionality for link headers 
+
+Definition at line 10 of file Link.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_af43c081771851f7837457275d6b67274}\label{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_af43c081771851f7837457275d6b67274}} 
+\index{Link@{Link}!addLink@{addLink}}
+\index{addLink@{addLink}!Link@{Link}}
+\doxysubsubsection{\texorpdfstring{addLink()}{addLink()}}
+{\footnotesize\ttfamily add\+Link (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$rel,  }\item[{array}]{\$params = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+Add a link to the header
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link}{Link}} URL \\
+\hline
+string & {\em \$rel} & \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link}{Link}} rel \\
+\hline
+array & {\em \$params} & Other link parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file Link.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_a84536ed4eaf75d9c078e634e0a5852b4}\label{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_a84536ed4eaf75d9c078e634e0a5852b4}} 
+\index{Link@{Link}!getLink@{getLink}}
+\index{getLink@{getLink}!Link@{Link}}
+\doxysubsubsection{\texorpdfstring{getLink()}{getLink()}}
+{\footnotesize\ttfamily get\+Link (\begin{DoxyParamCaption}\item[{}]{\$rel }\end{DoxyParamCaption})}
+
+Get a specific link for a given rel attribute
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$rel} & Rel value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$null 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Link.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_a09967788c0b5ec97029e46a2d1980d08}\label{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_a09967788c0b5ec97029e46a2d1980d08}} 
+\index{Link@{Link}!getLinks@{getLinks}}
+\index{getLinks@{getLinks}!Link@{Link}}
+\doxysubsubsection{\texorpdfstring{getLinks()}{getLinks()}}
+{\footnotesize\ttfamily get\+Links (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get an associative array of links
+
+For example\+: \mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link}{Link}}\+: \href{http:/.../front.jpeg}{\texttt{ http\+:/.../front.\+jpeg}}; rel=front; type=\char`\"{}image/jpeg\char`\"{}, \href{http://.../back.jpeg}{\texttt{ http\+://.../back.\+jpeg}}; rel=back; type=\char`\"{}image/jpeg\char`\"{}
+
+{\ttfamily  var\+\_\+export(\$response-\/$>$\mbox{\hyperlink{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_a09967788c0b5ec97029e46a2d1980d08}{get\+Links()}}); array( array( \textquotesingle{}url\textquotesingle{} =$>$ \textquotesingle{}\href{http:/.../front.jpeg'}{\texttt{ http\+:/.../front.\+jpeg\textquotesingle{}}}, \textquotesingle{}rel\textquotesingle{} =$>$ \textquotesingle{}back\textquotesingle{}, \textquotesingle{}type\textquotesingle{} =$>$ \textquotesingle{}image/jpeg\textquotesingle{}, ) ) }
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file Link.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_a50c71b685538c15db5f133d9433e54f7}\label{class_guzzle_1_1_http_1_1_message_1_1_header_1_1_link_a50c71b685538c15db5f133d9433e54f7}} 
+\index{Link@{Link}!hasLink@{hasLink}}
+\index{hasLink@{hasLink}!Link@{Link}}
+\doxysubsubsection{\texorpdfstring{hasLink()}{hasLink()}}
+{\footnotesize\ttfamily has\+Link (\begin{DoxyParamCaption}\item[{}]{\$rel }\end{DoxyParamCaption})}
+
+Check if a specific link exists for a given rel attribute
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$rel} & rel value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Link.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Http/\+Message/\+Header/\mbox{\hyperlink{_link_8php}{Link.\+php}}\end{DoxyCompactItemize}

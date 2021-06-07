@@ -1,0 +1,367 @@
+\hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher}{}\doxysection{Traceable\+Event\+Dispatcher Class Reference}
+\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher}\index{TraceableEventDispatcher@{TraceableEventDispatcher}}
+Inheritance diagram for Traceable\+Event\+Dispatcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_ad7f14aa4f92841ae33f36d9b0aa8a601}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface}{Event\+Dispatcher\+Interface}} \$dispatcher, \mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch}{Stopwatch}} \$stopwatch, Logger\+Interface \$logger=null)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_adcfdadce839cc0bc897ddf6a998f76f7}{add\+Listener}} (\$event\+Name, \$listener, \$priority=0)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a2f54737e2e4b383a901cae736143bd2d}{add\+Subscriber}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface}{Event\+Subscriber\+Interface}} \$subscriber)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a285fd905f94dafed0c6007527b9d66fc}{remove\+Listener}} (\$event\+Name, \$listener)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a34aa2b525612f9c0d3b6b7e9c72c6393}{remove\+Subscriber}} (\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface}{Event\+Subscriber\+Interface}} \$subscriber)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a60846fb0ce44f706f2394a670fcdce9a}{get\+Listeners}} (\$event\+Name=null)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a953c2056734fc61d5f0c4245a700b00d}{get\+Listener\+Priority}} (\$event\+Name, \$listener)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_ab616bc1ac4c11b03413416c7a26785e5}{has\+Listeners}} (\$event\+Name=null)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a75b394fea0a8d9c842c91a34a4db99a5}{dispatch}} (\$event\+Name, \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}} \$event=null)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a73a2dd4ff7aeb56bdfc9fcb92502a724}{get\+Called\+Listeners}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_af70a3474437e3f5e4022b24032acc9df}{get\+Not\+Called\+Listeners}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_acfa40ec504c3c792c3b84cf2f1af511d}{\+\_\+\+\_\+call}} (\$method, \$arguments)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_aeef79b33f68a1a8392e7cc812fb01726}{pre\+Dispatch}} (\$event\+Name, \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}} \$event)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_acc52fffc0264a4f1761c7097a3f7a15e}{post\+Dispatch}} (\$event\+Name, \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}} \$event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_aebfec76216371ef236acc5910e90933d}{\$logger}}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a3221204ff7e8d8e109fa8ce5f0cafc6a}{\$stopwatch}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Collects some data about event listeners.
+
+This event dispatcher delegates the dispatching to another one.
+
+\begin{DoxyAuthor}{Author}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\texttt{ fabien@symfony.\+com}} 
+\end{DoxyAuthor}
+
+
+Definition at line 27 of file Traceable\+Event\+Dispatcher.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_ad7f14aa4f92841ae33f36d9b0aa8a601}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_ad7f14aa4f92841ae33f36d9b0aa8a601}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface}{Event\+Dispatcher\+Interface}}}]{\$dispatcher,  }\item[{\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch}{Stopwatch}}}]{\$stopwatch,  }\item[{Logger\+Interface}]{\$logger = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file Traceable\+Event\+Dispatcher.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_acfa40ec504c3c792c3b84cf2f1af511d}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_acfa40ec504c3c792c3b84cf2f1af511d}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!\_\_call@{\_\_call}}
+\index{\_\_call@{\_\_call}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{\_\_call()}{\_\_call()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+call (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$arguments }\end{DoxyParamCaption})}
+
+Proxies all method calls to the original event dispatcher.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & The method name \\
+\hline
+array & {\em \$arguments} & The method arguments\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 211 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_adcfdadce839cc0bc897ddf6a998f76f7}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_adcfdadce839cc0bc897ddf6a998f76f7}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!addListener@{addListener}}
+\index{addListener@{addListener}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{addListener()}{addListener()}}
+{\footnotesize\ttfamily add\+Listener (\begin{DoxyParamCaption}\item[{}]{\$event\+Name,  }\item[{}]{\$listener,  }\item[{}]{\$priority = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\{Adds an event listener that listens on the specified events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The event to listen on \\
+\hline
+callable & {\em \$listener} & The listener \\
+\hline
+int & {\em \$priority} & The higher this value, the earlier an event listener will be triggered in the chain (defaults to 0)\\
+\hline
+\end{DoxyParams}
+\} 
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface_adcfdadce839cc0bc897ddf6a998f76f7}{Event\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 48 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a2f54737e2e4b383a901cae736143bd2d}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a2f54737e2e4b383a901cae736143bd2d}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!addSubscriber@{addSubscriber}}
+\index{addSubscriber@{addSubscriber}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{addSubscriber()}{addSubscriber()}}
+{\footnotesize\ttfamily add\+Subscriber (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface}{Event\+Subscriber\+Interface}}}]{\$subscriber }\end{DoxyParamCaption})}
+
+\{Adds an event subscriber.
+
+The subscriber is asked for all the events he is interested in and added as a listener for these events.\} 
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface_a2f54737e2e4b383a901cae736143bd2d}{Event\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 56 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a75b394fea0a8d9c842c91a34a4db99a5}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a75b394fea0a8d9c842c91a34a4db99a5}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily dispatch (\begin{DoxyParamCaption}\item[{}]{\$event\+Name,  }\item[{\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}}}]{\$event = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Dispatches an event to all registered listeners.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The name of the event to dispatch. The name of the event is the name of the method that is invoked on listeners. \\
+\hline
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}} & {\em \$event} & The event to pass to the event handlers/listeners If not supplied, an empty \mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}} instance is created\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}}
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface_a75b394fea0a8d9c842c91a34a4db99a5}{Event\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 118 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a73a2dd4ff7aeb56bdfc9fcb92502a724}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a73a2dd4ff7aeb56bdfc9fcb92502a724}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!getCalledListeners@{getCalledListeners}}
+\index{getCalledListeners@{getCalledListeners}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{getCalledListeners()}{getCalledListeners()}}
+{\footnotesize\ttfamily get\+Called\+Listeners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the called listeners.
+
+\begin{DoxyReturn}{Returns}
+array An array of called listeners
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_interface_a73a2dd4ff7aeb56bdfc9fcb92502a724}{Traceable\+Event\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 148 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a953c2056734fc61d5f0c4245a700b00d}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a953c2056734fc61d5f0c4245a700b00d}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!getListenerPriority@{getListenerPriority}}
+\index{getListenerPriority@{getListenerPriority}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{getListenerPriority()}{getListenerPriority()}}
+{\footnotesize\ttfamily get\+Listener\+Priority (\begin{DoxyParamCaption}\item[{}]{\$event\+Name,  }\item[{}]{\$listener }\end{DoxyParamCaption})}
+
+\{\} 
+
+Definition at line 98 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a60846fb0ce44f706f2394a670fcdce9a}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a60846fb0ce44f706f2394a670fcdce9a}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!getListeners@{getListeners}}
+\index{getListeners@{getListeners}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{getListeners()}{getListeners()}}
+{\footnotesize\ttfamily get\+Listeners (\begin{DoxyParamCaption}\item[{}]{\$event\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Gets the listeners of a specific event or all listeners sorted by descending priority.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The name of the event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array The event listeners for the specified event, or all event listeners by event name
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface_a60846fb0ce44f706f2394a670fcdce9a}{Event\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 90 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_af70a3474437e3f5e4022b24032acc9df}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_af70a3474437e3f5e4022b24032acc9df}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!getNotCalledListeners@{getNotCalledListeners}}
+\index{getNotCalledListeners@{getNotCalledListeners}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{getNotCalledListeners()}{getNotCalledListeners()}}
+{\footnotesize\ttfamily get\+Not\+Called\+Listeners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\{Gets the not called listeners.
+
+\begin{DoxyReturn}{Returns}
+array An array of not called listeners
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_interface_af70a3474437e3f5e4022b24032acc9df}{Traceable\+Event\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 164 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_ab616bc1ac4c11b03413416c7a26785e5}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_ab616bc1ac4c11b03413416c7a26785e5}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!hasListeners@{hasListeners}}
+\index{hasListeners@{hasListeners}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{hasListeners()}{hasListeners()}}
+{\footnotesize\ttfamily has\+Listeners (\begin{DoxyParamCaption}\item[{}]{\$event\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\{Checks whether an event has any registered listeners.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The name of the event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the specified event has any listeners, false otherwise
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface_ab616bc1ac4c11b03413416c7a26785e5}{Event\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 110 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_acc52fffc0264a4f1761c7097a3f7a15e}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_acc52fffc0264a4f1761c7097a3f7a15e}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!postDispatch@{postDispatch}}
+\index{postDispatch@{postDispatch}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{postDispatch()}{postDispatch()}}
+{\footnotesize\ttfamily post\+Dispatch (\begin{DoxyParamCaption}\item[{}]{\$event\+Name,  }\item[{\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Called after dispatching the event.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The event name \\
+\hline
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}} & {\em \$event} & The event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 232 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_aeef79b33f68a1a8392e7cc812fb01726}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_aeef79b33f68a1a8392e7cc812fb01726}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!preDispatch@{preDispatch}}
+\index{preDispatch@{preDispatch}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{preDispatch()}{preDispatch()}}
+{\footnotesize\ttfamily pre\+Dispatch (\begin{DoxyParamCaption}\item[{}]{\$event\+Name,  }\item[{\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Called before dispatching the event.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The event name \\
+\hline
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_event_dispatcher_1_1_event}{Event}} & {\em \$event} & The event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 222 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a285fd905f94dafed0c6007527b9d66fc}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a285fd905f94dafed0c6007527b9d66fc}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!removeListener@{removeListener}}
+\index{removeListener@{removeListener}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{removeListener()}{removeListener()}}
+{\footnotesize\ttfamily remove\+Listener (\begin{DoxyParamCaption}\item[{}]{\$event\+Name,  }\item[{}]{\$listener }\end{DoxyParamCaption})}
+
+\{Removes an event listener from the specified events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+Name} & The event to remove a listener from \\
+\hline
+callable & {\em \$listener} & The listener to remove\\
+\hline
+\end{DoxyParams}
+\} 
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface_a285fd905f94dafed0c6007527b9d66fc}{Event\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 64 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a34aa2b525612f9c0d3b6b7e9c72c6393}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a34aa2b525612f9c0d3b6b7e9c72c6393}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!removeSubscriber@{removeSubscriber}}
+\index{removeSubscriber@{removeSubscriber}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{removeSubscriber()}{removeSubscriber()}}
+{\footnotesize\ttfamily remove\+Subscriber (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface}{Event\+Subscriber\+Interface}}}]{\$subscriber }\end{DoxyParamCaption})}
+
+\{\} 
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_dispatcher_interface_a34aa2b525612f9c0d3b6b7e9c72c6393}{Event\+Dispatcher\+Interface}}.
+
+
+
+Definition at line 82 of file Traceable\+Event\+Dispatcher.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_aebfec76216371ef236acc5910e90933d}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_aebfec76216371ef236acc5910e90933d}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!\$logger@{\$logger}}
+\index{\$logger@{\$logger}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{\$logger}{$logger}}
+{\footnotesize\ttfamily \$logger\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Traceable\+Event\+Dispatcher.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a3221204ff7e8d8e109fa8ce5f0cafc6a}\label{class_symfony_1_1_component_1_1_event_dispatcher_1_1_debug_1_1_traceable_event_dispatcher_a3221204ff7e8d8e109fa8ce5f0cafc6a}} 
+\index{TraceableEventDispatcher@{TraceableEventDispatcher}!\$stopwatch@{\$stopwatch}}
+\index{\$stopwatch@{\$stopwatch}!TraceableEventDispatcher@{TraceableEventDispatcher}}
+\doxysubsubsection{\texorpdfstring{\$stopwatch}{$stopwatch}}
+{\footnotesize\ttfamily \$stopwatch\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 30 of file Traceable\+Event\+Dispatcher.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/symfony/event-\/dispatcher/\+Debug/\mbox{\hyperlink{_traceable_event_dispatcher_8php}{Traceable\+Event\+Dispatcher.\+php}}\end{DoxyCompactItemize}

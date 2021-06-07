@@ -1,0 +1,153 @@
+\hypertarget{class_omnipay_1_1_common_1_1_gateway_factory}{}\doxysection{Gateway\+Factory Class Reference}
+\label{class_omnipay_1_1_common_1_1_gateway_factory}\index{GatewayFactory@{GatewayFactory}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_af9d14e4ae6227970ad603987781573ca}{all}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_a0a62ee69f77c98005df7506e7495549c}{replace}} (array \$gateways)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_ada2123f6e47801696de214b5b4f878d5}{register}} (\$class\+Name)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_a39ec161e9a5372e002b889d276208899}{find}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_add7982ae8c25f1e10b44271426feac99}{create}} (\$class, \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_client_interface}{Client\+Interface}} \$http\+Client=null, Http\+Request \$http\+Request=null)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_ad2895345ef53e06ae8800a86cb65e4ed}{get\+Supported\+Gateways}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_omnipay_1_1_omnipay}{Omnipay}} Gateway Factory class
+
+This class abstracts a set of gateways that can be independently registered, accessed, and used.
+
+Note that static calls to the \mbox{\hyperlink{class_omnipay_1_1_omnipay}{Omnipay}} class are routed to this class by the static call router (\+\_\+\+\_\+call\+Static) in \mbox{\hyperlink{class_omnipay_1_1_omnipay}{Omnipay}}.
+
+Example\+:
+
+{\ttfamily  // Create a gateway for the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} Express\+Gateway // (routes to \mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_add7982ae8c25f1e10b44271426feac99}{Gateway\+Factory\+::create}}) \$gateway = Omnipay\+::create(\textquotesingle{}Express\+Gateway\textquotesingle{}); }
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_omnipay_1_1_omnipay}{Omnipay}}\textbackslash{}\+Omnipay 
+\end{DoxySeeAlso}
+
+
+Definition at line 31 of file Gateway\+Factory.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_gateway_factory_af9d14e4ae6227970ad603987781573ca}\label{class_omnipay_1_1_common_1_1_gateway_factory_af9d14e4ae6227970ad603987781573ca}} 
+\index{GatewayFactory@{GatewayFactory}!all@{all}}
+\index{all@{all}!GatewayFactory@{GatewayFactory}}
+\doxysubsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+All available gateways
+
+\begin{DoxyReturn}{Returns}
+array An array of gateway names 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file Gateway\+Factory.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_gateway_factory_add7982ae8c25f1e10b44271426feac99}\label{class_omnipay_1_1_common_1_1_gateway_factory_add7982ae8c25f1e10b44271426feac99}} 
+\index{GatewayFactory@{GatewayFactory}!create@{create}}
+\index{create@{create}!GatewayFactory@{GatewayFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily create (\begin{DoxyParamCaption}\item[{}]{\$class,  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_client_interface}{Client\+Interface}}}]{\$http\+Client = {\ttfamily null},  }\item[{Http\+Request}]{\$http\+Request = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Create a new gateway instance
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class} & Gateway name \\
+\hline
+Client\+Interface | null & {\em \$http\+Client} & A Guzzle HTTP Client implementation \\
+\hline
+Http\+Request | null & {\em \$http\+Request} & A Symfony HTTP Request implementation \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Runtime\+Exception} & If no such gateway is found \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_gateway_interface}{Gateway\+Interface}} An object of class \$class is created and returned 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file Gateway\+Factory.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_gateway_factory_a39ec161e9a5372e002b889d276208899}\label{class_omnipay_1_1_common_1_1_gateway_factory_a39ec161e9a5372e002b889d276208899}} 
+\index{GatewayFactory@{GatewayFactory}!find@{find}}
+\index{find@{find}!GatewayFactory@{GatewayFactory}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily find (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Automatically find and register all officially supported gateways
+
+\begin{DoxyReturn}{Returns}
+array An array of gateway names 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file Gateway\+Factory.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_gateway_factory_ad2895345ef53e06ae8800a86cb65e4ed}\label{class_omnipay_1_1_common_1_1_gateway_factory_ad2895345ef53e06ae8800a86cb65e4ed}} 
+\index{GatewayFactory@{GatewayFactory}!getSupportedGateways@{getSupportedGateways}}
+\index{getSupportedGateways@{getSupportedGateways}!GatewayFactory@{GatewayFactory}}
+\doxysubsubsection{\texorpdfstring{getSupportedGateways()}{getSupportedGateways()}}
+{\footnotesize\ttfamily get\+Supported\+Gateways (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get a list of supported gateways which may be available
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file Gateway\+Factory.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_gateway_factory_ada2123f6e47801696de214b5b4f878d5}\label{class_omnipay_1_1_common_1_1_gateway_factory_ada2123f6e47801696de214b5b4f878d5}} 
+\index{GatewayFactory@{GatewayFactory}!register@{register}}
+\index{register@{register}!GatewayFactory@{GatewayFactory}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily register (\begin{DoxyParamCaption}\item[{}]{\$class\+Name }\end{DoxyParamCaption})}
+
+Register a new gateway
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$class\+Name} & Gateway name \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 65 of file Gateway\+Factory.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_common_1_1_gateway_factory_a0a62ee69f77c98005df7506e7495549c}\label{class_omnipay_1_1_common_1_1_gateway_factory_a0a62ee69f77c98005df7506e7495549c}} 
+\index{GatewayFactory@{GatewayFactory}!replace@{replace}}
+\index{replace@{replace}!GatewayFactory@{GatewayFactory}}
+\doxysubsubsection{\texorpdfstring{replace()}{replace()}}
+{\footnotesize\ttfamily replace (\begin{DoxyParamCaption}\item[{array}]{\$gateways }\end{DoxyParamCaption})}
+
+Replace the list of available gateways
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$gateways} & An array of gateway names \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file Gateway\+Factory.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/common/src/\+Omnipay/\+Common/\mbox{\hyperlink{_gateway_factory_8php}{Gateway\+Factory.\+php}}\end{DoxyCompactItemize}

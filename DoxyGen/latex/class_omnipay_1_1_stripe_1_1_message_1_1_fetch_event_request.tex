@@ -1,0 +1,123 @@
+\hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request}{}\doxysection{Fetch\+Event\+Request Class Reference}
+\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request}\index{FetchEventRequest@{FetchEventRequest}}
+Inheritance diagram for Fetch\+Event\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a9e97ee24c2f9ba554851d6d69880ed72}{get\+Event\+Reference}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_aa0f75ada363eba01ca4398544fa57dff}{set\+Event\+Reference}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a28507580eea1c43f0c9599aa095d09a8}{get\+Http\+Method}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} Fetch Event Request.
+
+\mbox{\hyperlink{}{https\+://stripe.\+com/docs/api/curl\#retrieve\+\_\+event}}
+
+Definition at line 13 of file Fetch\+Event\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{FetchEventRequest@{FetchEventRequest}!getData@{getData}}
+\index{getData@{getData}!FetchEventRequest@{FetchEventRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 35 of file Fetch\+Event\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{FetchEventRequest@{FetchEventRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!FetchEventRequest@{FetchEventRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Request}}.
+
+
+
+Definition at line 43 of file Fetch\+Event\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a9e97ee24c2f9ba554851d6d69880ed72}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a9e97ee24c2f9ba554851d6d69880ed72}} 
+\index{FetchEventRequest@{FetchEventRequest}!getEventReference@{getEventReference}}
+\index{getEventReference@{getEventReference}!FetchEventRequest@{FetchEventRequest}}
+\doxysubsubsection{\texorpdfstring{getEventReference()}{getEventReference()}}
+{\footnotesize\ttfamily get\+Event\+Reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the event reference.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file Fetch\+Event\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a28507580eea1c43f0c9599aa095d09a8}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a28507580eea1c43f0c9599aa095d09a8}} 
+\index{FetchEventRequest@{FetchEventRequest}!getHttpMethod@{getHttpMethod}}
+\index{getHttpMethod@{getHttpMethod}!FetchEventRequest@{FetchEventRequest}}
+\doxysubsubsection{\texorpdfstring{getHttpMethod()}{getHttpMethod()}}
+{\footnotesize\ttfamily get\+Http\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get HTTP Method.
+
+This is nearly always POST but can be over-\/ridden in sub classes.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a28507580eea1c43f0c9599aa095d09a8}{Abstract\+Request}}.
+
+
+
+Definition at line 48 of file Fetch\+Event\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_aa0f75ada363eba01ca4398544fa57dff}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_aa0f75ada363eba01ca4398544fa57dff}} 
+\index{FetchEventRequest@{FetchEventRequest}!setEventReference@{setEventReference}}
+\index{setEventReference@{setEventReference}!FetchEventRequest@{FetchEventRequest}}
+\doxysubsubsection{\texorpdfstring{setEventReference()}{setEventReference()}}
+{\footnotesize\ttfamily set\+Event\+Reference (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the event reference.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request}{Fetch\+Event\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file Fetch\+Event\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/stripe/src/\+Message/\mbox{\hyperlink{_fetch_event_request_8php}{Fetch\+Event\+Request.\+php}}\end{DoxyCompactItemize}

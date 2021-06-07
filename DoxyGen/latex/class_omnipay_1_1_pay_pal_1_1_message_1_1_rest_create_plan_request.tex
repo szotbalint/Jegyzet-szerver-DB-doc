@@ -1,0 +1,267 @@
+\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request}{}\doxysection{Rest\+Create\+Plan\+Request Class Reference}
+\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request}\index{RestCreatePlanRequest@{RestCreatePlanRequest}}
+Inheritance diagram for Rest\+Create\+Plan\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a0ccd02e4fb3606318dda7c8ca4259d3b}{set\+Name}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a830b5c75df72b32396701bc563fbe3c7}{get\+Type}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a66a90ba0873d37237743c9e80d9a190c}{set\+Type}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_ac9b42ed07c99e67efa914377ee20d770}{get\+Payment\+Definitions}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_afb3b32ac053c32860d4246832e861dcb}{set\+Payment\+Definitions}} (array \$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_ac2f61b201c05b85e500f22277399842b}{get\+Merchant\+Preferences}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a4aee5cc5de2c07d532e8af8718d70935}{set\+Merchant\+Preferences}} (array \$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST Create Plan Request
+
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} offers merchants a /billing-\/plans resource for providing billing plans to users for recurring payments.
+
+After the billing plan is created, the /billing-\/agreements resource provides billing agreements so that users can agree to be billed for the plans.
+
+You can create an empty billing plan and add a trial period and/or regular billing. Alternatively, you can create a fully loaded plan that includes both a trial period and regular billing. Note\+: By default, a created billing plan is in a CREATED state. A user cannot subscribe to the billing plan unless it has been set to the ACTIVE state.\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_autotoc_md154}{}\doxyparagraph{Request Data}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_autotoc_md154}
+In order to create a new billing plan you must submit the following details\+:
+
+
+\begin{DoxyItemize}
+\item name (string). Required.
+\item description (string). Required.
+\item type (string). Allowed values\+: FIXED, INFINITE. Required.
+\item payment\+\_\+definitions (array)
+\item merchant\+\_\+preferences (object)
+\end{DoxyItemize}\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_autotoc_md155}{}\doxyparagraph{Example}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_autotoc_md155}
+{\ttfamily  // Create a gateway for the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST Gateway // (routes to \mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_add7982ae8c25f1e10b44271426feac99}{Gateway\+Factory\+::create}}) \$gateway = Omnipay\+::create(\textquotesingle{}Pay\+Pal\+\_\+\+Rest\textquotesingle{});}
+
+{\ttfamily  // Initialise the gateway \$gateway-\/$>$initialize(array( \textquotesingle{}client\+Id\textquotesingle{} =$>$ \textquotesingle{}My\+Pay\+Pal\+Client\+Id\textquotesingle{}, \textquotesingle{}secret\textquotesingle{} =$>$ \textquotesingle{}My\+Pay\+Pal\+Secret\textquotesingle{}, \textquotesingle{}test\+Mode\textquotesingle{} =$>$ true, // Or false when you are ready for live transactions ));}
+
+{\ttfamily  // Do a create plan transaction on the gateway \$transaction = \$gateway-\/$>$create\+Plan(array( \textquotesingle{}name\textquotesingle{} =$>$ \textquotesingle{}Test Plan\textquotesingle{}, \textquotesingle{}description\textquotesingle{} =$>$ \textquotesingle{}A plan created for testing\textquotesingle{}, \textquotesingle{}type\textquotesingle{} =$>$ \$gateway\+::\+BILLING\+\_\+\+PLAN\+\_\+\+TYPE\+\_\+\+FIXED, \textquotesingle{}payment\+Definitions\textquotesingle{} =$>$ \mbox{[} \mbox{[} \textquotesingle{}name\textquotesingle{} =$>$ \textquotesingle{}Monthly Payments for 12 months\textquotesingle{}, \textquotesingle{}type\textquotesingle{} =$>$ \$gateway\+::\+PAYMENT\+\_\+\+TRIAL, \textquotesingle{}frequency\textquotesingle{} =$>$ \$gateway\+::\+BILLING\+\_\+\+PLAN\+\_\+\+FREQUENCY\+\_\+\+MONTH, \textquotesingle{}frequency\+\_\+interval\textquotesingle{} =$>$ 1, \textquotesingle{}cycles\textquotesingle{} =$>$ 12, \textquotesingle{}amount\textquotesingle{} =$>$ \mbox{[}\textquotesingle{}value\textquotesingle{} =$>$ 10.\+00, \textquotesingle{}currency\textquotesingle{} =$>$ \textquotesingle{}USD\textquotesingle{}\mbox{]}, \mbox{]}, \mbox{]}, )); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; if (\$response-\/$>$is\+Successful()) \{ echo \char`\"{}\+Create Plan transaction was successful!\textbackslash{}n\char`\"{}; \$plan\+\_\+id = \$response-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a514421414d937d0a743fe4319458b402}{get\+Transaction\+Reference()}}; echo \char`\"{}\+Plan reference = \char`\"{} . \$plan\+\_\+id . \char`\"{}\textbackslash{}n\char`\"{}; \} }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_autotoc_md156}{}\doxyparagraph{Request Sample}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_autotoc_md156}
+This is from the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} web site\+:
+
+{\ttfamily  curl -\/v POST \href{https://api.sandbox.paypal.com/v1/payments/billing-plans}{\texttt{ https\+://api.\+sandbox.\+paypal.\+com/v1/payments/billing-\/plans}} \textbackslash{} -\/H \textquotesingle{}Content-\/\+Type\+:application/json\textquotesingle{} \textbackslash{} -\/H \textquotesingle{}Authorization\+: Bearer $<$Access-\/\+Token$>$\textquotesingle{} \textbackslash{} -\/d \textquotesingle{}\{ \char`\"{}name\char`\"{}\+: \char`\"{}\+T-\/\+Shirt of the Month Club Plan\char`\"{}, \char`\"{}description\char`\"{}\+: \char`\"{}\+Template creation.\char`\"{}, \char`\"{}type\char`\"{}\+: \char`\"{}fixed\char`\"{}, \char`\"{}payment\+\_\+definitions\char`\"{}\+: \mbox{[} \{ \char`\"{}name\char`\"{}\+: \char`\"{}\+Regular Payments\char`\"{}, \char`\"{}type\char`\"{}\+: \char`\"{}\+REGULAR\char`\"{}, \char`\"{}frequency\char`\"{}\+: \char`\"{}\+MONTH\char`\"{}, \char`\"{}frequency\+\_\+interval\char`\"{}\+: \char`\"{}2\char`\"{}, \char`\"{}amount\char`\"{}\+: \{ \char`\"{}value\char`\"{}\+: \char`\"{}100\char`\"{}, \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{} \}, \char`\"{}cycles\char`\"{}\+: \char`\"{}12\char`\"{}, \char`\"{}charge\+\_\+models\char`\"{}\+: \mbox{[} \{ \char`\"{}type\char`\"{}\+: \char`\"{}\+SHIPPING\char`\"{}, \char`\"{}amount\char`\"{}\+: \{ \char`\"{}value\char`\"{}\+: \char`\"{}10\char`\"{}, \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{} \} \}, \{ \char`\"{}type\char`\"{}\+: \char`\"{}\+TAX\char`\"{}, \char`\"{}amount\char`\"{}\+: \{ \char`\"{}value\char`\"{}\+: \char`\"{}12\char`\"{}, \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{} \} \} \mbox{]} \} \mbox{]}, \char`\"{}merchant\+\_\+preferences\char`\"{}\+: \{ \char`\"{}setup\+\_\+fee\char`\"{}\+: \{ \char`\"{}value\char`\"{}\+: \char`\"{}1\char`\"{}, \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{} \}, \char`\"{}return\+\_\+url\char`\"{}\+: \char`\"{}http\+://www.\+return.\+com\char`\"{}, \char`\"{}cancel\+\_\+url\char`\"{}\+: \char`\"{}http\+://www.\+cancel.\+com\char`\"{}, \char`\"{}auto\+\_\+bill\+\_\+amount\char`\"{}\+: \char`\"{}\+YES\char`\"{}, \char`\"{}initial\+\_\+fail\+\_\+amount\+\_\+action\char`\"{}\+: \char`\"{}\+CONTINUE\char`\"{}, \char`\"{}max\+\_\+fail\+\_\+attempts\char`\"{}\+: \char`\"{}0\char`\"{} \} \}\textquotesingle{} }\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_autotoc_md157}{}\doxyparagraph{Response Sample}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_autotoc_md157}
+This is from the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} web site\+:
+
+{\ttfamily  \{ \char`\"{}id\char`\"{}\+: \char`\"{}\+P-\/94458432\+VR012762\+KRWBZEUA\char`\"{}, \char`\"{}state\char`\"{}\+: \char`\"{}\+CREATED\char`\"{}, \char`\"{}name\char`\"{}\+: \char`\"{}\+T-\/\+Shirt of the Month Club Plan\char`\"{}, \char`\"{}description\char`\"{}\+: \char`\"{}\+Template creation.\char`\"{}, \char`\"{}type\char`\"{}\+: \char`\"{}\+FIXED\char`\"{}, \char`\"{}payment\+\_\+definitions\char`\"{}\+: \mbox{[} \{ \char`\"{}id\char`\"{}\+: \char`\"{}\+PD-\/50606817\+NF8063316\+RWBZEUA\char`\"{}, \char`\"{}name\char`\"{}\+: \char`\"{}\+Regular Payments\char`\"{}, \char`\"{}type\char`\"{}\+: \char`\"{}\+REGULAR\char`\"{}, \char`\"{}frequency\char`\"{}\+: \char`\"{}\+Month\char`\"{}, \char`\"{}amount\char`\"{}\+: \{ \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{}, \char`\"{}value\char`\"{}\+: \char`\"{}100\char`\"{} \}, \char`\"{}charge\+\_\+models\char`\"{}\+: \mbox{[} \{ \char`\"{}id\char`\"{}\+: \char`\"{}\+CHM-\/55\+M5618301871492\+MRWBZEUA\char`\"{}, \char`\"{}type\char`\"{}\+: \char`\"{}\+SHIPPING\char`\"{}, \char`\"{}amount\char`\"{}\+: \{ \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{}, \char`\"{}value\char`\"{}\+: \char`\"{}10\char`\"{} \} \}, \{ \char`\"{}id\char`\"{}\+: \char`\"{}\+CHM-\/92\+S85978\+TN737850\+VRWBZEUA\char`\"{}, \char`\"{}type\char`\"{}\+: \char`\"{}\+TAX\char`\"{}, \char`\"{}amount\char`\"{}\+: \{ \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{}, \char`\"{}value\char`\"{}\+: \char`\"{}12\char`\"{} \} \} \mbox{]}, \char`\"{}cycles\char`\"{}\+: \char`\"{}12\char`\"{}, \char`\"{}frequency\+\_\+interval\char`\"{}\+: \char`\"{}2\char`\"{} \} \mbox{]}, \char`\"{}merchant\+\_\+preferences\char`\"{}\+: \{ \char`\"{}setup\+\_\+fee\char`\"{}\+: \{ \char`\"{}currency\char`\"{}\+: \char`\"{}\+USD\char`\"{}, \char`\"{}value\char`\"{}\+: \char`\"{}1\char`\"{} \}, \char`\"{}max\+\_\+fail\+\_\+attempts\char`\"{}\+: \char`\"{}0\char`\"{}, \char`\"{}return\+\_\+url\char`\"{}\+: \char`\"{}http\+://www.\+return.\+com\char`\"{}, \char`\"{}cancel\+\_\+url\char`\"{}\+: \char`\"{}http\+://www.\+cancel.\+com\char`\"{}, \char`\"{}auto\+\_\+bill\+\_\+amount\char`\"{}\+: \char`\"{}\+YES\char`\"{}, \char`\"{}initial\+\_\+fail\+\_\+amount\+\_\+action\char`\"{}\+: \char`\"{}\+CONTINUE\char`\"{} \}, \char`\"{}create\+\_\+time\char`\"{}\+: \char`\"{}2014-\/07-\/31\+T17\+:41\+:55.\+920\+Z\char`\"{}, \char`\"{}update\+\_\+time\char`\"{}\+: \char`\"{}2014-\/07-\/31\+T17\+:41\+:55.\+920\+Z\char`\"{}, \char`\"{}links\char`\"{}\+: \mbox{[} \{ \char`\"{}href\char`\"{}\+: \char`\"{}https\+://api.\+sandbox.\+paypal.\+com/v1/payments/billing-\/plans/\+P-\/94458432\+VR012762\+KRWBZEUA\char`\"{}, \char`\"{}rel\char`\"{}\+: \char`\"{}self\char`\"{}, \char`\"{}method\char`\"{}\+: \char`\"{}\+GET\char`\"{} \} \mbox{]} \} }
+
+\mbox{\hyperlink{}{Omnipay }}
+
+Definition at line 195 of file Rest\+Create\+Plan\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{RestCreatePlanRequest@{RestCreatePlanRequest}!getData@{getData}}
+\index{getData@{getData}!RestCreatePlanRequest@{RestCreatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 298 of file Rest\+Create\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{RestCreatePlanRequest@{RestCreatePlanRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!RestCreatePlanRequest@{RestCreatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get transaction endpoint.
+
+Billing plans are created using the /billing-\/plans resource.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 319 of file Rest\+Create\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_ac2f61b201c05b85e500f22277399842b}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_ac2f61b201c05b85e500f22277399842b}} 
+\index{RestCreatePlanRequest@{RestCreatePlanRequest}!getMerchantPreferences@{getMerchantPreferences}}
+\index{getMerchantPreferences@{getMerchantPreferences}!RestCreatePlanRequest@{RestCreatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{getMerchantPreferences()}{getMerchantPreferences()}}
+{\footnotesize\ttfamily get\+Merchant\+Preferences (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the plan merchant preferences
+
+See the class documentation and the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST API documentation for a description of the array elements.
+
+\begin{DoxyReturn}{Returns}
+array \mbox{\hyperlink{}{https\+://developer.\+paypal.\+com/docs/api/\#merchantpreferences-\/object}}
+\end{DoxyReturn}
+
+
+Definition at line 278 of file Rest\+Create\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a3d0963e68bb313b163a73f2803c64600}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a3d0963e68bb313b163a73f2803c64600}} 
+\index{RestCreatePlanRequest@{RestCreatePlanRequest}!getName@{getName}}
+\index{getName@{getName}!RestCreatePlanRequest@{RestCreatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the plan name
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 202 of file Rest\+Create\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_ac9b42ed07c99e67efa914377ee20d770}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_ac9b42ed07c99e67efa914377ee20d770}} 
+\index{RestCreatePlanRequest@{RestCreatePlanRequest}!getPaymentDefinitions@{getPaymentDefinitions}}
+\index{getPaymentDefinitions@{getPaymentDefinitions}!RestCreatePlanRequest@{RestCreatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{getPaymentDefinitions()}{getPaymentDefinitions()}}
+{\footnotesize\ttfamily get\+Payment\+Definitions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the plan payment definitions
+
+See the class documentation and the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST API documentation for a description of the array elements.
+
+\begin{DoxyReturn}{Returns}
+array \mbox{\hyperlink{}{https\+://developer.\+paypal.\+com/docs/api/\#paymentdefinition-\/object}}
+\end{DoxyReturn}
+
+
+Definition at line 249 of file Rest\+Create\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a830b5c75df72b32396701bc563fbe3c7}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a830b5c75df72b32396701bc563fbe3c7}} 
+\index{RestCreatePlanRequest@{RestCreatePlanRequest}!getType@{getType}}
+\index{getType@{getType}!RestCreatePlanRequest@{RestCreatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the plan type
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 223 of file Rest\+Create\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a4aee5cc5de2c07d532e8af8718d70935}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a4aee5cc5de2c07d532e8af8718d70935}} 
+\index{RestCreatePlanRequest@{RestCreatePlanRequest}!setMerchantPreferences@{setMerchantPreferences}}
+\index{setMerchantPreferences@{setMerchantPreferences}!RestCreatePlanRequest@{RestCreatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{setMerchantPreferences()}{setMerchantPreferences()}}
+{\footnotesize\ttfamily set\+Merchant\+Preferences (\begin{DoxyParamCaption}\item[{array}]{\$value }\end{DoxyParamCaption})}
+
+Set the plan merchant preferences
+
+See the class documentation and the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST API documentation for a description of the array elements.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request}{Rest\+Create\+Plan\+Request}} provides a fluent interface. \mbox{\hyperlink{}{https\+://developer.\+paypal.\+com/docs/api/\#merchantpreferences-\/object}}
+\end{DoxyReturn}
+
+
+Definition at line 293 of file Rest\+Create\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a0ccd02e4fb3606318dda7c8ca4259d3b}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a0ccd02e4fb3606318dda7c8ca4259d3b}} 
+\index{RestCreatePlanRequest@{RestCreatePlanRequest}!setName@{setName}}
+\index{setName@{setName}!RestCreatePlanRequest@{RestCreatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily set\+Name (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the plan name
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request}{Rest\+Create\+Plan\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 213 of file Rest\+Create\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_afb3b32ac053c32860d4246832e861dcb}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_afb3b32ac053c32860d4246832e861dcb}} 
+\index{RestCreatePlanRequest@{RestCreatePlanRequest}!setPaymentDefinitions@{setPaymentDefinitions}}
+\index{setPaymentDefinitions@{setPaymentDefinitions}!RestCreatePlanRequest@{RestCreatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{setPaymentDefinitions()}{setPaymentDefinitions()}}
+{\footnotesize\ttfamily set\+Payment\+Definitions (\begin{DoxyParamCaption}\item[{array}]{\$value }\end{DoxyParamCaption})}
+
+Set the plan payment definitions
+
+See the class documentation and the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST API documentation for a description of the array elements.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request}{Rest\+Create\+Plan\+Request}} provides a fluent interface. \mbox{\hyperlink{}{https\+://developer.\+paypal.\+com/docs/api/\#paymentdefinition-\/object}}
+\end{DoxyReturn}
+
+
+Definition at line 264 of file Rest\+Create\+Plan\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a66a90ba0873d37237743c9e80d9a190c}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request_a66a90ba0873d37237743c9e80d9a190c}} 
+\index{RestCreatePlanRequest@{RestCreatePlanRequest}!setType@{setType}}
+\index{setType@{setType}!RestCreatePlanRequest@{RestCreatePlanRequest}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily set\+Type (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the plan type
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & either \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_rest_gateway_a9ca3651b087ca2709b329c5e2cc0a42f}{Rest\+Gateway\+::\+BILLING\+\_\+\+PLAN\+\_\+\+TYPE\+\_\+\+FIXED}} or \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_rest_gateway_af98fee4f01df4c6b7e62c4583931914a}{Rest\+Gateway\+::\+BILLING\+\_\+\+PLAN\+\_\+\+TYPE\+\_\+\+INFINITE}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_plan_request}{Rest\+Create\+Plan\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 235 of file Rest\+Create\+Plan\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/paypal/src/\+Message/\mbox{\hyperlink{_rest_create_plan_request_8php}{Rest\+Create\+Plan\+Request.\+php}}\end{DoxyCompactItemize}

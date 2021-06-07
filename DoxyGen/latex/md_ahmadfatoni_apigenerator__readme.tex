@@ -1,0 +1,45 @@
+\begin{quote}
+October CMS plugin to build RESTful APIs. \end{quote}
+\hypertarget{md_ahmadfatoni_apigenerator__readme_autotoc_md1}{}\doxysection{Features}\label{md_ahmadfatoni_apigenerator__readme_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Auto generate routes
+\item Auto Generate \mbox{\hyperlink{class_controller}{Controller}} (CRUD)
+\item Support relationship restful API
+\end{DoxyItemize}\hypertarget{md_ahmadfatoni_apigenerator__readme_autotoc_md2}{}\doxysection{Install}\label{md_ahmadfatoni_apigenerator__readme_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require AhmadFatoni.ApiGenerator}
+
+\end{DoxyCode}
+\hypertarget{md_ahmadfatoni_apigenerator__readme_autotoc_md3}{}\doxysection{Usage}\label{md_ahmadfatoni_apigenerator__readme_autotoc_md3}
+\hypertarget{md_ahmadfatoni_apigenerator__readme_autotoc_md4}{}\doxysubsection{Form}\label{md_ahmadfatoni_apigenerator__readme_autotoc_md4}
+
+\begin{DoxyItemize}
+\item API Name \+: Name of your API module
+\item Base Endpoint \+: Base endpoint of your API, ex \+: api/v1/modulename
+\item Short Description \+: Describe your API
+\item \mbox{\hyperlink{class_model}{Model}} \+: select model that will be created API
+\item Custom Condition \+: Build customer response using JSON modeling
+\end{DoxyItemize}\hypertarget{md_ahmadfatoni_apigenerator__readme_autotoc_md5}{}\doxysubsection{Custom Condition Example}\label{md_ahmadfatoni_apigenerator__readme_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    'fillable': 'id,title,content',}
+\DoxyCodeLine{    'relation': [\{}
+\DoxyCodeLine{        'name': 'user',}
+\DoxyCodeLine{        'fillable': 'id,first\_name'}
+\DoxyCodeLine{    \}, \{}
+\DoxyCodeLine{        'name': 'categories',}
+\DoxyCodeLine{        'fillable': 'id,name}
+\DoxyCodeLine{    \}]}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item please replace single quote with quote
+\end{DoxyItemize}\hypertarget{md_ahmadfatoni_apigenerator__readme_autotoc_md6}{}\doxysection{Contribute}\label{md_ahmadfatoni_apigenerator__readme_autotoc_md6}
+Pull Requests accepted.\hypertarget{md_ahmadfatoni_apigenerator__readme_autotoc_md7}{}\doxysection{Contact}\label{md_ahmadfatoni_apigenerator__readme_autotoc_md7}
+You can communicate with me using \href{https://www.linkedin.com/in/ahmad-fatoni}{\texttt{ linkedin}}\hypertarget{md_ahmadfatoni_apigenerator__readme_autotoc_md8}{}\doxysection{License}\label{md_ahmadfatoni_apigenerator__readme_autotoc_md8}
+The October\+CMS platform is open-\/sourced software licensed under the \href{https://opensource.org/licenses/MIT}{\texttt{ MIT license}}. 

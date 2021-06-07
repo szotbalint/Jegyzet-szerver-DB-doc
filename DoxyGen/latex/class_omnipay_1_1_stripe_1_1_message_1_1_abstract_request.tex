@@ -1,0 +1,424 @@
+\hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request}{}\doxysection{Abstract\+Request Class Reference}
+\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request}\index{AbstractRequest@{AbstractRequest}}
+Inheritance diagram for Abstract\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_afdd5b6b54737f556694975ca3d93d773}{get\+Api\+Key}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_ae1171fc0c127a8f91b88970cca82ed5e}{set\+Api\+Key}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a9f612666a850b3af8aa5b35ddbf7a734}{get\+Card\+Token}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a9506c1481de55eef2d15f577410666c4}{set\+Card\+Token}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a94f02d6e522b21e686a70594ecc3d980}{get\+Customer\+Reference}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a081ecefd31c8eba42a9217a573dcc23e}{set\+Customer\+Reference}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a0150021c084b4ba5db6c51e6dbb0e5b8}{get\+Metadata}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a09c4a8b3724562c0149d8405e3cc26b7}{set\+Metadata}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_af02d9309f312ad770b66635b2bb3ecca}{get\+Connected\+Stripe\+Account\+Header}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a9b8373f9a272bec9abaf5b85aa933d82}{set\+Connected\+Stripe\+Account\+Header}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a82231ebe3de7393d86d38200aa6b9236}{get\+Idempotency\+Key\+Header}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_ab2a2a18450e3fdf1c29ffbb348e41f34}{set\+Idempotency\+Key\+Header}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a28507580eea1c43f0c9599aa095d09a8}{get\+Http\+Method}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a157e0005d82edaa21cbea07fdc5c62da}{get\+Headers}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_ac3814c2b33c636112edcdac00156b58f}{send\+Data}} (\$data)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a42fdd8313c99d9c5f80219c1e192b93a}{get\+Source}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a502eb25b9b81ddde34df7857f4eacacc}{set\+Source}} (\$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a4610fdf4ed1d25f909bb208675f4b742}{create\+Client\+Request}} (\$data, array \$headers=null)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a76c92df24aed8406d72a236582860960}{get\+Card\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_afb5204f7604df2f50a0058cb0e024875}{\$endpoint}} = \textquotesingle{}https\+://api.\+stripe.\+com/v1\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} Abstract Request.
+
+This is the parent class for all \mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} requests.
+
+Test modes\+:
+
+\mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} accounts have test-\/mode API keys as well as live-\/mode API keys. These keys can be active at the same time. Data created with test-\/mode credentials will never hit the credit card networks and will never cost anyone money.
+
+Unlike some gateways, there is no test mode endpoint separate to the live mode endpoint, the \mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} API endpoint is the same for test and for live.
+
+Setting the test\+Mode flag on this gateway has no effect. To use test mode just use your test mode API key.
+
+You can use any of the cards listed at \href{https://stripe.com/docs/testing}{\texttt{ https\+://stripe.\+com/docs/testing}} for testing.
+
+\begin{DoxySeeAlso}{See also}
+\textbackslash{}\+Omnipay\textbackslash{}\+Stripe\textbackslash{}\+Gateway \mbox{\hyperlink{}{https\+://stripe.\+com/docs/api}}
+\end{DoxySeeAlso}
+
+
+Definition at line 36 of file Abstract\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a4610fdf4ed1d25f909bb208675f4b742}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a4610fdf4ed1d25f909bb208675f4b742}} 
+\index{AbstractRequest@{AbstractRequest}!createClientRequest@{createClientRequest}}
+\index{createClientRequest@{createClientRequest}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{createClientRequest()}{createClientRequest()}}
+{\footnotesize\ttfamily create\+Client\+Request (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{array}]{\$headers = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \$data} & \\
+\hline
+array & {\em \$headers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+Interface 
+\end{DoxyReturn}
+
+
+Definition at line 192 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_afdd5b6b54737f556694975ca3d93d773}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_afdd5b6b54737f556694975ca3d93d773}} 
+\index{AbstractRequest@{AbstractRequest}!getApiKey@{getApiKey}}
+\index{getApiKey@{getApiKey}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{getApiKey()}{getApiKey()}}
+{\footnotesize\ttfamily get\+Api\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the gateway API Key.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a76c92df24aed8406d72a236582860960}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a76c92df24aed8406d72a236582860960}} 
+\index{AbstractRequest@{AbstractRequest}!getCardData@{getCardData}}
+\index{getCardData@{getCardData}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{getCardData()}{getCardData()}}
+{\footnotesize\ttfamily get\+Card\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get the card data.
+
+Because the stripe gateway uses a common format for passing card data to the API, this function can be called to get the data from the associated card object in the format that the API requires.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_update_card_request_a76c92df24aed8406d72a236582860960}{Update\+Card\+Request}}, and \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_a76c92df24aed8406d72a236582860960}{Create\+Card\+Request}}.
+
+
+
+Definition at line 271 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a9f612666a850b3af8aa5b35ddbf7a734}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a9f612666a850b3af8aa5b35ddbf7a734}} 
+\index{AbstractRequest@{AbstractRequest}!getCardToken@{getCardToken}}
+\index{getCardToken@{getCardToken}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{getCardToken()}{getCardToken()}}
+{\footnotesize\ttfamily get\+Card\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000035}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Definition at line 68 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_af02d9309f312ad770b66635b2bb3ecca}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_af02d9309f312ad770b66635b2bb3ecca}} 
+\index{AbstractRequest@{AbstractRequest}!getConnectedStripeAccountHeader@{getConnectedStripeAccountHeader}}
+\index{getConnectedStripeAccountHeader@{getConnectedStripeAccountHeader}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{getConnectedStripeAccountHeader()}{getConnectedStripeAccountHeader()}}
+{\footnotesize\ttfamily get\+Connected\+Stripe\+Account\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Connect only
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a94f02d6e522b21e686a70594ecc3d980}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a94f02d6e522b21e686a70594ecc3d980}} 
+\index{AbstractRequest@{AbstractRequest}!getCustomerReference@{getCustomerReference}}
+\index{getCustomerReference@{getCustomerReference}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{getCustomerReference()}{getCustomerReference()}}
+{\footnotesize\ttfamily get\+Customer\+Reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the customer reference.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{AbstractRequest@{AbstractRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_update_subscription_request_a7b3348502e757cb471a0507924c336a1}{Update\+Subscription\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_update_customer_request_a7b3348502e757cb471a0507924c336a1}{Update\+Customer\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_update_card_request_a7b3348502e757cb471a0507924c336a1}{Update\+Card\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_update_transfer_reversal_request_a7b3348502e757cb471a0507924c336a1}{Update\+Transfer\+Reversal\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_update_transfer_request_a7b3348502e757cb471a0507924c336a1}{Update\+Transfer\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_list_transfers_request_a7b3348502e757cb471a0507924c336a1}{List\+Transfers\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_list_transfer_reversals_request_a7b3348502e757cb471a0507924c336a1}{List\+Transfer\+Reversals\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_fetch_transfer_reversal_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Transfer\+Reversal\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_fetch_transfer_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Transfer\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_reversal_request_a7b3348502e757cb471a0507924c336a1}{Create\+Transfer\+Reversal\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_create_transfer_request_a7b3348502e757cb471a0507924c336a1}{Create\+Transfer\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_refund_request_a7b3348502e757cb471a0507924c336a1}{Refund\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_list_plans_request_a7b3348502e757cb471a0507924c336a1}{List\+Plans\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_list_invoices_request_a7b3348502e757cb471a0507924c336a1}{List\+Invoices\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Transaction\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_token_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Token\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_subscription_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Subscription\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_plan_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Plan\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_invoice_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Invoice\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_invoice_lines_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Invoice\+Lines\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_invoice_item_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Invoice\+Item\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Event\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_customer_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Customer\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_charge_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Charge\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a7b3348502e757cb471a0507924c336a1}{Fetch\+Balance\+Transaction\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_delete_plan_request_a7b3348502e757cb471a0507924c336a1}{Delete\+Plan\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_delete_invoice_item_request_a7b3348502e757cb471a0507924c336a1}{Delete\+Invoice\+Item\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_delete_customer_request_a7b3348502e757cb471a0507924c336a1}{Delete\+Customer\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_delete_card_request_a7b3348502e757cb471a0507924c336a1}{Delete\+Card\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_token_request_a7b3348502e757cb471a0507924c336a1}{Create\+Token\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_subscription_request_a7b3348502e757cb471a0507924c336a1}{Create\+Subscription\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_plan_request_a7b3348502e757cb471a0507924c336a1}{Create\+Plan\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_invoice_item_request_a7b3348502e757cb471a0507924c336a1}{Create\+Invoice\+Item\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_customer_request_a7b3348502e757cb471a0507924c336a1}{Create\+Customer\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_a7b3348502e757cb471a0507924c336a1}{Create\+Card\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_capture_request_a7b3348502e757cb471a0507924c336a1}{Capture\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_cancel_subscription_request_a7b3348502e757cb471a0507924c336a1}{Cancel\+Subscription\+Request}}, and \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_authorize_request_a7b3348502e757cb471a0507924c336a1}{Authorize\+Request}}.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a157e0005d82edaa21cbea07fdc5c62da}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a157e0005d82edaa21cbea07fdc5c62da}} 
+\index{AbstractRequest@{AbstractRequest}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 171 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a28507580eea1c43f0c9599aa095d09a8}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a28507580eea1c43f0c9599aa095d09a8}} 
+\index{AbstractRequest@{AbstractRequest}!getHttpMethod@{getHttpMethod}}
+\index{getHttpMethod@{getHttpMethod}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{getHttpMethod()}{getHttpMethod()}}
+{\footnotesize\ttfamily get\+Http\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get HTTP Method.
+
+This is nearly always POST but can be over-\/ridden in sub classes.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_list_transfers_request_a28507580eea1c43f0c9599aa095d09a8}{List\+Transfers\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_transfers_1_1_list_transfer_reversals_request_a28507580eea1c43f0c9599aa095d09a8}{List\+Transfer\+Reversals\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_list_plans_request_a28507580eea1c43f0c9599aa095d09a8}{List\+Plans\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_list_invoices_request_a28507580eea1c43f0c9599aa095d09a8}{List\+Invoices\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_transaction_request_a28507580eea1c43f0c9599aa095d09a8}{Fetch\+Transaction\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_token_request_a28507580eea1c43f0c9599aa095d09a8}{Fetch\+Token\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_subscription_request_a28507580eea1c43f0c9599aa095d09a8}{Fetch\+Subscription\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_plan_request_a28507580eea1c43f0c9599aa095d09a8}{Fetch\+Plan\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_invoice_request_a28507580eea1c43f0c9599aa095d09a8}{Fetch\+Invoice\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_invoice_lines_request_a28507580eea1c43f0c9599aa095d09a8}{Fetch\+Invoice\+Lines\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_invoice_item_request_a28507580eea1c43f0c9599aa095d09a8}{Fetch\+Invoice\+Item\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_event_request_a28507580eea1c43f0c9599aa095d09a8}{Fetch\+Event\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_customer_request_a28507580eea1c43f0c9599aa095d09a8}{Fetch\+Customer\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_charge_request_a28507580eea1c43f0c9599aa095d09a8}{Fetch\+Charge\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a28507580eea1c43f0c9599aa095d09a8}{Fetch\+Balance\+Transaction\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_delete_plan_request_a28507580eea1c43f0c9599aa095d09a8}{Delete\+Plan\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_delete_invoice_item_request_a28507580eea1c43f0c9599aa095d09a8}{Delete\+Invoice\+Item\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_delete_customer_request_a28507580eea1c43f0c9599aa095d09a8}{Delete\+Customer\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_delete_card_request_a28507580eea1c43f0c9599aa095d09a8}{Delete\+Card\+Request}}, and \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_cancel_subscription_request_a28507580eea1c43f0c9599aa095d09a8}{Cancel\+Subscription\+Request}}.
+
+
+
+Definition at line 163 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a82231ebe3de7393d86d38200aa6b9236}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a82231ebe3de7393d86d38200aa6b9236}} 
+\index{AbstractRequest@{AbstractRequest}!getIdempotencyKeyHeader@{getIdempotencyKeyHeader}}
+\index{getIdempotencyKeyHeader@{getIdempotencyKeyHeader}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{getIdempotencyKeyHeader()}{getIdempotencyKeyHeader()}}
+{\footnotesize\ttfamily get\+Idempotency\+Key\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Connect only
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 139 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a0150021c084b4ba5db6c51e6dbb0e5b8}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a0150021c084b4ba5db6c51e6dbb0e5b8}} 
+\index{AbstractRequest@{AbstractRequest}!getMetadata@{getMetadata}}
+\index{getMetadata@{getMetadata}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{getMetadata()}{getMetadata()}}
+{\footnotesize\ttfamily get\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 104 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a42fdd8313c99d9c5f80219c1e192b93a}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a42fdd8313c99d9c5f80219c1e192b93a}} 
+\index{AbstractRequest@{AbstractRequest}!getSource@{getSource}}
+\index{getSource@{getSource}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{getSource()}{getSource()}}
+{\footnotesize\ttfamily get\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_update_customer_request_a42fdd8313c99d9c5f80219c1e192b93a}{Update\+Customer\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_customer_request_a42fdd8313c99d9c5f80219c1e192b93a}{Create\+Customer\+Request}}, and \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_authorize_request_a42fdd8313c99d9c5f80219c1e192b93a}{Authorize\+Request}}.
+
+
+
+Definition at line 246 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_ac3814c2b33c636112edcdac00156b58f}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_ac3814c2b33c636112edcdac00156b58f}} 
+\index{AbstractRequest@{AbstractRequest}!sendData@{sendData}}
+\index{sendData@{sendData}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{sendData()}{sendData()}}
+{\footnotesize\ttfamily send\+Data (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})}
+
+\{Send the request with specified data
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$data} & The data to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_response_interface}{Response\+Interface}}
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_request_interface_ac3814c2b33c636112edcdac00156b58f}{Request\+Interface}}.
+
+
+
+Definition at line 224 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_ae1171fc0c127a8f91b88970cca82ed5e}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_ae1171fc0c127a8f91b88970cca82ed5e}} 
+\index{AbstractRequest@{AbstractRequest}!setApiKey@{setApiKey}}
+\index{setApiKey@{setApiKey}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{setApiKey()}{setApiKey()}}
+{\footnotesize\ttfamily set\+Api\+Key (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the gateway API Key.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request}{Abstract\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a9506c1481de55eef2d15f577410666c4}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a9506c1481de55eef2d15f577410666c4}} 
+\index{AbstractRequest@{AbstractRequest}!setCardToken@{setCardToken}}
+\index{setCardToken@{setCardToken}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{setCardToken()}{setCardToken()}}
+{\footnotesize\ttfamily set\+Card\+Token (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000036}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Definition at line 76 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a9b8373f9a272bec9abaf5b85aa933d82}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a9b8373f9a272bec9abaf5b85aa933d82}} 
+\index{AbstractRequest@{AbstractRequest}!setConnectedStripeAccountHeader@{setConnectedStripeAccountHeader}}
+\index{setConnectedStripeAccountHeader@{setConnectedStripeAccountHeader}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{setConnectedStripeAccountHeader()}{setConnectedStripeAccountHeader()}}
+{\footnotesize\ttfamily set\+Connected\+Stripe\+Account\+Header (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Abstract\+Request 
+\end{DoxyReturn}
+
+
+Definition at line 129 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a081ecefd31c8eba42a9217a573dcc23e}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a081ecefd31c8eba42a9217a573dcc23e}} 
+\index{AbstractRequest@{AbstractRequest}!setCustomerReference@{setCustomerReference}}
+\index{setCustomerReference@{setCustomerReference}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{setCustomerReference()}{setCustomerReference()}}
+{\footnotesize\ttfamily set\+Customer\+Reference (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the customer reference.
+
+Used when calling Create\+Card on an existing customer. If this parameter is not set then a new customer is created.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request}{Abstract\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_ab2a2a18450e3fdf1c29ffbb348e41f34}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_ab2a2a18450e3fdf1c29ffbb348e41f34}} 
+\index{AbstractRequest@{AbstractRequest}!setIdempotencyKeyHeader@{setIdempotencyKeyHeader}}
+\index{setIdempotencyKeyHeader@{setIdempotencyKeyHeader}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{setIdempotencyKeyHeader()}{setIdempotencyKeyHeader()}}
+{\footnotesize\ttfamily set\+Idempotency\+Key\+Header (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Omnipay\textbackslash{}\+Common\textbackslash{}\+Message\textbackslash{}\+Abstract\+Request 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a09c4a8b3724562c0149d8405e3cc26b7}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a09c4a8b3724562c0149d8405e3cc26b7}} 
+\index{AbstractRequest@{AbstractRequest}!setMetadata@{setMetadata}}
+\index{setMetadata@{setMetadata}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{setMetadata()}{setMetadata()}}
+{\footnotesize\ttfamily set\+Metadata (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 109 of file Abstract\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a502eb25b9b81ddde34df7857f4eacacc}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a502eb25b9b81ddde34df7857f4eacacc}} 
+\index{AbstractRequest@{AbstractRequest}!setSource@{setSource}}
+\index{setSource@{setSource}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{setSource()}{setSource()}}
+{\footnotesize\ttfamily set\+Source (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request}{Abstract\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_update_customer_request_a502eb25b9b81ddde34df7857f4eacacc}{Update\+Customer\+Request}}, \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_customer_request_a502eb25b9b81ddde34df7857f4eacacc}{Create\+Customer\+Request}}, and \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_authorize_request_a502eb25b9b81ddde34df7857f4eacacc}{Authorize\+Request}}.
+
+
+
+Definition at line 256 of file Abstract\+Request.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_afb5204f7604df2f50a0058cb0e024875}\label{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_afb5204f7604df2f50a0058cb0e024875}} 
+\index{AbstractRequest@{AbstractRequest}!\$endpoint@{\$endpoint}}
+\index{\$endpoint@{\$endpoint}!AbstractRequest@{AbstractRequest}}
+\doxysubsubsection{\texorpdfstring{\$endpoint}{$endpoint}}
+{\footnotesize\ttfamily \$endpoint = \textquotesingle{}https\+://api.\+stripe.\+com/v1\textquotesingle{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 43 of file Abstract\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/stripe/src/\+Message/\mbox{\hyperlink{stripe_2src_2_message_2_abstract_request_8php}{Abstract\+Request.\+php}}\end{DoxyCompactItemize}

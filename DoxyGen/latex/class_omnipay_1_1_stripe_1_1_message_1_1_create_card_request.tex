@@ -1,0 +1,101 @@
+\hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request}{}\doxysection{Create\+Card\+Request Class Reference}
+\label{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request}\index{CreateCardRequest@{CreateCardRequest}}
+Inheritance diagram for Create\+Card\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_a76c92df24aed8406d72a236582860960}{get\+Card\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} Create Credit Card Request.
+
+In the stripe system, creating a credit card requires passing a customer ID. The card is then added to the customer\textquotesingle{}s account. If the customer has no default card then the newly added card becomes the customer\textquotesingle{}s default card.
+
+This call can be used to create a new customer or add a card to an existing customer. If a customer\+Reference is passed in then a card is added to an existing customer. If there is no customer\+Reference passed in then a new customer is created. The response in that case will then contain both a customer token and a card token, and is essentially the same as \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_customer_request}{Create\+Customer\+Request}}\hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_autotoc_md206}{}\doxyparagraph{Example}\label{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_autotoc_md206}
+This example assumes that you have already created a customer, and that the customer reference is stored in \$customer\+\_\+id. See \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_customer_request}{Create\+Customer\+Request}} for the first part of this transaction.
+
+{\ttfamily  // Create a credit card object // This card can be used for testing. // The Credit\+Card object is also used for creating customers. \$new\+\_\+card = new Credit\+Card(array( \textquotesingle{}first\+Name\textquotesingle{} =$>$ \textquotesingle{}Example\textquotesingle{}, \textquotesingle{}last\+Name\textquotesingle{} =$>$ \textquotesingle{}Customer\textquotesingle{}, \textquotesingle{}number\textquotesingle{} =$>$ \textquotesingle{}5555555555554444\textquotesingle{}, \textquotesingle{}expiry\+Month\textquotesingle{} =$>$ \textquotesingle{}01\textquotesingle{}, \textquotesingle{}expiry\+Year\textquotesingle{} =$>$ \textquotesingle{}2020\textquotesingle{}, \textquotesingle{}cvv\textquotesingle{} =$>$ \textquotesingle{}456\textquotesingle{}, \textquotesingle{}email\textquotesingle{} =$>$ \textquotesingle{}\href{mailto:customer@example.com}{\texttt{ customer@example.\+com}}\textquotesingle{}, \textquotesingle{}billing\+Address1\textquotesingle{} =$>$ \textquotesingle{}1 Lower Creek Road\textquotesingle{}, \textquotesingle{}billing\+Country\textquotesingle{} =$>$ \textquotesingle{}AU\textquotesingle{}, \textquotesingle{}billing\+City\textquotesingle{} =$>$ \textquotesingle{}Upper Swan\textquotesingle{}, \textquotesingle{}billing\+Postcode\textquotesingle{} =$>$ \textquotesingle{}6999\textquotesingle{}, \textquotesingle{}billing\+State\textquotesingle{} =$>$ \textquotesingle{}WA\textquotesingle{}, ));}
+
+{\ttfamily  // Do a create card transaction on the gateway \$response = \$gateway-\/$>$create\+Card(array( \textquotesingle{}card\textquotesingle{} =$>$ \$new\+\_\+card, \textquotesingle{}customer\+Reference\textquotesingle{} =$>$ \$customer\+\_\+id, ))-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; if (\$response-\/$>$is\+Successful()) \{ echo \char`\"{}\+Gateway create\+Card was successful.\textbackslash{}n\char`\"{}; // Find the card ID \$card\+\_\+id = \$response-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a26698369eb36c07c89856ea74ffb9dff}{get\+Card\+Reference()}}; echo \char`\"{}\+Card ID = \char`\"{} . \$card\+\_\+id . \char`\"{}\textbackslash{}n\char`\"{}; \} }
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_create_customer_request}{Create\+Customer\+Request}} \mbox{\hyperlink{}{https\+://stripe.\+com/docs/api\#create\+\_\+card}}
+\end{DoxySeeAlso}
+
+
+Definition at line 64 of file Create\+Card\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_a76c92df24aed8406d72a236582860960}\label{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_a76c92df24aed8406d72a236582860960}} 
+\index{CreateCardRequest@{CreateCardRequest}!getCardData@{getCardData}}
+\index{getCardData@{getCardData}!CreateCardRequest@{CreateCardRequest}}
+\doxysubsubsection{\texorpdfstring{getCardData()}{getCardData()}}
+{\footnotesize\ttfamily get\+Card\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the card data.
+
+Because the stripe gateway uses a common format for passing card data to the API, this function can be called to get the data from the associated card object in the format that the API requires.
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a76c92df24aed8406d72a236582860960}{Abstract\+Request}}.
+
+
+
+Definition at line 107 of file Create\+Card\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{CreateCardRequest@{CreateCardRequest}!getData@{getData}}
+\index{getData@{getData}!CreateCardRequest@{CreateCardRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 66 of file Create\+Card\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_stripe_1_1_message_1_1_create_card_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{CreateCardRequest@{CreateCardRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!CreateCardRequest@{CreateCardRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Request}}.
+
+
+
+Definition at line 96 of file Create\+Card\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/stripe/src/\+Message/\mbox{\hyperlink{_create_card_request_8php}{Create\+Card\+Request.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,76 @@
+\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_capture_request}{}\doxysection{Rest\+Capture\+Request Class Reference}
+\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_capture_request}\index{RestCaptureRequest@{RestCaptureRequest}}
+Inheritance diagram for Rest\+Capture\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_capture_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_capture_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_capture_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST Capture Request
+
+Use this resource to capture and process a previously created authorization. To use this resource, the original payment call must have the intent set to authorize.
+
+To capture payment, make a call to /v1/payments/authorization/\{authorization\+\_\+id\}/capture with the authorization ID in the URI along with an amount object. For a partial capture, you can provide a lower amount. Additionally, you can explicitly indicate a final capture (prevent future captures) by setting the is\+\_\+final\+\_\+capture value to true.\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_capture_request_autotoc_md148}{}\doxyparagraph{Example}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_capture_request_autotoc_md148}
+Note this example assumes that the authorization has been successful and that the authorization ID returned from the authorization is held in \$auth\+\_\+id. See \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request}{Rest\+Authorize\+Request}} for the first part of this example transaction\+:
+
+{\ttfamily  // Once the transaction has been authorized, we can capture it for final payment. \$transaction = \$gateway-\/$>$capture(array( \textquotesingle{}amount\textquotesingle{} =$>$ \textquotesingle{}10.\+00\textquotesingle{}, \textquotesingle{}currency\textquotesingle{} =$>$ \textquotesingle{}AUD\textquotesingle{}, )); \$transaction-\/$>$set\+Transaction\+Reference(\$auth\+\_\+id); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; }
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_authorize_request}{Rest\+Authorize\+Request}} \mbox{\hyperlink{}{https\+://developer.\+paypal.\+com/docs/api/\#capture-\/an-\/authorization}}
+\end{DoxySeeAlso}
+
+
+Definition at line 40 of file Rest\+Capture\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_capture_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_capture_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{RestCaptureRequest@{RestCaptureRequest}!getData@{getData}}
+\index{getData@{getData}!RestCaptureRequest@{RestCaptureRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 42 of file Rest\+Capture\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_capture_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_capture_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{RestCaptureRequest@{RestCaptureRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!RestCaptureRequest@{RestCaptureRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 55 of file Rest\+Capture\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/paypal/src/\+Message/\mbox{\hyperlink{_rest_capture_request_8php}{Rest\+Capture\+Request.\+php}}\end{DoxyCompactItemize}

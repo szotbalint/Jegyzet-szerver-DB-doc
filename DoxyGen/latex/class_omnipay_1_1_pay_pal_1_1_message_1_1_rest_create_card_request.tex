@@ -1,0 +1,85 @@
+\hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_card_request}{}\doxysection{Rest\+Create\+Card\+Request Class Reference}
+\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_card_request}\index{RestCreateCardRequest@{RestCreateCardRequest}}
+Inheritance diagram for Rest\+Create\+Card\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_card_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_card_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_card_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} REST Create Card Request
+
+\mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} offers merchants a /vault API to store sensitive details like credit card related details.
+
+You can currently use the /vault API to store credit card details with \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} instead of storing them on your own server. After storing a credit card, you can then pass the credit card id instead of the related credit card details to complete a payment.
+
+Direct credit card payment and related features are restricted in some countries. As of January 2015 these transactions are only supported in the UK and in the USA.
+
+Example\+:
+
+{\ttfamily  // Create a gateway for the \mbox{\hyperlink{namespace_omnipay_1_1_pay_pal}{Pay\+Pal}} \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_rest_gateway}{Rest\+Gateway}} // (routes to \mbox{\hyperlink{class_omnipay_1_1_common_1_1_gateway_factory_add7982ae8c25f1e10b44271426feac99}{Gateway\+Factory\+::create}}) \$gateway = Omnipay\+::create(\textquotesingle{}Pay\+Pal\+\_\+\+Rest\textquotesingle{});}
+
+{\ttfamily  // Initialise the gateway \$gateway-\/$>$initialize(array( \textquotesingle{}client\+Id\textquotesingle{} =$>$ \textquotesingle{}My\+Pay\+Pal\+Client\+Id\textquotesingle{}, \textquotesingle{}secret\textquotesingle{} =$>$ \textquotesingle{}My\+Pay\+Pal\+Secret\textquotesingle{}, \textquotesingle{}test\+Mode\textquotesingle{} =$>$ true, // Or false when you are ready for live transactions ));}
+
+{\ttfamily  // Create a credit card object // DO NOT USE THESE CARD VALUES -- substitute your own // see the documentation in the class header. \$card = new Credit\+Card(array( \textquotesingle{}first\+Name\textquotesingle{} =$>$ \textquotesingle{}Example\textquotesingle{}, \textquotesingle{}last\+Name\textquotesingle{} =$>$ \textquotesingle{}User\textquotesingle{}, \textquotesingle{}number\textquotesingle{} =$>$ \textquotesingle{}4111111111111111\textquotesingle{}, \textquotesingle{}expiry\+Month\textquotesingle{} =$>$ \textquotesingle{}01\textquotesingle{}, \textquotesingle{}expiry\+Year\textquotesingle{} =$>$ \textquotesingle{}2020\textquotesingle{}, \textquotesingle{}cvv\textquotesingle{} =$>$ \textquotesingle{}123\textquotesingle{}, \textquotesingle{}billing\+Address1\textquotesingle{} =$>$ \textquotesingle{}1 Scrubby Creek Road\textquotesingle{}, \textquotesingle{}billing\+Country\textquotesingle{} =$>$ \textquotesingle{}AU\textquotesingle{}, \textquotesingle{}billing\+City\textquotesingle{} =$>$ \textquotesingle{}Scrubby Creek\textquotesingle{}, \textquotesingle{}billing\+Postcode\textquotesingle{} =$>$ \textquotesingle{}4999\textquotesingle{}, \textquotesingle{}billing\+State\textquotesingle{} =$>$ \textquotesingle{}QLD\textquotesingle{}, ));}
+
+{\ttfamily  // Do a create card transaction on the gateway \$transaction = \$gateway-\/$>$create\+Card(array( \textquotesingle{}card\textquotesingle{} =$>$ \$card, )); \$response = \$transaction-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; if (\$response-\/$>$is\+Successful()) \{ echo \char`\"{}\+Create card transaction was successful!\textbackslash{}n\char`\"{}; // Find the card ID \$card\+\_\+id = \$response-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a514421414d937d0a743fe4319458b402}{get\+Transaction\+Reference()}}; \} }
+
+\mbox{\hyperlink{}{\href{https://developer.paypal.com/docs/api/\#store-a-credit-card}{\texttt{ https\+://developer.\+paypal.\+com/docs/api/\#store-\/a-\/credit-\/card}}  \href{http://bit.ly/1wUQ33R}{\texttt{ http\+://bit.\+ly/1w\+UQ33R}} }}
+
+Definition at line 71 of file Rest\+Create\+Card\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_card_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_card_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{RestCreateCardRequest@{RestCreateCardRequest}!getData@{getData}}
+\index{getData@{getData}!RestCreateCardRequest@{RestCreateCardRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 73 of file Rest\+Create\+Card\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_card_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_pay_pal_1_1_message_1_1_rest_create_card_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{RestCreateCardRequest@{RestCreateCardRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!RestCreateCardRequest@{RestCreateCardRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_pay_pal_1_1_message_1_1_abstract_rest_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Rest\+Request}}.
+
+
+
+Definition at line 106 of file Rest\+Create\+Card\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/paypal/src/\+Message/\mbox{\hyperlink{_rest_create_card_request_8php}{Rest\+Create\+Card\+Request.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,132 @@
+\hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request}{}\doxysection{Fetch\+Balance\+Transaction\+Request Class Reference}
+\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request}\index{FetchBalanceTransactionRequest@{FetchBalanceTransactionRequest}}
+Inheritance diagram for Fetch\+Balance\+Transaction\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a97c734e22dc2a9f1f3e8227cd4a75529}{get\+Balance\+Transaction\+Reference}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_ad4b8d8a491aee3a49288e3776398d37c}{set\+Balance\+Transaction\+Reference}} (\$value)
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a7b3348502e757cb471a0507924c336a1}{get\+Endpoint}} ()
+\item 
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a28507580eea1c43f0c9599aa095d09a8}{get\+Http\+Method}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_omnipay_1_1_stripe}{Stripe}} Fetch Balance Request
+
+Example -- note this example assumes that the purchase has been successful and that the transaction balance ID returned from the purchase is held in \$balance\+Transaction\+Id. See \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_purchase_request}{Purchase\+Request}} for the first part of this example transaction\+:
+
+{\ttfamily  // Fetch the balance to get information about the payment. \$balance = \$gateway-\/$>$fetch\+Balance\+Transaction(); \$balance-\/$>$set\+Balance\+Transaction\+Reference(\$balance\+\_\+transaction\+\_\+id); \$response = \$balance-\/$>$\mbox{\hyperlink{class_omnipay_1_1_common_1_1_message_1_1_abstract_request_a12bcef5130168b80d3d52dc82213f19a}{send()}}; \$data = \$response-\/$>$\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a81a67162a6288d78fc4c55283325f0b4}{get\+Data()}}; echo \char`\"{}\+Gateway fetch\+Balance response data == \char`\"{} . print\+\_\+r(\$data, true) . \char`\"{}\textbackslash{}n\char`\"{}; }
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_purchase_request}{Purchase\+Request}} 
+
+\mbox{\hyperlink{class_omnipay_1_1_omnipay}{Omnipay}}\textbackslash{}\+Stripe\textbackslash{}\+Gateway \mbox{\hyperlink{}{https\+://stripe.\+com/docs/api\#retrieve\+\_\+balance\+\_\+transaction}}
+\end{DoxySeeAlso}
+
+
+Definition at line 28 of file Fetch\+Balance\+Transaction\+Request.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a97c734e22dc2a9f1f3e8227cd4a75529}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a97c734e22dc2a9f1f3e8227cd4a75529}} 
+\index{FetchBalanceTransactionRequest@{FetchBalanceTransactionRequest}!getBalanceTransactionReference@{getBalanceTransactionReference}}
+\index{getBalanceTransactionReference@{getBalanceTransactionReference}!FetchBalanceTransactionRequest@{FetchBalanceTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getBalanceTransactionReference()}{getBalanceTransactionReference()}}
+{\footnotesize\ttfamily get\+Balance\+Transaction\+Reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the transaction balance reference
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file Fetch\+Balance\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a81a67162a6288d78fc4c55283325f0b4}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a81a67162a6288d78fc4c55283325f0b4}} 
+\index{FetchBalanceTransactionRequest@{FetchBalanceTransactionRequest}!getData@{getData}}
+\index{getData@{getData}!FetchBalanceTransactionRequest@{FetchBalanceTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data array for this message. The format of this varies from gateway to gateway, but will usually be either an associative array, or a Simple\+XMLElement.
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_omnipay_1_1_common_1_1_message_1_1_message_interface_a81a67162a6288d78fc4c55283325f0b4}{Message\+Interface}}.
+
+
+
+Definition at line 50 of file Fetch\+Balance\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a7b3348502e757cb471a0507924c336a1}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a7b3348502e757cb471a0507924c336a1}} 
+\index{FetchBalanceTransactionRequest@{FetchBalanceTransactionRequest}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!FetchBalanceTransactionRequest@{FetchBalanceTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily get\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a7b3348502e757cb471a0507924c336a1}{Abstract\+Request}}.
+
+
+
+Definition at line 59 of file Fetch\+Balance\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a28507580eea1c43f0c9599aa095d09a8}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_a28507580eea1c43f0c9599aa095d09a8}} 
+\index{FetchBalanceTransactionRequest@{FetchBalanceTransactionRequest}!getHttpMethod@{getHttpMethod}}
+\index{getHttpMethod@{getHttpMethod}!FetchBalanceTransactionRequest@{FetchBalanceTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{getHttpMethod()}{getHttpMethod()}}
+{\footnotesize\ttfamily get\+Http\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get HTTP Method.
+
+This is nearly always POST but can be over-\/ridden in sub classes.
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request_a28507580eea1c43f0c9599aa095d09a8}{Abstract\+Request}}.
+
+
+
+Definition at line 64 of file Fetch\+Balance\+Transaction\+Request.\+php.
+
+\mbox{\Hypertarget{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_ad4b8d8a491aee3a49288e3776398d37c}\label{class_omnipay_1_1_stripe_1_1_message_1_1_fetch_balance_transaction_request_ad4b8d8a491aee3a49288e3776398d37c}} 
+\index{FetchBalanceTransactionRequest@{FetchBalanceTransactionRequest}!setBalanceTransactionReference@{setBalanceTransactionReference}}
+\index{setBalanceTransactionReference@{setBalanceTransactionReference}!FetchBalanceTransactionRequest@{FetchBalanceTransactionRequest}}
+\doxysubsubsection{\texorpdfstring{setBalanceTransactionReference()}{setBalanceTransactionReference()}}
+{\footnotesize\ttfamily set\+Balance\+Transaction\+Reference (\begin{DoxyParamCaption}\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set the transaction balance reference
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_omnipay_1_1_stripe_1_1_message_1_1_abstract_request}{Abstract\+Request}} provides a fluent interface. 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file Fetch\+Balance\+Transaction\+Request.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/omnipay/stripe/src/\+Message/\mbox{\hyperlink{_fetch_balance_transaction_request_8php}{Fetch\+Balance\+Transaction\+Request.\+php}}\end{DoxyCompactItemize}

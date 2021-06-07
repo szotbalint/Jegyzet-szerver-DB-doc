@@ -1,0 +1,177 @@
+\hypertarget{class_stripe_1_1_invoice}{}\doxysection{Invoice Class Reference}
+\label{class_stripe_1_1_invoice}\index{Invoice@{Invoice}}
+Inheritance diagram for Invoice\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_stripe_1_1_invoice}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stripe_1_1_invoice_a36272bc924225238efc2eee854b876ff}{save}} (\$opts=null)
+\item 
+\mbox{\hyperlink{class_stripe_1_1_invoice_a1baab8813f089300b10eb93be7160523}{pay}} (\$opts=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_invoice_a4dc9366b498ccb081364695d75107775}{create}} (\$params=null, \$opts=null)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_invoice_a758a5118de102e5cab5c9c68864b07c7}{retrieve}} (\$id, \$opts=null)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_invoice_ac3eba2668dea2e3deac0f09bfea416c2}{all}} (\$params=null, \$opts=null)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_invoice_a93a32034843cb2e92901d3e3d90dc1d5}{update}} (\$id, \$params=null, \$options=null)
+\item 
+static \mbox{\hyperlink{class_stripe_1_1_invoice_ae4f427ee19452a93a9ddd2d6e5e041f2}{upcoming}} (\$params=null, \$opts=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file Invoice.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stripe_1_1_invoice_ac3eba2668dea2e3deac0f09bfea416c2}\label{class_stripe_1_1_invoice_ac3eba2668dea2e3deac0f09bfea416c2}} 
+\index{Invoice@{Invoice}!all@{all}}
+\index{all@{all}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily static all (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_collection}{Collection}} of Invoices 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Invoice.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_invoice_a4dc9366b498ccb081364695d75107775}\label{class_stripe_1_1_invoice_a4dc9366b498ccb081364695d75107775}} 
+\index{Invoice@{Invoice}!create@{create}}
+\index{create@{create}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static create (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_invoice}{Invoice}} The created invoice. 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file Invoice.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_invoice_a1baab8813f089300b10eb93be7160523}\label{class_stripe_1_1_invoice_a1baab8813f089300b10eb93be7160523}} 
+\index{Invoice@{Invoice}!pay@{pay}}
+\index{pay@{pay}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{pay()}{pay()}}
+{\footnotesize\ttfamily pay (\begin{DoxyParamCaption}\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_invoice}{Invoice}} The paid invoice. 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Invoice.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_invoice_a758a5118de102e5cab5c9c68864b07c7}\label{class_stripe_1_1_invoice_a758a5118de102e5cab5c9c68864b07c7}} 
+\index{Invoice@{Invoice}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{retrieve()}{retrieve()}}
+{\footnotesize\ttfamily static retrieve (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The ID of the invoice to retrieve. \\
+\hline
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_invoice}{Invoice}} 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file Invoice.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_invoice_a36272bc924225238efc2eee854b876ff}\label{class_stripe_1_1_invoice_a36272bc924225238efc2eee854b876ff}} 
+\index{Invoice@{Invoice}!save@{save}}
+\index{save@{save}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_invoice}{Invoice}} The saved invoice. 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file Invoice.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_invoice_ae4f427ee19452a93a9ddd2d6e5e041f2}\label{class_stripe_1_1_invoice_ae4f427ee19452a93a9ddd2d6e5e041f2}} 
+\index{Invoice@{Invoice}!upcoming@{upcoming}}
+\index{upcoming@{upcoming}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{upcoming()}{upcoming()}}
+{\footnotesize\ttfamily static upcoming (\begin{DoxyParamCaption}\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$opts = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$opts} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_invoice}{Invoice}} The upcoming invoice. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Invoice.\+php.
+
+\mbox{\Hypertarget{class_stripe_1_1_invoice_a93a32034843cb2e92901d3e3d90dc1d5}\label{class_stripe_1_1_invoice_a93a32034843cb2e92901d3e3d90dc1d5}} 
+\index{Invoice@{Invoice}!update@{update}}
+\index{update@{update}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily static update (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$params = {\ttfamily null},  }\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & The ID of the invoice to update. \\
+\hline
+array | null & {\em \$params} & \\
+\hline
+array | string | null & {\em \$options} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_stripe_1_1_invoice}{Invoice}} The updated invoice. 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file Invoice.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/stripe/stripe-\/php/lib/\mbox{\hyperlink{_invoice_8php}{Invoice.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{interface_guzzle_1_1_parser_1_1_cookie_1_1_cookie_parser_interface}{}\doxysection{Cookie\+Parser\+Interface Interface Reference}
+\label{interface_guzzle_1_1_parser_1_1_cookie_1_1_cookie_parser_interface}\index{CookieParserInterface@{CookieParserInterface}}
+Inheritance diagram for Cookie\+Parser\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_guzzle_1_1_parser_1_1_cookie_1_1_cookie_parser_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_parser_1_1_cookie_1_1_cookie_parser_interface_a390cde3eafa6fbd0586557f8a684d73d}{parse\+Cookie}} (\$cookie, \$host=null, \$path=null, \$decode=false)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_guzzle_1_1_parser_1_1_cookie}{Cookie}} parser interface 
+
+Definition at line 8 of file Cookie\+Parser\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_guzzle_1_1_parser_1_1_cookie_1_1_cookie_parser_interface_a390cde3eafa6fbd0586557f8a684d73d}\label{interface_guzzle_1_1_parser_1_1_cookie_1_1_cookie_parser_interface_a390cde3eafa6fbd0586557f8a684d73d}} 
+\index{CookieParserInterface@{CookieParserInterface}!parseCookie@{parseCookie}}
+\index{parseCookie@{parseCookie}!CookieParserInterface@{CookieParserInterface}}
+\doxysubsubsection{\texorpdfstring{parseCookie()}{parseCookie()}}
+{\footnotesize\ttfamily parse\+Cookie (\begin{DoxyParamCaption}\item[{}]{\$cookie,  }\item[{}]{\$host = {\ttfamily null},  }\item[{}]{\$path = {\ttfamily null},  }\item[{}]{\$decode = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Parse a cookie string as set in a Set-\/\+Cookie HTTP header and return an associative array of data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$cookie} & \mbox{\hyperlink{namespace_guzzle_1_1_parser_1_1_cookie}{Cookie}} header value to parse \\
+\hline
+string & {\em \$host} & Host of an associated request \\
+\hline
+string & {\em \$path} & Path of an associated request \\
+\hline
+bool & {\em \$decode} & Set to TRUE to urldecode cookie values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$bool Returns FALSE on failure or returns an array of arrays, with each of the sub arrays including\+:
+\begin{DoxyItemize}
+\item domain (string) -\/ Domain of the cookie
+\item path (string) -\/ Path of the cookie
+\item cookies (array) -\/ Associative array of cookie names and values
+\item max\+\_\+age (int) -\/ Lifetime of the cookie in seconds
+\item version (int) -\/ Version of the cookie specification. RFC 2965 is 1
+\item secure (bool) -\/ Whether or not this is a secure cookie
+\item discard (bool) -\/ Whether or not this is a discardable cookie
+\item custom (string) -\/ Custom cookie data array
+\item comment (string) -\/ How the cookie is intended to be used
+\item comment\+\_\+url (str)-\/ URL that contains info on how it will be used
+\item port (array$\vert$str) -\/ Array of ports or null
+\item http\+\_\+only (bool) -\/ HTTP only cookie 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_parser_1_1_cookie_1_1_cookie_parser_a390cde3eafa6fbd0586557f8a684d73d}{Cookie\+Parser}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Parser/\+Cookie/\mbox{\hyperlink{_cookie_parser_interface_8php}{Cookie\+Parser\+Interface.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,429 @@
+\hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi}{}\doxysection{Curl\+Multi Class Reference}
+\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi}\index{CurlMulti@{CurlMulti}}
+Inheritance diagram for Curl\+Multi\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_aae6b6bcf73d5846716521b185ecec861}{\+\_\+\+\_\+construct}} (\$select\+Timeout=1.\+0)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_adbc3777a66d60c1491023a4c2c5d9225}{add}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_af9d14e4ae6227970ad603987781573ca}{all}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a7e95d9608bf4766b2177f0e2cbfea113}{remove}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_af41ff968b4d078e633370ef8444853a7}{reset}} (\$hard=false)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a12bcef5130168b80d3d52dc82213f19a}{send}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_ac751e87b3d4c4bf2feb03bee8b092755}{count}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_afd48db932373ed2d0f9d52c275551fed}{throw\+Multi\+Exception}} (array \$exceptions, array \$successful)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a5af46fb223c939f225dfa636e4fdcf4b}{before\+Send}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a9b048d49d39bd9cad78104dcc6dcdc0a}{create\+Curl\+Handle}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a469121070b5e6118f202517380558019}{perform}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_adcebeb4d4542df706e6d4ee55dca8eac}{remove\+Errored\+Request}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \textbackslash{}Exception \$e=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_ab868f900dbc8bba553ffcb36053b4cc4}{remove\+Handle}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a80b0ed414a192c08f4982ebe6f3e4c9d}{\$multi\+Handle}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a28d7688bd020a3b104adc19d1e08df96}{\$requests}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a3cdc52a574bba9e5c2d90e10d7945fc7}{\$handles}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_af5db7d0f9bb20df948dcf9241146dd56}{\$resource\+Hash}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a7b3cdaf64a0a391d40bc8ecd4008218a}{\$exceptions}} = array()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_abdc0098b3ead0fb819e232570620128d}{\$successful}} = array()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a20c8ae9df35f01d6cb86af9675a78261}{\$multi\+Errors}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a3272e82fac71fe4320470246686af7ca}{\$select\+Timeout}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Send \{\begin{DoxySeeAlso}{See also}
+Request\+Interface\} objects in parallel using curl\+\_\+multi 
+\end{DoxySeeAlso}
+
+
+Definition at line 16 of file Curl\+Multi.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_aae6b6bcf73d5846716521b185ecec861}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_aae6b6bcf73d5846716521b185ecec861}} 
+\index{CurlMulti@{CurlMulti}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$select\+Timeout = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a421831a265621325e1fdd19aace0c758}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a421831a265621325e1fdd19aace0c758}} 
+\index{CurlMulti@{CurlMulti}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{\_\_destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file Curl\+Multi.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_adbc3777a66d60c1491023a4c2c5d9225}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_adbc3777a66d60c1491023a4c2c5d9225}} 
+\index{CurlMulti@{CurlMulti}!add@{add}}
+\index{add@{add}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+Add a request to the pool.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to add\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_curl_1_1_curl_multi_interface}{Curl\+Multi\+Interface}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_curl_1_1_curl_multi_interface_adbc3777a66d60c1491023a4c2c5d9225}{Curl\+Multi\+Interface}}.
+
+
+
+Definition at line 66 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_af9d14e4ae6227970ad603987781573ca}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_af9d14e4ae6227970ad603987781573ca}} 
+\index{CurlMulti@{CurlMulti}!all@{all}}
+\index{all@{all}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get an array of attached \{\begin{DoxySeeAlso}{See also}
+Request\+Interface\} objects
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_curl_1_1_curl_multi_interface_af9d14e4ae6227970ad603987781573ca}{Curl\+Multi\+Interface}}.
+
+
+
+Definition at line 77 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a5af46fb223c939f225dfa636e4fdcf4b}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a5af46fb223c939f225dfa636e4fdcf4b}} 
+\index{CurlMulti@{CurlMulti}!beforeSend@{beforeSend}}
+\index{beforeSend@{beforeSend}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{beforeSend()}{beforeSend()}}
+{\footnotesize\ttfamily before\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Prepare for sending
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to prepare \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 157 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_ac751e87b3d4c4bf2feb03bee8b092755}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_ac751e87b3d4c4bf2feb03bee8b092755}} 
+\index{CurlMulti@{CurlMulti}!count@{count}}
+\index{count@{count}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 121 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a9b048d49d39bd9cad78104dcc6dcdc0a}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a9b048d49d39bd9cad78104dcc6dcdc0a}} 
+\index{CurlMulti@{CurlMulti}!createCurlHandle@{createCurlHandle}}
+\index{createCurlHandle@{createCurlHandle}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{createCurlHandle()}{createCurlHandle()}}
+{\footnotesize\ttfamily create\+Curl\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create a curl handle for a request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_handle}{Curl\+Handle}} 
+\end{DoxyReturn}
+
+
+Definition at line 192 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a469121070b5e6118f202517380558019}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a469121070b5e6118f202517380558019}} 
+\index{CurlMulti@{CurlMulti}!perform@{perform}}
+\index{perform@{perform}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{perform()}{perform()}}
+{\footnotesize\ttfamily perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get the data from the multi handle 
+
+Definition at line 204 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a7e95d9608bf4766b2177f0e2cbfea113}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a7e95d9608bf4766b2177f0e2cbfea113}} 
+\index{CurlMulti@{CurlMulti}!remove@{remove}}
+\index{remove@{remove}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+Remove a request from the pool.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to remove\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns true on success or false on failure 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_curl_1_1_curl_multi_interface_a7e95d9608bf4766b2177f0e2cbfea113}{Curl\+Multi\+Interface}}.
+
+
+
+Definition at line 82 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_adcebeb4d4542df706e6d4ee55dca8eac}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_adcebeb4d4542df706e6d4ee55dca8eac}} 
+\index{CurlMulti@{CurlMulti}!removeErroredRequest@{removeErroredRequest}}
+\index{removeErroredRequest@{removeErroredRequest}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{removeErroredRequest()}{removeErroredRequest()}}
+{\footnotesize\ttfamily remove\+Errored\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{\textbackslash{}Exception}]{\$e = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Remove a request that encountered an exception
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to remove \\
+\hline
+\textbackslash{}\+Exception & {\em \$e} & \mbox{\hyperlink{namespace_guzzle_1_1_http_1_1_exception}{Exception}} encountered \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 271 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_ab868f900dbc8bba553ffcb36053b4cc4}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_ab868f900dbc8bba553ffcb36053b4cc4}} 
+\index{CurlMulti@{CurlMulti}!removeHandle@{removeHandle}}
+\index{removeHandle@{removeHandle}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{removeHandle()}{removeHandle()}}
+{\footnotesize\ttfamily remove\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Remove a curl handle from the curl multi object
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request that owns the handle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 332 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_af41ff968b4d078e633370ef8444853a7}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_af41ff968b4d078e633370ef8444853a7}} 
+\index{CurlMulti@{CurlMulti}!reset@{reset}}
+\index{reset@{reset}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}\item[{}]{\$hard = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Reset the state and remove any attached Request\+Interface objects
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$hard} & Set to true to close and reopen any open multi handles \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_curl_1_1_curl_multi_interface_af41ff968b4d078e633370ef8444853a7}{Curl\+Multi\+Interface}}.
+
+
+
+Definition at line 96 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a12bcef5130168b80d3d52dc82213f19a}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a12bcef5130168b80d3d52dc82213f19a}} 
+\index{CurlMulti@{CurlMulti}!send@{send}}
+\index{send@{send}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Send a pool of \{\begin{DoxySeeAlso}{See also}
+Request\+Interface\} requests.
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception\+Collection} & if any requests threw exceptions during the transfer. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_curl_1_1_curl_multi_interface_a12bcef5130168b80d3d52dc82213f19a}{Curl\+Multi\+Interface}}.
+
+
+
+Definition at line 109 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_afd48db932373ed2d0f9d52c275551fed}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_afd48db932373ed2d0f9d52c275551fed}} 
+\index{CurlMulti@{CurlMulti}!throwMultiException@{throwMultiException}}
+\index{throwMultiException@{throwMultiException}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{throwMultiException()}{throwMultiException()}}
+{\footnotesize\ttfamily throw\+Multi\+Exception (\begin{DoxyParamCaption}\item[{array}]{\$exceptions,  }\item[{array}]{\$successful }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Build and throw a Multi\+Transfer\+Exception
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$exceptions} & Exceptions encountered \\
+\hline
+array & {\em \$successful} & Successful requests \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Multi\+Transfer\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 133 of file Curl\+Multi.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a7b3cdaf64a0a391d40bc8ecd4008218a}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a7b3cdaf64a0a391d40bc8ecd4008218a}} 
+\index{CurlMulti@{CurlMulti}!\$exceptions@{\$exceptions}}
+\index{\$exceptions@{\$exceptions}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{\$exceptions}{$exceptions}}
+{\footnotesize\ttfamily \$exceptions = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a3cdc52a574bba9e5c2d90e10d7945fc7}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a3cdc52a574bba9e5c2d90e10d7945fc7}} 
+\index{CurlMulti@{CurlMulti}!\$handles@{\$handles}}
+\index{\$handles@{\$handles}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{\$handles}{$handles}}
+{\footnotesize\ttfamily \$handles\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a20c8ae9df35f01d6cb86af9675a78261}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a20c8ae9df35f01d6cb86af9675a78261}} 
+\index{CurlMulti@{CurlMulti}!\$multiErrors@{\$multiErrors}}
+\index{\$multiErrors@{\$multiErrors}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{\$multiErrors}{$multiErrors}}
+{\footnotesize\ttfamily \$multi\+Errors\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        CURLM\_BAD\_HANDLE      => array(\textcolor{stringliteral}{'CURLM\_BAD\_HANDLE'}, \textcolor{stringliteral}{'The passed-\/in handle is not a valid CURLM handle.'}),}
+\DoxyCodeLine{        CURLM\_BAD\_EASY\_HANDLE => array(\textcolor{stringliteral}{'CURLM\_BAD\_EASY\_HANDLE'}, \textcolor{stringliteral}{"{}An easy handle was not good/valid. It could mean that it isn't an easy handle at all, or possibly that the handle already is in used by this or another multi handle."{}}),}
+\DoxyCodeLine{        CURLM\_OUT\_OF\_MEMORY   => array(\textcolor{stringliteral}{'CURLM\_OUT\_OF\_MEMORY'}, \textcolor{stringliteral}{'You are doomed.'}),}
+\DoxyCodeLine{        CURLM\_INTERNAL\_ERROR  => array(\textcolor{stringliteral}{'CURLM\_INTERNAL\_ERROR'}, \textcolor{stringliteral}{'This can only be returned if libcurl bugs. Please report it to us!'})}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Definition at line 37 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a80b0ed414a192c08f4982ebe6f3e4c9d}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a80b0ed414a192c08f4982ebe6f3e4c9d}} 
+\index{CurlMulti@{CurlMulti}!\$multiHandle@{\$multiHandle}}
+\index{\$multiHandle@{\$multiHandle}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{\$multiHandle}{$multiHandle}}
+{\footnotesize\ttfamily \$multi\+Handle\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 19 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a28d7688bd020a3b104adc19d1e08df96}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a28d7688bd020a3b104adc19d1e08df96}} 
+\index{CurlMulti@{CurlMulti}!\$requests@{\$requests}}
+\index{\$requests@{\$requests}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{\$requests}{$requests}}
+{\footnotesize\ttfamily \$requests\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 22 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_af5db7d0f9bb20df948dcf9241146dd56}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_af5db7d0f9bb20df948dcf9241146dd56}} 
+\index{CurlMulti@{CurlMulti}!\$resourceHash@{\$resourceHash}}
+\index{\$resourceHash@{\$resourceHash}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{\$resourceHash}{$resourceHash}}
+{\footnotesize\ttfamily \$resource\+Hash\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a3272e82fac71fe4320470246686af7ca}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_a3272e82fac71fe4320470246686af7ca}} 
+\index{CurlMulti@{CurlMulti}!\$selectTimeout@{\$selectTimeout}}
+\index{\$selectTimeout@{\$selectTimeout}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{\$selectTimeout}{$selectTimeout}}
+{\footnotesize\ttfamily \$select\+Timeout\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 45 of file Curl\+Multi.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_abdc0098b3ead0fb819e232570620128d}\label{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi_abdc0098b3ead0fb819e232570620128d}} 
+\index{CurlMulti@{CurlMulti}!\$successful@{\$successful}}
+\index{\$successful@{\$successful}!CurlMulti@{CurlMulti}}
+\doxysubsubsection{\texorpdfstring{\$successful}{$successful}}
+{\footnotesize\ttfamily \$successful = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 34 of file Curl\+Multi.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Http/\+Curl/\mbox{\hyperlink{_curl_multi_8php}{Curl\+Multi.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+\hypertarget{class_guzzle_1_1_parser_1_1_message_1_1_message_parser}{}\doxysection{Message\+Parser Class Reference}
+\label{class_guzzle_1_1_parser_1_1_message_1_1_message_parser}\index{MessageParser@{MessageParser}}
+Inheritance diagram for Message\+Parser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_guzzle_1_1_parser_1_1_message_1_1_message_parser}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_parser_1_1_message_1_1_message_parser_aebbb6cc71cc44d2e3171be81db7f8e80}{parse\+Request}} (\$message)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_parser_1_1_message_1_1_message_parser_a5712d7409a3202b709fdad90d6619620}{parse\+Response}} (\$message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_parser_1_1_message_1_1_message_parser_a6d4940f06e5510840c86be609c60ec68}{parse\+Message}} (\$message)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Default request and response parser used by Guzzle. Optimized for speed. 
+
+Definition at line 8 of file Message\+Parser.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_parser_1_1_message_1_1_message_parser_a6d4940f06e5510840c86be609c60ec68}\label{class_guzzle_1_1_parser_1_1_message_1_1_message_parser_a6d4940f06e5510840c86be609c60ec68}} 
+\index{MessageParser@{MessageParser}!parseMessage@{parseMessage}}
+\index{parseMessage@{parseMessage}!MessageParser@{MessageParser}}
+\doxysubsubsection{\texorpdfstring{parseMessage()}{parseMessage()}}
+{\footnotesize\ttfamily parse\+Message (\begin{DoxyParamCaption}\item[{}]{\$message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parse a message into parts
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$message} & \mbox{\hyperlink{namespace_guzzle_1_1_parser_1_1_message}{Message}} to parse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Message\+Parser.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_parser_1_1_message_1_1_message_parser_aebbb6cc71cc44d2e3171be81db7f8e80}\label{class_guzzle_1_1_parser_1_1_message_1_1_message_parser_aebbb6cc71cc44d2e3171be81db7f8e80}} 
+\index{MessageParser@{MessageParser}!parseRequest@{parseRequest}}
+\index{parseRequest@{parseRequest}!MessageParser@{MessageParser}}
+\doxysubsubsection{\texorpdfstring{parseRequest()}{parseRequest()}}
+{\footnotesize\ttfamily parse\+Request (\begin{DoxyParamCaption}\item[{}]{\$message }\end{DoxyParamCaption})}
+
+Parse an HTTP request message into an associative array of parts.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$message} & HTTP request to parse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$bool Returns false if the message is invalid 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_parser_1_1_message_1_1_message_parser_interface_aebbb6cc71cc44d2e3171be81db7f8e80}{Message\+Parser\+Interface}}.
+
+
+
+Definition at line 10 of file Message\+Parser.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_parser_1_1_message_1_1_message_parser_a5712d7409a3202b709fdad90d6619620}\label{class_guzzle_1_1_parser_1_1_message_1_1_message_parser_a5712d7409a3202b709fdad90d6619620}} 
+\index{MessageParser@{MessageParser}!parseResponse@{parseResponse}}
+\index{parseResponse@{parseResponse}!MessageParser@{MessageParser}}
+\doxysubsubsection{\texorpdfstring{parseResponse()}{parseResponse()}}
+{\footnotesize\ttfamily parse\+Response (\begin{DoxyParamCaption}\item[{}]{\$message }\end{DoxyParamCaption})}
+
+Parse an HTTP response message into an associative array of parts.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$message} & HTTP response to parse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$bool Returns false if the message is invalid 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_parser_1_1_message_1_1_message_parser_interface_a5712d7409a3202b709fdad90d6619620}{Message\+Parser\+Interface}}.
+
+
+
+Definition at line 41 of file Message\+Parser.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Parser/\+Message/\mbox{\hyperlink{_message_parser_8php}{Message\+Parser.\+php}}\end{DoxyCompactItemize}

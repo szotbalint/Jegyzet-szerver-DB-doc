@@ -1,0 +1,118 @@
+\hypertarget{class_guzzle_1_1_batch_1_1_batch_request_transfer}{}\doxysection{Batch\+Request\+Transfer Class Reference}
+\label{class_guzzle_1_1_batch_1_1_batch_request_transfer}\index{BatchRequestTransfer@{BatchRequestTransfer}}
+Inheritance diagram for Batch\+Request\+Transfer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_batch_1_1_batch_request_transfer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_request_transfer_a9eb160f35c999c4d48bee9d90b53654a}{\+\_\+\+\_\+construct}} (\$batch\+Size=50)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_request_transfer_ae5750bba85ba4c7c1d7fb9cef789e054}{create\+Batches}} (\textbackslash{}Spl\+Queue \$queue)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_request_transfer_a49020e430ac206e6b083d0e0d068b263}{transfer}} (array \$batch)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_request_transfer_aca95f569480c222954dbf1a755bdcc97}{\$batch\+Size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch}{Batch}} transfer strategy used to efficiently transfer a batch of requests. This class is to be used with \{\begin{DoxySeeAlso}{See also}
+Guzzle\textbackslash{}\+Batch\textbackslash{}\+Batch\+Interface\} 
+\end{DoxySeeAlso}
+
+
+Definition at line 14 of file Batch\+Request\+Transfer.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_request_transfer_a9eb160f35c999c4d48bee9d90b53654a}\label{class_guzzle_1_1_batch_1_1_batch_request_transfer_a9eb160f35c999c4d48bee9d90b53654a}} 
+\index{BatchRequestTransfer@{BatchRequestTransfer}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!BatchRequestTransfer@{BatchRequestTransfer}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$batch\+Size = {\ttfamily 50} }\end{DoxyParamCaption})}
+
+Constructor used to specify how large each batch should be
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$batch\+Size} & Size of each batch \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Batch\+Request\+Transfer.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_request_transfer_ae5750bba85ba4c7c1d7fb9cef789e054}\label{class_guzzle_1_1_batch_1_1_batch_request_transfer_ae5750bba85ba4c7c1d7fb9cef789e054}} 
+\index{BatchRequestTransfer@{BatchRequestTransfer}!createBatches@{createBatches}}
+\index{createBatches@{createBatches}!BatchRequestTransfer@{BatchRequestTransfer}}
+\doxysubsubsection{\texorpdfstring{createBatches()}{createBatches()}}
+{\footnotesize\ttfamily create\+Batches (\begin{DoxyParamCaption}\item[{\textbackslash{}Spl\+Queue}]{\$queue }\end{DoxyParamCaption})}
+
+Creates batches of requests by grouping requests by their associated curl multi object. \{Divide a queue of items into an array batches
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Spl\+Queue & {\em \$queue} & Queue of items to divide into batches. Items are removed as they are iterated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$\textbackslash{}\+Traversable Returns an array or Traversable object that contains arrays of items to transfer
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_divisor_interface_ae5750bba85ba4c7c1d7fb9cef789e054}{Batch\+Divisor\+Interface}}.
+
+
+
+Definition at line 33 of file Batch\+Request\+Transfer.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_request_transfer_a49020e430ac206e6b083d0e0d068b263}\label{class_guzzle_1_1_batch_1_1_batch_request_transfer_a49020e430ac206e6b083d0e0d068b263}} 
+\index{BatchRequestTransfer@{BatchRequestTransfer}!transfer@{transfer}}
+\index{transfer@{transfer}!BatchRequestTransfer@{BatchRequestTransfer}}
+\doxysubsubsection{\texorpdfstring{transfer()}{transfer()}}
+{\footnotesize\ttfamily transfer (\begin{DoxyParamCaption}\item[{array}]{\$batch }\end{DoxyParamCaption})}
+
+Transfer an array of items
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$batch} & Array of items to transfer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_transfer_interface_a49020e430ac206e6b083d0e0d068b263}{Batch\+Transfer\+Interface}}.
+
+
+
+Definition at line 59 of file Batch\+Request\+Transfer.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_request_transfer_aca95f569480c222954dbf1a755bdcc97}\label{class_guzzle_1_1_batch_1_1_batch_request_transfer_aca95f569480c222954dbf1a755bdcc97}} 
+\index{BatchRequestTransfer@{BatchRequestTransfer}!\$batchSize@{\$batchSize}}
+\index{\$batchSize@{\$batchSize}!BatchRequestTransfer@{BatchRequestTransfer}}
+\doxysubsubsection{\texorpdfstring{\$batchSize}{$batchSize}}
+{\footnotesize\ttfamily \$batch\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Batch\+Request\+Transfer.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Batch/\mbox{\hyperlink{_batch_request_transfer_8php}{Batch\+Request\+Transfer.\+php}}\end{DoxyCompactItemize}

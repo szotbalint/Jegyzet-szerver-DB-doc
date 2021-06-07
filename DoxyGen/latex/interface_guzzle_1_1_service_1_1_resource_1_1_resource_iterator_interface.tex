@@ -1,0 +1,138 @@
+\hypertarget{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{}\doxysection{Resource\+Iterator\+Interface Interface Reference}
+\label{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}\index{ResourceIteratorInterface@{ResourceIteratorInterface}}
+Inheritance diagram for Resource\+Iterator\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.414634cm]{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_a7619eef85cb7cdac49cc330a05cb5b62}{get\+Next\+Token}} ()
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_af06052007e9d286ba36d06f273b50b51}{set\+Limit}} (\$limit)
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_abc5d90464aa4a14206fcff8e70774e44}{set\+Page\+Size}} (\$page\+Size)
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_a24a9bf83a1002d46ece83a93d14bd921}{get}} (\$key)
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_aab787bd83f84f4215dceb35f7c305eee}{set}} (\$key, \$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Iterates over a paginated resource using subsequent requests in order to retrieve the entire matching result set 
+
+Definition at line 11 of file Resource\+Iterator\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_a24a9bf83a1002d46ece83a93d14bd921}\label{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_a24a9bf83a1002d46ece83a93d14bd921}} 
+\index{ResourceIteratorInterface@{ResourceIteratorInterface}!get@{get}}
+\index{get@{get}!ResourceIteratorInterface@{ResourceIteratorInterface}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{}]{\$key }\end{DoxyParamCaption})}
+
+Get a data option from the iterator
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & Key of the option to retrieve\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed$\vert$null Returns NULL if not set or the value if set 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a24a9bf83a1002d46ece83a93d14bd921}{Resource\+Iterator}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_a7619eef85cb7cdac49cc330a05cb5b62}\label{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_a7619eef85cb7cdac49cc330a05cb5b62}} 
+\index{ResourceIteratorInterface@{ResourceIteratorInterface}!getNextToken@{getNextToken}}
+\index{getNextToken@{getNextToken}!ResourceIteratorInterface@{ResourceIteratorInterface}}
+\doxysubsubsection{\texorpdfstring{getNextToken()}{getNextToken()}}
+{\footnotesize\ttfamily get\+Next\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the Next\+Token that can be used in other iterators.
+
+\begin{DoxyReturn}{Returns}
+string Returns a Next\+Token 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a7619eef85cb7cdac49cc330a05cb5b62}{Resource\+Iterator}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_aab787bd83f84f4215dceb35f7c305eee}\label{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_aab787bd83f84f4215dceb35f7c305eee}} 
+\index{ResourceIteratorInterface@{ResourceIteratorInterface}!set@{set}}
+\index{set@{set}!ResourceIteratorInterface@{ResourceIteratorInterface}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set a data option on the iterator
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & Key of the option to set \\
+\hline
+mixed & {\em \$value} & Value to set for the option\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_aab787bd83f84f4215dceb35f7c305eee}{Resource\+Iterator}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_af06052007e9d286ba36d06f273b50b51}\label{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_af06052007e9d286ba36d06f273b50b51}} 
+\index{ResourceIteratorInterface@{ResourceIteratorInterface}!setLimit@{setLimit}}
+\index{setLimit@{setLimit}!ResourceIteratorInterface@{ResourceIteratorInterface}}
+\doxysubsubsection{\texorpdfstring{setLimit()}{setLimit()}}
+{\footnotesize\ttfamily set\+Limit (\begin{DoxyParamCaption}\item[{}]{\$limit }\end{DoxyParamCaption})}
+
+Attempt to limit the total number of resources returned by the iterator.
+
+You may still receive more items than you specify. Set to 0 to specify no limit.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$limit} & Limit amount\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_af06052007e9d286ba36d06f273b50b51}{Resource\+Iterator}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_abc5d90464aa4a14206fcff8e70774e44}\label{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_abc5d90464aa4a14206fcff8e70774e44}} 
+\index{ResourceIteratorInterface@{ResourceIteratorInterface}!setPageSize@{setPageSize}}
+\index{setPageSize@{setPageSize}!ResourceIteratorInterface@{ResourceIteratorInterface}}
+\doxysubsubsection{\texorpdfstring{setPageSize()}{setPageSize()}}
+{\footnotesize\ttfamily set\+Page\+Size (\begin{DoxyParamCaption}\item[{}]{\$page\+Size }\end{DoxyParamCaption})}
+
+Attempt to limit the total number of resources retrieved per request by the iterator.
+
+The iterator may return more than you specify in the page size argument depending on the service and underlying command implementation. Set to 0 to specify no page size limitation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$page\+Size} & Limit amount\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_abc5d90464aa4a14206fcff8e70774e44}{Resource\+Iterator}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Resource/\mbox{\hyperlink{_resource_iterator_interface_8php}{Resource\+Iterator\+Interface.\+php}}\end{DoxyCompactItemize}

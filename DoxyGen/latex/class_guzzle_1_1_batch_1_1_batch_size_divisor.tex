@@ -1,0 +1,129 @@
+\hypertarget{class_guzzle_1_1_batch_1_1_batch_size_divisor}{}\doxysection{Batch\+Size\+Divisor Class Reference}
+\label{class_guzzle_1_1_batch_1_1_batch_size_divisor}\index{BatchSizeDivisor@{BatchSizeDivisor}}
+Inheritance diagram for Batch\+Size\+Divisor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_batch_1_1_batch_size_divisor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_size_divisor_a3c8e2628fe8b2aaaf5cea84772e54c44}{\+\_\+\+\_\+construct}} (\$size)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_size_divisor_aa0bc9af8f0fa6dc091cb6da9b59f4437}{set\+Size}} (\$size)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_size_divisor_a75cce10cdf81be6dc84881c28b3379b7}{get\+Size}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_size_divisor_ae5750bba85ba4c7c1d7fb9cef789e054}{create\+Batches}} (\textbackslash{}Spl\+Queue \$queue)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_size_divisor_af594986e4618a8d6a5d7566617f583c6}{\$size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Divides batches into smaller batches under a certain size 
+
+Definition at line 8 of file Batch\+Size\+Divisor.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_size_divisor_a3c8e2628fe8b2aaaf5cea84772e54c44}\label{class_guzzle_1_1_batch_1_1_batch_size_divisor_a3c8e2628fe8b2aaaf5cea84772e54c44}} 
+\index{BatchSizeDivisor@{BatchSizeDivisor}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!BatchSizeDivisor@{BatchSizeDivisor}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$size} & Size of each batch \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file Batch\+Size\+Divisor.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_size_divisor_ae5750bba85ba4c7c1d7fb9cef789e054}\label{class_guzzle_1_1_batch_1_1_batch_size_divisor_ae5750bba85ba4c7c1d7fb9cef789e054}} 
+\index{BatchSizeDivisor@{BatchSizeDivisor}!createBatches@{createBatches}}
+\index{createBatches@{createBatches}!BatchSizeDivisor@{BatchSizeDivisor}}
+\doxysubsubsection{\texorpdfstring{createBatches()}{createBatches()}}
+{\footnotesize\ttfamily create\+Batches (\begin{DoxyParamCaption}\item[{\textbackslash{}Spl\+Queue}]{\$queue }\end{DoxyParamCaption})}
+
+Divide a queue of items into an array batches
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Spl\+Queue & {\em \$queue} & Queue of items to divide into batches. Items are removed as they are iterated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array$\vert$\textbackslash{}\+Traversable Returns an array or Traversable object that contains arrays of items to transfer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_batch_1_1_batch_divisor_interface_ae5750bba85ba4c7c1d7fb9cef789e054}{Batch\+Divisor\+Interface}}.
+
+
+
+Definition at line 43 of file Batch\+Size\+Divisor.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_size_divisor_a75cce10cdf81be6dc84881c28b3379b7}\label{class_guzzle_1_1_batch_1_1_batch_size_divisor_a75cce10cdf81be6dc84881c28b3379b7}} 
+\index{BatchSizeDivisor@{BatchSizeDivisor}!getSize@{getSize}}
+\index{getSize@{getSize}!BatchSizeDivisor@{BatchSizeDivisor}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the size of each batch
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Batch\+Size\+Divisor.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_size_divisor_aa0bc9af8f0fa6dc091cb6da9b59f4437}\label{class_guzzle_1_1_batch_1_1_batch_size_divisor_aa0bc9af8f0fa6dc091cb6da9b59f4437}} 
+\index{BatchSizeDivisor@{BatchSizeDivisor}!setSize@{setSize}}
+\index{setSize@{setSize}!BatchSizeDivisor@{BatchSizeDivisor}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily set\+Size (\begin{DoxyParamCaption}\item[{}]{\$size }\end{DoxyParamCaption})}
+
+Set the size of each batch
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$size} & Size of each batch\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_batch_1_1_batch_size_divisor}{Batch\+Size\+Divisor}} 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file Batch\+Size\+Divisor.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_batch_1_1_batch_size_divisor_af594986e4618a8d6a5d7566617f583c6}\label{class_guzzle_1_1_batch_1_1_batch_size_divisor_af594986e4618a8d6a5d7566617f583c6}} 
+\index{BatchSizeDivisor@{BatchSizeDivisor}!\$size@{\$size}}
+\index{\$size@{\$size}!BatchSizeDivisor@{BatchSizeDivisor}}
+\doxysubsubsection{\texorpdfstring{\$size}{$size}}
+{\footnotesize\ttfamily \$size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 11 of file Batch\+Size\+Divisor.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Batch/\mbox{\hyperlink{_batch_size_divisor_8php}{Batch\+Size\+Divisor.\+php}}\end{DoxyCompactItemize}

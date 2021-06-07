@@ -1,0 +1,129 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy}{}\doxysection{Abstract\+Error\+Code\+Backoff\+Strategy Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy}\index{AbstractErrorCodeBackoffStrategy@{AbstractErrorCodeBackoffStrategy}}
+Inheritance diagram for Abstract\+Error\+Code\+Backoff\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.440860cm]{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_af396ba0fd045bb8cda0c4aaf4d5ee4b5}{\+\_\+\+\_\+construct}} (array \$codes=null, \mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_backoff_1_1_backoff_strategy_interface}{Backoff\+Strategy\+Interface}} \$next=null)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a4b101bee317e17df87a73f52689b0210}{makes\+Decision}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a2ad9cf9b8bcf8d35c82c18cd3dd8c5cd}{get\+Default\+Failure\+Codes}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a3b93da793cd81d9e4667f7b3729d4f43}{\$error\+Codes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a3beb89c4150ae99562602a7f1e1970eb}{\$default\+Error\+Codes}} = array()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Strategy used to retry when certain error codes are encountered 
+
+Definition at line 8 of file Abstract\+Error\+Code\+Backoff\+Strategy.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_af396ba0fd045bb8cda0c4aaf4d5ee4b5}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_af396ba0fd045bb8cda0c4aaf4d5ee4b5}} 
+\index{AbstractErrorCodeBackoffStrategy@{AbstractErrorCodeBackoffStrategy}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!AbstractErrorCodeBackoffStrategy@{AbstractErrorCodeBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$codes = {\ttfamily null},  }\item[{\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_backoff_1_1_backoff_strategy_interface}{Backoff\+Strategy\+Interface}}}]{\$next = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$codes} & Array of codes that should be retried \\
+\hline
+\mbox{\hyperlink{interface_guzzle_1_1_plugin_1_1_backoff_1_1_backoff_strategy_interface}{Backoff\+Strategy\+Interface}} & {\em \$next} & The optional next strategy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file Abstract\+Error\+Code\+Backoff\+Strategy.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a2ad9cf9b8bcf8d35c82c18cd3dd8c5cd}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a2ad9cf9b8bcf8d35c82c18cd3dd8c5cd}} 
+\index{AbstractErrorCodeBackoffStrategy@{AbstractErrorCodeBackoffStrategy}!getDefaultFailureCodes@{getDefaultFailureCodes}}
+\index{getDefaultFailureCodes@{getDefaultFailureCodes}!AbstractErrorCodeBackoffStrategy@{AbstractErrorCodeBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{getDefaultFailureCodes()}{getDefaultFailureCodes()}}
+{\footnotesize\ttfamily static get\+Default\+Failure\+Codes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get the default failure codes to retry
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file Abstract\+Error\+Code\+Backoff\+Strategy.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a4b101bee317e17df87a73f52689b0210}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a4b101bee317e17df87a73f52689b0210}} 
+\index{AbstractErrorCodeBackoffStrategy@{AbstractErrorCodeBackoffStrategy}!makesDecision@{makesDecision}}
+\index{makesDecision@{makesDecision}!AbstractErrorCodeBackoffStrategy@{AbstractErrorCodeBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{makesDecision()}{makesDecision()}}
+{\footnotesize\ttfamily makes\+Decision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if the strategy does filtering and makes decisions on whether or not to retry.
+
+Strategies that return false will never retry if all of the previous strategies in a chain defer on a backoff decision.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_backoff_strategy_a4b101bee317e17df87a73f52689b0210}{Abstract\+Backoff\+Strategy}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_reason_phrase_backoff_strategy_a4b101bee317e17df87a73f52689b0210}{Reason\+Phrase\+Backoff\+Strategy}}.
+
+
+
+Definition at line 36 of file Abstract\+Error\+Code\+Backoff\+Strategy.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a3beb89c4150ae99562602a7f1e1970eb}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a3beb89c4150ae99562602a7f1e1970eb}} 
+\index{AbstractErrorCodeBackoffStrategy@{AbstractErrorCodeBackoffStrategy}!\$defaultErrorCodes@{\$defaultErrorCodes}}
+\index{\$defaultErrorCodes@{\$defaultErrorCodes}!AbstractErrorCodeBackoffStrategy@{AbstractErrorCodeBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{\$defaultErrorCodes}{$defaultErrorCodes}}
+{\footnotesize\ttfamily \$default\+Error\+Codes = array()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 11 of file Abstract\+Error\+Code\+Backoff\+Strategy.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a3b93da793cd81d9e4667f7b3729d4f43}\label{class_guzzle_1_1_plugin_1_1_backoff_1_1_abstract_error_code_backoff_strategy_a3b93da793cd81d9e4667f7b3729d4f43}} 
+\index{AbstractErrorCodeBackoffStrategy@{AbstractErrorCodeBackoffStrategy}!\$errorCodes@{\$errorCodes}}
+\index{\$errorCodes@{\$errorCodes}!AbstractErrorCodeBackoffStrategy@{AbstractErrorCodeBackoffStrategy}}
+\doxysubsubsection{\texorpdfstring{\$errorCodes}{$errorCodes}}
+{\footnotesize\ttfamily \$error\+Codes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file Abstract\+Error\+Code\+Backoff\+Strategy.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Backoff/\mbox{\hyperlink{_abstract_error_code_backoff_strategy_8php}{Abstract\+Error\+Code\+Backoff\+Strategy.\+php}}\end{DoxyCompactItemize}

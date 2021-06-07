@@ -1,0 +1,170 @@
+\hypertarget{interface_guzzle_1_1_http_1_1_entity_body_interface}{}\doxysection{Entity\+Body\+Interface Interface Reference}
+\label{interface_guzzle_1_1_http_1_1_entity_body_interface}\index{EntityBodyInterface@{EntityBodyInterface}}
+Inheritance diagram for Entity\+Body\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{interface_guzzle_1_1_http_1_1_entity_body_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface_a69f574162b8c56b0c75a36469349c21d}{set\+Rewind\+Function}} (\$callable)
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface_ae8831f619eef72cc8c07813cc352bbaa}{compress}} (\$filter=\textquotesingle{}zlib.\+deflate\textquotesingle{})
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface_a57d886700b9c73579b391bb908ebd97f}{uncompress}} (\$filter=\textquotesingle{}zlib.\+inflate\textquotesingle{})
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface_ada8d0f952b0facf4465480d95e777243}{get\+Content\+Length}} ()
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface_aa843137beb02bc2516fe0551c00ff7d7}{get\+Content\+Type}} ()
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface_aa8b42fe02aadb88cd634fc94346a3e74}{get\+Content\+Md5}} (\$raw\+Output=false, \$base64\+Encode=false)
+\item 
+\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface_ab88fba7bb081d2801c42272907921ce0}{get\+Content\+Encoding}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entity body used with an HTTP request or response 
+
+Definition at line 10 of file Entity\+Body\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_guzzle_1_1_http_1_1_entity_body_interface_ae8831f619eef72cc8c07813cc352bbaa}\label{interface_guzzle_1_1_http_1_1_entity_body_interface_ae8831f619eef72cc8c07813cc352bbaa}} 
+\index{EntityBodyInterface@{EntityBodyInterface}!compress@{compress}}
+\index{compress@{compress}!EntityBodyInterface@{EntityBodyInterface}}
+\doxysubsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily compress (\begin{DoxyParamCaption}\item[{}]{\$filter = {\ttfamily \textquotesingle{}zlib.deflate\textquotesingle{}} }\end{DoxyParamCaption})}
+
+If the stream is readable, compress the data in the stream using deflate compression. The uncompressed stream is then closed, and the compressed stream then becomes the wrapped stream.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$filter} & Compression filter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns TRUE on success or FALSE on failure 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_http_1_1_entity_body_ae8831f619eef72cc8c07813cc352bbaa}{Entity\+Body}}, and \mbox{\hyperlink{class_guzzle_1_1_http_1_1_abstract_entity_body_decorator_ae8831f619eef72cc8c07813cc352bbaa}{Abstract\+Entity\+Body\+Decorator}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_http_1_1_entity_body_interface_ab88fba7bb081d2801c42272907921ce0}\label{interface_guzzle_1_1_http_1_1_entity_body_interface_ab88fba7bb081d2801c42272907921ce0}} 
+\index{EntityBodyInterface@{EntityBodyInterface}!getContentEncoding@{getContentEncoding}}
+\index{getContentEncoding@{getContentEncoding}!EntityBodyInterface@{EntityBodyInterface}}
+\doxysubsubsection{\texorpdfstring{getContentEncoding()}{getContentEncoding()}}
+{\footnotesize\ttfamily get\+Content\+Encoding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the Content-\/\+Encoding of the \mbox{\hyperlink{class_guzzle_1_1_http_1_1_entity_body}{Entity\+Body}}
+
+\begin{DoxyReturn}{Returns}
+bool$\vert$string 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_http_1_1_entity_body_ab88fba7bb081d2801c42272907921ce0}{Entity\+Body}}, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_caching_entity_body_ab88fba7bb081d2801c42272907921ce0}{Caching\+Entity\+Body}}, and \mbox{\hyperlink{class_guzzle_1_1_http_1_1_abstract_entity_body_decorator_ab88fba7bb081d2801c42272907921ce0}{Abstract\+Entity\+Body\+Decorator}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_http_1_1_entity_body_interface_ada8d0f952b0facf4465480d95e777243}\label{interface_guzzle_1_1_http_1_1_entity_body_interface_ada8d0f952b0facf4465480d95e777243}} 
+\index{EntityBodyInterface@{EntityBodyInterface}!getContentLength@{getContentLength}}
+\index{getContentLength@{getContentLength}!EntityBodyInterface@{EntityBodyInterface}}
+\doxysubsubsection{\texorpdfstring{getContentLength()}{getContentLength()}}
+{\footnotesize\ttfamily get\+Content\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the Content-\/\+Length of the entity body if possible (alias of get\+Size)
+
+\begin{DoxyReturn}{Returns}
+int$\vert$bool Returns the Content-\/\+Length or false on failure 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_http_1_1_read_limit_entity_body_ada8d0f952b0facf4465480d95e777243}{Read\+Limit\+Entity\+Body}}, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_entity_body_ada8d0f952b0facf4465480d95e777243}{Entity\+Body}}, and \mbox{\hyperlink{class_guzzle_1_1_http_1_1_abstract_entity_body_decorator_ada8d0f952b0facf4465480d95e777243}{Abstract\+Entity\+Body\+Decorator}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_http_1_1_entity_body_interface_aa8b42fe02aadb88cd634fc94346a3e74}\label{interface_guzzle_1_1_http_1_1_entity_body_interface_aa8b42fe02aadb88cd634fc94346a3e74}} 
+\index{EntityBodyInterface@{EntityBodyInterface}!getContentMd5@{getContentMd5}}
+\index{getContentMd5@{getContentMd5}!EntityBodyInterface@{EntityBodyInterface}}
+\doxysubsubsection{\texorpdfstring{getContentMd5()}{getContentMd5()}}
+{\footnotesize\ttfamily get\+Content\+Md5 (\begin{DoxyParamCaption}\item[{}]{\$raw\+Output = {\ttfamily false},  }\item[{}]{\$base64\+Encode = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Get an MD5 checksum of the stream\textquotesingle{}s contents
+
+
+\begin{DoxyParams}[1]{Parameters}
+bool & {\em \$raw\+Output} & Whether or not to use raw output \\
+\hline
+bool & {\em \$base64\+Encode} & Whether or not to base64 encode raw output (only if raw output is true)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool$\vert$string Returns an MD5 string on success or FALSE on failure 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_http_1_1_entity_body_aa8b42fe02aadb88cd634fc94346a3e74}{Entity\+Body}}, and \mbox{\hyperlink{class_guzzle_1_1_http_1_1_abstract_entity_body_decorator_aa8b42fe02aadb88cd634fc94346a3e74}{Abstract\+Entity\+Body\+Decorator}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_http_1_1_entity_body_interface_aa843137beb02bc2516fe0551c00ff7d7}\label{interface_guzzle_1_1_http_1_1_entity_body_interface_aa843137beb02bc2516fe0551c00ff7d7}} 
+\index{EntityBodyInterface@{EntityBodyInterface}!getContentType@{getContentType}}
+\index{getContentType@{getContentType}!EntityBodyInterface@{EntityBodyInterface}}
+\doxysubsubsection{\texorpdfstring{getContentType()}{getContentType()}}
+{\footnotesize\ttfamily get\+Content\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Guess the Content-\/\+Type of a local stream
+
+\begin{DoxyReturn}{Returns}
+string$\vert$null 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.php.net/manual/en/function.finfo-open.php}{\texttt{ http\+://www.\+php.\+net/manual/en/function.\+finfo-\/open.\+php}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_http_1_1_entity_body_aa843137beb02bc2516fe0551c00ff7d7}{Entity\+Body}}, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_caching_entity_body_aa843137beb02bc2516fe0551c00ff7d7}{Caching\+Entity\+Body}}, and \mbox{\hyperlink{class_guzzle_1_1_http_1_1_abstract_entity_body_decorator_aa843137beb02bc2516fe0551c00ff7d7}{Abstract\+Entity\+Body\+Decorator}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_http_1_1_entity_body_interface_a69f574162b8c56b0c75a36469349c21d}\label{interface_guzzle_1_1_http_1_1_entity_body_interface_a69f574162b8c56b0c75a36469349c21d}} 
+\index{EntityBodyInterface@{EntityBodyInterface}!setRewindFunction@{setRewindFunction}}
+\index{setRewindFunction@{setRewindFunction}!EntityBodyInterface@{EntityBodyInterface}}
+\doxysubsubsection{\texorpdfstring{setRewindFunction()}{setRewindFunction()}}
+{\footnotesize\ttfamily set\+Rewind\+Function (\begin{DoxyParamCaption}\item[{}]{\$callable }\end{DoxyParamCaption})}
+
+Specify a custom callback used to rewind a non-\/seekable stream. This can be useful entity enclosing requests that are redirected.
+
+
+\begin{DoxyParams}[1]{Parameters}
+mixed & {\em \$callable} & Callable to invoke to rewind a non-\/seekable stream. The callback must accept an \mbox{\hyperlink{interface_guzzle_1_1_http_1_1_entity_body_interface}{Entity\+Body\+Interface}} object, perform the rewind if possible, and return a boolean representing whether or not the rewind was successful. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_http_1_1_entity_body_a69f574162b8c56b0c75a36469349c21d}{Entity\+Body}}, \mbox{\hyperlink{class_guzzle_1_1_http_1_1_caching_entity_body_a69f574162b8c56b0c75a36469349c21d}{Caching\+Entity\+Body}}, and \mbox{\hyperlink{class_guzzle_1_1_http_1_1_abstract_entity_body_decorator_a69f574162b8c56b0c75a36469349c21d}{Abstract\+Entity\+Body\+Decorator}}.
+
+\mbox{\Hypertarget{interface_guzzle_1_1_http_1_1_entity_body_interface_a57d886700b9c73579b391bb908ebd97f}\label{interface_guzzle_1_1_http_1_1_entity_body_interface_a57d886700b9c73579b391bb908ebd97f}} 
+\index{EntityBodyInterface@{EntityBodyInterface}!uncompress@{uncompress}}
+\index{uncompress@{uncompress}!EntityBodyInterface@{EntityBodyInterface}}
+\doxysubsubsection{\texorpdfstring{uncompress()}{uncompress()}}
+{\footnotesize\ttfamily uncompress (\begin{DoxyParamCaption}\item[{}]{\$filter = {\ttfamily \textquotesingle{}zlib.inflate\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Decompress a deflated string. Once uncompressed, the uncompressed string is then used as the wrapped stream.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$filter} & De-\/compression filter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Returns TRUE on success or FALSE on failure 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_guzzle_1_1_http_1_1_entity_body_a57d886700b9c73579b391bb908ebd97f}{Entity\+Body}}, and \mbox{\hyperlink{class_guzzle_1_1_http_1_1_abstract_entity_body_decorator_a57d886700b9c73579b391bb908ebd97f}{Abstract\+Entity\+Body\+Decorator}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Http/\mbox{\hyperlink{_entity_body_interface_8php}{Entity\+Body\+Interface.\+php}}\end{DoxyCompactItemize}

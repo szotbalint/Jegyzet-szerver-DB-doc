@@ -1,0 +1,304 @@
+\hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event}{}\doxysection{Stopwatch\+Event Class Reference}
+\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event}\index{StopwatchEvent@{StopwatchEvent}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a37bb4309c281737ab5f92b3703e7d53c}{\+\_\+\+\_\+construct}} (float \$origin, string \$category=null, bool \$more\+Precision=false, string \$name=null)
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ada0bf69887885f455ebdfbe878e14543}{get\+Category}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ace359404a4a0a42d342fd96f2f3e1a3f}{get\+Origin}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_af8fa59992209e36dccb3eefb0f75531f}{start}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a8b6fc76a620d7557d06e9a11a9ffb509}{stop}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a1ffe0e26cd53b764f58c5bbed489c278}{is\+Started}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ada051c89f437b8c070acf4ad54b8d478}{lap}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a1d5450fe54685ba04bf99dccb94aaca5}{ensure\+Stopped}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a9fa3b6a3c796c27097380d11ebe6fd3f}{get\+Periods}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a568a7fafd601b520ff8c4bd91c962e29}{get\+Start\+Time}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a553a46d707ec3e83965c44c41f449f68}{get\+End\+Time}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ab46fe3d2750728c84bd71ae1bfd08ee8}{get\+Duration}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a144248575cd034a40315155a9b48ff87}{get\+Memory}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a3d0963e68bb313b163a73f2803c64600}{get\+Name}} ()
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a54f4b01db632857306ff337592cc05d7}{get\+Now}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an Event managed by \mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch}{Stopwatch}}.
+
+\begin{DoxyAuthor}{Author}
+Fabien Potencier \href{mailto:fabien@symfony.com}{\texttt{ fabien@symfony.\+com}} 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file Stopwatch\+Event.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a37bb4309c281737ab5f92b3703e7d53c}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a37bb4309c281737ab5f92b3703e7d53c}} 
+\index{StopwatchEvent@{StopwatchEvent}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{float}]{\$origin,  }\item[{string}]{\$category = {\ttfamily null},  }\item[{bool}]{\$more\+Precision = {\ttfamily false},  }\item[{string}]{\$name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+float & {\em \$origin} & The origin time in milliseconds \\
+\hline
+string | null & {\em \$category} & The event category or null to use the default \\
+\hline
+bool & {\em \$more\+Precision} & If true, time is stored as float to keep the original microsecond precision \\
+\hline
+string | null & {\em \$name} & The event name or null to define the name as default\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 59 of file Stopwatch\+Event.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a7516ca30af0db3cdbf9a7739b48ce91d}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{StopwatchEvent@{StopwatchEvent}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 254 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a1d5450fe54685ba04bf99dccb94aaca5}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a1d5450fe54685ba04bf99dccb94aaca5}} 
+\index{StopwatchEvent@{StopwatchEvent}!ensureStopped@{ensureStopped}}
+\index{ensureStopped@{ensureStopped}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{ensureStopped()}{ensureStopped()}}
+{\footnotesize\ttfamily ensure\+Stopped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stops all non already stopped periods. 
+
+Definition at line 140 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ada0bf69887885f455ebdfbe878e14543}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ada0bf69887885f455ebdfbe878e14543}} 
+\index{StopwatchEvent@{StopwatchEvent}!getCategory@{getCategory}}
+\index{getCategory@{getCategory}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{getCategory()}{getCategory()}}
+{\footnotesize\ttfamily get\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the category.
+
+\begin{DoxyReturn}{Returns}
+string The category 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ab46fe3d2750728c84bd71ae1bfd08ee8}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ab46fe3d2750728c84bd71ae1bfd08ee8}} 
+\index{StopwatchEvent@{StopwatchEvent}!getDuration@{getDuration}}
+\index{getDuration@{getDuration}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{getDuration()}{getDuration()}}
+{\footnotesize\ttfamily get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the duration of the events (including all periods).
+
+\begin{DoxyReturn}{Returns}
+int$\vert$float The duration (in milliseconds) 
+\end{DoxyReturn}
+
+
+Definition at line 192 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a553a46d707ec3e83965c44c41f449f68}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a553a46d707ec3e83965c44c41f449f68}} 
+\index{StopwatchEvent@{StopwatchEvent}!getEndTime@{getEndTime}}
+\index{getEndTime@{getEndTime}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{getEndTime()}{getEndTime()}}
+{\footnotesize\ttfamily get\+End\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the relative time of the end of the last period.
+
+\begin{DoxyReturn}{Returns}
+int$\vert$float The time (in milliseconds) 
+\end{DoxyReturn}
+
+
+Definition at line 180 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a144248575cd034a40315155a9b48ff87}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a144248575cd034a40315155a9b48ff87}} 
+\index{StopwatchEvent@{StopwatchEvent}!getMemory@{getMemory}}
+\index{getMemory@{getMemory}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{getMemory()}{getMemory()}}
+{\footnotesize\ttfamily get\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the max memory usage of all periods.
+
+\begin{DoxyReturn}{Returns}
+int The memory usage (in bytes) 
+\end{DoxyReturn}
+
+
+Definition at line 214 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a3d0963e68bb313b163a73f2803c64600}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a3d0963e68bb313b163a73f2803c64600}} 
+\index{StopwatchEvent@{StopwatchEvent}!getName@{getName}}
+\index{getName@{getName}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the event name. 
+
+Definition at line 249 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a54f4b01db632857306ff337592cc05d7}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a54f4b01db632857306ff337592cc05d7}} 
+\index{StopwatchEvent@{StopwatchEvent}!getNow@{getNow}}
+\index{getNow@{getNow}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{getNow()}{getNow()}}
+{\footnotesize\ttfamily get\+Now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Return the current time relative to origin.
+
+\begin{DoxyReturn}{Returns}
+float Time in ms 
+\end{DoxyReturn}
+
+
+Definition at line 231 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ace359404a4a0a42d342fd96f2f3e1a3f}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ace359404a4a0a42d342fd96f2f3e1a3f}} 
+\index{StopwatchEvent@{StopwatchEvent}!getOrigin@{getOrigin}}
+\index{getOrigin@{getOrigin}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{getOrigin()}{getOrigin()}}
+{\footnotesize\ttfamily get\+Origin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the origin.
+
+\begin{DoxyReturn}{Returns}
+float The origin in milliseconds 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a9fa3b6a3c796c27097380d11ebe6fd3f}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a9fa3b6a3c796c27097380d11ebe6fd3f}} 
+\index{StopwatchEvent@{StopwatchEvent}!getPeriods@{getPeriods}}
+\index{getPeriods@{getPeriods}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{getPeriods()}{getPeriods()}}
+{\footnotesize\ttfamily get\+Periods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets all event periods.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_period}{Stopwatch\+Period}}\mbox{[}\mbox{]} An array of \mbox{\hyperlink{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_period}{Stopwatch\+Period}} instances 
+\end{DoxyReturn}
+
+
+Definition at line 152 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a568a7fafd601b520ff8c4bd91c962e29}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a568a7fafd601b520ff8c4bd91c962e29}} 
+\index{StopwatchEvent@{StopwatchEvent}!getStartTime@{getStartTime}}
+\index{getStartTime@{getStartTime}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{getStartTime()}{getStartTime()}}
+{\footnotesize\ttfamily get\+Start\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the relative time of the start of the first period.
+
+\begin{DoxyReturn}{Returns}
+int$\vert$float The time (in milliseconds) 
+\end{DoxyReturn}
+
+
+Definition at line 162 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a1ffe0e26cd53b764f58c5bbed489c278}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a1ffe0e26cd53b764f58c5bbed489c278}} 
+\index{StopwatchEvent@{StopwatchEvent}!isStarted@{isStarted}}
+\index{isStarted@{isStarted}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{isStarted()}{isStarted()}}
+{\footnotesize\ttfamily is\+Started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the event was started.
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ada051c89f437b8c070acf4ad54b8d478}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_ada051c89f437b8c070acf4ad54b8d478}} 
+\index{StopwatchEvent@{StopwatchEvent}!lap@{lap}}
+\index{lap@{lap}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{lap()}{lap()}}
+{\footnotesize\ttfamily lap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stops the current period and then starts a new one.
+
+\begin{DoxyReturn}{Returns}
+\$this 
+\end{DoxyReturn}
+
+
+Definition at line 132 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_af8fa59992209e36dccb3eefb0f75531f}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_af8fa59992209e36dccb3eefb0f75531f}} 
+\index{StopwatchEvent@{StopwatchEvent}!start@{start}}
+\index{start@{start}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Starts a new event period.
+
+\begin{DoxyReturn}{Returns}
+\$this 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file Stopwatch\+Event.\+php.
+
+\mbox{\Hypertarget{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a8b6fc76a620d7557d06e9a11a9ffb509}\label{class_symfony_1_1_component_1_1_stopwatch_1_1_stopwatch_event_a8b6fc76a620d7557d06e9a11a9ffb509}} 
+\index{StopwatchEvent@{StopwatchEvent}!stop@{stop}}
+\index{stop@{stop}!StopwatchEvent@{StopwatchEvent}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stops the last started event period.
+
+\begin{DoxyReturn}{Returns}
+\$this
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 106 of file Stopwatch\+Event.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vdlp/redirect/vendor/symfony/stopwatch/\mbox{\hyperlink{_stopwatch_event_8php}{Stopwatch\+Event.\+php}}\end{DoxyCompactItemize}

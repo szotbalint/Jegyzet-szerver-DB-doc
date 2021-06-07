@@ -1,0 +1,481 @@
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md91}{}\doxysection{3.\+6 to 3.\+7}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md91}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md92}{}\doxysubsection{Deprecations}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md92}
+
+\begin{DoxyItemize}
+\item You can now enable E\+\_\+\+USER\+\_\+\+DEPRECATED warnings to see if you are using any deprecated methods.\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_version_a61b62707207cd4ee6051287e6bc9cdcf}{\(\backslash\)Guzzle\(\backslash\)Common\(\backslash\)Version::\$emitWarnings}} = \textcolor{keyword}{true};}
+
+\end{DoxyCode}
+
+
+The following APIs and options have been marked as deprecated\+:
+
+
+\begin{DoxyItemize}
+\item Marked {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+::is\+Response\+Body\+Repeatable()} as deprecated. Use {\ttfamily \$request-\/$>$get\+Response\+Body()-\/$>$is\+Repeatable()} instead.
+\item Marked {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+::can\+Cache()} as deprecated. Use {\ttfamily Guzzle\textbackslash{}Plugin\textbackslash{}Cache\textbackslash{}Default\+Can\+Cache\+Strategy-\/$>$can\+Cache\+Request()} instead.
+\item Marked {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+::can\+Cache()} as deprecated. Use {\ttfamily Guzzle\textbackslash{}Plugin\textbackslash{}Cache\textbackslash{}Default\+Can\+Cache\+Strategy-\/$>$can\+Cache\+Request()} instead.
+\item Marked {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+::set\+Is\+Redirect()} as deprecated. Use the History\+Plugin instead.
+\item Marked {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+::is\+Redirect()} as deprecated. Use the History\+Plugin instead.
+\item Marked {\ttfamily Guzzle\textbackslash{}Cache\textbackslash{}Cache\+Adapter\+Factory\+::factory()} as deprecated
+\item Marked {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Client\+::enable\+Magic\+Methods()} as deprecated. Magic methods can no longer be disabled on a Guzzle\textbackslash{}\+Service\textbackslash{}\+Client.
+\item Marked {\ttfamily Guzzle\textbackslash{}Parser\textbackslash{}Url\textbackslash{}Url\+Parser} as deprecated. Just use PHP\textquotesingle{}s {\ttfamily parse\+\_\+url()} and percent encode your UTF-\/8.
+\item Marked {\ttfamily Guzzle\textbackslash{}Common\textbackslash{}Collection\+::inject()} as deprecated.
+\item Marked {\ttfamily Guzzle\textbackslash{}Plugin\textbackslash{}Curl\+Auth\textbackslash{}Curl\+Auth\+Plugin} as deprecated. Use `\$client-\/$>$get\+Config()-\/$>$set\+Path(\textquotesingle{}request.\+options/auth', array(\textquotesingle{}user\textquotesingle{}, \textquotesingle{}pass\textquotesingle{}, \textquotesingle{}Basic$\vert$\+Digest$\vert$\+NTLM$\vert$\+Any\textquotesingle{}));{\ttfamily or }\$client-\/$>$set\+Default\+Option(\textquotesingle{}auth\textquotesingle{}, array(\textquotesingle{}user\textquotesingle{}, \textquotesingle{}pass\textquotesingle{}, \textquotesingle{}Basic$\vert$\+Digest$\vert$\+NTLM$\vert$\+Any\textquotesingle{}));\`{}
+\end{DoxyItemize}
+
+3.\+7 introduces {\ttfamily request.\+options} as a parameter for a client configuration and as an optional argument to all creational request methods. When paired with a client\textquotesingle{}s configuration settings, these options allow you to specify default settings for various aspects of a request. Because these options make other previous configuration options redundant, several configuration options and methods of a client and Abstract\+Command have been deprecated.
+
+
+\begin{DoxyItemize}
+\item Marked {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Client\+::get\+Default\+Headers()} as deprecated. Use `\$client-\/$>$get\+Default\+Option(\textquotesingle{}headers'){\ttfamily .}
+\item {\ttfamily Marked}Guzzle\textbackslash{}\+Service\textbackslash{}\+Client\+::set\+Default\+Headers(){\ttfamily as deprecated. Use}\$client-\/$>$set\+Default\+Option(\textquotesingle{}headers/\{header\+\_\+name\}\textquotesingle{}, \textquotesingle{}value\textquotesingle{})`.
+\item Marked \textquotesingle{}request.\+params' for {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Client} as deprecated. Use `\$client-\/$>$set\+Default\+Option(\textquotesingle{}params/\{param\+\_\+name\}', \textquotesingle{}value\textquotesingle{})`
+\item Marked \textquotesingle{}command.\+headers', \textquotesingle{}command.\+response\+\_\+body\textquotesingle{} and \textquotesingle{}command.\+on\+\_\+complete\textquotesingle{} as deprecated for Abstract\+Command. These will work through Guzzle 4.\+0 \begin{DoxyVerb}  $command = $client->getCommand('foo', array(
+      'command.headers' => array('Test' => '123'),
+      'command.response_body' => '/path/to/file'
+  ));
+
+  // Should be changed to:
+
+  $command = $client->getCommand('foo', array(
+      'command.request_options' => array(
+          'headers' => array('Test' => '123'),
+          'save_as' => '/path/to/file'
+      )
+  ));
+\end{DoxyVerb}
+ 
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md93}{}\doxysubsection{Interface changes}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md93}
+Additions and changes (you will need to update any implementations or subclasses you may have created)\+:
+
+
+\begin{DoxyItemize}
+\item Added an {\ttfamily \$options} argument to the end of the following methods of {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Client\+Interface}\+: create\+Request, head, delete, put, patch, post, options, prepare\+Request
+\item Added an {\ttfamily \$options} argument to the end of {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\textbackslash{}Request\+Factory\+Interface\+::create\+Request()}
+\item Added an {\ttfamily apply\+Options()} method to {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\textbackslash{}Request\+Factory\+Interface}
+\item Changed {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Client\+Interface\+::get(\$uri = null, \$headers = null, \$body = null)} to {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Client\+Interface\+::get(\$uri = null, \$headers = null, \$options = array())}. You can still pass in a resource, string, or Entity\+Body into the \$options parameter to specify the download location of the response.
+\item Changed {\ttfamily Guzzle\textbackslash{}Common\textbackslash{}Collection\+::\+\_\+\+\_\+construct(\$data)} to no longer accepts a null value for {\ttfamily \$data} but a default {\ttfamily array()}
+\item Added {\ttfamily Guzzle\textbackslash{}Stream\textbackslash{}Stream\+Interface\+::is\+Repeatable}
+\item Made {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Client\+::expand\+Template} and {\ttfamily get\+Uri\+Template} protected methods.
+\end{DoxyItemize}
+
+The following methods were removed from interfaces. All of these methods are still available in the concrete classes that implement them, but you should update your code to use alternative methods\+:
+
+
+\begin{DoxyItemize}
+\item Removed {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Client\+Interface\+::set\+Default\+Headers(). Use }\$client-\/$>$get\+Config()-\/$>$set\+Path(\textquotesingle{}request.\+options/headers/\{header\+\_\+name\}\textquotesingle{}, \textquotesingle{}value\textquotesingle{}){\ttfamily . or }\$client-\/$>$get\+Config()-\/$>$set\+Path(\textquotesingle{}request.\+options/headers\textquotesingle{}, array(\textquotesingle{}header\+\_\+name\textquotesingle{} =$>$ \textquotesingle{}value\textquotesingle{})){\ttfamily or }\$client-\/$>$set\+Default\+Option(\textquotesingle{}headers/\{header\+\_\+name\}\textquotesingle{}, \textquotesingle{}value\textquotesingle{}){\ttfamily . or }\$client-\/$>$set\+Default\+Option(\textquotesingle{}headers\textquotesingle{}, array(\textquotesingle{}header\+\_\+name\textquotesingle{} =$>$ \textquotesingle{}value\textquotesingle{})){\ttfamily .}
+\item {\ttfamily Removed}Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::get\+Default\+Headers(). Use `\$client-\/$>$get\+Config()-\/$>$get\+Path(\textquotesingle{}request.\+options/headers'){\ttfamily .}
+\item {\ttfamily Removed}Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::expand\+Template(){\ttfamily . This is an implementation detail.}
+\item {\ttfamily Removed}Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::set\+Request\+Factory(){\ttfamily . This is an implementation detail.}
+\item {\ttfamily Removed}Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::get\+Curl\+Multi(){\ttfamily . This is a very specific implementation detail.}
+\item {\ttfamily Removed}Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+Interface\+::can\+Cache$<$tt$>$. Use the Cache\+Plugin.
+\item RemovedGuzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+Interface\+::set\+Is\+Redirect$<$tt$>$. Use the History\+Plugin.
+\item RemovedGuzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+Interface\+::is\+Redirect\`{}. Use the History\+Plugin.
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md94}{}\doxysubsection{Cache plugin breaking changes}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md94}
+
+\begin{DoxyItemize}
+\item Cache\+Key\+Provider\+Interface and Default\+Cache\+Key\+Provider are no longer used. All of this logic is handled in a Cache\+Storage\+Interface. These two objects and interface will be removed in a future version.
+\item Always setting X-\/cache headers on cached responses
+\item Default cache TTLs are now handled by the Cache\+Storage\+Interface of a Cache\+Plugin
+\item {\ttfamily Cache\+Storage\+Interface\+::cache(\$key, Response \$response, \$ttl = null)} has changed to {\ttfamily cache(Request\+Interface \$request, Response \$response);}
+\item {\ttfamily Cache\+Storage\+Interface\+::fetch(\$key)} has changed to {\ttfamily fetch(Request\+Interface \$request);}
+\item {\ttfamily Cache\+Storage\+Interface\+::delete(\$key)} has changed to {\ttfamily delete(Request\+Interface \$request);}
+\item Added {\ttfamily Cache\+Storage\+Interface\+::purge(\$url)}
+\item {\ttfamily Default\+Revalidation\+::\+\_\+\+\_\+construct(Cache\+Key\+Provider\+Interface \$cache\+Key, Cache\+Storage\+Interface \$cache, Cache\+Plugin \$plugin)} has changed to {\ttfamily Default\+Revalidation\+::\+\_\+\+\_\+construct(Cache\+Storage\+Interface \$cache, Can\+Cache\+Strategy\+Interface \$can\+Cache = null)}
+\item Added {\ttfamily Revalidation\+Interface\+::should\+Revalidate(Request\+Interface \$request, Response \$response)}
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md95}{}\doxysection{3.\+5 to 3.\+6}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md95}
+
+\begin{DoxyItemize}
+\item Mixed casing of headers are now forced to be a single consistent casing across all values for that header.
+\item Messages internally use a Header\+Collection object to delegate handling case-\/insensitive header resolution
+\item Removed the whole changed\+Header() function system of messages because all header changes now go through add\+Header(). For example, set\+Header() first removes the header using unset on a Header\+Collection and then calls add\+Header(). Keeping the Host header and URL host in sync is now handled by overriding the add\+Header method in Request.
+\item Specific header implementations can be created for complex headers. When a message creates a header, it uses a Header\+Factory which can map specific headers to specific header classes. There is now a Link header and Cache\+Control header implementation.
+\item Moved get\+Links() from Response to just be used on a Link header object.
+\end{DoxyItemize}
+
+If you previously relied on Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Header\+::raw(), then you will need to update your code to use the Header\+Interface (e.\+g. to\+Array(), get\+All(), etc).\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md96}{}\doxysubsection{Interface changes}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md96}
+
+\begin{DoxyItemize}
+\item Removed from interface\+: Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::set\+Uri\+Template
+\item Removed from interface\+: Guzzle\textbackslash{}\+Http\textbackslash{}\+Client\+Interface\+::set\+Curl\+Multi()
+\item Removed Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Request\+::received\+Request\+Header() and implemented this functionality in Guzzle\textbackslash{}\+Http\textbackslash{}\+Curl\textbackslash{}\+Request\+Mediator
+\item Removed the optional \$as\+String parameter from Message\+Interface\+::get\+Header(). Just cast the header to a string.
+\item Removed the optional \$try\+Chunked\+Transfer option from Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Entity\+Enclosing\+Request\+Interface
+\item Removed the \$as\+Objects argument from Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Message\+Interface\+::get\+Headers()
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md97}{}\doxysubsection{Removed deprecated functions}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md97}
+
+\begin{DoxyItemize}
+\item Removed Guzzle\textbackslash{}\+Parser\textbackslash{}\+Parser\+Register\mbox{\hyperlink{_service_locator_trait_8php_a1daf468da92d39bf50b3cf737cf8f32b}{get()}}. Use get\+Parser()
+\item Removed Guzzle\textbackslash{}\+Parser\textbackslash{}\+Parser\+Register\+::set(). Use register\+Parser().
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md98}{}\doxysubsection{Deprecations}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md98}
+
+\begin{DoxyItemize}
+\item The ability to case-\/insensitively search for header values
+\item Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Header\+::has\+Exact\+Header
+\item Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Header\+::raw. Use get\+All()
+\item Deprecated cache control specific methods on Guzzle\textbackslash{}\+Http\textbackslash{}\+Message\textbackslash{}\+Abstract\+Message. Use the Cache\+Control header object instead.
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md99}{}\doxysubsection{Other changes}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md99}
+
+\begin{DoxyItemize}
+\item All response header helper functions return a string rather than mixing Header objects and strings inconsistently
+\item Removed c\+URL blacklist support. This is no longer necessary now that Expect, Accept, etc are managed by Guzzle directly via interfaces
+\item Removed the injecting of a request object onto a response object. The methods to get and set a request still exist but are a no-\/op until removed.
+\item Most classes that used to require a \`{}{\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Command\textbackslash{}Command\+Interface} typehint now request a {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Command\textbackslash{}Array\+Command\+Interface}.
+\item Added {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Request\+Interface\+::start\+Response()} to the Request\+Interface to handle injecting a response on a request while the request is still being transferred
+\item {\ttfamily Guzzle\textbackslash{}Service\textbackslash{}Command\textbackslash{}Command\+Interface} now extends from To\+Array\+Interface and Array\+Access
+\end{DoxyItemize}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md100}{}\doxysection{3.\+3 to 3.\+4}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md100}
+Base URLs of a client now follow the rules of \href{http://tools.ietf.org/html/rfc3986\#section-5.2.2}{\texttt{ http\+://tools.\+ietf.\+org/html/rfc3986\#section-\/5.\+2.\+2}} when merging URLs.\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md101}{}\doxysection{3.\+2 to 3.\+3}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md101}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md102}{}\doxysubsection{Response\+::get\+Etag() quote stripping removed}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md102}
+{\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Message\textbackslash{}Response\+::get\+Etag()} no longer strips quotes around the ETag response header\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md103}{}\doxysubsection{Removed $<$tt$>$\+Guzzle\textbackslash{}\+Http\textbackslash{}\+Utils$<$/tt$>$}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md103}
+The {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Utils} class was removed. This class was only used for testing.\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md104}{}\doxysubsection{Stream wrapper and type}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md104}
+{\ttfamily Guzzle\textbackslash{}Stream\textbackslash{}Stream\+::get\+Wrapper()} and {\ttfamily Guzzle\textbackslash{}Stream\textbackslash{}Stream\+::get\+Steam\+Type()} are no longer converted to lowercase.\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md105}{}\doxysubsection{curl.\+emit\+\_\+io became emit\+\_\+io}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md105}
+Emitting IO events from a Request\+Mediator is now a parameter that must be set in a request\textquotesingle{}s curl options using the \textquotesingle{}emit\+\_\+io\textquotesingle{} key. This was previously set under a request\textquotesingle{}s parameters using \textquotesingle{}curl.\+emit\+\_\+io\textquotesingle{}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md106}{}\doxysection{3.\+1 to 3.\+2}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md106}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md107}{}\doxysubsection{Curl\+Multi is no longer reused globally}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md107}
+Before 3.\+2, the same Curl\+Multi object was reused globally for each client. This can cause issue where plugins added to a single client can pollute requests dispatched from other clients.
+
+If you still wish to reuse the same Curl\+Multi object with each client, then you can add a listener to the Service\+Builder\textquotesingle{}s {\ttfamily service\+\_\+builder.\+create\+\_\+client} event to inject a custom Curl\+Multi object into each client as it is created.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$multi = \textcolor{keyword}{new} \mbox{\hyperlink{class_guzzle_1_1_http_1_1_curl_1_1_curl_multi}{Guzzle\(\backslash\)Http\(\backslash\)Curl\(\backslash\)CurlMulti}}();}
+\DoxyCodeLine{\mbox{\hyperlink{pixel_2shop_2vendor_2guzzle_2guzzle_2tests_2bootstrap_8php_a03b3894f94a4a13f6de58cc6150584f3}{\$builder}} = \mbox{\hyperlink{class_guzzle_1_1_service_1_1_builder_1_1_service_builder_a771996c4da90fe20a6092d546207dc38}{Guzzle\(\backslash\)Service\(\backslash\)Builder\(\backslash\)ServiceBuilder::factory}}(\textcolor{stringliteral}{'/path/to/config.json'});}
+\DoxyCodeLine{\mbox{\hyperlink{pixel_2shop_2vendor_2guzzle_2guzzle_2tests_2bootstrap_8php_a03b3894f94a4a13f6de58cc6150584f3}{\$builder}}-\/>addListener(\textcolor{stringliteral}{'service\_builder.create\_client'}, \textcolor{keyword}{function} (\$event) use (\$multi) \{}
+\DoxyCodeLine{    \$event[\textcolor{stringliteral}{'client'}]-\/>setCurlMulti(\$multi);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md108}{}\doxysubsection{No default path}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md108}
+URLs no longer have a default path value of \textquotesingle{}/\textquotesingle{} if no path was specified.
+
+Before\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$request = \$client-\/>get(\textcolor{stringliteral}{'http://www.foo.com'});}
+\DoxyCodeLine{echo \$request-\/>getUrl();}
+\DoxyCodeLine{\textcolor{comment}{// >> http://www.foo.com/}}
+
+\end{DoxyCode}
+
+
+After\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$request = \$client-\/>get(\textcolor{stringliteral}{'http://www.foo.com'});}
+\DoxyCodeLine{echo \$request-\/>getUrl();}
+\DoxyCodeLine{\textcolor{comment}{// >> http://www.foo.com}}
+
+\end{DoxyCode}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md109}{}\doxysubsection{Less verbose Bad\+Response\+Exception}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md109}
+The exception message for {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Exception\textbackslash{}Bad\+Response\+Exception} no longer contains the full HTTP request and response information. You can, however, get access to the request and response object by calling {\ttfamily get\+Request()} or {\ttfamily get\+Response()} on the exception object.\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md110}{}\doxysubsection{Query parameter aggregation}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md110}
+Multi-\/valued query parameters are no longer aggregated using a callback function. {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Query} now has a set\+Aggregator() method that accepts a {\ttfamily Guzzle\textbackslash{}Http\textbackslash{}Query\+Aggregator\textbackslash{}Query\+Aggregator\+Interface} object. This object is responsible for handling the aggregation of multi-\/valued query string variables into a flattened hash.\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md111}{}\doxysection{2.\+8 to 3.\+x}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md111}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md112}{}\doxysubsection{Guzzle\textbackslash{}\+Service\textbackslash{}\+Inspector}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md112}
+Change {\ttfamily \textbackslash{}Guzzle\textbackslash{}Service\textbackslash{}Inspector\+::from\+Config} to {\ttfamily \textbackslash{}Guzzle\textbackslash{}Common\textbackslash{}Collection\+::from\+Config}
+
+{\bfseries{Before}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use Guzzle\(\backslash\)Service\(\backslash\)Inspector;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }YourClient \textcolor{keyword}{extends} \mbox{\hyperlink{class_guzzle_1_1_service_1_1_client}{\(\backslash\)Guzzle\(\backslash\)Service\(\backslash\)Client}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{function} factory(\mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}} = array())}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$default = array();}
+\DoxyCodeLine{        \$required = array(\textcolor{stringliteral}{'base\_url'}, \textcolor{stringliteral}{'username'}, \textcolor{stringliteral}{'api\_key'});}
+\DoxyCodeLine{        \mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}} = Inspector::fromConfig(\mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}}, \$default, \$required);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$client = \textcolor{keyword}{new} \textcolor{keyword}{self}(}
+\DoxyCodeLine{            \mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}}-\/>get(\textcolor{stringliteral}{'base\_url'}),}
+\DoxyCodeLine{            \mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}}-\/>get(\textcolor{stringliteral}{'username'}),}
+\DoxyCodeLine{            \mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}}-\/>get(\textcolor{stringliteral}{'api\_key'})}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{        \$client-\/>setConfig(\mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$client-\/>setDescription(ServiceDescription::factory(\_\_DIR\_\_ . DIRECTORY\_SEPARATOR . \textcolor{stringliteral}{'client.json'}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$client;}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+{\bfseries{After}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_guzzle_1_1_common_1_1_collection}{Guzzle\(\backslash\)Common\(\backslash\)Collection}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }YourClient \textcolor{keyword}{extends} \mbox{\hyperlink{class_guzzle_1_1_service_1_1_client}{\(\backslash\)Guzzle\(\backslash\)Service\(\backslash\)Client}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{function} factory(\mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}} = array())}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \$default = array();}
+\DoxyCodeLine{        \$required = array(\textcolor{stringliteral}{'base\_url'}, \textcolor{stringliteral}{'username'}, \textcolor{stringliteral}{'api\_key'});}
+\DoxyCodeLine{        \mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}} = Collection::fromConfig(\mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}}, \$default, \$required);}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$client = \textcolor{keyword}{new} \textcolor{keyword}{self}(}
+\DoxyCodeLine{            \mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}}-\/>get(\textcolor{stringliteral}{'base\_url'}),}
+\DoxyCodeLine{            \mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}}-\/>get(\textcolor{stringliteral}{'username'}),}
+\DoxyCodeLine{            \mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}}-\/>get(\textcolor{stringliteral}{'api\_key'})}
+\DoxyCodeLine{        );}
+\DoxyCodeLine{        \$client-\/>setConfig(\mbox{\hyperlink{build_8php_ac2b0b6b8a20296c9480c23c5b4348ee6}{\$config}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \$client-\/>setDescription(ServiceDescription::factory(\_\_DIR\_\_ . DIRECTORY\_SEPARATOR . \textcolor{stringliteral}{'client.json'}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \$client;}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md113}{}\doxysubsection{Convert XML Service Descriptions to JSON}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md113}
+{\bfseries{Before}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?\textcolor{keyword}{xml} \textcolor{keyword}{version}=\textcolor{stringliteral}{"{}1.0"{}} \textcolor{keyword}{encoding}=\textcolor{stringliteral}{"{}UTF-\/8"{}}?>}
+\DoxyCodeLine{<\textcolor{keywordtype}{client}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{commands}>}
+\DoxyCodeLine{        \textcolor{comment}{<!-\/-\/ Groups -\/-\/>}}
+\DoxyCodeLine{        <\textcolor{keywordtype}{command} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}list\_groups"{}} \textcolor{keyword}{method}=\textcolor{stringliteral}{"{}GET"{}} \textcolor{keyword}{uri}=\textcolor{stringliteral}{"{}groups.json"{}}>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{doc}>\textcolor{keyword}{Get} \textcolor{keyword}{a} \textcolor{keyword}{list} \textcolor{keyword}{of} \textcolor{keyword}{groups}</\textcolor{keywordtype}{doc}>}
+\DoxyCodeLine{        </\textcolor{keywordtype}{command}>}
+\DoxyCodeLine{        <\textcolor{keywordtype}{command} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}search\_groups"{}} \textcolor{keyword}{method}=\textcolor{stringliteral}{"{}GET"{}} \textcolor{keyword}{uri}=\textcolor{stringliteral}{'search.json?query="{}\{\{query\}\} type:group"{}'}>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{doc}>\textcolor{keyword}{Uses} \textcolor{keyword}{a} \textcolor{keyword}{search} \textcolor{keyword}{query} \textcolor{keyword}{to} \textcolor{keyword}{get} \textcolor{keyword}{a} \textcolor{keyword}{list} \textcolor{keyword}{of} \textcolor{keyword}{groups}</\textcolor{keywordtype}{doc}>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{param} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}query"{}} \textcolor{keyword}{type}=\textcolor{stringliteral}{"{}string"{}} \textcolor{keyword}{required}=\textcolor{stringliteral}{"{}true"{}} />}
+\DoxyCodeLine{        </\textcolor{keywordtype}{command}>}
+\DoxyCodeLine{        <\textcolor{keywordtype}{command} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}create\_group"{}} \textcolor{keyword}{method}=\textcolor{stringliteral}{"{}POST"{}} \textcolor{keyword}{uri}=\textcolor{stringliteral}{"{}groups.json"{}}>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{doc}>\textcolor{keyword}{Create} \textcolor{keyword}{a} \textcolor{keyword}{group}</\textcolor{keywordtype}{doc}>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{param} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}data"{}} \textcolor{keyword}{type}=\textcolor{stringliteral}{"{}array"{}} \textcolor{keyword}{location}=\textcolor{stringliteral}{"{}body"{}} \textcolor{keyword}{filters}=\textcolor{stringliteral}{"{}json\_encode"{}} \textcolor{keyword}{doc}=\textcolor{stringliteral}{"{}Group JSON"{}}/>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{param} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Content-\/Type"{}} \textcolor{keyword}{location}=\textcolor{stringliteral}{"{}header"{}} \textcolor{keyword}{static}=\textcolor{stringliteral}{"{}application/json"{}}/>}
+\DoxyCodeLine{        </\textcolor{keywordtype}{command}>}
+\DoxyCodeLine{        <\textcolor{keywordtype}{command} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}delete\_group"{}} \textcolor{keyword}{method}=\textcolor{stringliteral}{"{}DELETE"{}} \textcolor{keyword}{uri}=\textcolor{stringliteral}{"{}groups/\{\{id\}\}.json"{}}>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{doc}>\textcolor{keyword}{Delete} \textcolor{keyword}{a} \textcolor{keyword}{group} \textcolor{keyword}{by} \textcolor{keyword}{ID}</\textcolor{keywordtype}{doc}>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{param} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}id"{}} \textcolor{keyword}{type}=\textcolor{stringliteral}{"{}integer"{}} \textcolor{keyword}{required}=\textcolor{stringliteral}{"{}true"{}}/>}
+\DoxyCodeLine{        </\textcolor{keywordtype}{command}>}
+\DoxyCodeLine{        <\textcolor{keywordtype}{command} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}get\_group"{}} \textcolor{keyword}{method}=\textcolor{stringliteral}{"{}GET"{}} \textcolor{keyword}{uri}=\textcolor{stringliteral}{"{}groups/\{\{id\}\}.json"{}}>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{param} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}id"{}} \textcolor{keyword}{type}=\textcolor{stringliteral}{"{}integer"{}} \textcolor{keyword}{required}=\textcolor{stringliteral}{"{}true"{}}/>}
+\DoxyCodeLine{        </\textcolor{keywordtype}{command}>}
+\DoxyCodeLine{        <\textcolor{keywordtype}{command} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}update\_group"{}} \textcolor{keyword}{method}=\textcolor{stringliteral}{"{}PUT"{}} \textcolor{keyword}{uri}=\textcolor{stringliteral}{"{}groups/\{\{id\}\}.json"{}}>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{doc}>\textcolor{keyword}{Update} \textcolor{keyword}{a} \textcolor{keyword}{group}</\textcolor{keywordtype}{doc}>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{param} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}id"{}} \textcolor{keyword}{type}=\textcolor{stringliteral}{"{}integer"{}} \textcolor{keyword}{required}=\textcolor{stringliteral}{"{}true"{}}/>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{param} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}data"{}} \textcolor{keyword}{type}=\textcolor{stringliteral}{"{}array"{}} \textcolor{keyword}{location}=\textcolor{stringliteral}{"{}body"{}} \textcolor{keyword}{filters}=\textcolor{stringliteral}{"{}json\_encode"{}} \textcolor{keyword}{doc}=\textcolor{stringliteral}{"{}Group JSON"{}}/>}
+\DoxyCodeLine{            <\textcolor{keywordtype}{param} \textcolor{keyword}{name}=\textcolor{stringliteral}{"{}Content-\/Type"{}} \textcolor{keyword}{location}=\textcolor{stringliteral}{"{}header"{}} \textcolor{keyword}{static}=\textcolor{stringliteral}{"{}application/json"{}}/>}
+\DoxyCodeLine{        </\textcolor{keywordtype}{command}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{commands}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{client}>}
+
+\end{DoxyCode}
+
+
+{\bfseries{After}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    "{}name"{}:       "{}Zendesk REST API v2"{},}
+\DoxyCodeLine{    "{}apiVersion"{}: "{}2012-\/12-\/31"{},}
+\DoxyCodeLine{    "{}description"{}:"{}Provides access to Zendesk views, groups, tickets, ticket fields, and users"{},}
+\DoxyCodeLine{    "{}operations"{}: \{}
+\DoxyCodeLine{        "{}list\_groups"{}:  \{}
+\DoxyCodeLine{            "{}httpMethod"{}:"{}GET"{},}
+\DoxyCodeLine{            "{}uri"{}:       "{}groups.json"{},}
+\DoxyCodeLine{            "{}summary"{}:   "{}Get a list of groups"{}}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{        "{}search\_groups"{}:\{}
+\DoxyCodeLine{            "{}httpMethod"{}:"{}GET"{},}
+\DoxyCodeLine{            "{}uri"{}:       "{}search.json?query=\(\backslash\)"{}\{query\} type:group\(\backslash\)"{}"{},}
+\DoxyCodeLine{            "{}summary"{}:   "{}Uses a search query to get a list of groups"{},}
+\DoxyCodeLine{            "{}parameters"{}:\{}
+\DoxyCodeLine{                "{}query"{}:\{}
+\DoxyCodeLine{                    "{}location"{}:   "{}uri"{},}
+\DoxyCodeLine{                    "{}description"{}:"{}Zendesk Search Query"{},}
+\DoxyCodeLine{                    "{}type"{}:       "{}string"{},}
+\DoxyCodeLine{                    "{}required"{}:   true}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{        "{}create\_group"{}: \{}
+\DoxyCodeLine{            "{}httpMethod"{}:"{}POST"{},}
+\DoxyCodeLine{            "{}uri"{}:       "{}groups.json"{},}
+\DoxyCodeLine{            "{}summary"{}:   "{}Create a group"{},}
+\DoxyCodeLine{            "{}parameters"{}:\{}
+\DoxyCodeLine{                "{}data"{}:        \{}
+\DoxyCodeLine{                    "{}type"{}:       "{}array"{},}
+\DoxyCodeLine{                    "{}location"{}:   "{}body"{},}
+\DoxyCodeLine{                    "{}description"{}:"{}Group JSON"{},}
+\DoxyCodeLine{                    "{}filters"{}:    "{}json\_encode"{},}
+\DoxyCodeLine{                    "{}required"{}:   true}
+\DoxyCodeLine{                \},}
+\DoxyCodeLine{                "{}Content-\/Type"{}:\{}
+\DoxyCodeLine{                    "{}type"{}:    "{}string"{},}
+\DoxyCodeLine{                    "{}location"{}:"{}header"{},}
+\DoxyCodeLine{                    "{}static"{}:  "{}application/json"{}}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{        "{}delete\_group"{}: \{}
+\DoxyCodeLine{            "{}httpMethod"{}:"{}DELETE"{},}
+\DoxyCodeLine{            "{}uri"{}:       "{}groups/\{id\}.json"{},}
+\DoxyCodeLine{            "{}summary"{}:   "{}Delete a group"{},}
+\DoxyCodeLine{            "{}parameters"{}:\{}
+\DoxyCodeLine{                "{}id"{}:\{}
+\DoxyCodeLine{                    "{}location"{}:   "{}uri"{},}
+\DoxyCodeLine{                    "{}description"{}:"{}Group to delete by ID"{},}
+\DoxyCodeLine{                    "{}type"{}:       "{}integer"{},}
+\DoxyCodeLine{                    "{}required"{}:   true}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{        "{}get\_group"{}:    \{}
+\DoxyCodeLine{            "{}httpMethod"{}:"{}GET"{},}
+\DoxyCodeLine{            "{}uri"{}:       "{}groups/\{id\}.json"{},}
+\DoxyCodeLine{            "{}summary"{}:   "{}Get a ticket"{},}
+\DoxyCodeLine{            "{}parameters"{}:\{}
+\DoxyCodeLine{                "{}id"{}:\{}
+\DoxyCodeLine{                    "{}location"{}:   "{}uri"{},}
+\DoxyCodeLine{                    "{}description"{}:"{}Group to get by ID"{},}
+\DoxyCodeLine{                    "{}type"{}:       "{}integer"{},}
+\DoxyCodeLine{                    "{}required"{}:   true}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{        "{}update\_group"{}: \{}
+\DoxyCodeLine{            "{}httpMethod"{}:"{}PUT"{},}
+\DoxyCodeLine{            "{}uri"{}:       "{}groups/\{id\}.json"{},}
+\DoxyCodeLine{            "{}summary"{}:   "{}Update a group"{},}
+\DoxyCodeLine{            "{}parameters"{}:\{}
+\DoxyCodeLine{                "{}id"{}:          \{}
+\DoxyCodeLine{                    "{}location"{}:   "{}uri"{},}
+\DoxyCodeLine{                    "{}description"{}:"{}Group to update by ID"{},}
+\DoxyCodeLine{                    "{}type"{}:       "{}integer"{},}
+\DoxyCodeLine{                    "{}required"{}:   true}
+\DoxyCodeLine{                \},}
+\DoxyCodeLine{                "{}data"{}:        \{}
+\DoxyCodeLine{                    "{}type"{}:       "{}array"{},}
+\DoxyCodeLine{                    "{}location"{}:   "{}body"{},}
+\DoxyCodeLine{                    "{}description"{}:"{}Group JSON"{},}
+\DoxyCodeLine{                    "{}filters"{}:    "{}json\_encode"{},}
+\DoxyCodeLine{                    "{}required"{}:   true}
+\DoxyCodeLine{                \},}
+\DoxyCodeLine{                "{}Content-\/Type"{}:\{}
+\DoxyCodeLine{                    "{}type"{}:    "{}string"{},}
+\DoxyCodeLine{                    "{}location"{}:"{}header"{},}
+\DoxyCodeLine{                    "{}static"{}:  "{}application/json"{}}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md114}{}\doxysubsection{Guzzle\textbackslash{}\+Service\textbackslash{}\+Description\textbackslash{}\+Service\+Description}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md114}
+Commands are now called Operations
+
+{\bfseries{Before}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_service_description}{Guzzle\(\backslash\)Service\(\backslash\)Description\(\backslash\)ServiceDescription}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$sd = \textcolor{keyword}{new} ServiceDescription();}
+\DoxyCodeLine{\$sd-\/>getCommands();     \textcolor{comment}{// @returns ApiCommandInterface[]}}
+\DoxyCodeLine{\$sd-\/>hasCommand(\$name);}
+\DoxyCodeLine{\$sd-\/>getCommand(\$name); \textcolor{comment}{// @returns ApiCommandInterface|null}}
+\DoxyCodeLine{\$sd-\/>addCommand(\$command); \textcolor{comment}{// @param ApiCommandInterface \$command}}
+
+\end{DoxyCode}
+
+
+{\bfseries{After}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_guzzle_1_1_service_1_1_description_1_1_service_description}{Guzzle\(\backslash\)Service\(\backslash\)Description\(\backslash\)ServiceDescription}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$sd = \textcolor{keyword}{new} ServiceDescription();}
+\DoxyCodeLine{\$sd-\/>getOperations();           \textcolor{comment}{// @returns OperationInterface[]}}
+\DoxyCodeLine{\$sd-\/>hasOperation(\$name);}
+\DoxyCodeLine{\$sd-\/>getOperation(\$name);       \textcolor{comment}{// @returns OperationInterface|null}}
+\DoxyCodeLine{\$sd-\/>addOperation(\$operation);  \textcolor{comment}{// @param OperationInterface \$operation}}
+
+\end{DoxyCode}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md115}{}\doxysubsection{Guzzle\textbackslash{}\+Common\textbackslash{}\+Inflection\textbackslash{}\+Inflector}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md115}
+Namespace is now {\ttfamily Guzzle\textbackslash{}Inflection\textbackslash{}Inflector}\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md116}{}\doxysubsection{Guzzle\textbackslash{}\+Http\textbackslash{}\+Plugin}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md116}
+Namespace is now {\ttfamily Guzzle\textbackslash{}Plugin}. Many other changes occur within this namespace and are detailed in their own sections below.\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md117}{}\doxysubsection{Guzzle\textbackslash{}\+Http\textbackslash{}\+Plugin\textbackslash{}\+Log\+Plugin and Guzzle\textbackslash{}\+Common\textbackslash{}\+Log}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md117}
+Now {\ttfamily Guzzle\textbackslash{}Plugin\textbackslash{}Log\textbackslash{}Log\+Plugin} and {\ttfamily Guzzle\textbackslash{}Log} respectively.
+
+{\bfseries{Before}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use Guzzle\(\backslash\)Common\(\backslash\)Log\(\backslash\)ClosureLogAdapter;}
+\DoxyCodeLine{use Guzzle\(\backslash\)Http\(\backslash\)Plugin\(\backslash\)LogPlugin;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$client;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// \$verbosity is an integer indicating desired message verbosity level}}
+\DoxyCodeLine{\$client-\/>addSubscriber(\textcolor{keyword}{new} LogPlugin(\textcolor{keyword}{new} ClosureLogAdapter(\textcolor{keyword}{function}(\$m) \{ echo \$m; \}, \$verbosity = LogPlugin::LOG\_VERBOSE);}
+
+\end{DoxyCode}
+
+
+{\bfseries{After}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_guzzle_1_1_log_1_1_closure_log_adapter}{Guzzle\(\backslash\)Log\(\backslash\)ClosureLogAdapter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_guzzle_1_1_log_1_1_message_formatter}{Guzzle\(\backslash\)Log\(\backslash\)MessageFormatter}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_log_1_1_log_plugin}{Guzzle\(\backslash\)Plugin\(\backslash\)Log\(\backslash\)LogPlugin}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$client;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// \$format is a string indicating desired message format -\/-\/ @see MessageFormatter}}
+\DoxyCodeLine{\$client-\/>addSubscriber(\textcolor{keyword}{new} LogPlugin(\textcolor{keyword}{new} ClosureLogAdapter(\textcolor{keyword}{function}(\$m) \{ echo \$m; \}, \$format = MessageFormatter::DEBUG\_FORMAT);}
+
+\end{DoxyCode}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md118}{}\doxysubsection{Guzzle\textbackslash{}\+Http\textbackslash{}\+Plugin\textbackslash{}\+Curl\+Auth\+Plugin}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md118}
+Now {\ttfamily Guzzle\textbackslash{}Plugin\textbackslash{}Curl\+Auth\textbackslash{}Curl\+Auth\+Plugin}.\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md119}{}\doxysubsection{Guzzle\textbackslash{}\+Http\textbackslash{}\+Plugin\textbackslash{}\+Exponential\+Backoff\+Plugin}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md119}
+Now {\ttfamily Guzzle\textbackslash{}Plugin\textbackslash{}Backoff\textbackslash{}Backoff\+Plugin}, and other changes.
+
+{\bfseries{Before}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use Guzzle\(\backslash\)Http\(\backslash\)Plugin\(\backslash\)ExponentialBackoffPlugin;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$backoffPlugin = \textcolor{keyword}{new} ExponentialBackoffPlugin(\$maxRetries, array\_merge(}
+\DoxyCodeLine{        ExponentialBackoffPlugin::getDefaultFailureCodes(), array(429)}
+\DoxyCodeLine{    ));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$client-\/>addSubscriber(\$backoffPlugin);}
+
+\end{DoxyCode}
+
+
+{\bfseries{After}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_backoff_plugin}{Guzzle\(\backslash\)Plugin\(\backslash\)Backoff\(\backslash\)BackoffPlugin}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_backoff_1_1_http_backoff_strategy}{Guzzle\(\backslash\)Plugin\(\backslash\)Backoff\(\backslash\)HttpBackoffStrategy}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Use convenient factory method instead -\/-\/ see implementation for ideas of what}}
+\DoxyCodeLine{\textcolor{comment}{// you can do with chaining backoff strategies}}
+\DoxyCodeLine{\$backoffPlugin = BackoffPlugin::getExponentialBackoff(\$maxRetries, array\_merge(}
+\DoxyCodeLine{        HttpBackoffStrategy::getDefaultFailureCodes(), array(429)}
+\DoxyCodeLine{    ));}
+\DoxyCodeLine{\$client-\/>addSubscriber(\$backoffPlugin);}
+
+\end{DoxyCode}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md120}{}\doxysubsection{Known Issues}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md120}
+\hypertarget{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md121}{}\doxysubsubsection{\mbox{[}\+BUG\mbox{]} Accept-\/\+Encoding header behavior changed unintentionally.}\label{md_pixel_shop_vendor_guzzle_guzzle__u_p_g_r_a_d_i_n_g_autotoc_md121}
+(See \#217) (Fixed in 09daeb8c666fb44499a0646d655a8ae36456575e)
+
+In version 2.\+8 setting the {\ttfamily Accept-\/\+Encoding} header would set the CURLOPT\+\_\+\+ENCODING option, which permitted c\+URL to properly handle gzip/deflate compressed responses from the server. In versions affected by this bug this does not happen. See issue \#217 for a workaround, or use a version containing the fix. 

@@ -1,0 +1,109 @@
+\hypertarget{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator}{}\doxysection{Mock\+Command\+Iterator Class Reference}
+\label{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator}\index{MockCommandIterator@{MockCommandIterator}}
+Inheritance diagram for Mock\+Command\+Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.731707cm]{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_acea62048bfee7b3cd80ed446c86fb78a}{next}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_acfe6846338dbf5cf990a593d55cbdc4c}{get\+Resources}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_a90c16658629aceddaffce39c918bcb94}{get\+Iterated\+Count}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_aee5c85ff8b6b48d91b51d7a5199632f6}{\$called\+Next}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_aa5ec0a28f2756176d849109283c5cd87}{send\+Request}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 7 of file Mock\+Command\+Iterator.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_a90c16658629aceddaffce39c918bcb94}\label{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_a90c16658629aceddaffce39c918bcb94}} 
+\index{MockCommandIterator@{MockCommandIterator}!getIteratedCount@{getIteratedCount}}
+\index{getIteratedCount@{getIteratedCount}!MockCommandIterator@{MockCommandIterator}}
+\doxysubsubsection{\texorpdfstring{getIteratedCount()}{getIteratedCount()}}
+{\footnotesize\ttfamily get\+Iterated\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Mock\+Command\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_acfe6846338dbf5cf990a593d55cbdc4c}\label{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_acfe6846338dbf5cf990a593d55cbdc4c}} 
+\index{MockCommandIterator@{MockCommandIterator}!getResources@{getResources}}
+\index{getResources@{getResources}!MockCommandIterator@{MockCommandIterator}}
+\doxysubsubsection{\texorpdfstring{getResources()}{getResources()}}
+{\footnotesize\ttfamily get\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file Mock\+Command\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_acea62048bfee7b3cd80ed446c86fb78a}\label{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_acea62048bfee7b3cd80ed446c86fb78a}} 
+\index{MockCommandIterator@{MockCommandIterator}!next@{next}}
+\index{next@{next}!MockCommandIterator@{MockCommandIterator}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_acea62048bfee7b3cd80ed446c86fb78a}{Resource\+Iterator}}.
+
+
+
+Definition at line 27 of file Mock\+Command\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_aa5ec0a28f2756176d849109283c5cd87}\label{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_aa5ec0a28f2756176d849109283c5cd87}} 
+\index{MockCommandIterator@{MockCommandIterator}!sendRequest@{sendRequest}}
+\index{sendRequest@{sendRequest}!MockCommandIterator@{MockCommandIterator}}
+\doxysubsubsection{\texorpdfstring{sendRequest()}{sendRequest()}}
+{\footnotesize\ttfamily send\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send a request to retrieve the next page of results. Hook for subclasses to implement.
+
+\begin{DoxyReturn}{Returns}
+array Returns the newly loaded resources 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_aa5ec0a28f2756176d849109283c5cd87}{Resource\+Iterator}}.
+
+
+
+Definition at line 11 of file Mock\+Command\+Iterator.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_aee5c85ff8b6b48d91b51d7a5199632f6}\label{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_aee5c85ff8b6b48d91b51d7a5199632f6}} 
+\index{MockCommandIterator@{MockCommandIterator}!\$calledNext@{\$calledNext}}
+\index{\$calledNext@{\$calledNext}!MockCommandIterator@{MockCommandIterator}}
+\doxysubsubsection{\texorpdfstring{\$calledNext}{$calledNext}}
+{\footnotesize\ttfamily \$called\+Next = 0}
+
+
+
+Definition at line 9 of file Mock\+Command\+Iterator.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/tests/\+Guzzle/\+Tests/\+Service/\+Mock/\+Model/\mbox{\hyperlink{_mock_command_iterator_8php}{Mock\+Command\+Iterator.\+php}}\end{DoxyCompactItemize}

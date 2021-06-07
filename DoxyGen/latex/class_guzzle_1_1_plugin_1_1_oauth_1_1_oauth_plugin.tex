@@ -1,0 +1,373 @@
+\hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin}{}\doxysection{Oauth\+Plugin Class Reference}
+\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin}\index{OauthPlugin@{OauthPlugin}}
+Inheritance diagram for Oauth\+Plugin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_acf2ad978657d47ceab41038dc7d95737}{\+\_\+\+\_\+construct}} (\$config)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_ad5d409207870e96ccf59041047a94ccc}{on\+Request\+Before\+Send}} (\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} \$event)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a129ce50c0d602593e468a03cd3c7e26f}{get\+Signature}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$timestamp, \$nonce)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a77718b517ac80ebde7f702cc3c7c2a83}{get\+String\+To\+Sign}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$timestamp, \$nonce)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a26a2d855257d1fe3d64edb683f43a5d7}{get\+Params\+To\+Sign}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request, \$timestamp, \$nonce)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a59a9b3d45110326a3b271f4c6dae42c6}{should\+Post\+Fields\+Be\+Signed}} (\$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a0619d6aa30bffddda975068919b906a1}{generate\+Nonce}} (\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}} \$request)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a16e73a84860914ffb5ac8a075731dd08}{get\+Timestamp}} (\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}} \$event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_af1f63475927bbcb3bd21b58712076104}{get\+Subscribed\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_acb486de68913eccce8dae68f7dd9eea8}{REQUEST\+\_\+\+METHOD\+\_\+\+HEADER}} = \textquotesingle{}header\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_aa1e8334281cb0e4acdb87c4e1307d616}{REQUEST\+\_\+\+METHOD\+\_\+\+QUERY}} = \textquotesingle{}query\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_aa6fd62822ecefd36d364b57f6fb29d5a}{get\+Oauth\+Params}} (\$timestamp, \$nonce)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_aa0ac3c0bcb38ab04d03351a2bb847d8b}{prepare\+Parameters}} (\$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a49c7011be9c979d9174c52a8b83e5d8e}{\$config}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+OAuth signing plugin \mbox{\hyperlink{}{http\+://oauth.\+net/core/1.\+0/\#rfc.\+section.\+9.\+1.\+1}}
+
+Definition at line 17 of file Oauth\+Plugin.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_acf2ad978657d47ceab41038dc7d95737}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_acf2ad978657d47ceab41038dc7d95737}} 
+\index{OauthPlugin@{OauthPlugin}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$config }\end{DoxyParamCaption})}
+
+Create a new OAuth 1.\+0 plugin
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$config} & Configuration array containing these parameters\+:
+\begin{DoxyItemize}
+\item string \textquotesingle{}request\+\_\+method\textquotesingle{} Consumer request method. Use the class constants.
+\item string \textquotesingle{}callback\textquotesingle{} OAuth callback
+\item string \textquotesingle{}consumer\+\_\+key\textquotesingle{} Consumer key
+\item string \textquotesingle{}consumer\+\_\+secret\textquotesingle{} Consumer secret
+\item string \textquotesingle{}token\textquotesingle{} Token
+\item string \textquotesingle{}token\+\_\+secret\textquotesingle{} Token secret
+\item string \textquotesingle{}verifier\textquotesingle{} OAuth verifier.
+\item string \textquotesingle{}version\textquotesingle{} OAuth version. Defaults to 1.\+0
+\item string \textquotesingle{}signature\+\_\+method\textquotesingle{} Custom signature method
+\item bool \textquotesingle{}disable\+\_\+post\+\_\+params\textquotesingle{} Set to true to prevent POST parameters from being signed
+\item array$\vert$\+Closure \textquotesingle{}signature\+\_\+callback\textquotesingle{} Custom signature callback that accepts a string to sign and a signing key 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file Oauth\+Plugin.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a0619d6aa30bffddda975068919b906a1}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a0619d6aa30bffddda975068919b906a1}} 
+\index{OauthPlugin@{OauthPlugin}!generateNonce@{generateNonce}}
+\index{generateNonce@{generateNonce}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{generateNonce()}{generateNonce()}}
+{\footnotesize\ttfamily generate\+Nonce (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request }\end{DoxyParamCaption})}
+
+Returns a Nonce Based on the unique id and URL. This will allow for multiple requests in parallel with the same exact timestamp to use separate nonce\textquotesingle{}s.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to generate a nonce for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 263 of file Oauth\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_aa6fd62822ecefd36d364b57f6fb29d5a}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_aa6fd62822ecefd36d364b57f6fb29d5a}} 
+\index{OauthPlugin@{OauthPlugin}!getOauthParams@{getOauthParams}}
+\index{getOauthParams@{getOauthParams}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{getOauthParams()}{getOauthParams()}}
+{\footnotesize\ttfamily get\+Oauth\+Params (\begin{DoxyParamCaption}\item[{}]{\$timestamp,  }\item[{}]{\$nonce }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get the oauth parameters as named by the oauth spec
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$timestamp} & \\
+\hline
+{\em \$nonce} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Collection 
+\end{DoxyReturn}
+
+
+Definition at line 175 of file Oauth\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a26a2d855257d1fe3d64edb683f43a5d7}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a26a2d855257d1fe3d64edb683f43a5d7}} 
+\index{OauthPlugin@{OauthPlugin}!getParamsToSign@{getParamsToSign}}
+\index{getParamsToSign@{getParamsToSign}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{getParamsToSign()}{getParamsToSign()}}
+{\footnotesize\ttfamily get\+Params\+To\+Sign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$timestamp,  }\item[{}]{\$nonce }\end{DoxyParamCaption})}
+
+Get all of the parameters required to sign a request including\+:
+\begin{DoxyItemize}
+\item The oauth params
+\item The request GET params
+\item The params passed in the POST body (with a content-\/type of application/x-\/www-\/form-\/urlencoded)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to generate a signature for \\
+\hline
+integer & {\em \$timestamp} & Timestamp to use for nonce \\
+\hline
+string & {\em \$nonce} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 214 of file Oauth\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a129ce50c0d602593e468a03cd3c7e26f}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a129ce50c0d602593e468a03cd3c7e26f}} 
+\index{OauthPlugin@{OauthPlugin}!getSignature@{getSignature}}
+\index{getSignature@{getSignature}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{getSignature()}{getSignature()}}
+{\footnotesize\ttfamily get\+Signature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$timestamp,  }\item[{}]{\$nonce }\end{DoxyParamCaption})}
+
+Calculate signature for request
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to generate a signature for \\
+\hline
+integer & {\em \$timestamp} & Timestamp to use for nonce \\
+\hline
+string & {\em \$nonce} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file Oauth\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a77718b517ac80ebde7f702cc3c7c2a83}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a77718b517ac80ebde7f702cc3c7c2a83}} 
+\index{OauthPlugin@{OauthPlugin}!getStringToSign@{getStringToSign}}
+\index{getStringToSign@{getStringToSign}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{getStringToSign()}{getStringToSign()}}
+{\footnotesize\ttfamily get\+String\+To\+Sign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_http_1_1_message_1_1_request_interface}{Request\+Interface}}}]{\$request,  }\item[{}]{\$timestamp,  }\item[{}]{\$nonce }\end{DoxyParamCaption})}
+
+Calculate string to sign
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request\+Interface & {\em \$request} & Request to generate a signature for \\
+\hline
+int & {\em \$timestamp} & Timestamp to use for nonce \\
+\hline
+string & {\em \$nonce} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file Oauth\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_af1f63475927bbcb3bd21b58712076104}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_af1f63475927bbcb3bd21b58712076104}} 
+\index{OauthPlugin@{OauthPlugin}!getSubscribedEvents@{getSubscribedEvents}}
+\index{getSubscribedEvents@{getSubscribedEvents}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{getSubscribedEvents()}{getSubscribedEvents()}}
+{\footnotesize\ttfamily static get\+Subscribed\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns an array of event names this subscriber wants to listen to.
+
+The array keys are event names and the value can be\+:
+
+
+\begin{DoxyItemize}
+\item The method name to call (priority defaults to 0)
+\item An array composed of the method name to call and the priority
+\item An array of arrays composed of the method names to call and respective priorities, or 0 if unset
+\end{DoxyItemize}
+
+For instance\+:
+
+
+\begin{DoxyItemize}
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ \textquotesingle{}method\+Name\textquotesingle{})
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(\textquotesingle{}method\+Name\textquotesingle{}, \$priority))
+\item array(\textquotesingle{}event\+Name\textquotesingle{} =$>$ array(array(\textquotesingle{}method\+Name1\textquotesingle{}, \$priority), array(\textquotesingle{}method\+Name2\textquotesingle{})))
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+array The event names to listen to 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_symfony_1_1_component_1_1_event_dispatcher_1_1_event_subscriber_interface_af1f63475927bbcb3bd21b58712076104}{Event\+Subscriber\+Interface}}.
+
+
+
+Definition at line 61 of file Oauth\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a16e73a84860914ffb5ac8a075731dd08}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a16e73a84860914ffb5ac8a075731dd08}} 
+\index{OauthPlugin@{OauthPlugin}!getTimestamp@{getTimestamp}}
+\index{getTimestamp@{getTimestamp}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{getTimestamp()}{getTimestamp()}}
+{\footnotesize\ttfamily get\+Timestamp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})}
+
+Gets timestamp from event or create new timestamp
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event & {\em \$event} & Event containing contextual information\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 275 of file Oauth\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_ad5d409207870e96ccf59041047a94ccc}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_ad5d409207870e96ccf59041047a94ccc}} 
+\index{OauthPlugin@{OauthPlugin}!onRequestBeforeSend@{onRequestBeforeSend}}
+\index{onRequestBeforeSend@{onRequestBeforeSend}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{onRequestBeforeSend()}{onRequestBeforeSend()}}
+{\footnotesize\ttfamily on\+Request\+Before\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_guzzle_1_1_common_1_1_event}{Event}}}]{\$event }\end{DoxyParamCaption})}
+
+Request before-\/send event handler
+
+
+\begin{DoxyParams}[1]{Parameters}
+Event & {\em \$event} & Event received \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 75 of file Oauth\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_aa0ac3c0bcb38ab04d03351a2bb847d8b}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_aa0ac3c0bcb38ab04d03351a2bb847d8b}} 
+\index{OauthPlugin@{OauthPlugin}!prepareParameters@{prepareParameters}}
+\index{prepareParameters@{prepareParameters}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{prepareParameters()}{prepareParameters()}}
+{\footnotesize\ttfamily prepare\+Parameters (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Convert booleans to strings, removed unset parameters, and sorts the array
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & Data array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 287 of file Oauth\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a59a9b3d45110326a3b271f4c6dae42c6}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a59a9b3d45110326a3b271f4c6dae42c6}} 
+\index{OauthPlugin@{OauthPlugin}!shouldPostFieldsBeSigned@{shouldPostFieldsBeSigned}}
+\index{shouldPostFieldsBeSigned@{shouldPostFieldsBeSigned}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{shouldPostFieldsBeSigned()}{shouldPostFieldsBeSigned()}}
+{\footnotesize\ttfamily should\+Post\+Fields\+Be\+Signed (\begin{DoxyParamCaption}\item[{}]{\$request }\end{DoxyParamCaption})}
+
+Decide whether the post fields should be added to the base string that \mbox{\hyperlink{namespace_guzzle_1_1_plugin_1_1_oauth}{Oauth}} signs. This implementation is correct. Non-\/conformant APIs may require that this method be overwritten e.\+g. the Flickr API incorrectly adds the post fields when the Content-\/\+Type is \textquotesingle{}application/x-\/www-\/form-\/urlencoded\textquotesingle{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Whether the post fields should be signed or not 
+\end{DoxyReturn}
+
+
+Definition at line 243 of file Oauth\+Plugin.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a49c7011be9c979d9174c52a8b83e5d8e}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_a49c7011be9c979d9174c52a8b83e5d8e}} 
+\index{OauthPlugin@{OauthPlugin}!\$config@{\$config}}
+\index{\$config@{\$config}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{\$config}{$config}}
+{\footnotesize\ttfamily \$config\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Oauth\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_acb486de68913eccce8dae68f7dd9eea8}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_acb486de68913eccce8dae68f7dd9eea8}} 
+\index{OauthPlugin@{OauthPlugin}!REQUEST\_METHOD\_HEADER@{REQUEST\_METHOD\_HEADER}}
+\index{REQUEST\_METHOD\_HEADER@{REQUEST\_METHOD\_HEADER}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{REQUEST\_METHOD\_HEADER}{REQUEST\_METHOD\_HEADER}}
+{\footnotesize\ttfamily const REQUEST\+\_\+\+METHOD\+\_\+\+HEADER = \textquotesingle{}header\textquotesingle{}}
+
+Consumer request method constants. See \href{http://oauth.net/core/1.0/\#consumer_req_param}{\texttt{ http\+://oauth.\+net/core/1.\+0/\#consumer\+\_\+req\+\_\+param}} 
+
+Definition at line 22 of file Oauth\+Plugin.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_aa1e8334281cb0e4acdb87c4e1307d616}\label{class_guzzle_1_1_plugin_1_1_oauth_1_1_oauth_plugin_aa1e8334281cb0e4acdb87c4e1307d616}} 
+\index{OauthPlugin@{OauthPlugin}!REQUEST\_METHOD\_QUERY@{REQUEST\_METHOD\_QUERY}}
+\index{REQUEST\_METHOD\_QUERY@{REQUEST\_METHOD\_QUERY}!OauthPlugin@{OauthPlugin}}
+\doxysubsubsection{\texorpdfstring{REQUEST\_METHOD\_QUERY}{REQUEST\_METHOD\_QUERY}}
+{\footnotesize\ttfamily const REQUEST\+\_\+\+METHOD\+\_\+\+QUERY = \textquotesingle{}query\textquotesingle{}}
+
+
+
+Definition at line 23 of file Oauth\+Plugin.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Plugin/\+Oauth/\mbox{\hyperlink{_oauth_plugin_8php}{Oauth\+Plugin.\+php}}\end{DoxyCompactItemize}

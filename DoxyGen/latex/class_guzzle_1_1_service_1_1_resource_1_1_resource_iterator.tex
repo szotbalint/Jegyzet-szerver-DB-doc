@@ -1,0 +1,508 @@
+\hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator}{}\doxysection{Resource\+Iterator Class Reference}
+\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator}\index{ResourceIterator@{ResourceIterator}}
+Inheritance diagram for Resource\+Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.731707cm]{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad5c3a4644399086f3962eca110b328d4}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}} \$command, array \$data=array())
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a658defb34762c8f40085aec87e16ba1a}{to\+Array}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_af06052007e9d286ba36d06f273b50b51}{set\+Limit}} (\$limit)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_abc5d90464aa4a14206fcff8e70774e44}{set\+Page\+Size}} (\$page\+Size)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a24a9bf83a1002d46ece83a93d14bd921}{get}} (\$\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a729e946b4ef600e71740113c6d4332c0}{key}})
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_aab787bd83f84f4215dceb35f7c305eee}{set}} (\$\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a729e946b4ef600e71740113c6d4332c0}{key}}, \$value)
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_af343507d1926e6ecf964625d41db528c}{current}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a729e946b4ef600e71740113c6d4332c0}{key}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ac751e87b3d4c4bf2feb03bee8b092755}{count}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_adf6818057e9db0510c9bbb9c276662fd}{get\+Request\+Count}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ae619dcf2218c21549cb65d875bbc6c9c}{rewind}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_abb9f0d6adf1eb9b3b55712056861a247}{valid}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_acea62048bfee7b3cd80ed446c86fb78a}{next}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a7619eef85cb7cdac49cc330a05cb5b62}{get\+Next\+Token}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a0cf9c0f01ef8b36bdd76aa204c35c194}{get\+All\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a9bbaeba83e804aa9b6363d44e26471ba}{calculate\+Page\+Size}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_af3e0425e4fe6c418a0a4b65fe611a0de}{reset\+State}} ()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_aa5ec0a28f2756176d849109283c5cd87}{send\+Request}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a8f120409eb9f635ac30b3f9a6d5becdc}{\$command}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a5b6c1c2a59c36dd5c23dc71cb9f7b671}{\$original\+Command}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad57e7e99506ffd448d98e036b1a8da50}{\$resources}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a397e0f829216f462010e9cf4d877a1a3}{\$retrieved\+Count}} = 0
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a0cab8e8162a8305f65e4958b9d32f451}{\$iterated\+Count}} = 0
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad24a5a39d6e87a3d4d4d553b0cb0163a}{\$next\+Token}} = false
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_aba05ad69ff0d70b7b236fdf3570955a9}{\$page\+Size}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ae05862a0294251c88629b141b5ce329a}{\$limit}}
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad62d747b85e3d27802121cd3f7f58675}{\$request\+Count}} = 0
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a6efc15b5a2314dd4b5aaa556a375c6d6}{\$data}} = array()
+\item 
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a7cfdb67ae141f6890fac76dc5a4eda6c}{\$invalid}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 8 of file Resource\+Iterator.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad5c3a4644399086f3962eca110b328d4}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad5c3a4644399086f3962eca110b328d4}} 
+\index{ResourceIterator@{ResourceIterator}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_command_1_1_command_interface}{Command\+Interface}}}]{\$command,  }\item[{array}]{\$data = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Command\+Interface & {\em \$command} & Initial command used for iteration \\
+\hline
+array & {\em \$data} & Associative array of additional parameters. You may specify any number of custom options for an iterator. Among these options, you may also specify the following values\+:
+\begin{DoxyItemize}
+\item limit\+: Attempt to limit the maximum number of resources to this amount
+\item page\+\_\+size\+: Attempt to retrieve this number of resources per request 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file Resource\+Iterator.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a9bbaeba83e804aa9b6363d44e26471ba}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a9bbaeba83e804aa9b6363d44e26471ba}} 
+\index{ResourceIterator@{ResourceIterator}!calculatePageSize@{calculatePageSize}}
+\index{calculatePageSize@{calculatePageSize}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{calculatePageSize()}{calculatePageSize()}}
+{\footnotesize\ttfamily calculate\+Page\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns the value that should be specified for the page size for a request that will maintain any hard limits, but still honor the specified page\+Size if the number of items retrieved + page\+Size $<$ hard limit
+
+\begin{DoxyReturn}{Returns}
+int Returns the page size of the next request. 
+\end{DoxyReturn}
+
+
+Definition at line 227 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ac751e87b3d4c4bf2feb03bee8b092755}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ac751e87b3d4c4bf2feb03bee8b092755}} 
+\index{ResourceIterator@{ResourceIterator}!count@{count}}
+\index{count@{count}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_af343507d1926e6ecf964625d41db528c}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_af343507d1926e6ecf964625d41db528c}} 
+\index{ResourceIterator@{ResourceIterator}!current@{current}}
+\index{current@{current}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{current()}{current()}}
+{\footnotesize\ttfamily current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 124 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a24a9bf83a1002d46ece83a93d14bd921}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a24a9bf83a1002d46ece83a93d14bd921}} 
+\index{ResourceIterator@{ResourceIterator}!get@{get}}
+\index{get@{get}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily get (\begin{DoxyParamCaption}\item[{}]{\$key }\end{DoxyParamCaption})}
+
+Get an option from the iterator
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & Key of the option to retrieve\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed$\vert$null Returns NULL if not set or the value if set 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_a24a9bf83a1002d46ece83a93d14bd921}{Resource\+Iterator\+Interface}}.
+
+
+
+Definition at line 104 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a0cf9c0f01ef8b36bdd76aa204c35c194}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a0cf9c0f01ef8b36bdd76aa204c35c194}} 
+\index{ResourceIterator@{ResourceIterator}!getAllEvents@{getAllEvents}}
+\index{getAllEvents@{getAllEvents}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{getAllEvents()}{getAllEvents()}}
+{\footnotesize\ttfamily static get\+All\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a list of all of the events emitted from the class
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_guzzle_1_1_common_1_1_abstract_has_dispatcher_a0cf9c0f01ef8b36bdd76aa204c35c194}{Abstract\+Has\+Dispatcher}}.
+
+
+
+Definition at line 43 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a7619eef85cb7cdac49cc330a05cb5b62}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a7619eef85cb7cdac49cc330a05cb5b62}} 
+\index{ResourceIterator@{ResourceIterator}!getNextToken@{getNextToken}}
+\index{getNextToken@{getNextToken}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{getNextToken()}{getNextToken()}}
+{\footnotesize\ttfamily get\+Next\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the Next\+Token that can be used in other iterators.
+
+\begin{DoxyReturn}{Returns}
+string Returns a Next\+Token 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_a7619eef85cb7cdac49cc330a05cb5b62}{Resource\+Iterator\+Interface}}.
+
+
+
+Definition at line 216 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_adf6818057e9db0510c9bbb9c276662fd}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_adf6818057e9db0510c9bbb9c276662fd}} 
+\index{ResourceIterator@{ResourceIterator}!getRequestCount@{getRequestCount}}
+\index{getRequestCount@{getRequestCount}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{getRequestCount()}{getRequestCount()}}
+{\footnotesize\ttfamily get\+Request\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the total number of requests sent
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 144 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a729e946b4ef600e71740113c6d4332c0}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a729e946b4ef600e71740113c6d4332c0}} 
+\index{ResourceIterator@{ResourceIterator}!key@{key}}
+\index{key@{key}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{key()}{key()}}
+{\footnotesize\ttfamily key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 129 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_acea62048bfee7b3cd80ed446c86fb78a}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_acea62048bfee7b3cd80ed446c86fb78a}} 
+\index{ResourceIterator@{ResourceIterator}!next@{next}}
+\index{next@{next}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_acea62048bfee7b3cd80ed446c86fb78a}{Mock\+Command\+Iterator}}.
+
+
+
+Definition at line 166 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_af3e0425e4fe6c418a0a4b65fe611a0de}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_af3e0425e4fe6c418a0a4b65fe611a0de}} 
+\index{ResourceIterator@{ResourceIterator}!resetState@{resetState}}
+\index{resetState@{resetState}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{resetState()}{resetState()}}
+{\footnotesize\ttfamily reset\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Reset the internal state of the iterator without triggering a \mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ae619dcf2218c21549cb65d875bbc6c9c}{rewind()}} 
+
+Definition at line 239 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ae619dcf2218c21549cb65d875bbc6c9c}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ae619dcf2218c21549cb65d875bbc6c9c}} 
+\index{ResourceIterator@{ResourceIterator}!rewind@{rewind}}
+\index{rewind@{rewind}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{rewind()}{rewind()}}
+{\footnotesize\ttfamily rewind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Rewind the \mbox{\hyperlink{namespace_guzzle_1_1_iterator}{Iterator}} to the first element and send the original command 
+
+Definition at line 152 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_aa5ec0a28f2756176d849109283c5cd87}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_aa5ec0a28f2756176d849109283c5cd87}} 
+\index{ResourceIterator@{ResourceIterator}!sendRequest@{sendRequest}}
+\index{sendRequest@{sendRequest}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{sendRequest()}{sendRequest()}}
+{\footnotesize\ttfamily send\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+Send a request to retrieve the next page of results. Hook for subclasses to implement.
+
+\begin{DoxyReturn}{Returns}
+array Returns the newly loaded resources 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_guzzle_1_1_tests_1_1_service_1_1_mock_1_1_model_1_1_mock_command_iterator_aa5ec0a28f2756176d849109283c5cd87}{Mock\+Command\+Iterator}}.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_aab787bd83f84f4215dceb35f7c305eee}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_aab787bd83f84f4215dceb35f7c305eee}} 
+\index{ResourceIterator@{ResourceIterator}!set@{set}}
+\index{set@{set}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{}]{\$key,  }\item[{}]{\$value }\end{DoxyParamCaption})}
+
+Set an option on the iterator
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$key} & Key of the option to set \\
+\hline
+mixed & {\em \$value} & Value to set for the option\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator}{Resource\+Iterator}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_aab787bd83f84f4215dceb35f7c305eee}{Resource\+Iterator\+Interface}}.
+
+
+
+Definition at line 117 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_af06052007e9d286ba36d06f273b50b51}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_af06052007e9d286ba36d06f273b50b51}} 
+\index{ResourceIterator@{ResourceIterator}!setLimit@{setLimit}}
+\index{setLimit@{setLimit}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{setLimit()}{setLimit()}}
+{\footnotesize\ttfamily set\+Limit (\begin{DoxyParamCaption}\item[{}]{\$limit }\end{DoxyParamCaption})}
+
+Attempt to limit the total number of resources returned by the iterator.
+
+You may still receive more items than you specify. Set to 0 to specify no limit.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$limit} & Limit amount\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_af06052007e9d286ba36d06f273b50b51}{Resource\+Iterator\+Interface}}.
+
+
+
+Definition at line 81 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_abc5d90464aa4a14206fcff8e70774e44}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_abc5d90464aa4a14206fcff8e70774e44}} 
+\index{ResourceIterator@{ResourceIterator}!setPageSize@{setPageSize}}
+\index{setPageSize@{setPageSize}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{setPageSize()}{setPageSize()}}
+{\footnotesize\ttfamily set\+Page\+Size (\begin{DoxyParamCaption}\item[{}]{\$page\+Size }\end{DoxyParamCaption})}
+
+Attempt to limit the total number of resources retrieved per request by the iterator.
+
+The iterator may return more than you specify in the page size argument depending on the service and underlying command implementation. Set to 0 to specify no page size limitation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$page\+Size} & Limit amount\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface}{Resource\+Iterator\+Interface}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_interface_abc5d90464aa4a14206fcff8e70774e44}{Resource\+Iterator\+Interface}}.
+
+
+
+Definition at line 89 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a658defb34762c8f40085aec87e16ba1a}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a658defb34762c8f40085aec87e16ba1a}} 
+\index{ResourceIterator@{ResourceIterator}!toArray@{toArray}}
+\index{toArray@{toArray}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{toArray()}{toArray()}}
+{\footnotesize\ttfamily to\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get all of the resources as an array (Warning\+: this could issue a large number of requests)
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_guzzle_1_1_common_1_1_to_array_interface_a658defb34762c8f40085aec87e16ba1a}{To\+Array\+Interface}}.
+
+
+
+Definition at line 76 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_abb9f0d6adf1eb9b3b55712056861a247}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_abb9f0d6adf1eb9b3b55712056861a247}} 
+\index{ResourceIterator@{ResourceIterator}!valid@{valid}}
+\index{valid@{valid}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 160 of file Resource\+Iterator.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a8f120409eb9f635ac30b3f9a6d5becdc}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a8f120409eb9f635ac30b3f9a6d5becdc}} 
+\index{ResourceIterator@{ResourceIterator}!\$command@{\$command}}
+\index{\$command@{\$command}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\$command}{$command}}
+{\footnotesize\ttfamily \$command\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 11 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a6efc15b5a2314dd4b5aaa556a375c6d6}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a6efc15b5a2314dd4b5aaa556a375c6d6}} 
+\index{ResourceIterator@{ResourceIterator}!\$data@{\$data}}
+\index{\$data@{\$data}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\$data}{$data}}
+{\footnotesize\ttfamily \$data = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 38 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a7cfdb67ae141f6890fac76dc5a4eda6c}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a7cfdb67ae141f6890fac76dc5a4eda6c}} 
+\index{ResourceIterator@{ResourceIterator}!\$invalid@{\$invalid}}
+\index{\$invalid@{\$invalid}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\$invalid}{$invalid}}
+{\footnotesize\ttfamily \$invalid\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 41 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a0cab8e8162a8305f65e4958b9d32f451}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a0cab8e8162a8305f65e4958b9d32f451}} 
+\index{ResourceIterator@{ResourceIterator}!\$iteratedCount@{\$iteratedCount}}
+\index{\$iteratedCount@{\$iteratedCount}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\$iteratedCount}{$iteratedCount}}
+{\footnotesize\ttfamily \$iterated\+Count = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ae05862a0294251c88629b141b5ce329a}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ae05862a0294251c88629b141b5ce329a}} 
+\index{ResourceIterator@{ResourceIterator}!\$limit@{\$limit}}
+\index{\$limit@{\$limit}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\$limit}{$limit}}
+{\footnotesize\ttfamily \$limit\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad24a5a39d6e87a3d4d4d553b0cb0163a}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad24a5a39d6e87a3d4d4d553b0cb0163a}} 
+\index{ResourceIterator@{ResourceIterator}!\$nextToken@{\$nextToken}}
+\index{\$nextToken@{\$nextToken}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\$nextToken}{$nextToken}}
+{\footnotesize\ttfamily \$next\+Token = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a5b6c1c2a59c36dd5c23dc71cb9f7b671}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a5b6c1c2a59c36dd5c23dc71cb9f7b671}} 
+\index{ResourceIterator@{ResourceIterator}!\$originalCommand@{\$originalCommand}}
+\index{\$originalCommand@{\$originalCommand}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\$originalCommand}{$originalCommand}}
+{\footnotesize\ttfamily \$original\+Command\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_aba05ad69ff0d70b7b236fdf3570955a9}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_aba05ad69ff0d70b7b236fdf3570955a9}} 
+\index{ResourceIterator@{ResourceIterator}!\$pageSize@{\$pageSize}}
+\index{\$pageSize@{\$pageSize}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\$pageSize}{$pageSize}}
+{\footnotesize\ttfamily \$page\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad62d747b85e3d27802121cd3f7f58675}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad62d747b85e3d27802121cd3f7f58675}} 
+\index{ResourceIterator@{ResourceIterator}!\$requestCount@{\$requestCount}}
+\index{\$requestCount@{\$requestCount}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\$requestCount}{$requestCount}}
+{\footnotesize\ttfamily \$request\+Count = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 35 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad57e7e99506ffd448d98e036b1a8da50}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_ad57e7e99506ffd448d98e036b1a8da50}} 
+\index{ResourceIterator@{ResourceIterator}!\$resources@{\$resources}}
+\index{\$resources@{\$resources}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\$resources}{$resources}}
+{\footnotesize\ttfamily \$resources\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Resource\+Iterator.\+php.
+
+\mbox{\Hypertarget{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a397e0f829216f462010e9cf4d877a1a3}\label{class_guzzle_1_1_service_1_1_resource_1_1_resource_iterator_a397e0f829216f462010e9cf4d877a1a3}} 
+\index{ResourceIterator@{ResourceIterator}!\$retrievedCount@{\$retrievedCount}}
+\index{\$retrievedCount@{\$retrievedCount}!ResourceIterator@{ResourceIterator}}
+\doxysubsubsection{\texorpdfstring{\$retrievedCount}{$retrievedCount}}
+{\footnotesize\ttfamily \$retrieved\+Count = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 20 of file Resource\+Iterator.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pixel/shop/vendor/guzzle/guzzle/src/\+Guzzle/\+Service/\+Resource/\mbox{\hyperlink{_resource_iterator_8php}{Resource\+Iterator.\+php}}\end{DoxyCompactItemize}
